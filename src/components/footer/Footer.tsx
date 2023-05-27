@@ -6,8 +6,13 @@ const Footer = () => {
   return (
     <div className="flexbox">
       <ListGroup variant="horizontal">
-        <ListGroup.Item>617-838-4092</ListGroup.Item>
-        <ListGroup.Item>vpverm@bu.edu</ListGroup.Item>
+        <ListGroup.Item>
+          <a href="tel:1-617-838-4092">617-838-4092</a>
+        </ListGroup.Item>
+        <ListGroup.Item>
+          {" "}
+          <a href="mailto:vpverm@bu.edu">vpverm@bu.edu</a>
+        </ListGroup.Item>
         <ListGroup.Item>
           <a
             href="https://www.linkedin.com/in/victor-verma-91713022b/"

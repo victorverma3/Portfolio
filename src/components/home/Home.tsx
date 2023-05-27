@@ -10,11 +10,6 @@ const Home = () => {
         and computer science, and minoring in data science. Explore my personal
         website to learn about me!
       </p>
-      <hr className="my-4" />
-      <p>Explore my personal website to get to know about me!</p>
-      <a className="btn btn-primary btn-lg" href="#" role="button">
-        Learn more
-      </a>
     </div>
   );
 };

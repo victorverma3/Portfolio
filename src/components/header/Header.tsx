@@ -9,11 +9,11 @@ const Header = () => {
     <div>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Victor Verma</Navbar.Brand>
+          <Navbar.Brand href="">Victor Verma</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="Home">Home</Nav.Link>
+              <Nav.Link href="/src/App">Home</Nav.Link>
               <Nav.Link href="#home">Experience</Nav.Link>
               <Nav.Link href="#link">Academics</Nav.Link>
               <Nav.Link href="#home">Projects</Nav.Link>

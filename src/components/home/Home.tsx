@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
+import MainCard from "../mainCard/MainCard";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
           website to learn about me!
         </p>
       </div>
+      <MainCard />
       <Footer />
     </>
   );

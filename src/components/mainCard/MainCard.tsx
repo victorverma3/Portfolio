@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainCard.css";
 import Card from "react-bootstrap/Card";
-import image from "../../assets/ikea.jpeg";
+import image from "../../images/vic.png";
 
 const MainCard = () => {
   return (

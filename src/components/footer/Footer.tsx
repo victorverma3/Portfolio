@@ -4,7 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 const Footer = () => {
   return (
-    <div className="flexbox">
+    <div className="footer">
       <ListGroup variant="horizontal">
         <ListGroup.Item>
           <a href="tel:1-617-838-4092">617-838-4092</a>

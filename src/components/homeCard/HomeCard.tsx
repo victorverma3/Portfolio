@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainCard.css";
+import "./HomeCard.css";
 import Card from "react-bootstrap/Card";
 import image from "../../images/vic.jpg";
 

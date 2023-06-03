@@ -3,6 +3,7 @@ import "./Header.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -13,16 +14,21 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="">Home</Nav.Link>
-              <Nav.Link href="">Experiences</Nav.Link>
-              <Nav.Link href="">Academics</Nav.Link>
-              <Nav.Link href="">Projects</Nav.Link>
-              <Nav.Link href="">Resume</Nav.Link>
-              <Nav.Link href="">About</Nav.Link>
+              <Nav.Link>
+                <Link to="/">Home</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/experiences">Experiences</Link>
+              </Nav.Link>
+              <Nav.Link>Academics</Nav.Link>
+              <Nav.Link>Projects</Nav.Link>
+              <Nav.Link>Resume</Nav.Link>
+              <Nav.Link>About</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <Outlet />
     </div>
   );
 };

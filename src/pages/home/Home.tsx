@@ -1,6 +1,8 @@
 import React from "react";
 import "./Home.css";
 import MainCard from "../../components/homeCard/HomeCard";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -17,6 +19,9 @@ const Home = () => {
         <div className="pic">
           <MainCard />
         </div>
+      </div>
+      <div className="bottom">
+        <Footer />
       </div>
     </>
   );

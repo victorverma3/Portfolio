@@ -1,13 +1,10 @@
 import React from "react";
 import "./Home.css";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
 import MainCard from "../../components/homeCard/HomeCard";
 
 const Home = () => {
   return (
     <>
-      <Header />
       <div className="content">
         <div className="jumbotron">
           <h1 className="display-4">Hello Everyone!</h1>
@@ -20,9 +17,6 @@ const Home = () => {
         <div className="pic">
           <MainCard />
         </div>
-      </div>
-      <div className="bottom">
-        <Footer />
       </div>
     </>
   );

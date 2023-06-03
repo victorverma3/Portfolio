@@ -1,12 +1,4 @@
-.bottom {
-    padding: 20px 0px 10px 0px;
-    display:flex;
-    background-color:red;
-    justify-content:center;
-    position:relative;
-    bottom:0;
-
-}.content {
+.content {
     width: 100%;
     padding: 50px 0px 0px 0px;
     display:flex;

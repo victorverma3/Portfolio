@@ -4,3 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+
+.bottom {
+  padding: 20px 0px 10px 0px;
+  display:flex;
+  background-color:red;
+  justify-content:center;
+}

@@ -1,23 +1,30 @@
 .bottom {
-    display:block;
-}.content {
-    margin: auto;
-    width: 100%;
-    padding: 50px 7.5% 0px 7.5%;
+    padding: 20px 0px 10px 0px;
     display:flex;
-    flex-direction:row;
-    align-items:flex-start;
+    background-color:red;
+    justify-content:center;
+    position:relative;
+    bottom:0;
+
+}.content {
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    
 }
 .lead {
     font-size:25px;
 }
 
 .jumbotron {
-    margin:auto;
-    width:40%;
+    background-color:red;
+    max-width:50%;
+    flex-grow:1;
 }
 
 .pic {
-    margin:auto;
-    width:25%;
+    max-width:50%;
+    flex-grow:1;
 }

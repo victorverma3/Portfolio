@@ -1,12 +1,4 @@
-.cardList {
-    display:flex;
-    flex-flow: row wrap;
-    justify-content:space-around;
-    flex:1;
-    
-}
-
-#aboutContent {
+.aboutContent {
     width:100%;
     padding:25px 0px 0px 0px;
 }

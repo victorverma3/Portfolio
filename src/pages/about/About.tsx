@@ -29,13 +29,11 @@ const About = () => {
   ];
   return (
     <>
-      <div id="aboutContent">
+      <div className="aboutContent">
         <h1 className="pageTitle">About Me</h1>
         <h2 className="pageSubTitle">Hobbies</h2>
         <br></br>
-        <div className="aboutCards">
-          <CardList cards={aboutCards} />
-        </div>
+        <CardList cards={aboutCards} />
       </div>
       <div className="bottom">
         <Footer />

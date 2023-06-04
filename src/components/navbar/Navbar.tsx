@@ -15,22 +15,34 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link>
-                <Link to="/">Home</Link>
+                <Link className="navLink" to="/">
+                  Home
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/experiences">Experiences</Link>
+                <Link className="navLink" to="/experiences">
+                  Experiences
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/academics">Academics</Link>
+                <Link className="navLink" to="/academics">
+                  Academics
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/projects">Projects</Link>
+                <Link className="navLink" to="/projects">
+                  Projects
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/resume">Resume</Link>
+                <Link className="navLink" to="/resume">
+                  Resume
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/about">About</Link>
+                <Link className="navLink" to="/about">
+                  About
+                </Link>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -6,6 +6,13 @@ import CardList from "../../components/cardList/CardList";
 const About = () => {
   const aboutCards = [
     {
+      hobby: "Gym",
+      image: "placeholder",
+      description: "I like going to the gym.",
+      link: "placeholder",
+      url: "placeholder",
+    },
+    {
       hobby: "Watching Movies",
       image: "placeholder",
       description: "I like watching movies.",
@@ -16,13 +23,6 @@ const About = () => {
       hobby: "Rubik's Cube",
       image: "placeholder",
       description: "I enjoying solving the Rubik's Cube.",
-      link: "placeholder",
-      url: "placeholder",
-    },
-    {
-      hobby: "Gym",
-      image: "placeholder",
-      description: "I like going to the gym.",
       link: "placeholder",
       url: "placeholder",
     },

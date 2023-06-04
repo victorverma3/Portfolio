@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <ListGroup horizontal className="footer">
       <ListGroup.Item>
-        <a href="tel:1-617-838-4092">617-838-4092</a>
+        <a>617-838-4092</a>
       </ListGroup.Item>
       <ListGroup.Item>
         <a href="mailto:vpverm@bu.edu">vpverm@bu.edu</a>

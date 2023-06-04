@@ -1,3 +1,14 @@
-.content {
+.cardList {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    flex-grow:1;
+    gap:5%;
+}
+
+#aboutContent {
+    width:100%;
     padding:25px 0px 0px 0px;
 }

@@ -16,9 +16,9 @@ interface CardListProps {
 
 const CardList = ({ cards }: CardListProps) => {
   return (
-    <Card>
+    <div className="cardList">
       {cards.map((card) => (
-        <>
+        <Card className="cards">
           <Card.Img
             variant="top"
             src="{card.image}"
@@ -29,9 +29,9 @@ const CardList = ({ cards }: CardListProps) => {
             <Card.Text>{card.description}</Card.Text>
             <Button variant="dark">{card.link}</Button>
           </Card.Body>
-        </>
+        </Card>
       ))}
-    </Card>
+    </div>
   );
 };
 

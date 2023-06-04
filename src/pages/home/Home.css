@@ -5,12 +5,20 @@
     justify-content:center;
   }
   
-#homeContent {
+.homeCard {
+        border:none;
+} 
+
+.homeContent {
     width:100%;
     padding:25px 0px 0px 0px;
     display:flex;
     justify-content:center;
     align-content:center;
+}
+
+.homePic {
+    border:none;
 }
 
 .lead {

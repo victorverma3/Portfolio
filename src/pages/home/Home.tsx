@@ -7,10 +7,10 @@ import image from "../../images/vic.jpg";
 const Home = () => {
   return (
     <>
-      <div id="homeContent">
+      <div className="homeContent">
         <div className="jumbotron">
           <h1 className="display-4">Hello Everyone!</h1>
-          <p className="lead">
+          <p className="homeLead">
             I am a third-year student at Boston University majoring in
             mathematics and computer science and minoring in data science.
             Explore my personal website to learn about me!
@@ -25,9 +25,7 @@ const Home = () => {
           </Card>
         </div>
       </div>
-      <div className="bottom">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };

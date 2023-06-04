@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Header from "./components/header/Header";
+import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Experiences from "./pages/experiences/Experiences";
 import Error from "./pages/error/Error";
@@ -12,7 +12,7 @@ import About from "./pages/about/About";
 
 const router = createBrowserRouter([
   {
-    element: <Header />,
+    element: <Navbar />,
     children: [
       {
         path: "/",

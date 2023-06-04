@@ -6,7 +6,7 @@ import Footer from "../../components/footer/Footer";
 const Home = () => {
   return (
     <>
-      <div className="content">
+      <div id="homeContent">
         <div className="jumbotron">
           <h1 className="display-4">Hello Everyone!</h1>
           <p className="lead">
@@ -15,7 +15,7 @@ const Home = () => {
             Explore my personal website to learn about me!
           </p>
         </div>
-        <div className="pic">
+        <div id="pic">
           <HomeCard />
         </div>
       </div>

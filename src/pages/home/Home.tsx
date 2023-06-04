@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import MainCard from "../../components/homeCard/HomeCard";
+import HomeCard from "../../components/homeCard/HomeCard";
 import Footer from "../../components/footer/Footer";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
           </p>
         </div>
         <div className="pic">
-          <MainCard />
+          <HomeCard />
         </div>
       </div>
       <div className="bottom">

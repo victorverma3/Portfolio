@@ -3,6 +3,8 @@
    display:flex;
    background-color:red;
    justify-content:center;
+   width:fit-content;
+   margin:auto;
  }
 
 .footer {

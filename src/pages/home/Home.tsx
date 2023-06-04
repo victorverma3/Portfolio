@@ -2,7 +2,6 @@ import React from "react";
 import "./Home.css";
 import Footer from "../../components/footer/Footer";
 import { Card } from "react-bootstrap";
-import image from "../../images/vic.jpg";
 
 const Home = () => {
   return (
@@ -16,14 +15,15 @@ const Home = () => {
             Explore my personal website to learn about me!
           </p>
         </div>
-        <div className="homePic">
+        <div className="homeEmpty"></div>
+        {/*<div className="homePic">
           <Card className="homeCard">
             <Card.Img variant="top" src={image} alt="error loading image" />
             <Card.Body>
               <Card.Text>I like solving problems.</Card.Text>
             </Card.Body>
           </Card>
-        </div>
+  </div>*/}
       </div>
       <Footer />
     </>

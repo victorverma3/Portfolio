@@ -3,11 +3,13 @@
 } 
 
 .homeContent {
-    width:100%;
+    width:100vw;
     padding:25px 0px 0px 0px;
-    display:flex;
-    justify-content:center;
     align-content:center;
+}
+
+.homeEmpty {
+    background-color:blue;
 }
 
 .homeLead {
@@ -21,8 +23,10 @@
 }
 
 .jumbotron {
+    margin: auto;
     background-color:red;
-    max-width:50%;
+    max-width:50vw;
+    max-height:50vh;
     flex-grow:1;
 }
 

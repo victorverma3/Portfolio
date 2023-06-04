@@ -1,6 +1,7 @@
 .navLink {
     text-decoration: none;
     color: black;
+    font-size:18px;
  }
  .navLink:hover {
     text-decoration: underline;

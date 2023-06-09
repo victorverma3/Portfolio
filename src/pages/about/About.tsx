@@ -14,7 +14,7 @@ const About = () => {
     },
     {
       hobby: "Watching Movies",
-      image: "placeholder",
+      image: "../../images/letterboxd.jpg",
       description: "I like watching movies.",
       link: "Letterboxd",
       url: "placeholder",

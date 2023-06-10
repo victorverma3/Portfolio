@@ -6,9 +6,6 @@
     width:100vw;
     min-height:81vh;
     padding:100px 0px 0px 0px;
-    display:flex;
-    flex-direction:column;
-    align-content:center;
 }
 
 .homeLead {
@@ -19,10 +16,6 @@
     margin:auto;
 }
 
-.homePic {
-    border:none;
-}
-
 .homeTitle {
     font-size:100px;
 }
@@ -31,10 +24,5 @@
     margin: auto;
     width: 60vw;
     height:fit-content;
-    flex-grow:1;
-}
-
-.pic {
-    max-width:50%;
     flex-grow:1;
 }

@@ -26,8 +26,15 @@ const CardList = ({ cards }: CardListProps) => {
           />
           <Card.Body>
             <Card.Title>{card.hobby}</Card.Title>
-            <Card.Text>{card.description}</Card.Text>
-            <Button variant="dark">{card.link}</Button>
+            <Card.Text className="cardText">{card.description}</Card.Text>
+            <Button
+              className="cardButton"
+              href={card.url}
+              target="_blank"
+              variant="dark"
+            >
+              {card.link}
+            </Button>
           </Card.Body>
         </Card>
       ))}

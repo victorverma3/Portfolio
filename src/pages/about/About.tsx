@@ -2,7 +2,9 @@ import React from "react";
 import "./About.css";
 import Footer from "../../components/footer/Footer";
 import CardList from "../../components/cardList/CardList";
+import paris from "../../images/paris.jpg";
 import hobby2 from "../../images/letterboxd.jpg";
+import test from "../../images/tom.jpg";
 
 const About = () => {
   const aboutCards = [
@@ -11,8 +13,8 @@ const About = () => {
       image: "placeholder",
       description:
         "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate my split between Push Pull Legs (PPL) and Arnold.",
-      link: "placeholder",
-      url: "placeholder",
+      link: "Latest Workouts",
+      url: "https://docs.google.com/spreadsheets/d/10zi_VmH-wYWIiWBucsQ4NTbagEHaQHntUIhvYHy9qfk/edit?usp=sharing",
     },
     {
       hobby: "Watching Movies",
@@ -35,6 +37,7 @@ const About = () => {
     <>
       <div className="aboutContent">
         <h1 className="pageTitle">About Me</h1>
+        <img className="aboutPic" src={paris} alt="image loading error"></img>
         <p className="bio">
           My name is Victor Verma, and I'm a 20-year old who was born and raised
           in central Massachusetts. Throughout my whole life I've loved sports,

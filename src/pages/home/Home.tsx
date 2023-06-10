@@ -17,7 +17,9 @@ const Home = () => {
           about...
         </p>
       </div>
-      <Footer />
+      <div className="bottom">
+        <Footer />
+      </div>
     </>
   );
 };

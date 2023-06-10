@@ -1,4 +1,5 @@
 .aboutContent {
-    width:100%;
+    width:100vw;
+    min-height:81vh;
     padding:25px 0px 0px 0px;
 }

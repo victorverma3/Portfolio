@@ -1,8 +1,9 @@
 #root {
-  max-width:98.57rem;
-  margin:0 auto;
+  max-width:1440px;
+  margin:auto;
   text-align:center;
   background-image:url("./images/background.jpg");
+  overflow-x:hidden;
 }
 
 .pageSubTitle {

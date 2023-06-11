@@ -3,8 +3,8 @@ import "./CardList.css";
 import { Button, Card } from "react-bootstrap";
 
 interface Card {
+  title: string;
   image: string;
-  hobby: string;
   description: string;
   link: string;
   url: string;
@@ -21,7 +21,7 @@ const CardList = ({ cards }: CardListProps) => {
         <Card className="cards">
           <Card.Img variant="top" src={card.image} alt="image loading error" />
           <Card.Body>
-            <Card.Title>{card.hobby}</Card.Title>
+            <Card.Title>{card.title}</Card.Title>
             <Card.Text className="cardText">{card.description}</Card.Text>
             <Button
               className="cardButton"

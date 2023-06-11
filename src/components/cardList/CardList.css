@@ -5,12 +5,10 @@
 .cardList {
     width:90%;
     margin:auto;
-    height:90%;
     display:flex;
-    flex-flow: row wrap;
+    flex-flow:row wrap;
     justify-content:space-around;
     align-content:space-around;
-    padding-bottom:10px;
 }
 
 .cardText {
@@ -20,4 +18,5 @@
 .cards {
     width:18rem;
     border:none;
+    margin:10px 0px 10px 0px;
 }

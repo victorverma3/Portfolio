@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import Footer from "../../components/footer/Footer";
-import CardList from "../../components/cardList/CardList";
+import CardList from "../../components/CardList/CardList";
 import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";
 import weights from "../../images/weights.png";
@@ -10,7 +10,7 @@ import cube from "../../images/cube.png";
 const About = () => {
   const aboutCards = [
     {
-      hobby: "Watching Movies",
+      title: "Watching Movies",
       image: movies,
       description:
         "I like watching movies in my free time, mostly from any genre except romance. I use the Letterboxd app to log and rate the movies I watch.",
@@ -18,7 +18,7 @@ const About = () => {
       url: "https://letterboxd.com/vic_verma/",
     },
     {
-      hobby: "Gym",
+      title: "Gym",
       image: weights,
       description:
         "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate my split between Push Pull Legs (PPL) and Arnold.",
@@ -26,12 +26,12 @@ const About = () => {
       url: "https://docs.google.com/spreadsheets/d/10zi_VmH-wYWIiWBucsQ4NTbagEHaQHntUIhvYHy9qfk/edit?usp=sharing",
     },
     {
-      hobby: "Rubik's Cube",
+      title: "Rubik's Cube",
       image: cube,
       description:
-        "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. The 3x3 is my favorite one and my personal record is 11.97 seconds.",
-      link: "placeholder",
-      url: "placeholder",
+        "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. My personal record on the 3x3 is 11.97 seconds using the CFOP method.",
+      link: "CFOP Tutorial",
+      url: "https://youtu.be/MS5jByTX_pk",
     },
   ];
   return (
@@ -39,7 +39,7 @@ const About = () => {
       <div className="aboutContent">
         <h1 className="pageTitle">About Me</h1>
         <img className="aboutPic" src={paris} alt="image loading error"></img>
-        <p className="bio">
+        <p className="aboutBio">
           My name is Victor Verma, and I'm a 20-year old who was born and raised
           in central Massachusetts. Throughout my whole life I've loved sports,
           primarily football, basketball, and soccer. I played football for 10
@@ -48,7 +48,7 @@ const About = () => {
           hanging out with my friends, and watching movies with whoever is
           interested.
         </p>
-        <p className="bio">
+        <p className="aboutBio">
           I have a passion for learning, and often watch youtube videos on
           topics ranging from STEM fields such as computer science and physics,
           to the social sciences and humanities as well. I really love to keep
@@ -58,7 +58,6 @@ const About = () => {
           loop, and pick a new major everytime.
         </p>
         <h2 className="pageSubTitle">Hobbies</h2>
-        <br></br>
         <CardList cards={aboutCards} />
       </div>
       <div className="bottom">

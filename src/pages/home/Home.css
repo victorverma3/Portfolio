@@ -5,12 +5,12 @@
 .homeContent {
     width:100vw;
     min-height:81vh;
-    padding:100px 0px 0px 0px;
+    margin-top:100px;
 }
 
 .homeLead {
     font-size:25px;
-    padding:25px 10px 0px 10px;
+    padding-top:25px;
     text-align:justify;
     width:60vw;
     margin:auto;
@@ -21,8 +21,8 @@
 }
 
 .jumbotron {
-    margin: auto;
-    width: 60vw;
+    margin:auto;
+    width:60vw;
     height:fit-content;
     flex-grow:1;
 }

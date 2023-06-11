@@ -2,31 +2,32 @@ import React from "react";
 import "./About.css";
 import Footer from "../../components/footer/Footer";
 import CardList from "../../components/cardList/CardList";
-import paris from "../../images/paris.jpg";
-import hobby2 from "../../images/letterboxd.jpg";
-import test from "../../images/tom.jpg";
+import paris from "../../images/paris.png";
+import movies from "../../images/letterboxd.png";
+import weights from "../../images/weights.png";
+import cube from "../../images/cube.png";
 
 const About = () => {
   const aboutCards = [
     {
-      hobby: "Gym",
-      image: "placeholder",
-      description:
-        "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate my split between Push Pull Legs (PPL) and Arnold.",
-      link: "Latest Workouts",
-      url: "https://docs.google.com/spreadsheets/d/10zi_VmH-wYWIiWBucsQ4NTbagEHaQHntUIhvYHy9qfk/edit?usp=sharing",
-    },
-    {
       hobby: "Watching Movies",
-      image: "placeholder",
+      image: movies,
       description:
         "I like watching movies in my free time, mostly from any genre except romance. I use the Letterboxd app to log and rate the movies I watch.",
       link: "Letterboxd",
       url: "https://letterboxd.com/vic_verma/",
     },
     {
+      hobby: "Gym",
+      image: weights,
+      description:
+        "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate my split between Push Pull Legs (PPL) and Arnold.",
+      link: "Latest Workouts",
+      url: "https://docs.google.com/spreadsheets/d/10zi_VmH-wYWIiWBucsQ4NTbagEHaQHntUIhvYHy9qfk/edit?usp=sharing",
+    },
+    {
       hobby: "Rubik's Cube",
-      image: "placeholder",
+      image: cube,
       description:
         "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. The 3x3 is my favorite one and my personal record is 11.97 seconds.",
       link: "placeholder",

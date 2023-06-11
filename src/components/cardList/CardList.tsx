@@ -19,11 +19,7 @@ const CardList = ({ cards }: CardListProps) => {
     <div className="cardList">
       {cards.map((card) => (
         <Card className="cards">
-          <Card.Img
-            variant="top"
-            src="{card.image}"
-            alt="image loading error"
-          />
+          <Card.Img variant="top" src={card.image} alt="image loading error" />
           <Card.Body>
             <Card.Title>{card.hobby}</Card.Title>
             <Card.Text className="cardText">{card.description}</Card.Text>

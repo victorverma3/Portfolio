@@ -9,7 +9,7 @@ const Projects = () => {
       title: "SportsNews",
       image: "placeholder",
       description:
-        "Daily email newsletter built using Python, HTML, and CSS that scrapes the latest sports headlines and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run every morning at 9:00am est. Currently supported sports include basketball, college basketball, college football, cricket, football, and soccer.",
+        "Daily email newsletter built using Python, HTML, and Bootstrap CSS that scrapes the latest sports headlines and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run every morning at 9:00am est. Supported sports include basketball, college basketball, college football, cricket, football, and soccer.",
       link: "Github",
       url: "https://github.com/victorverma3/SportsNews",
     },

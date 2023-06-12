@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
+    <div className="navContainer">
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="">Victor Verma</Navbar.Brand>

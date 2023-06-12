@@ -9,5 +9,5 @@
 .aboutContent {
     width:100vw;
     min-height:81vh;
-    margin:25px 0px 55px 0px;
+    margin:25px auto 55px auto;
 }

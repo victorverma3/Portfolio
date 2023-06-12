@@ -39,7 +39,8 @@ const Projects = () => {
     {
       title: "Connect4",
       image: "placeholder",
-      description: "placeholder",
+      description:
+        'Used Python to create the game "Connect 4". Users can play against each other or against an AI capable of predicting moves using recursive backtracking. The moves are given by user inputs and the game ends in a win, loss, or tie. The difficulty of the AI is defined by how many moves it can "look ahead". Utilized object-oriented programming to make a board class, player class, and AI class.',
       link: "Github",
       url: "https://github.com/victorverma3/Connect4",
     },

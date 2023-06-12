@@ -1,6 +1,6 @@
 import React from "react";
 import "./Resume.css";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import resume from "../../images/resume.png";
 import PDFView from "../../components/pdfview/PDFView";
 
@@ -13,9 +13,9 @@ const Resume = () => {
       <div className="resumeContent">
         <h1 className="pageTitle">Resume</h1>
         <img src={resume} alt="image not loading"></img>
-      </div>
-      <div className="resumeView">
-        <PDFView pdf={resumePDF} />
+        <div className="resumeView">
+          <PDFView pdf={resumePDF} />
+        </div>
       </div>
       <div className="bottom">
         <Footer />

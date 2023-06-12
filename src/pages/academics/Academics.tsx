@@ -1,6 +1,6 @@
 import React from "react";
 import "./Academics.css";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 const Academics = () => {
   return (

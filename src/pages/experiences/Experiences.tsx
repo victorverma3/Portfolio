@@ -1,6 +1,6 @@
 import React from "react";
 import "./Experiences.css";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 const Experiences = () => {
   return (

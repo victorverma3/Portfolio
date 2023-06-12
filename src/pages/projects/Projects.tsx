@@ -16,7 +16,8 @@ const Projects = () => {
     {
       title: "MovieData",
       image: "placeholder",
-      description: "placeholder",
+      description:
+        "Software that utilizes the pandas and BeautifulSoup libraries in Python to efficiently compile movie metadata for all of the movies that a specified user has rated on the Letterboxd app. The movie's title, user rating, Letterboxd rating, Letterboxd rating count, genres, and country of origin are output into a CSV file, which is read to create summary histograms and a CSV containing summary statistics.",
       link: "Github",
       url: "https://github.com/victorverma3/MovieData",
     },

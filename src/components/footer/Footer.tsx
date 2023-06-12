@@ -9,15 +9,9 @@ const Footer = () => {
         <a>617-838-4092</a>
       </div>
       <div className="footerItem">
-        <a>|</a>
-      </div>
-      <div className="footerItem">
         <a className="footerLink" href="mailto:vpverm@bu.edu">
           vpverm@bu.edu
         </a>
-      </div>
-      <div className="footerItem">
-        <a>|</a>
       </div>
       <div className="footerItem">
         <a
@@ -27,9 +21,6 @@ const Footer = () => {
         >
           LinkedIn
         </a>
-      </div>
-      <div className="footerItem">
-        <a>|</a>
       </div>
       <div className="footerItem">
         <a

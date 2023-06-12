@@ -16,10 +16,6 @@
    width:25vw;
 }
 
-.footerItem:hover {
-   background-color:red;
-}
-
 .footerLink {
    text-decoration: none;
    color:black;

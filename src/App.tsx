@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/home/Home";
 import Experiences from "./pages/experiences/Experiences";
 import Academics from "./pages/academics/Academics";

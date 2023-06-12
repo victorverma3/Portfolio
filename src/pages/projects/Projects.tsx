@@ -9,7 +9,7 @@ const Projects = () => {
       title: "SportsNews",
       image: "placeholder",
       description:
-        "Daily email newsletter built using Python, HTML, and CSS that gathers the latest sports headlines and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run every morning at 9:00am est. Currently supported sports include basketball, college basketball, college football, cricket, football, and soccer.",
+        "Daily email newsletter built using Python, HTML, and CSS that scrapes the latest sports headlines and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run every morning at 9:00am est. Currently supported sports include basketball, college basketball, college football, cricket, football, and soccer.",
       link: "Github",
       url: "https://github.com/victorverma3/SportsNews",
     },
@@ -24,7 +24,7 @@ const Projects = () => {
       title: "IGBot",
       image: "placeholder",
       description:
-        "Simple script that utilizes a user's inputted Instagram data to create a CSV that lists all of the accounts the user is following on Instagram that do not follow the user back in return. Many scripts for this task already exist on the internet, but I decided to create my own that I find easy to follow and can be used by my friends who are unfamilliar with programming.",
+        "Simple script that utilizes the user's inputted Instagram data to create a CSV that lists all of the accounts the user is following on Instagram that do not follow the user back in return. Many scripts for this task already exist on the internet, but I decided to create my own that I find easy to follow and can be used by my friends who are unfamilliar with programming.",
       link: "Github",
       url: "https://github.com/victorverma3/IGBot",
     },

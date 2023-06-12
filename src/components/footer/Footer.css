@@ -1,7 +1,8 @@
 .bottom {
    display:flex;
    justify-content:space-around;
-   width:100%;
+   width:100vw;
+   margin:auto;
    background-color:white;
    padding:10px 0px 10px 0px;
    position:fixed;

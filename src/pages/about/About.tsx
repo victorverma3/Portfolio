@@ -18,7 +18,7 @@ const About = () => {
       url: "https://letterboxd.com/vic_verma/",
     },
     {
-      title: "Gym",
+      title: "Working Out",
       image: weights,
       description:
         "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate my split between Push Pull Legs (PPL) and Arnold.",

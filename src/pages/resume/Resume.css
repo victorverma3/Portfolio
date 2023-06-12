@@ -1,7 +1,7 @@
 .resumeContent {
-    width:100vw;
+    width:90;
     min-height:81vh;
-    margin:25px 0px 25px 0px;
+    margin:25px auto 25px auto;
 }
 
 .resumeView {

@@ -2,7 +2,7 @@ import React from "react";
 import "./Resume.css";
 import Footer from "../../components/Footer/Footer";
 import resume from "../../images/resume.png";
-import PDFView from "../../components/pdfview/PDFView";
+import PDFView from "../../components/PDFView/PDFView";
 
 const Resume = () => {
   const resumePDF = {

@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import Footer from "../../components/Footer/Footer";
 import CardList from "../../components/CardList/CardList";
-import paris from "../../images/vic.png";
+import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";
 import weights from "../../images/weights.png";
 import cube from "../../images/cube.png";
@@ -46,6 +46,15 @@ const About = () => {
           years and was a starter at left-guard at the varsity level for my high
           school team. Additionally, I enjoy hanging out with my friends, and
           watching movies with whoever is interested.
+        </p>
+        <p className="aboutBio">
+          I have a passion for learning, and often watch youtube videos on
+          topics ranging from computer science and physics, to the social
+          sciences and humanities as well. I especially love to keep up with
+          ideas in the fields of international relations and political science,
+          and I find it equally fascinating to learn about history. Sometimes I
+          even tell my friends that I wish I could experience college as an
+          infinite loop, and pick a new major everytime.
         </p>
         <p className="aboutBio">
           I have a passion for learning, and often watch youtube videos on

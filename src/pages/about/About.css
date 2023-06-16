@@ -3,7 +3,7 @@
     margin:auto;
     font-size:20px;
     text-align:justify;
-    padding-top:10px;
+    padding-top:25px;
 }
 
 .aboutContent {
@@ -13,5 +13,5 @@
 }
 
 .aboutPic {
-    width:75vw;
+    width:50vw;
 }

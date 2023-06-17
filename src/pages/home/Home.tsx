@@ -11,10 +11,8 @@ const Home = () => {
         <p className="homeLead">
           I'm Victor, a third-year student at Boston University majoring in
           mathematics and computer science and minoring in data science. I have
-          no idea what I want to do in the future, so I just create whatever
-          pops into my head. Sometimes these projects are educational and have a
-          functional purpose in my life; otherwise, I just work on whatever I am
-          feeling passionate about...
+          no idea what I want to do in the future, so I just learn and create
+          whatever I find interesting...
         </p>
       </div>
       <div className="bottom">

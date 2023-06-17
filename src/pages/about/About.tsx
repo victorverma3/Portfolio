@@ -41,30 +41,27 @@ const About = () => {
         <img className="aboutPic" src={paris} alt="image loading error"></img>
         <p className="aboutBio">
           My name is Victor Verma, and I'm a 20-year old who was born and raised
-          in central Massachusetts. Throughout my whole life I've loved sports,
-          primarily football, basketball, and soccer. I played football for 10
-          years and was a starter at left-guard at the varsity level for my high
-          school team. Additionally, I enjoy hanging out with my family and
-          friends, going to the gym, and watching movies, which I could truly
-          spend all day talking about.
+          in central Massachusetts. I live with my parents, my younger sister,
+          and our dog. Throughout my whole life I've loved sports, primarily
+          football, basketball, and soccer. I played football for 10 years and
+          was a starter at left-guard at the varsity level for my high school
+          team. I was awarded the varsity lineman of the week once, the junior
+          varsity player of the week twice, and the best hit of the week once,
+          all of which were decided by my coaches. I'm especially proud to have
+          been named to the central mass all-star team in 7th grade as a
+          linebacker.
         </p>
         <p className="aboutBio">
-          I enjoy just about anything that is based upon creativity and
-          problem-solving, and sometimes I get so invested that I don't even
-          notice the time go by. I've spent hours on end writing, building
-          legos, and even reading news stories and informational articles. I
-          strongly believe in spending time doing what you're passionate about,
-          and so you'll rarely find me doing something that doesn't tie into a
-          larger aspect of my life.
-        </p>
-        <p className="aboutBio">
-          I have a passion for learning, and often watch youtube videos on
-          topics ranging from computer science and physics, to the social
-          sciences and humanities as well. I especially love to keep up with
-          ideas in the fields of international relations and political science,
-          and I find it equally fascinating to learn about history. Sometimes I
-          even tell my friends that I wish I could experience college as an
-          infinite loop, and pick a new major everytime.
+          I have a passion for learning. I created this website on the weekends
+          while working 40 hours as a research assistant during the week, and I
+          still wish that I had time to learn even more things. I like to watch
+          youtube videos on topics ranging from computer science, mathematics,
+          and physics, to the social sciences and humanities as well. I
+          especially love to keep up with ideas in the fields of international
+          relations and political science, and I find it equally fascinating to
+          learn about history. I actually tell everyone that I wish I could
+          experience college as an infinite loop and pick a new major in every
+          pass.
         </p>
         <h2 className="pageSubTitle">Hobbies</h2>
         <CardList cards={aboutCards} />

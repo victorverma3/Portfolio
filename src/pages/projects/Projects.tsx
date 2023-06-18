@@ -2,6 +2,7 @@ import React from "react";
 import "./Projects.css";
 import Footer from "../../components/Footer/Footer";
 import CardList from "../../components/CardList/CardList";
+import website from "../../images/website.png";
 import sports from "../../images/sports.png";
 import reel from "../../images/reel.png";
 import bot from "../../images/bot.png";
@@ -12,10 +13,18 @@ import Disclaimer from "../../components/Disclaimer/Disclaimer";
 const Projects = () => {
   const projectCards = [
     {
+      title: "Portfolio Website",
+      image: website,
+      description:
+        "Designed and created my personal portfolio website using TypeScript, HTML, and Bootstrap CSS in a React framework. Primarily used YouTube, Google, and ChatGPT to independently learn TypeScript and React and expand my previous knowledge of HTML and CSS. Deployed using Vercel in order to make the website accessible to the internet, and periodically receives maintenance and improvements. ",
+      link: "Github",
+      url: "https://github.com/victorverma3/Portfolio",
+    },
+    {
       title: "SportsNews",
       image: sports,
       description:
-        "Daily email newsletter built using Python, HTML, and Bootstrap CSS that scrapes the latest headlines in sports and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run daily at 9:00am est. Currently supported sports include basketball, college basketball, college football, cricket, football, and soccer, with further sports coverage in development.",
+        "Daily email newsletter built using Python, HTML, and CSS that scrapes the latest headlines in sports and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run daily at 9:00am est. Currently supported sports include basketball, college basketball, college football, cricket, football, and soccer, with further sports coverage in development.",
       link: "Github",
       url: "https://github.com/victorverma3/SportsNews",
     },
@@ -28,7 +37,7 @@ const Projects = () => {
       url: "https://github.com/victorverma3/MovieData",
     },
     {
-      title: "IGBot",
+      title: "IG Bot",
       image: bot,
       description:
         "Simple script that utilizes the user's inputted Instagram data to create a CSV that lists all of the accounts the user is following on Instagram that do not follow the user back in return. Many scripts for this task already exist on the internet, but I decided to create my own version that is customized to my needs and can be used easily by friends, especially those who are unfamilliar with programming.",

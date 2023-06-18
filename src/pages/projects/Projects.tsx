@@ -7,6 +7,7 @@ import reel from "../../images/reel.png";
 import bot from "../../images/bot.png";
 import puzzle from "../../images/8puzzle.png";
 import connect4 from "../../images/connect4.png";
+import Disclaimer from "../../components/Disclaimer/Disclaimer";
 
 const Projects = () => {
   const projectCards = [
@@ -56,6 +57,7 @@ const Projects = () => {
       <div className="projectContent">
         <h1 className="pageTitle">Projects</h1>
         <CardList cards={projectCards} />
+        <Disclaimer />
       </div>
       <div className="bottom">
         <Footer />

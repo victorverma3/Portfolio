@@ -6,6 +6,7 @@ import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";
 import weights from "../../images/weights.png";
 import cube from "../../images/cube.png";
+import Disclaimer from "../../components/Disclaimer/Disclaimer";
 
 const About = () => {
   const aboutCards = [
@@ -65,6 +66,7 @@ const About = () => {
         </p>
         <h2 className="pageSubTitle">Hobbies</h2>
         <CardList cards={aboutCards} />
+        <Disclaimer />
       </div>
       <div className="bottom">
         <Footer />

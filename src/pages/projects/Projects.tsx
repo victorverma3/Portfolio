@@ -37,10 +37,10 @@ const Projects = () => {
       url: "https://github.com/victorverma3/MovieData",
     },
     {
-      title: "IG Bot",
+      title: "FakeFriends",
       image: bot,
       description:
-        "Simple script that utilizes the user's inputted Instagram data to create a CSV that lists all of the accounts the user is following on Instagram that do not follow the user back in return. Many scripts for this task already exist on the internet, but I decided to create my own version that is customized to my needs and can be used easily by friends, especially those who are unfamilliar with programming.",
+        "Simple script that analyzes the user's inputted Instagram data and creates a CSV that lists the user's \"fakes\" (accounts that the user follows, but don't follow the user back) and \"fans\" (accounts that follow the user, but the user doesn't follow back. A future goal is for the script to gather the user's following and follower data with just the username as input (though only with the consent of the user).  ",
       link: "Github",
       url: "https://github.com/victorverma3/IGBot",
     },

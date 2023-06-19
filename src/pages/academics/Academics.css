@@ -18,15 +18,10 @@
 }
 
 .schoolInfo {
-    width:60vw;
+    width:75vw;
+    margin:auto;
     text-align:left;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-}
-
-.schoolActivities {
-    width:45vw;
-    margin:auto;
-    text-align:left;
 }

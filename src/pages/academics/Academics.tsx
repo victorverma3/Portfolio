@@ -74,39 +74,42 @@ const Academics = () => {
                 <Card.Text>
                   <ul>
                     <li>
-                      Applied Abstract Algebra, Differential Equations, Linear
-                      Algebra, Multivariate Calculus, and Probability.
+                      AP Calculus BC, AP Statistics, and Honors Mathematical
+                      Modeling.
                     </li>
-                    <li>
-                      Combinatoric Structures, Computer Systems, Concepts of
-                      Programming Languages, Introduction to Analysis of
-                      Algorithms, Introduction to Computer Science I & II,
-                      Probability in Computing, and Software Engineering.
-                    </li>
-                    <li>Introduction to Machine Learning and AI.</li>
                   </ul>
                 </Card.Text>
                 <Card.Subtitle>Extracurriculars</Card.Subtitle>
                 <Card.Text>
                   <ul>
-                    <li></li>
+                    <li>Varsity Football.</li>
+                    <li>Société Honoraire de Français.</li>
+                    <li>Lab Assistant for Honors Chemistry.</li>
+                    <li>Junior Varsity Track and Field.</li>
                   </ul>
                 </Card.Text>
                 <Card.Subtitle>Accomplishments</Card.Subtitle>
                 <Card.Text>
                   <ul>
-                    <li>4.938 GPA</li>
+                    <li>4.938 GPA and AP Scholar with Distinction.</li>
                     <li>
-                      College of Arts and Sciences Dean's List (Spring 2023,
-                      Fall 2022, Spring 2022, Fall 2021)
+                      1 of 8 recipients of the Town of Shrewsbury Scholarship.
+                    </li>
+                    <li>
+                      Varsity Football Lineman of the Week (voted by the
+                      coaches).
+                    </li>
+                    <li>
+                      Junior Varsity Football Player of the Week (2x) (voted by
+                      the coaches).
                     </li>
                   </ul>
                 </Card.Text>
               </Card.Body>
             </Card>
           </div>
-          <div className="awards"></div>
         </div>
+        <div className="awards"></div>
       </div>
       <div className="bottom">
         <Footer />

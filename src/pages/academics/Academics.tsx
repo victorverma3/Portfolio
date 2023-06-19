@@ -82,8 +82,8 @@ const Academics = () => {
                 <Card.Subtitle>Extracurriculars</Card.Subtitle>
                 <Card.Text>
                   <ul>
-                    <li>Varsity Football.</li>
-                    <li>Société Honoraire de Français.</li>
+                    <li>Varsity Football Starter.</li>
+                    <li>Member of the Société Honoraire de Français.</li>
                     <li>Lab Assistant for Honors Chemistry.</li>
                     <li>Junior Varsity Track and Field.</li>
                   </ul>

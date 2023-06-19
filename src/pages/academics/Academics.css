@@ -12,7 +12,7 @@
 
 .school {
     width:90vw;
-    margin: 20px auto;
+    margin:20px auto;
     display:flex;
     flex-direction:row;
 }

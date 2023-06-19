@@ -11,12 +11,12 @@
     align-content:space-around;
 }
 
-.cardText {
-    text-align:justify;
-}
-
 .cards {
     width:18rem;
     border:none;
     margin:10px 0px 10px 0px;
+}
+
+.cardText {
+    text-align:justify;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Academics.css";
+import "./Education.css";
 import Footer from "../../components/Footer/Footer";
 import { Card } from "react-bootstrap";
 

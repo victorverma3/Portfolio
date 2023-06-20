@@ -4,6 +4,7 @@
 
 .expCards {
     width: 33rem;
+    border: 1px solid lightgray;
     margin-block: 10px;
 }
 

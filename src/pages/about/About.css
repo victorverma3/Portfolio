@@ -14,5 +14,6 @@
 
 .aboutPic {
     width: 50vw;
-    padding-block: 10px;
+    border: 1px solid lightgray;
+    margin-block: 10px;
 }

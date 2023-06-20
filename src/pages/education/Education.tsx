@@ -13,7 +13,7 @@ const Education = () => {
         <h1 className="pageTitle">Education</h1>
         <div className="school">
           <div className="schoolInfo">
-            <Card>
+            <Card className="eduCard">
               <Card.Header as="h5">Boston University</Card.Header>
               <Card.Body>
                 <Card.Title>
@@ -80,7 +80,7 @@ const Education = () => {
         </div>
         <div className="school">
           <div className="schoolInfo">
-            <Card>
+            <Card className="eduCard">
               <Card.Header as="h5">Shrewsbury High School</Card.Header>
               <Card.Body>
                 <Card.Title>High School Diploma</Card.Title>

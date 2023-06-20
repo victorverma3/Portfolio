@@ -5,7 +5,8 @@
 }
 
 .resumePic {
-    padding-block: 10px;
+    margin-block: 10px;
+    border: 1px solid lightgray;
 }
 
 .resumeView {

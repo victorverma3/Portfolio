@@ -14,7 +14,7 @@ const About = () => {
       title: "Watching Movies",
       image: movies,
       description:
-        "I like watching movies in my free time, mostly from any genre except romance. I use the Letterboxd app to log and rate the movies I watch.",
+        "I like watching movies in my free time, mostly from any genre. I use the Letterboxd app to log, rate, and rank the movies that I watch.",
       link: "Letterboxd",
       url: "https://letterboxd.com/vic_verma/",
     },

@@ -24,7 +24,7 @@ const ExpCards = ({ cards }: ExpCardProps) => {
             <Card.Title>{card.employer}</Card.Title>
             <Card.Subtitle>{card.dates}</Card.Subtitle>
             <Card.Text>{card.location}</Card.Text>
-            <Card.Text>{card.description}</Card.Text>
+            <Card.Text className="desc">{card.description}</Card.Text>
           </Card.Body>
         </Card>
       ))}

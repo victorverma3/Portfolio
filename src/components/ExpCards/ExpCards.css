@@ -1,6 +1,10 @@
+.desc {
+    text-align:justify;
+}
+
 .expCards {
+    width:33rem;
     margin:10px 0px 10px 0px;
-    width:40vw;
 }
 
 .expCardsList {

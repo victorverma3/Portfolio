@@ -3,8 +3,8 @@ import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/home/Home";
-import Experiences from "./pages/experiences/Experiences";
-import Academics from "./pages/academics/Academics";
+import Experience from "./pages/experience/Experience";
+import Education from "./pages/education/Education";
 import Projects from "./pages/projects/Projects";
 import Resume from "./pages/resume/Resume";
 import About from "./pages/about/About";
@@ -20,11 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/experiences",
-        element: <Experiences />,
+        element: <Experience />,
       },
       {
-        path: "/academics",
-        element: <Academics />,
+        path: "/education",
+        element: <Education />,
       },
       {
         path: "/projects",

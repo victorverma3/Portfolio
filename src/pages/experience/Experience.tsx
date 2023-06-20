@@ -59,6 +59,7 @@ const Experiences = () => {
       <div className="experienceContent">
         <h1 className="pageTitle">Experience</h1>
         <ExpCards cards={expCards} />
+        <h2 className="pageSubtitle">Skills</h2>
       </div>
       <div className="bottom">
         <Footer />

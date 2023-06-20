@@ -1,12 +1,12 @@
 import React from "react";
 import "./Error.css";
-import image from "../../images/tom.jpg";
+import tom from "../../images/tom.png";
 import Footer from "../../components/Footer/Footer";
 
 const Error = () => {
   return (
     <>
-      <img className="errorImage" src={image} alt="error loading image"></img>
+      <img className="errorImage" src={tom} alt="error loading image"></img>
       <Footer />
     </>
   );

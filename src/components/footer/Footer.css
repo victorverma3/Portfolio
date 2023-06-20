@@ -1,25 +1,25 @@
 .bottom {
-   display:flex;
-   justify-content:space-around;
-   width:100vw;
-   margin:auto;
-   background-color:white;
-   padding:10px 0px 10px 0px;
-   position:fixed;
-   bottom:0;
+   display: flex;
+   justify-content: space-around;
+   width: 100vw;
+   margin: auto;
+   background-color: white;
+   padding-block: 10px;
+   position: fixed;
+   bottom: 0;
  }
 
 .footer {
-   font-size:12px;
+   font-size: 12px;
 }
 
 .footerItem {
-   width:25vw;
+   width: 25vw;
 }
 
 .footerLink {
    text-decoration: none;
-   color:black;
+   color: black;
 }
 .footerLink:hover {
    text-decoration: underline;

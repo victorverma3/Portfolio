@@ -1,17 +1,17 @@
 .aboutBio {
-    width:75vw;
-    margin:auto;
-    font-size:20px;
-    text-align:justify;
-    padding-top:25px;
+    width: 75vw;
+    margin: auto;
+    font-size: 20px;
+    text-align: justify;
+    padding-top: 25px;
 }
 
 .aboutContent {
-    width:100vw;
-    min-height:81vh;
-    margin:25px auto 55px auto;
+    width: 100vw;
+    min-height: 81vh;
+    margin: 25px auto 55px auto;
 }
 
 .aboutPic {
-    width:50vw;
+    width: 50vw;
 }

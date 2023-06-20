@@ -1,13 +1,13 @@
 .resumeContent {
-    width:100vw;
-    min-height:81vh;
-    margin:25px auto 55px auto;
+    width: 100vw;
+    min-height: 81vh;
+    margin: 25px auto 55px auto;
 }
 
 .resumePic {
-    padding:10px 0px 10px 0px;
+    padding-block: 10px;
 }
 
 .resumeView {
-    padding: 10px auto;
+    padding-block: 10px;
 }

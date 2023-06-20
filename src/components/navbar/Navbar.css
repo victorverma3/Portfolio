@@ -1,12 +1,12 @@
 .navContainer {
-   width:100vw;
-   margin:auto;
+   width: 100vw;
+   margin: auto;
 }
 
 .navLink {
     text-decoration: none;
     color: black;
-    font-size:18px;
+    font-size: 18px;
  }
 
  .navLink:hover {

@@ -2,6 +2,9 @@ import React from "react";
 import "./Education.css";
 import Footer from "../../components/Footer/Footer";
 import { Card } from "react-bootstrap";
+import bueast from "../../images/bueast.png";
+import comlawn from "../../images/comlawn.png";
+import shs from "../../images/shs.png";
 
 const Education = () => {
   return (
@@ -62,6 +65,10 @@ const Education = () => {
               </Card.Body>
             </Card>
           </div>
+          <div className="schoolPicContainer">
+            <img className="schoolPic" src={comlawn}></img>
+            <img className="schoolPic" src={bueast}></img>
+          </div>
         </div>
         <div className="school">
           <div className="schoolInfo">
@@ -107,6 +114,9 @@ const Education = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
+          </div>
+          <div className="schoolPicContainer">
+            <img className="schoolPic" src={shs}></img>
           </div>
         </div>
       </div>

@@ -6,15 +6,26 @@
 
 .school {
     width: 90vw;
-    margin: 20px auto;
+    margin: auto;
+    padding-block: 10px;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .schoolInfo {
-    width: 75vw;
-    margin: auto;
+    width: 35rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.schoolPic {
+    width: 25rem;
+}
+
+.schoolPicContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

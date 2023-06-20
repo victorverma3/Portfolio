@@ -3,9 +3,10 @@ import "./ExpCards.css";
 import { Card } from "react-bootstrap";
 
 interface Card {
-  employer: string;
   title: string;
+  employer: string;
   dates: string;
+  location: string;
   description: string;
 }
 
@@ -18,10 +19,11 @@ const ExpCards = ({ cards }: ExpCardProps) => {
     <div className="expCardsList">
       {cards.map((card) => (
         <Card className="expCards">
-          <Card.Header as="h5">{card.employer}</Card.Header>
+          <Card.Header as="h5">{card.title}</Card.Header>
           <Card.Body>
-            <Card.Title>{card.title}</Card.Title>
-            <Card.Text>{card.dates}</Card.Text>
+            <Card.Title>{card.employer}</Card.Title>
+            <Card.Subtitle>{card.dates}</Card.Subtitle>
+            <Card.Text>{card.location}</Card.Text>
             <Card.Text>{card.description}</Card.Text>
           </Card.Body>
         </Card>

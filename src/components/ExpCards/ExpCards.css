@@ -1,9 +1,13 @@
 .expCards {
     margin:10px 0px 10px 0px;
+    width:40vw;
 }
 
 .expCardsList {
-    width:75vw;
+    width:90vw;
     margin:20px auto;
     text-align:left;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
 }

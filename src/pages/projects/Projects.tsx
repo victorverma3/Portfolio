@@ -24,7 +24,7 @@ const Projects = () => {
       title: "SportsNews",
       image: sports,
       description:
-        "Daily email newsletter built using Python, HTML, and CSS that scrapes the latest headlines in sports and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run daily at 9:00am est. Currently supported sports include basketball, college basketball, college football, cricket, football, and soccer, with further sports coverage in development.",
+        "Daily email newsletter built using Python, HTML, and CSS that scrapes the latest headlines in sports and sends them in email format to users on the mailing list. Deployed using Heroku in order to automate the script to run daily at 9:00am est. Currently supports basketball, college basketball, college football, cricket, football, and soccer, with additional sports coverage implemented over time .",
       link: "Github",
       url: "https://github.com/victorverma3/SportsNews",
     },
@@ -32,7 +32,7 @@ const Projects = () => {
       title: "MovieData",
       image: reel,
       description:
-        "Software that utilizes the pandas and BeautifulSoup libraries in Python to efficiently compile movie metadata for all of the movies that a specified user has rated on the Letterboxd app. The movie's title, user rating, Letterboxd rating, Letterboxd rating count, genres, and country of origin are output into a CSV file, which is read to create summary histograms and a CSV containing summary statistics.",
+        "Software that utilizes the pandas and BeautifulSoup libraries in Python to efficiently compile the movie metadata for all movies that a specified user has rated on the Letterboxd app. The movie's title, user rating, Letterboxd rating, Letterboxd rating count, genres, and country of origin are output into a CSV file, which is then read to create summary histograms and a CSV file with summary statistics.",
       link: "Github",
       url: "https://github.com/victorverma3/MovieData",
     },
@@ -40,7 +40,7 @@ const Projects = () => {
       title: "FakeFriends",
       image: bot,
       description:
-        "Simple script that analyzes the user's inputted Instagram data and creates a CSV that lists the user's \"fakes\" (accounts that the user follows, but don't follow the user back) and \"fans\" (accounts that follow the user, but the user doesn't follow back. A future goal is for the script to gather the user's following and follower data with just the username as input (though only with the consent of the user).  ",
+        "Simple script that analyzes the user's inputted Instagram data and creates a CSV that lists the user's \"fakes\" (accounts that the user follows, but don't follow the user back) and \"fans\" (accounts that follow the user, but the user doesn't follow back. A future goal is for the script to gather the user's following and follower data with just the username as input (only with the consent of the user).  ",
       link: "Github",
       url: "https://github.com/victorverma3/IGBot",
     },
@@ -56,7 +56,7 @@ const Projects = () => {
       title: "Connect4",
       image: connect4,
       description:
-        'Used Python to create the game "Connect 4" in which users can play against each other or against an AI capable of predicting moves using recursive backtracking. The moves are given by user inputs and the game ends in a win, loss, or tie. The difficulty of the AI is defined by how many moves it can "look ahead". Utilized object-oriented programming to make a board class, player class, and AI class.',
+        'Used Python to create the game "Connect 4" in which users can play against each other or against an AI capable of predicting moves using recursive backtracking. The moves are given by user inputs and the game ends in a win, loss, or tie. The difficulty of the AI is defined by how many moves it can "look ahead". The board, player, and AI classes are created using object-oriented programming.',
       link: "Github",
       url: "https://github.com/victorverma3/Connect4",
     },

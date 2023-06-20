@@ -66,8 +66,16 @@ const Education = () => {
             </Card>
           </div>
           <div className="schoolPicContainer">
-            <img className="schoolPic" src={comlawn}></img>
-            <img className="schoolPic" src={bueast}></img>
+            <img
+              className="schoolPic"
+              src={comlawn}
+              alt="image not loading"
+            ></img>
+            <img
+              className="schoolPic"
+              src={bueast}
+              alt="image not loading"
+            ></img>
           </div>
         </div>
         <div className="school">
@@ -116,7 +124,7 @@ const Education = () => {
             </Card>
           </div>
           <div className="schoolPicContainer">
-            <img className="schoolPic" src={shs}></img>
+            <img className="schoolPic" src={shs} alt="image not loading"></img>
           </div>
         </div>
       </div>

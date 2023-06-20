@@ -20,3 +20,8 @@
 .cardText {
     text-align: justify;
 }
+
+.titleLink {
+    text-decoration: none;
+    color: black;
+}

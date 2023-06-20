@@ -21,7 +21,11 @@ const CardList = ({ cards }: CardListProps) => {
         <Card className="cards">
           <Card.Img variant="top" src={card.image} alt="image loading error" />
           <Card.Body>
-            <Card.Title>{card.title}</Card.Title>
+            <Card.Title>
+              <a className="titleLink" href={card.url} target="_blank">
+                {card.title}
+              </a>
+            </Card.Title>
             <Card.Text className="cardText">{card.description}</Card.Text>
             <Button
               className="cardButton"

@@ -35,7 +35,7 @@ const Experiences = () => {
       dates: "June 2021 - January 2022",
       location: "Northborough, Massachusetts, United States",
       description:
-        "Responsible for ensuring the packages were sorted, organized, and moved efficiently between stations. Sorted, scanned, and stacked 5000+ packages on pallets, helping to get customer orders ready for delivery.",
+        "Worked as part of a team responsible for ensuring that 30000+ packages were sorted, organized, and moved efficiently between stations during each shift. Sorted packages on the conveyor line and identified package destinations. Physically stacked packages onto wooden pallets and wrapped them in preparation for delivery.",
     },
     {
       title: "Hospital Volunteer",
@@ -43,7 +43,7 @@ const Experiences = () => {
       dates: "July 2019 - August 2019",
       location: "Marlborough, Massachusetts, United States",
       description:
-        "Stocked and transported hospital supplies, including wheelchairs and beds. Supported patients in the hospital by providing food, water, reading material, and assistance with any physical tasks. Spent quality time with the patients and fostered meaningful relationships.",
+        "Stocked and transported hospital supplies, including personal protective equipment, wheelchairs, and beds. Supported patients in the hospital by providing food, water, reading material, support cards, and assistance with any physical tasks. Spent quality time with individual patients and fostered meaningful relationships.",
     },
     {
       title: "Math Tutor",
@@ -51,7 +51,7 @@ const Experiences = () => {
       dates: "February 2019 - August 2019",
       location: "Shrewsbury, Massachusetts, United States",
       description:
-        "Tutored elementary and middle school math students, helping them with homework and preparing for competitive tests. Worked with individual students to develop strategies for better learning. Served as a friend, guide, and mentor to the students and strived to cultivate a love for math.",
+        "Tutored elementary and middle school math students, helping them with homework, explaining relevant math concepts, and preparing them for competitive tests. Worked with students to develop strategies for better independent learning. Served as both a friend and mentor to students while striving to cultivate a love for math.",
     },
   ];
   return (

@@ -12,7 +12,7 @@ const Resume = () => {
     <>
       <div className="resumeContent">
         <h1 className="pageTitle">Resume</h1>
-        <img src={resume} alt="image not loading"></img>
+        <img className="resumePic" src={resume} alt="image not loading"></img>
         <div className="resumeView">
           <PDFView pdf={resumePDF} />
         </div>

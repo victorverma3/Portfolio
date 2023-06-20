@@ -3,11 +3,11 @@ import "./Education.css";
 import Footer from "../../components/Footer/Footer";
 import { Card } from "react-bootstrap";
 
-const Academics = () => {
+const Education = () => {
   return (
     <>
-      <div className="academicContent">
-        <h1 className="pageTitle">Academics</h1>
+      <div className="educationContent">
+        <h1 className="pageTitle">Education</h1>
         <div className="school">
           <div className="schoolInfo">
             <Card>
@@ -109,7 +109,6 @@ const Academics = () => {
             </Card>
           </div>
         </div>
-        <div className="awards"></div>
       </div>
       <div className="bottom">
         <Footer />
@@ -118,4 +117,4 @@ const Academics = () => {
   );
 };
 
-export default Academics;
+export default Education;

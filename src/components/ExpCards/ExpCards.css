@@ -9,7 +9,7 @@
 
 .expCardsList {
     width:90vw;
-    margin:20px auto;
+    margin:auto;
     text-align:left;
     display:flex;
     flex-flow:row wrap;

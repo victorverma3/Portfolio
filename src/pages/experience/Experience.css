@@ -3,3 +3,22 @@
     min-height: 81vh;
     margin: 25px auto 55px auto;
 }
+
+.skillsList {
+    width: 65rem;
+    margin: auto;
+    padding: 20px;
+    text-align: start;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+
+.skillsTitle {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1172px) {
+    .skillsList {
+        width: 30rem;
+    }
+}

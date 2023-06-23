@@ -38,6 +38,22 @@
     justify-content: space-around;
 }
 
+@media screen and (max-width: 1208px) {
+    .schoolPic {
+        width: 15rem;
+        margin: auto;
+        border: 1px solid lightgrey;
+    }
+
+    .schoolPicContainer {
+        width: 38rem;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
 @media screen and (min-width: 1440px) {
     .schoolInfo {
         width: 42rem;

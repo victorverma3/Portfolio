@@ -11,7 +11,7 @@ const Experiences = () => {
       dates: "January 2023 - Present",
       location: "Boston, Massachusetts, United States",
       description:
-        "Utilizing pandas, the Google Search API, web scraping, and ChatGPT to build Python software to automate the extraction of the biodata of 150,000 U.S. State Representative Candidates across all 50 states from 1970 to 2020. Working under Professor Jetson Leder-Luis of the Boston University Questrom School of Business.",
+        "Utilizing pandas, the Google Search API, web scraping, and the ChatGPT API to build Python software to automate the extraction of the biodata of 150,000 U.S. State Representative Candidates across all 50 states from 1970 to 2020. Working under Professor Jetson Leder-Luis of the Boston University Questrom School of Business.",
     },
     {
       title: "Computer Assistant/Programmer",

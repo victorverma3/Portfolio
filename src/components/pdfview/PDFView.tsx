@@ -26,7 +26,7 @@ const PDFView = ({ pdf }: PDFDownloadProps) => {
     });
   };
   return (
-    <Button variant="dark" onClick={onButtonClick}>
+    <Button className="pdfButton" variant="dark" onClick={onButtonClick}>
       View as PDF
     </Button>
   );

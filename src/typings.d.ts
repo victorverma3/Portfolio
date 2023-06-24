@@ -5,7 +5,7 @@ declare module 'Footer' {
   export default Footer;
 }
 
-declare module 'CardList' {
+declare module 'CList' {
   interface Card {
     title: string;
     image: string;
@@ -13,11 +13,11 @@ declare module 'CardList' {
     link: string;
     url: string;
   }
-  interface CardListProps {
+  interface CListProps {
     cards: Card[];
   }
-  const CardList: React.FunctionComponent<CardListProps>;
-  export default CardList;
+  const CList: React.FunctionComponent<CListProps>;
+  export default CList;
 }
 
 declare module 'PDFView' {

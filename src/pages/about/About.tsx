@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import Footer from "../../components/footer/Footer";
-import CardList from "../../components/cardlist/CardList";
+import CList from "../../components/CList/CList";
 import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";
 import weights from "../../images/weights.png";
@@ -65,7 +65,7 @@ const About = () => {
           pass.
         </p>
         <h2 className="pageSubTitle">Hobbies</h2>
-        <CardList cards={aboutCards} />
+        <CList cards={aboutCards} />
         <Disclaimer />
       </div>
       <div className="bottom">

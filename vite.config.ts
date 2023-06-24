@@ -8,7 +8,7 @@ export default defineConfig({
 }, 
 root: './',
 build: {
-    outDir: './build',
+    outDir: './dist',
 },
 optimizeDeps: {
     esbuildOptions: {

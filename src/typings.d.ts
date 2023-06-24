@@ -19,3 +19,14 @@ declare module 'CardList' {
   const CardList: React.FunctionComponent<CardListProps>;
   export default CardList;
 }
+
+declare module 'PDFView' {
+  interface PDF {
+    source: string;
+  }
+  interface PDFDownloadProps {
+    pdf: PDF;
+  }
+  const PDFView: React.FunctionComponent<PDFDownloadProps>;
+  export default PDFView;
+}

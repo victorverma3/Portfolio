@@ -1,4 +1,3 @@
-import React from "react";
 import "./PDFView.css";
 import Button from "react-bootstrap/Button";
 

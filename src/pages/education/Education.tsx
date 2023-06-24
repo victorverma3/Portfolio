@@ -1,4 +1,3 @@
-import React from "react";
 import "./Education.css";
 import Footer from "../../components/Footer/Footer";
 import { Card } from "react-bootstrap";

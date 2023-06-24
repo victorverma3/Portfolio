@@ -1,4 +1,3 @@
-import React from "react";
 import "./Resume.css";
 import Footer from "../../components/Footer/Footer";
 import resume from "../../images/resume.png";

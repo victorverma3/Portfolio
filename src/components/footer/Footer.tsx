@@ -1,6 +1,4 @@
-import React from "react";
 import "./Footer.css";
-import ListGroup from "react-bootstrap/ListGroup";
 
 const Footer = () => {
   return (

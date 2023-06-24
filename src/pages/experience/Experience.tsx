@@ -1,4 +1,3 @@
-import React from "react";
 import "./Experience.css";
 import Footer from "../../components/Footer/Footer";
 import ExpCards from "../../components/ExpCards/ExpCards";

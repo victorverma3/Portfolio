@@ -1,7 +1,5 @@
-import React from "react";
 import "./Home.css";
 import Footer from "../../components/Footer/Footer";
-import { Card } from "react-bootstrap";
 
 const Home = () => {
   return (

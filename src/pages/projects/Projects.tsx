@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.css";
 import Footer from "../../components/footer/Footer";
-import CardList from "../../components/CardList/CardList";
+import CardList from "../../components/cardlist/CardList";
 import website from "../../images/website.png";
 import sports from "../../images/sports.png";
 import reel from "../../images/reel.png";

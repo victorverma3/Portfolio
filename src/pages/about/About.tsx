@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import Footer from "../../components/footer/Footer";
-import CardList from "../../components/CardList/CardList";
+import CardList from "../../components/cardlist/CardList";
 import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";
 import weights from "../../images/weights.png";

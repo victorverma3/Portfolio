@@ -10,3 +10,17 @@
   margin-top: 20px;
   font-size: 35px;
 }
+
+.pageTitle {
+  font-size: 45px;
+}
+
+@media screen and (min-width: 1440px) {
+  .pageSubTitle {
+    font-size: 50px;
+  }
+
+  .pageTitle {
+    font-size: 65px;
+  }
+}

@@ -1,7 +1,3 @@
 declare module '*.png'
 
-declare module 'Footer' {
-  const Footer: React.FC;
-
-  export default Footer;
-}
+declare const Footer: React.FunctionComponent;

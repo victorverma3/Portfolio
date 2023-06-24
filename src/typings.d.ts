@@ -1,10 +1,7 @@
 declare module '*.png'
 
 declare module 'Footer' {
-  interface FooterProps {
-  }
-
-  const Footer: React.FC<FooterProps>;
+  const Footer: React.FC;
 
   export default Footer;
 }

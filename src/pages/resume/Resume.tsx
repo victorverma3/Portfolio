@@ -1,8 +1,8 @@
 import React from "react";
 import "./Resume.css";
-import Footer from "Footer";
+import Footer from "../../components/footer/Footer";
 import resume from "../../images/resume.png";
-import PDFView from "PDFView";
+import PDFView from "../../components/PDFView/PDFView";
 
 const Resume = () => {
   const resumePDF = {

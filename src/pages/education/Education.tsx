@@ -1,6 +1,6 @@
 import React from "react";
 import "./Education.css";
-import Footer from "Footer";
+import Footer from "../../components/footer/Footer";
 import { Card } from "react-bootstrap";
 import bueast from "../../images/bueast.png";
 import comlawn from "../../images/comlawn.png";

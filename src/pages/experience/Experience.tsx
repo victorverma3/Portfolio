@@ -1,6 +1,6 @@
 import React from "react";
 import "./Experience.css";
-import Footer from "../../components/Footer/Footer";
+import Footer from "Footer";
 import ExpCards from "../../components/ExpCards/ExpCards";
 
 const Experiences = () => {

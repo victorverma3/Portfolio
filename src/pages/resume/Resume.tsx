@@ -1,6 +1,6 @@
 import React from "react";
 import "./Resume.css";
-import Footer from "../../components/Footer/Footer";
+import Footer from "Footer";
 import resume from "../../images/resume.png";
 import PDFView from "../../components/PDFView/PDFView";
 

@@ -16,7 +16,7 @@ const Projects = () => {
       title: "Portfolio Website",
       image: website,
       description:
-        "Designed and created my personal portfolio website using TypeScript, HTML, and Bootstrap CSS in a Vite + React framework. Primarily used YouTube, Google, and ChatGPT to independently learn TypeScript and React and expand my previous knowledge of HTML and CSS. Deployed using Vercel in order to make the website accessible to the internet and periodically receives maintenance and improvements. ",
+        "Designed and created my personal portfolio website using TypeScript, HTML, and Bootstrap CSS in a Vite + React framework. Primarily used YouTube, Google, and ChatGPT to independently learn TypeScript and React and expand my previous knowledge of HTML and CSS. Deployed using Vercel in order to make the website accessible to the internet, and periodically receives maintenance and improvements. ",
       link: "Github",
       url: "https://github.com/victorverma3/Portfolio",
     },

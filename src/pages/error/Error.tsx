@@ -1,3 +1,4 @@
+import React from "react";
 import "./Error.css";
 import tom from "../../images/tom.png";
 import Footer from "../../components/Footer/Footer";

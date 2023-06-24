@@ -1,3 +1,4 @@
+import React from "react";
 import "./About.css";
 import Footer from "../../components/Footer/Footer";
 import CardList from "../../components/CardList/CardList";

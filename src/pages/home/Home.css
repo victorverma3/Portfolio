@@ -36,7 +36,7 @@
 @media screen and (min-width: 390px) and (max-width: 768px) {
     .homeLead {
         font-size: 20px;
-        text-align: start;
+        text-align: justify;
     }
 
     .homeTitle {

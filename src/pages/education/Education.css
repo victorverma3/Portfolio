@@ -40,12 +40,12 @@
 
 @media screen and (max-width: 499) {
     .schoolPic {
-        width: 18rem;
+        width: 90vw;
         margin-top: 20px;
     }
 
     .schoolPicContainer {
-        width: 38rem;
+        width: 90vw;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -62,7 +62,7 @@
     }
 
     .schoolPic {
-        width: 40%;
+        width: 45%;
     }
 
     .schoolPicContainer {

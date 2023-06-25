@@ -9,12 +9,9 @@
    bottom: 0;
  }
 
-.footer {
-   font-size: 12px;
-}
-
 .footerItem {
    width: 25vw;
+   font-size: 1rem;
 }
 
 .footerLink {
@@ -23,10 +20,4 @@
 }
 .footerLink:hover {
    text-decoration: underline;
-}
-
-@media only screen and (min-width: 390px) {
-   .footer {
-      font-size: 6px;
-   }
 }

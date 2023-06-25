@@ -11,7 +11,7 @@
 
 .footerItem {
    width: 25vw;
-   font-size: 1rem;
+   font-size: 15px;
 }
 
 .footerLink {
@@ -20,4 +20,10 @@
 }
 .footerLink:hover {
    text-decoration: underline;
+}
+
+@media screen and (min-height: 390px) {
+   .footerItem {
+      font-size: 6px;
+   }
 }

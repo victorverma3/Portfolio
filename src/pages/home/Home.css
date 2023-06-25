@@ -34,6 +34,10 @@
 }
 
 @media screen and (min-width: 390px) and (max-width: 768px) {
+    .homeContent {
+       margin-block: 25px;
+    }
+
     .homeLead {
         font-size: 22px;
         text-align: justify;

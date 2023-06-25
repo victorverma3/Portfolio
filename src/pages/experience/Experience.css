@@ -17,14 +17,14 @@
     font-size: 20px;
 }
 
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (max-width: 499) {
     .skillsList {
         width: 85vw;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1172px) {
+@media screen and (min-width: 500px) and (max-width: 1439px) {
     .skillsList {
-        width: 30rem;
+        width: 60vw;
     }
 }

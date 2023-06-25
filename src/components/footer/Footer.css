@@ -21,8 +21,12 @@
    text-decoration: underline;
 }
 
-@media screen and (min-height: 390px) and (max-width: 768px) {
+@media only screen and (max-width: 499px) {
    .footerItem {
       font-size: 10px;
    }
 }
+
+@media only screen and (min-width: 500px) and (max-width: 1439px) { }
+
+@media only screen and (min-width: 1440px) { }

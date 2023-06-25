@@ -38,7 +38,7 @@
     justify-content: space-around;
 }
 
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (max-width: 499) {
     .schoolPic {
         width: 20rem;
         margin-top: 20px;
@@ -52,7 +52,7 @@
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1208px) {
+@media screen and (min-width: 500px) and (max-width: 1439px) {
     .schoolInfo {
         width: 80%;
         text-align: left;

@@ -18,8 +18,12 @@
     margin-block: 10px;
 }
 
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media only screen and (max-width: 499px) {
     .aboutPic {
         width: 70vw;
     }
 }
+
+@media only screen and (min-width: 500px) and (max-width: 1439px) { }
+
+@media only screen and (min-width: 1440px) { }

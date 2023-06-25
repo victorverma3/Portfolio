@@ -12,3 +12,9 @@
 .resumeView {
     padding-block: 10px;
 }
+
+@media screen and (max-width: 499px) {
+    .resumePic {
+        width: 90vw;
+    }
+}

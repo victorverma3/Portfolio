@@ -22,7 +22,7 @@
    text-decoration: underline;
 }
 
-@media screen and (min-height: 390px) {
+@media screen and (min-height: 390px) and (max-width: 768px) {
    .footerItem {
       font-size: 10px;
    }

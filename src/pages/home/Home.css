@@ -33,12 +33,12 @@
     }
 }
 
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 390px) and (max-width: 768px) {
     .homeLead {
         font-size: 15px;
     }
 
-    .hometitle {
+    .homeTitle {
         font-size: 40px;
     }
 }

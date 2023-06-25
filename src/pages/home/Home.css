@@ -43,7 +43,11 @@
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1439px) { }
+@media screen and (min-width: 500px) and (max-width: 1439px) {
+    .homeContent {
+        min-height: 80vh;
+    }
+ }
 
 @media screen and (min-width: 1440px) {
     .homeLead {

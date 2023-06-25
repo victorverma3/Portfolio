@@ -35,8 +35,8 @@
 
 @media screen and (min-width: 390px) and (max-width: 768px) {
     .homeContent {
+        height: fit-content;
         margin-block: 25px;
-       
     }
 
     .homeLead {

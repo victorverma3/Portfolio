@@ -17,3 +17,9 @@
     border: 1px solid lightgray;
     margin-block: 10px;
 }
+
+@media screen and (min-width: 390px) and (max-width: 768px) {
+    .aboutPic {
+        width: 70vw;
+    }
+}

@@ -10,6 +10,7 @@ import Projects from "./pages/projects/Projects";
 import Resume from "./pages/resume/Resume";
 import About from "./pages/about/About";
 import Error from "./pages/error/Error";
+import { Analytics } from "@vercel/analytics/react";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,7 @@ function App() {
   return (
     <div>
       <RouterProvider router={router} />
+      <Analytics />
     </div>
   );
 }

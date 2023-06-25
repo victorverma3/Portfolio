@@ -32,3 +32,9 @@
         font-size: 30px;
     }
 }
+
+@media screen and (min-width: 390px) {
+    .hometitle {
+        font-size: 50px;
+    }
+}

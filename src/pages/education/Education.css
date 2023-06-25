@@ -40,7 +40,7 @@
 
 @media screen and (min-width: 390px) and (max-width: 768px) {
     .schoolPic {
-        width: 25rem;
+        width: 20rem;
         margin-top: 20px;
     }
 
@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1208px) {
     .schoolPic {
-        width: 15rem;
+        width: 18rem;
     }
 
     .schoolPicContainer {

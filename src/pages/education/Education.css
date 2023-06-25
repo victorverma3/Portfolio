@@ -38,7 +38,21 @@
     justify-content: space-around;
 }
 
-@media screen and (max-width: 1208px) {
+@media screen and (min-width: 390px) and (max-width: 768px) {
+    .schoolPic {
+        width: 25rem;
+        margin-top: 20px;
+    }
+
+    .schoolPicContainer {
+        width: 38rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1208px) {
     .schoolPic {
         width: 15rem;
     }

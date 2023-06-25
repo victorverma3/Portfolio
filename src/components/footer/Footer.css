@@ -24,3 +24,9 @@
 .footerLink:hover {
    text-decoration: underline;
 }
+
+@media screen and (min-width: 390px) {
+   .footer {
+      font-size: 6px;
+   }
+}

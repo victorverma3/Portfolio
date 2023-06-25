@@ -34,8 +34,8 @@
     }
 
     .homeLead {
+        width: 70vw;
         font-size: 22px;
-        text-align: justify;
     }
 
     .homeTitle {

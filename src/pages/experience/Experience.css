@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 499) {
     .skillsList {
-        width: 75vw;
+        width: 20rem;
     }
 }
 
@@ -28,3 +28,5 @@
         width: 60vw;
     }
 }
+
+@media screen and (min-width: 1440px) { }

@@ -38,14 +38,14 @@
     justify-content: space-around;
 }
 
-@media screen and (max-width: 499) {
+@media screen and (max-width: 499px) {
     .schoolPic {
-        width: 90%;
+        width: 90vw;
         margin-top: 20px;
     }
 
     .schoolPicContainer {
-        width: 90%;
+        width: 90vw;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -66,7 +66,7 @@
     }
 
     .schoolPicContainer {
-        width: 80%;
+        width: 80vw;
         margin-top: 20px;
         display: flex;
         flex-direction: row;

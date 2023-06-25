@@ -62,11 +62,11 @@
     }
 
     .schoolPic {
-        width: 22rem;
+        width: 40%;
     }
 
     .schoolPicContainer {
-        width: 50rem;
+        width: 80%;
         margin-top: 20px;
         display: flex;
         flex-direction: row;

@@ -12,3 +12,9 @@
 .resumeView {
     padding-block: 10px;
 }
+
+@media screen and (width: 390px) {
+    .resumeContent {
+        margin-block: 25px;
+    }
+}

@@ -15,6 +15,7 @@
 
 .skillsList {
     text-align: start;
+    padding: 10px;
     background-color: white;
     border: 1px solid lightgrey;
 }

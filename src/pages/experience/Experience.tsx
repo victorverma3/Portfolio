@@ -59,18 +59,20 @@ const Experiences = () => {
       <div className="experienceContent">
         <h1 className="pageTitle">Experience</h1>
         <ExpCards cards={expCards} />
-        <p className="skillsList">
-          <span className="skillsTitle">Technical Skills: </span>Python, pandas,
-          BeautifulSoup, Java, HTML/CSS, TypeScript, Vite, React, Bash.
-          Algorithm Analysis/Design, Data Structures, Web Scraping, Web
-          Development, Object-Oriented Programming. Git, Github, Salesforce
-          Lightning.
-        </p>
-        <p className="skillsList">
-          <span className="skillsTitle">Soft Skills: </span>Communication,
-          Teamwork, Organization, Problem-Solving, Customer Service, Emotional
-          Intelligence.
-        </p>
+        <div className="skills">
+          <p className="skillsList">
+            <span className="skillsTitle">Technical Skills: </span>Python,
+            pandas, BeautifulSoup, Java, HTML/CSS, TypeScript, Vite, React,
+            Bash. Algorithm Analysis/Design, Data Structures, Web Scraping, Web
+            Development, Object-Oriented Programming. Git, Github, Salesforce
+            Lightning.
+          </p>
+          <p className="skillsList">
+            <span className="skillsTitle">Soft Skills: </span>Communication,
+            Teamwork, Organization, Problem-Solving, Customer Service, Emotional
+            Intelligence.
+          </p>
+        </div>
       </div>
       <div className="bottom">
         <Footer />

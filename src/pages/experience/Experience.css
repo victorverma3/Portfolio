@@ -4,10 +4,16 @@
     margin: 25px auto 55px auto;
 }
 
-.skillsList {
-    width: 65rem;
+.skills {
+    width: 65vw;
     margin: auto;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skillsList {
     text-align: start;
     background-color: white;
     border: 1px solid lightgrey;

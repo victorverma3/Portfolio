@@ -13,14 +13,14 @@
 }
 
 .aboutPic {
-    width: 75vw;
+    width: 50vw;
     border: 1px solid lightgray;
     margin-block: 10px;
 }
 
 @media only screen and (max-width: 499px) {
     .aboutPic {
-        width: 70vw;
+        width: 75vw;
     }
 }
 

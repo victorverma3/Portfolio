@@ -12,9 +12,10 @@
 }
 
 .cards {
-    width: 18rem;
+    width: 22rem;
     border: 1px solid lightgray;
     margin-block: 10px;
+    font-size: 18px;
 }
 
 .cardText {

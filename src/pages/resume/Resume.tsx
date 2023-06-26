@@ -2,11 +2,11 @@ import React from "react";
 import "./Resume.css";
 import Footer from "../../components/footer/Footer";
 import resume from "../../images/resume.png";
-import { Button } from "react-bootstrap";
+import PDFView from "../../components/pdfview/PDFView";
 
 const Resume = () => {
-  const onButtonClick = () => {
-    window.open("../../../public/VictorVerma.pdf", "_blank");
+  const resumePDF = {
+    source: "VictorVerma.pdf",
   };
   return (
     <>
@@ -14,9 +14,7 @@ const Resume = () => {
         <h1 className="pageTitle">Resume</h1>
         <img className="resumePic" src={resume} alt="image not loading"></img>
         <div className="resumeView">
-          <Button className="pdfButton" variant="dark" onClick={onButtonClick}>
-            View as PDF
-          </Button>
+          <PDFView pdf={resumePDF} />
         </div>
       </div>
       <div className="bottom">

@@ -14,7 +14,7 @@ const About = () => {
       title: "Watching Movies",
       image: movies,
       description:
-        "I like watching movies in my free time, mostly from any genre. I use the Letterboxd app to log, rate, and rank the movies that I watch.",
+        "I like watching movies in my free time, mostly from any genre. I use the Letterboxd app to log, rate, and rank the movies that I watch. My two favorite movies are Interstellar and Scream.",
       link: "Letterboxd",
       url: "https://letterboxd.com/vic_verma/",
     },
@@ -22,7 +22,7 @@ const About = () => {
       title: "Working Out",
       image: weights,
       description:
-        "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate my split between Push Pull Legs (PPL) and Arnold.",
+        "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate my split between Push Pull Legs (PPL) and Arnold. My favorite exercise is the barbell front squat.",
       link: "Latest Workouts",
       url: "https://docs.google.com/spreadsheets/d/10zi_VmH-wYWIiWBucsQ4NTbagEHaQHntUIhvYHy9qfk/edit?usp=sharing",
     },
@@ -30,7 +30,7 @@ const About = () => {
       title: "Rubik's Cube",
       image: cube,
       description:
-        "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. My personal record on the 3x3 is 11.97 seconds using the CFOP method.",
+        "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. My personal record on the 3x3 is 11.97 seconds using the CFOP method. My lifetime goal is to achieve a 10 second average.",
       link: "CFOP Tutorial",
       url: "https://youtu.be/MS5jByTX_pk",
     },

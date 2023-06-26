@@ -65,7 +65,7 @@ const Experiences = () => {
             HTML/CSS, TypeScript, React, Git, Github, LaTeX, Pandas,
             BeautifulSoup, ChatGPT, Web Development, Web Scraping,
             Object-Oriented Programming, Data Structures, Algorithm
-            Analysis/Design
+            Analysis/Design.
           </p>
           <p className="skillsList">
             <span className="skillsTitle">Soft Skills: </span>Communication,

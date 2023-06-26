@@ -64,7 +64,7 @@ const About = () => {
           experience college as an infinite loop and pick a new major in every
           pass.
         </p>
-        <h2 className="pageSubTitle">Hobbies</h2>
+        <br></br>
         <CList cards={aboutCards} />
         <Disclaimer />
       </div>

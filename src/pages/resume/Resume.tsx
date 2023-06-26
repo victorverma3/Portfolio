@@ -6,9 +6,6 @@ import { Button } from "react-bootstrap";
 import PDF from "../../components/VictorVerma.pdf";
 
 const Resume = () => {
-  const resumePDF = {
-    source: "VictorVerma.pdf",
-  };
   return (
     <>
       <div className="resumeContent">

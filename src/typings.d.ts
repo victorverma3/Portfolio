@@ -21,14 +21,3 @@ declare module 'CList' {
   const CList: React.FunctionComponent<CListProps>;
   export default CList;
 }
-
-declare module 'PDFView' {
-  interface PDF {
-    source: string;
-  }
-  interface PDFDownloadProps {
-    pdf: PDF;
-  }
-  const PDFView: React.FunctionComponent<PDFDownloadProps>;
-  export default PDFView;
-}

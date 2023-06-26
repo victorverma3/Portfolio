@@ -3,6 +3,8 @@ import "./Resume.css";
 import Footer from "../../components/footer/Footer";
 import resume from "../../images/resume.png";
 import PDFView from "../../components/pdfview/PDFView";
+import { Button } from "react-bootstrap";
+import PDF from "../../components/VictorVerma.pdf";
 
 const Resume = () => {
   const resumePDF = {
@@ -15,6 +17,14 @@ const Resume = () => {
         <img className="resumePic" src={resume} alt="image not loading"></img>
         <div className="resumeView">
           <PDFView pdf={resumePDF} />
+          <Button
+            className="pdfButton"
+            variant="dark"
+            href={PDF}
+            target="_blank"
+          >
+            View as PDF
+          </Button>
         </div>
       </div>
       <div className="bottom">

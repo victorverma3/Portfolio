@@ -25,6 +25,7 @@
 .titleLink {
     text-decoration: none;
     color: black;
+    font-size: 30px;
 }
 
 @media only screen and (max-width: 499px) { }

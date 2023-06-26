@@ -61,11 +61,11 @@ const Experiences = () => {
         <ExpCards cards={expCards} />
         <div className="skills">
           <p className="skillsList">
-            <span className="skillsTitle">Technical Skills: </span>Python,
-            pandas, BeautifulSoup, Java, HTML/CSS, TypeScript, Vite, React,
-            Bash. Algorithm Analysis/Design, Data Structures, Web Scraping, Web
-            Development, Object-Oriented Programming. Git, Github, Salesforce
-            Lightning.
+            <span className="skillsTitle">Technical Skills: </span>Python, Java,
+            HTML/CSS, TypeScript, React, Git, Github, LaTeX, Pandas,
+            BeautifulSoup, ChatGPT, Web Development, Web Scraping,
+            Object-Oriented Programming, Data Structures, Algorithm
+            Analysis/Design
           </p>
           <p className="skillsList">
             <span className="skillsTitle">Soft Skills: </span>Communication,

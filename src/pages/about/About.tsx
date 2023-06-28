@@ -1,12 +1,12 @@
 import React from "react";
 import "./About.css";
 import Footer from "../../components/footer/Footer";
-import CList from "../../components/clist/CList";
+import CList from "../../components/CList/CList";
 import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";
 import weights from "../../images/weights.png";
 import cube from "../../images/cube.png";
-import Disclaimer from "../../components/disclaimer/Disclaimer";
+import Disclaimer from "../../components/Disclaimer/Disclaimer";
 
 const About = () => {
   const aboutCards = [

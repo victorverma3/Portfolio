@@ -1,14 +1,14 @@
 import React from "react";
 import "./Projects.css";
 import Footer from "../../components/footer/Footer";
-import CList from "../../components/clist/CList";
+import CList from "../../components/CList/CList";
 import website from "../../images/website.png";
 import sports from "../../images/sports.png";
 import reel from "../../images/reel.png";
 import bot from "../../images/bot.png";
 import puzzle from "../../images/8puzzle.png";
 import connect4 from "../../images/connect4.png";
-import Disclaimer from "../../components/disclaimer/Disclaimer";
+import Disclaimer from "../../components/Disclaimer/Disclaimer";
 
 const Projects = () => {
   const projectCards = [

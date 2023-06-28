@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import CList from "../../components/CList/CList";
 import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";

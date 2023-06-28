@@ -1,6 +1,6 @@
 import React from "react";
 import "./Resume.css";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import resume from "../../images/resume.png";
 import { Button } from "react-bootstrap";
 import PDF from "../../components/VictorVerma.pdf";

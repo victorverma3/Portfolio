@@ -20,8 +20,8 @@ const Header = () => {
                 </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link className="navLink" to="/experience">
-                  Experience
+                <Link className="navLink" to="/experiences">
+                  Experiences
                 </Link>
               </Nav.Link>
               <Nav.Link>

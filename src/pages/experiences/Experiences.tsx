@@ -1,5 +1,5 @@
 import React from "react";
-import "./Experience.css";
+import "./Experiences.css";
 import Footer from "../../components/footer/Footer";
 import ExpCards from "../../components/ExpCards/ExpCards";
 

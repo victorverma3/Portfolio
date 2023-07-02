@@ -30,7 +30,7 @@ const About = () => {
       title: "Rubik's Cube",
       image: cube,
       description:
-        "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. My personal record on the 3x3 is 11.97 seconds using the CFOP method. My lifetime goal is to achieve a 10 second average.",
+        "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. My personal record on the 3x3 is 10.55 seconds using the CFOP method. My lifetime goal is to achieve a 10 second average.",
       link: "CFOP Tutorial",
       url: "https://youtu.be/MS5jByTX_pk",
     },

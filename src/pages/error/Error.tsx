@@ -6,7 +6,9 @@ import Footer from "../../components/footer/Footer";
 const Error = () => {
   return (
     <>
-      <img className="errorImage" src={tom} alt="error loading image"></img>
+      <div className="errorBackground">
+        <img className="errorImage" src={tom} alt="error loading image"></img>
+      </div>
       <Footer />
     </>
   );

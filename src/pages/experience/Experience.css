@@ -6,7 +6,7 @@
 
 .skills {
     padding-top: 15px;
-    width: 65vw;
+    width: 80vw;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -45,8 +45,6 @@
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1439px) {
-
-}
+@media screen and (min-width: 500px) and (max-width: 1439px) { }
 
 @media screen and (min-width: 1440px) { }

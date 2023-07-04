@@ -55,6 +55,10 @@
 
 @media screen and (min-width: 1440px) {
     .schoolInfo {
+        width: 90%;
+    }
+    
+    .schoolInfo {
         width: 45rem;
     }
 

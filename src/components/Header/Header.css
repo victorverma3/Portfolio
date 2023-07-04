@@ -1,5 +1,5 @@
 .navBrand {
-   font-size: 20px;
+   font-size: 22px;
 }
 
 .navContainer {
@@ -10,7 +10,7 @@
 .navLink {
    text-decoration: none;
    color: black;
-   font-size: 18px;
+   font-size: 20px;
 }
 
 .navLink:hover {
@@ -20,11 +20,11 @@
 
 @media only screen and (min-width: 1440px) { 
    .navBrand {
-      font-size: 22px;
+      font-size: 26px;
    }
    
    .navLink {
-      font-size: 20px;
+      font-size: 24px;
    }
 }
 

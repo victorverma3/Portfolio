@@ -29,6 +29,10 @@
     text-align: justify;
 }
 
+.vertical-timeline-element-subtitle {
+    text-align: left;
+}
+
 .vertical-timeline-element-title {
     text-align: left;
 }

@@ -27,7 +27,7 @@ const Experiences = () => {
       role: "Computer Assistant/Programmer",
       employer: "Boston University",
       dates: "September 2021 - Present",
-      location: "Boston, Massachuetts, United States",
+      location: "Boston, Massachusetts, United States",
       description:
         "Working directly with professors, students, and teammates at the Questrom Open Access Lab to efficiently brainstorm solutions to technological problems that arise in the fast-paced classroom environment. Previously gained experience using Salesforce Lightning through the completion of Salesforce Trailhead Modules.",
       icon: bulogo,
@@ -87,9 +87,15 @@ const Experiences = () => {
                 <h3 className="vertical-timeline-element-title">
                   {element.role}
                 </h3>
-                <h5 className="timelineElementInfo">{element.employer}</h5>
-                <h6 className="timelineElementInfo">{element.dates}</h6>
-                <h6 className="timelineElementInfo">{element.location}</h6>
+                <h5 className="vertical-timeline-element-subtitle">
+                  {element.employer}
+                </h5>
+                <h6 className="vertical-timeline-element-subtitle">
+                  {element.dates}
+                </h6>
+                <h6 className="vertical-timeline-element-subtitle">
+                  {element.location}
+                </h6>
                 <p className="timelineElementInfo">{element.description}</p>
               </VerticalTimelineElement>
             );

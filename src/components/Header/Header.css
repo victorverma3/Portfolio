@@ -11,4 +11,5 @@
 
  .navLink:hover {
     text-decoration: underline;
+    color: lightskyblue;
  }

@@ -19,6 +19,7 @@
 }
 .footerLink:hover {
    text-decoration: underline;
+   color: lightskyblue;
 }
 
 @media only screen and (max-width: 499px) {

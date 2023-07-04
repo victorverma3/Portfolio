@@ -18,7 +18,7 @@
 }
 
 .schoolInfo {
-    width: 38rem;
+    width: 80%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -26,15 +26,16 @@
 }
 
 .schoolPic {
-    width: 27rem;
+    width: 45%;
     margin: auto;
     border: 1px solid lightgrey;
 }
 
 .schoolPicContainer {
-    width: 30rem;
+    width: 80vw;
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
 }
 
@@ -48,28 +49,6 @@
         width: 90vw;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 1439px) {
-    .schoolInfo {
-        width: 80%;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .schoolPic {
-        width: 45%;
-    }
-
-    .schoolPicContainer {
-        width: 80vw;
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
         justify-content: space-around;
     }
 }

@@ -38,9 +38,6 @@
     text-align: left;
 }
 
-@media screen and (max-width: 499) {
-}
-
-@media screen and (min-width: 500px) and (max-width: 1439px) { }
+@media screen and (max-width: 499) { }
 
 @media screen and (min-width: 1440px) { }

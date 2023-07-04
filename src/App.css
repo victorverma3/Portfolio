@@ -12,8 +12,6 @@
 
 @media screen and (max-width: 499px) { }
 
-@media screen and (min-width: 500px) and (max-width: 1439px) { }
-
 @media screen and (min-width: 1440px) {
   .pageSubTitle {
     font-size: 50px;

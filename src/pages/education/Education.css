@@ -40,6 +40,10 @@
 }
 
 @media screen and (max-width: 499px) {
+    .schoolInfo {
+        width: 27rem;
+    }
+    
     .schoolPic {
         width: 90vw;
         margin-top: 20px;
@@ -54,10 +58,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .schoolInfo {
-        width: 90%;
-    }
-    
     .schoolInfo {
         width: 45rem;
     }

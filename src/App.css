@@ -2,7 +2,7 @@
   max-width: 1440px;
   margin: auto;
   text-align: center;
-  background-image: url("./images/background.png");
+  background-color: lightskyblue;
   overflow-x: hidden;
 }
 

@@ -1,15 +1,30 @@
+.navBrand {
+   font-size: 20px;
+}
+
 .navContainer {
    width: 100vw;
    margin: auto;
 }
 
 .navLink {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
- }
+   text-decoration: none;
+   color: black;
+   font-size: 18px;
+}
 
- .navLink:hover {
-    text-decoration: underline;
-    color: lightskyblue;
- }
+.navLink:hover {
+   text-decoration: underline;
+   color: lightskyblue;
+}
+
+@media only screen and (min-width: 1440px) { 
+   .navBrand {
+      font-size: 22px;
+   }
+   
+   .navLink {
+      font-size: 20px;
+   }
+}
+

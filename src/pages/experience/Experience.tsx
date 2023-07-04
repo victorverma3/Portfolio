@@ -103,16 +103,20 @@ const Experiences = () => {
         </VerticalTimeline>
         <div className="skills">
           <p className="skillsList">
-            <span className="skillsTitle">Technical Skills: </span>Python, Java,
-            HTML/CSS, TypeScript, React, Git, Github, LaTeX, Pandas,
-            BeautifulSoup, ChatGPT, Web Development, Web Scraping,
+            <span className="skillsTitle">
+              <strong>Technical Skills: </strong>
+            </span>
+            Python, Java, HTML/CSS, TypeScript, React, Git, Github, LaTeX,
+            Pandas, BeautifulSoup, ChatGPT, Web Development, Web Scraping,
             Object-Oriented Programming, Data Structures, Algorithm
             Analysis/Design.
           </p>
           <p className="skillsList">
-            <span className="skillsTitle">Soft Skills: </span>Communication,
-            Teamwork, Organization, Problem-Solving, Customer Service, Emotional
-            Intelligence.
+            <span className="skillsTitle">
+              <strong>Soft Skills: </strong>
+            </span>
+            Communication, Teamwork, Organization, Problem-Solving, Customer
+            Service, Emotional Intelligence.
           </p>
         </div>
       </div>

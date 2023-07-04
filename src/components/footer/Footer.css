@@ -28,4 +28,8 @@
    }
 }
 
-@media only screen and (min-width: 1440px) { }
+@media only screen and (min-width: 1440px) { 
+   .footerItem {
+      font-size: 18px;
+   }
+}

@@ -55,10 +55,18 @@
 
 @media screen and (min-width: 1440px) {
     .schoolInfo {
-        width: 42rem;
+        width: 45rem;
+    }
+
+    .schoolPic {
+        width: 25rem;
     }
 
     .schoolPicContainer {
-        width: 33rem;
+        width: 30rem;
+        margin-block: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 }

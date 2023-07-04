@@ -19,7 +19,12 @@ const CList = ({ cards }: CListProps) => {
     <div className="cardList">
       {cards.map((card) => (
         <Card className="cards">
-          <Card.Img variant="top" src={card.image} alt="image loading error" />
+          <Card.Img
+            className="cardImage"
+            variant="top"
+            src={card.image}
+            alt="image loading error"
+          />
           <Card.Body>
             <Card.Title>
               <a className="titleLink" href={card.url} target="_blank">

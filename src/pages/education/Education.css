@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 499px) {
     .schoolInfo {
-        width: 27rem;
+        width: 90vw;
     }
     
     .schoolPic {

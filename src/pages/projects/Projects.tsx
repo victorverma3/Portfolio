@@ -1,7 +1,6 @@
 import React from "react";
 import "./Projects.css";
 import Footer from "../../components/footer/Footer";
-import CList from "../../components/AboutCards/AboutCards";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import website from "../../images/website.png";
 import sports from "../../images/sports.png";

@@ -4,7 +4,6 @@ import Footer from "../../components/footer/Footer";
 import { Card } from "react-bootstrap";
 import bueast from "../../images/bueast.png";
 import comlawn from "../../images/comlawn.png";
-import shs from "../../images/shs.png";
 
 const Education = () => {
   return (

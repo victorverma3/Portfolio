@@ -3,4 +3,4 @@ I designed and created my own portfolio website using TypeScript, HTML, CSS, and
 
 Live Demo: https://victor-verma-portfolio.vercel.app/
 
-Screenshot: <img src="./public/Portfolio.png" />
+Homepage: <img src="./public/Portfolio.png" />

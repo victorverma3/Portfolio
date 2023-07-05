@@ -7,7 +7,7 @@ declare module 'Footer' {
   export default Footer;
 }
 
-declare module 'CList' {
+declare module 'AboutCards' {
   interface Card {
     title: string;
     image: string;
@@ -15,9 +15,24 @@ declare module 'CList' {
     link: string;
     url: string;
   }
-  interface CListProps {
+  interface AboutCardsProps {
     cards: Card[];
   }
-  const CList: React.FunctionComponent<CListProps>;
-  export default CList;
+  const AboutCards: React.FunctionComponent<AboutCardsProps>;
+  export default AboutCards;
+}
+
+declare module 'ProjectCards' {
+  interface Card {
+    title: string;
+    image: string;
+    description: string;
+    link: string;
+    url: string;
+  }
+  interface ProjectCardsProps {
+    cards: Card[];
+  }
+  const ProjectCards: React.FunctionComponent<ProjectCardsProps>;
+  export default ProjectCards;
 }

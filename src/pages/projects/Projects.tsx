@@ -1,7 +1,8 @@
 import React from "react";
 import "./Projects.css";
 import Footer from "../../components/footer/Footer";
-import CList from "../../components/CList/CList";
+import CList from "../../components/AboutCards/AboutCards";
+import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import website from "../../images/website.png";
 import sports from "../../images/sports.png";
 import reel from "../../images/reel.png";
@@ -65,7 +66,7 @@ const Projects = () => {
     <>
       <div className="projectContent">
         <h1 className="pageTitle">Projects</h1>
-        <CList cards={projectCards} />
+        <ProjectCards cards={projectCards} />
         <Disclaimer />
       </div>
       <div className="bottom">

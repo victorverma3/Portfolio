@@ -1,0 +1,42 @@
+.aboutCardButton {
+    width: 60%;
+}
+
+.aboutCardList {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.aboutCards {
+    width: 22rem;
+    border: 1px solid lightgray;
+    margin-block: 10px;
+    font-size: 16px;
+}
+
+.aboutCardText {
+    text-align: justify;
+}
+
+.aboutCardTitle {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 499px) { }
+ 
+@media only screen and (min-width: 1440px) { 
+    .aboutCards {
+        width: 24rem;
+        font-size: 22px;
+    }
+
+    .aboutCardTitle {
+        font-size: 35px;
+    }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./CList.css";
+import "./ProjectCards.css";
 import { Button, Card } from "react-bootstrap";
 
 interface Card {
@@ -10,30 +10,32 @@ interface Card {
   url: string;
 }
 
-interface CListProps {
+interface ProjectCardsProps {
   cards: Card[];
 }
 
-const CList = ({ cards }: CListProps) => {
+const ProjectCards = ({ cards }: ProjectCardsProps) => {
   return (
-    <div className="cardList">
+    <div className="projectCardList">
       {cards.map((card) => (
-        <Card className="cards">
+        <Card className="projectCards">
           <Card.Img
-            className="cardImage"
+            className="projectCardImage"
             variant="top"
             src={card.image}
             alt="image loading error"
           />
           <Card.Body>
             <Card.Title>
-              <a className="titleLink" href={card.url} target="_blank">
+              <a className="projectCardTitle" href={card.url} target="_blank">
                 {card.title}
               </a>
             </Card.Title>
-            <Card.Text className="cardText">{card.description}</Card.Text>
+            <Card.Text className="projectCardText">
+              {card.description}
+            </Card.Text>
             <Button
-              className="cardButton"
+              className="projectCardButton"
               href={card.url}
               target="_blank"
               variant="dark"
@@ -47,4 +49,4 @@ const CList = ({ cards }: CListProps) => {
   );
 };
 
-export default CList;
+export default ProjectCards;

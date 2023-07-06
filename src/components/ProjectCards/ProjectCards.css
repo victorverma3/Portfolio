@@ -4,7 +4,7 @@
 
 .projectCardButtons {
     width: 90%;
-    margin: auto;
+    margin: 10px auto auto auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

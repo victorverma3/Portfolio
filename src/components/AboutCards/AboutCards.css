@@ -2,6 +2,10 @@
     width: 60%;
 }
 
+.aboutCardButton:hover {
+    background-color: lightskyblue;
+}
+
 .aboutCardList {
     width: 90%;
     margin: auto;

@@ -2,6 +2,11 @@
     width: 10rem;
 }
 
+.pdfButton:hover {
+    background-color: white;
+    color: lightskyblue;
+}
+
 .resumeContent {
     width: 100vw;
     min-height: 80vh;

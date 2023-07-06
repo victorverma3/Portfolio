@@ -2,6 +2,15 @@
     width: 35%;
 }
 
+.projectCardButtons {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
 .projectCardButton:hover {
     background-color: lightskyblue;
 }

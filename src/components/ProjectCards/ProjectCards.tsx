@@ -7,8 +7,7 @@ interface Card {
   image: string;
   description: string;
   technologies: Array<string>;
-  link: string;
-  url: string;
+  links: Array<Array<string>>;
 }
 
 interface ProjectCardsProps {
@@ -28,9 +27,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
           />
           <Card.Body>
             <Card.Title>
-              <a className="projectCardTitle" href={card.url} target="_blank">
-                {card.title}
-              </a>
+              <h1 className="projectCardTitle">{card.title}</h1>
             </Card.Title>
             <Card.Text className="projectCardText">
               {card.description}
@@ -46,14 +43,20 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                 );
               })}
             </div>
-            <Button
-              className="projectCardButton"
-              href={card.url}
-              target="_blank"
-              variant="dark"
-            >
-              {card.link}
-            </Button>
+            <div className="projectCardButtons">
+              {card.links.map((element) => {
+                return (
+                  <Button
+                    className="projectCardButton"
+                    href={element[1]}
+                    target="_blank"
+                    variant="dark"
+                  >
+                    {element[0]}
+                  </Button>
+                );
+              })}
+            </div>
           </Card.Body>
         </Card>
       ))}

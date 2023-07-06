@@ -19,8 +19,10 @@ const Projects = () => {
       description:
         "I designed my own personal portfolio website and deployed it using Vercel. The site periodically receives maintenance, updates, and improvements. ",
       technologies: [reactlogo, typescriptlogo, htmllogo, csslogo],
-      link: "GitHub",
-      url: "https://github.com/victorverma3/Portfolio",
+      links: [
+        ["Live Demo", "https://victor-verma-portfolio.vercel.app/"],
+        ["GitHub", "https://github.com/victorverma3/Portfolio"],
+      ],
     },
     {
       title: "SportsNews",
@@ -28,8 +30,7 @@ const Projects = () => {
       technologies: [pythonlogo, htmllogo, csslogo],
       description:
         "I created a script that scrapes the latest headlines for 6 sports and sends them as formatted emails to users on mailing lists every morning at 9:00am est. ",
-      link: "GitHub",
-      url: "https://github.com/victorverma3/SportsNews",
+      links: [["GitHub", "https://github.com/victorverma3/SportsNews"]],
     },
   ];
   return (

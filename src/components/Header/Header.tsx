@@ -7,51 +7,53 @@ import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="navContainer">
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand className="navBrand" href="/">
-            Victor Verma
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link>
-                <Link className="navLink" to="/">
-                  Home
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link className="navLink" to="/experience">
-                  Experience
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link className="navLink" to="/education">
-                  Education
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link className="navLink" to="/projects">
-                  Projects
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link className="navLink" to="/resume">
-                  Resume
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link className="navLink" to="/about">
-                  About Me
-                </Link>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <>
+      <div className="navContainer">
+        <Navbar bg="light" expand="lg">
+          <Container>
+            <Navbar.Brand className="navBrand" href="/">
+              Victor Verma
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto">
+                <Nav.Link>
+                  <Link className="navLink" to="/">
+                    Home
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link className="navLink" to="/experience">
+                    Experience
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link className="navLink" to="/education">
+                    Education
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link className="navLink" to="/projects">
+                    Projects
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link className="navLink" to="/resume">
+                    Resume
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link className="navLink" to="/about">
+                    About Me
+                  </Link>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
       <Outlet />
-    </div>
+    </>
   );
 };
 

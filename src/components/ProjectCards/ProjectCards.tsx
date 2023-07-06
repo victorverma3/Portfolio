@@ -6,6 +6,7 @@ interface Card {
   title: string;
   image: string;
   description: string;
+  technologies: Array<string>;
   link: string;
   url: string;
 }
@@ -34,6 +35,17 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
             <Card.Text className="projectCardText">
               {card.description}
             </Card.Text>
+            <div className="projectCardTechnologies">
+              {card.technologies.map((element) => {
+                return (
+                  <img
+                    className="projectCardLogos"
+                    src={element}
+                    alt="image loading error"
+                  ></img>
+                );
+              })}
+            </div>
             <Button
               className="projectCardButton"
               href={card.url}

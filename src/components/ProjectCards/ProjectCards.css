@@ -3,7 +3,7 @@
 }
 
 .projectCardImage {
-    width: 60%;
+    width: 90%;
     margin: auto;
 }
 
@@ -16,11 +16,24 @@
     align-items: space-around;
 }
 
+.projectCardLogos {
+    background-color: white;
+    width: 15%;
+}
+
 .projectCards {
-    width: 21rem;
+    width: 26rem;
     border: 1px solid lightgray;
     margin-block: 10px;
     font-size: 16px;
+}
+
+.projectCardTechnologies {
+    margin-block: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-around;
 }
 
 .projectCardText {
@@ -41,7 +54,7 @@
     }
     
     .projectCards {
-        width: 24rem;
+        width: 35rem;
         font-size: 22px;
     }
 

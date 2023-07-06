@@ -10,6 +10,7 @@ import csslogo from "../../images/csslogo.png";
 import sportsnews from "../../images/sportsnews.png";
 import pythonlogo from "../../images/pythonlogo.png";
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
+import Reveal from "../../components/Reveal/Reveal";
 
 const Projects = () => {
   const projectCards = [
@@ -37,7 +38,9 @@ const Projects = () => {
     <>
       <div className="projectContent">
         <h1 className="pageTitle">Projects</h1>
-        <ProjectCards cards={projectCards} />
+        <Reveal>
+          <ProjectCards cards={projectCards} />
+        </Reveal>
         <Disclaimer />
       </div>
       <div className="bottom">

@@ -27,12 +27,20 @@ declare module 'ProjectCards' {
     title: string;
     image: string;
     description: string;
-    link: string;
-    url: string;
+    technologies: Array<string>;
+    links: Array<Array<string>>;
   }
   interface ProjectCardsProps {
     cards: Card[];
   }
   const ProjectCards: React.FunctionComponent<ProjectCardsProps>;
   export default ProjectCards;
+}
+
+declare module 'Reveal' {
+  interface Props {
+    children: JSX.Element;
+  }
+  const Reveal: React.FunctionComponent<Props>;
+  export default Reveal
 }

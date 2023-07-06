@@ -2,11 +2,6 @@ declare module '*.png'
 
 declare module '*.pdf'
 
-declare module 'Footer' {
-  const Footer: React.FunctionComponent;
-  export default Footer;
-}
-
 declare module 'AboutCards' {
   interface Card {
     title: string;
@@ -20,6 +15,21 @@ declare module 'AboutCards' {
   }
   const AboutCards: React.FunctionComponent<AboutCardsProps>;
   export default AboutCards;
+}
+
+declare module 'Disclaimer' {
+  const Disclaimer: React.FunctionComponent;
+  export default Disclaimer;
+}
+
+declare module 'Footer' {
+  const Footer: React.FunctionComponent;
+  export default Footer;
+}
+
+declare module 'Header' {
+  const Header: React.FunctionComponent;
+  export default Header;
 }
 
 declare module 'ProjectCards' {

@@ -1,5 +1,9 @@
 .projectCardButton {
-    width: 60%;
+    width: 35%;
+}
+
+.projectCardButton:hover {
+    background-color: lightskyblue;
 }
 
 .projectCardImage {
@@ -49,6 +53,10 @@
 @media only screen and (max-width: 499px) { }
  
 @media only screen and (min-width: 1440px) { 
+    .projectCardButton {
+        font-size: 20px;
+    }
+
     .projectCardImage {
         width: 80%;
     }

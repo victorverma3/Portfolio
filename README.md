@@ -5,4 +5,4 @@ Live Demo: https://victor-verma-portfolio.vercel.app/
 
 Homepage:
 
-<img src="./public/Portfolio.png" />
+<img src="./src/images/portfolio.png" />

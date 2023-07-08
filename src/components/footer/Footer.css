@@ -4,13 +4,13 @@
    width: 100vw;
    margin: auto;
    background-color: white;
-   padding-block: 10px;
+   padding-block: 0.625rem;
    position: fixed;
    bottom: 0;
  }
 
 .footerItem {
-   font-size: 15px;
+   font-size: 0.9375rem;
 }
 
 .footerLink {
@@ -24,12 +24,12 @@
 
 @media only screen and (max-width: 499px) {
    .footerItem {
-      font-size: 10px;
+      font-size: 0.625rem;
    }
 }
 
 @media only screen and (min-width: 1440px) { 
    .footerItem {
-      font-size: 18px;
+      font-size: 1.125rem;
    }
 }

@@ -38,7 +38,7 @@
     width: 26rem;
     border: 1px solid lightgray;
     margin-block: 10px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .projectCardTechnologies {
@@ -56,7 +56,7 @@
 .projectCardTitle {
     text-decoration: none;
     color: black;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 @media only screen and (max-width: 499px) {
@@ -67,7 +67,7 @@
  
 @media only screen and (min-width: 1440px) { 
     .projectCardButton {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .projectCardImage {
@@ -76,12 +76,12 @@
     
     .projectCards {
         width: 35rem;
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .projectCardTitle {
         text-decoration: none;
         color: black;
-        font-size: 35px;
+        font-size: 2.25rem;
     }
 }

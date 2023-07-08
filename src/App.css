@@ -7,17 +7,17 @@
 }
 
 .pageTitle {
-  font-size: 45px;
+  font-size: 2.875rem;
 }
 
 @media screen and (max-width: 499px) { }
 
 @media screen and (min-width: 1440px) {
   .pageSubTitle {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 
   .pageTitle {
-    font-size: 65px;
+    font-size: 4.125rem;
   }
 }

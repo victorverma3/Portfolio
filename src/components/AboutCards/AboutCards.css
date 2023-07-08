@@ -19,7 +19,7 @@
     width: 22rem;
     border: 1px solid lightgray;
     margin-block: 10px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .aboutCardText {
@@ -29,7 +29,7 @@
 .aboutCardTitle {
     text-decoration: none;
     color: black;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 @media only screen and (max-width: 499px) {
@@ -41,10 +41,10 @@
 @media only screen and (min-width: 1440px) { 
     .aboutCards {
         width: 24rem;
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .aboutCardTitle {
-        font-size: 35px;
+        font-size: 2.25rem;
     }
 }

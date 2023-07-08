@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .skillsList {
@@ -23,7 +23,7 @@
 }
 
 .skillsTitle {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .timelineElementInfo {
@@ -42,6 +42,6 @@
 
 @media screen and (min-width: 1440px) { 
     .skills {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }

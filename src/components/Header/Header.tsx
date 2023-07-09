@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       <div className="navContainer">
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" fixed="top">
           <Container>
             <Navbar.Brand className="navBrand" href="/">
               Victor Verma

@@ -6,22 +6,15 @@ import PDF from "../../components/VictorVerma.pdf";
 
 const Resume = () => {
   return (
-    <>
-      <div className="resumeContent">
-        <h1 className="pageTitle">Resume</h1>
-        <img className="resumePic" src={resume} alt="image not loading"></img>
-        <div className="resumeView">
-          <Button
-            className="pdfButton"
-            variant="dark"
-            href={PDF}
-            target="_blank"
-          >
-            View as PDF
-          </Button>
-        </div>
+    <div className="resumeContent">
+      <h1 className="pageTitle">Resume</h1>
+      <img className="resumePic" src={resume} alt="image not loading"></img>
+      <div className="resumeView">
+        <Button className="pdfButton" variant="dark" href={PDF} target="_blank">
+          View as PDF
+        </Button>
       </div>
-    </>
+    </div>
   );
 };
 

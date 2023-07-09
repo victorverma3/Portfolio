@@ -34,15 +34,13 @@ const Projects = () => {
     },
   ];
   return (
-    <>
-      <div className="projectContent">
-        <h1 className="pageTitle">Projects</h1>
-        <Reveal>
-          <ProjectCards cards={projectCards} />
-        </Reveal>
-        <Disclaimer />
-      </div>
-    </>
+    <div className="projectContent">
+      <h1 className="pageTitle">Projects</h1>
+      <Reveal>
+        <ProjectCards cards={projectCards} />
+      </Reveal>
+      <Disclaimer />
+    </div>
   );
 };
 

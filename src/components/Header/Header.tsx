@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       <div className="navContainer">
-        <Navbar bg="light" expand="lg" fixed="top">
+        <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
           <Container>
             <Navbar.Brand className="navBrand" href="/">
               Victor Verma
@@ -17,32 +17,32 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-                <Nav.Link>
+                <Nav.Link eventKey="1">
                   <Link className="navLink" to="/">
                     Home
                   </Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="2">
                   <Link className="navLink" to="/experience">
                     Experience
                   </Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="3">
                   <Link className="navLink" to="/education">
                     Education
                   </Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="4">
                   <Link className="navLink" to="/projects">
                     Projects
                   </Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="5">
                   <Link className="navLink" to="/resume">
                     Resume
                   </Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="6">
                   <Link className="navLink" to="/about">
                     About Me
                   </Link>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Education.css";
-import Footer from "../../components/footer/Footer";
 import { Card } from "react-bootstrap";
 import bueast from "../../images/bueast.png";
 import comlawn from "../../images/comlawn.png";
@@ -77,9 +76,6 @@ const Education = () => {
             ></img>
           </div>
         </div>
-      </div>
-      <div className="bottom">
-        <Footer />
       </div>
     </>
   );

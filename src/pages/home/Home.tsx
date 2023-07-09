@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -13,9 +12,6 @@ const Home = () => {
           I want to do in the future, so I learn and create whatever I find
           interesting...
         </p>
-      </div>
-      <div className="bottom">
-        <Footer />
       </div>
     </>
   );

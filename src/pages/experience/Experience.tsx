@@ -1,6 +1,5 @@
 import React from "react";
 import "./Experience.css";
-import Footer from "../../components/footer/Footer";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -119,9 +118,6 @@ const Experiences = () => {
             Service, Emotional Intelligence.
           </p>
         </div>
-      </div>
-      <div className="bottom">
-        <Footer />
       </div>
     </>
   );

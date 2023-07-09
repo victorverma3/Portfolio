@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-import Footer from "../../components/footer/Footer";
 import AboutCards from "../../components/AboutCards/AboutCards";
 import paris from "../../images/paris.png";
 import movies from "../../images/letterboxd.png";
@@ -67,9 +66,6 @@ const About = () => {
         <br></br>
         <AboutCards cards={aboutCards} />
         <Disclaimer />
-      </div>
-      <div className="bottom">
-        <Footer />
       </div>
     </>
   );

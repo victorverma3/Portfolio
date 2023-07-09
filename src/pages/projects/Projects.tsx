@@ -1,6 +1,5 @@
 import React from "react";
 import "./Projects.css";
-import Footer from "../../components/footer/Footer";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import portfolio from "../../images/portfolio.png";
 import reactlogo from "../../images/reactlogo.png";
@@ -42,9 +41,6 @@ const Projects = () => {
           <ProjectCards cards={projectCards} />
         </Reveal>
         <Disclaimer />
-      </div>
-      <div className="bottom">
-        <Footer />
       </div>
     </>
   );

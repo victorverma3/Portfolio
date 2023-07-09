@@ -1,6 +1,5 @@
 import React from "react";
 import "./Resume.css";
-import Footer from "../../components/footer/Footer";
 import resume from "../../images/resume.png";
 import { Button } from "react-bootstrap";
 import PDF from "../../components/VictorVerma.pdf";
@@ -21,9 +20,6 @@ const Resume = () => {
             View as PDF
           </Button>
         </div>
-      </div>
-      <div className="bottom">
-        <Footer />
       </div>
     </>
   );

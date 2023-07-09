@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Header from "./components/Header/Header";
+import { useLocation, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Experience from "./pages/experience/Experience";
 import Education from "./pages/education/Education";
@@ -11,47 +10,26 @@ import Resume from "./pages/resume/Resume";
 import About from "./pages/about/About";
 import Error from "./pages/error/Error";
 import { Analytics } from "@vercel/analytics/react";
-
-const router = createBrowserRouter([
-  {
-    element: <Header />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/experience",
-        element: <Experience />,
-      },
-      {
-        path: "/education",
-        element: <Education />,
-      },
-      {
-        path: "/projects",
-        element: <Projects />,
-      },
-      {
-        path: "/resume",
-        element: <Resume />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "*",
-        element: <Error />,
-      },
-    ],
-  },
-]);
+import Layout from "./Layout";
 
 function App() {
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div>
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
       <Analytics />
     </div>
   );

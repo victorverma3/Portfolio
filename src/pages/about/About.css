@@ -1,4 +1,4 @@
-.aboutBio {
+.about-bio {
     width: 75vw;
     margin: auto;
     font-size: 1.25rem;
@@ -6,20 +6,20 @@
     padding-top: 25px;
 }
 
-.aboutContent {
+.about-content {
     width: 100vw;
     min-height: 80vh;
     margin: 85px auto 55px auto;
 }
 
-.aboutPic {
+.about-pic {
     width: 50vw;
     border: 1px solid lightgray;
     margin-block: 10px;
 }
 
 @media only screen and (max-width: 499px) {
-    .aboutPic {
+    .about-pic {
         width: 75vw;
     }
 }

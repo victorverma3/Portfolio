@@ -1,8 +1,8 @@
-.eduCard {
+.edu-card {
     border: 1px solid lightgray;
 }
 
-.educationContent {
+.education-content {
     width: 100vw;
     min-height: 80vh;
     margin: 85px auto 55px auto;
@@ -17,7 +17,7 @@
     justify-content: space-around;
 }
 
-.schoolInfo {
+.school-info {
     width: 80%;
     text-align: left;
     display: flex;
@@ -25,13 +25,13 @@
     justify-content: space-around;
 }
 
-.schoolPic {
+.school-pic {
     width: 45%;
     margin: auto;
     border: 1px solid lightgrey;
 }
 
-.schoolPicContainer {
+.school-pic-container {
     width: 80vw;
     margin-top: 20px;
     display: flex;
@@ -40,16 +40,16 @@
 }
 
 @media screen and (max-width: 499px) {
-    .schoolInfo {
+    .school-info {
         width: 90vw;
     }
     
-    .schoolPic {
+    .school-pic {
         width: 90vw;
         margin-top: 20px;
     }
 
-    .schoolPicContainer {
+    .school-pic-container {
         width: 90vw;
         display: flex;
         flex-direction: column;
@@ -58,15 +58,15 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .schoolInfo {
+    .school-info {
         width: 45rem;
     }
 
-    .schoolPic {
+    .school-pic {
         width: 25rem;
     }
 
-    .schoolPicContainer {
+    .school-pic-container {
         width: 30rem;
         margin-block: 10px;
         display: flex;

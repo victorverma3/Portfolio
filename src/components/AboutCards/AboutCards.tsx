@@ -16,24 +16,24 @@ interface AboutCardsProps {
 
 const AboutCards = ({ cards }: AboutCardsProps) => {
   return (
-    <div className="aboutCardList">
+    <div className="aboutCard-list">
       {cards.map((card) => (
         <Card className="aboutCards">
           <Card.Img
-            className="aboutCardImage"
+            className="aboutCard-image"
             variant="top"
             src={card.image}
             alt="image loading error"
           />
           <Card.Body>
             <Card.Title>
-              <a className="aboutCardTitle" href={card.url} target="_blank">
+              <a className="aboutCard-title" href={card.url} target="_blank">
                 {card.title}
               </a>
             </Card.Title>
-            <Card.Text className="aboutCardText">{card.description}</Card.Text>
+            <Card.Text className="aboutCard-text">{card.description}</Card.Text>
             <Button
-              className="aboutCardButton"
+              className="aboutCard-button"
               href={card.url}
               target="_blank"
               variant="dark"

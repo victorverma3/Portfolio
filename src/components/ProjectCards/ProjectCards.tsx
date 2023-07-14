@@ -16,38 +16,38 @@ interface ProjectCardsProps {
 
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
   return (
-    <div className="projectCardList">
+    <div className="projectCard-list">
       {cards.map((card) => (
         <Card className="projectCards">
           <Card.Img
-            className="projectCardImage"
+            className="projectCard-image"
             variant="top"
             src={card.image}
             alt="image loading error"
           />
           <Card.Body>
             <Card.Title>
-              <h1 className="projectCardTitle">{card.title}</h1>
+              <h1 className="projectCard-title">{card.title}</h1>
             </Card.Title>
-            <Card.Text className="projectCardText">
+            <Card.Text className="projectCard-text">
               {card.description}
             </Card.Text>
-            <div className="projectCardTechnologies">
+            <div className="projectCard-technologies">
               {card.technologies.map((element) => {
                 return (
                   <img
-                    className="projectCardLogos"
+                    className="projectCard-logos"
                     src={element}
                     alt="image loading error"
                   ></img>
                 );
               })}
             </div>
-            <div className="projectCardButtons">
+            <div className="projectCard-buttons">
               {card.links.map((element) => {
                 return (
                   <Button
-                    className="projectCardButton"
+                    className="projectCard-button"
                     href={element[1]}
                     target="_blank"
                     variant="dark"

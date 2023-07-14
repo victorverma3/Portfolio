@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="navContainer">
+      <div className="nav-container">
         <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
           <Container>
-            <Navbar.Brand className="navBrand" href="/">
+            <Navbar.Brand className="nav-brand" href="/">
               Victor Verma
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

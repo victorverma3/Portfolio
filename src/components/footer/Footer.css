@@ -9,27 +9,27 @@
    bottom: 0;
  }
 
-.footerItem {
+.footer-item {
    font-size: 1rem;
 }
 
-.footerLink {
+.footer-link {
    text-decoration: none;
    color: black;
 }
-.footerLink:hover {
+.footer-link:hover {
    text-decoration: underline;
    color: lightskyblue;
 }
 
 @media only screen and (max-width: 499px) {
-   .footerItem {
+   .footer-item {
       font-size: 0.625rem;
    }
 }
 
 @media only screen and (min-width: 1440px) { 
-   .footerItem {
+   .footer-item {
       font-size: 1.125rem;
    }
 }

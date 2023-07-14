@@ -69,13 +69,12 @@ const Experiences = () => {
     },
   ];
   return (
-    <div className="experienceContent">
-      <h1 className="pageTitle">Experience</h1>
-      <VerticalTimeline className="timelineComponent">
+    <div className="experience-content">
+      <h1 className="page-title">Experience</h1>
+      <VerticalTimeline>
         {timelineElements.map((element) => {
           return (
             <VerticalTimelineElement
-              className="timelineElement"
               iconStyle={{
                 backgroundImage: `url(${element.icon})`,
                 backgroundPosition: "center",
@@ -94,22 +93,22 @@ const Experiences = () => {
               <h6 className="vertical-timeline-element-subtitle">
                 {element.location}
               </h6>
-              <p className="timelineElementInfo">{element.description}</p>
+              <p className="timeline-element-info">{element.description}</p>
             </VerticalTimelineElement>
           );
         })}
       </VerticalTimeline>
       <div className="skills">
-        <p className="skillsList">
-          <span className="skillsTitle">
+        <p className="skills-list">
+          <span className="skills-title">
             <strong>Technical Skills: </strong>
           </span>
           Python, Java, HTML/CSS, TypeScript, React, Git, Github, LaTeX, Pandas,
           BeautifulSoup, ChatGPT, Web Development, Web Scraping, Object-Oriented
           Programming, Data Structures, Algorithm Analysis/Design.
         </p>
-        <p className="skillsList">
-          <span className="skillsTitle">
+        <p className="skills-list">
+          <span className="skills-title">
             <strong>Soft Skills: </strong>
           </span>
           Communication, Teamwork, Organization, Problem-Solving, Customer

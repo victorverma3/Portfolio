@@ -1,36 +1,36 @@
-.pdfButton {
+.pdf-button {
     width: 10rem;
 }
 
-.pdfButton:hover {
+.pdf-button:hover {
     background-color: white;
     color: lightskyblue;
 }
 
-.resumeContent {
+.resume-content {
     width: 100vw;
     min-height: 80vh;
     margin: 85px auto 55px auto;
 }
 
-.resumePic {
+.resume-pic {
     margin-block: 10px;
     width: 70vw;
     border: 1px solid lightgray;
 }
 
-.resumeView {
+.resume-view {
     padding-block: 10px;
 }
 
 @media only screen and (max-width: 499px) {
-    .resumePic {
+    .resume-pic {
         width: 90vw;
     }
 }
  
 @media only screen and (min-width: 1440px) {
-    .pdfButton {
+    .pdf-button {
         width: 15rem;
         font-size: 1.5rem;
     }

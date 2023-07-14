@@ -1,8 +1,8 @@
-.navBrand {
+.nav-brand {
    font-size: 1.375rem;
 }
 
-.navContainer {
+.nav-container {
    width: 100vw;
    margin: auto;
 }
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (min-width: 1440px) { 
-   .navBrand {
+   .nav-brand {
       font-size: 1.625rem;
    }
    

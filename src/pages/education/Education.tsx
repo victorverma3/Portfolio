@@ -6,11 +6,11 @@ import comlawn from "../../images/comlawn.png";
 
 const Education = () => {
   return (
-    <div className="educationContent">
-      <h1 className="pageTitle">Education</h1>
+    <div className="education-content">
+      <h1 className="page-title">Education</h1>
       <div className="school">
-        <div className="schoolInfo">
-          <Card className="eduCard">
+        <div className="school-info">
+          <Card className="edu-card">
             <Card.Header as="h5">Boston University</Card.Header>
             <Card.Body>
               <Card.Title>
@@ -62,13 +62,17 @@ const Education = () => {
             </Card.Body>
           </Card>
         </div>
-        <div className="schoolPicContainer">
+        <div className="school-pic-container">
           <img
-            className="schoolPic"
+            className="school-pic"
             src={comlawn}
             alt="image not loading"
           ></img>
-          <img className="schoolPic" src={bueast} alt="image not loading"></img>
+          <img
+            className="school-pic"
+            src={bueast}
+            alt="image not loading"
+          ></img>
         </div>
       </div>
     </div>

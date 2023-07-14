@@ -35,10 +35,10 @@ const About = () => {
     },
   ];
   return (
-    <div className="aboutContent">
-      <h1 className="pageTitle">About Me</h1>
-      <img className="aboutPic" src={paris} alt="image loading error"></img>
-      <p className="aboutBio">
+    <div className="about-content">
+      <h1 className="page-title">About Me</h1>
+      <img className="about-pic" src={paris} alt="image loading error"></img>
+      <p className="about-bio">
         My name is Victor Verma, and I'm a 20-year old who was born and raised
         in central Massachusetts. I live with my parents, my younger sister, and
         our dog. Throughout my whole life I've loved sports, primarily football,
@@ -49,7 +49,7 @@ const About = () => {
         decided by my coaches. I'm especially proud to have been named to the
         central mass all-star team in 7th grade as a linebacker.
       </p>
-      <p className="aboutBio">
+      <p className="about-bio">
         I have a passion for learning. I created this website on the weekends
         while working 40 hours as a research assistant during the week, and I
         still wish that I had time to learn even more things. I like to watch

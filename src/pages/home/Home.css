@@ -1,14 +1,10 @@
-.homeCard {
-    border: none;
-} 
-
-.homeContent {
+.home-content {
     width: 100vw;
     min-height: 80vh;
     margin: 110px auto 55px auto;
 }
 
-.homeLead {
+.home-lead {
     font-size: 1.5625rem;
     padding-top: 25px;
     text-align: justify;
@@ -16,40 +12,33 @@
     margin: auto;
 }
 
-.homeTitle {
+.home-title {
     font-size: 100px;
 }
 
-.jumbotron {
-    margin: auto;
-    width: 60vw;
-    height: fit-content;
-    flex-grow: 1;
-}
-
 @media screen and (max-width: 499px) {
-    .homeContent {
+    .home-content {
         max-height: 844px;
         margin-top: 85px;
         margin-bottom: 25px;
     }
 
-    .homeLead {
+    .home-lead {
         width: 65vw;
         font-size: 1.375rem;
     }
 
-    .homeTitle {
+    .home-title {
         font-size: 3.125rem;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .homeLead {
+    .home-lead {
         font-size: 1.875rem;
     }
 
-    .homeTitle {
+    .home-title {
         font-size: 9.375rem;
     }
 }

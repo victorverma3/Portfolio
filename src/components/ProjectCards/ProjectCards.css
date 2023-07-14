@@ -1,8 +1,8 @@
-.projectCardButton {
+.projectCard-button {
     width: 35%;
 }
 
-.projectCardButtons {
+.projectCard-buttons {
     width: 90%;
     margin: 10px auto auto auto;
     display: flex;
@@ -11,16 +11,16 @@
     align-content: space-around;
 }
 
-.projectCardButton:hover {
+.projectCard-button:hover {
     background-color: lightskyblue;
 }
 
-.projectCardImage {
+.projectCard-image {
     width: 90%;
     margin: auto;
 }
 
-.projectCardList {
+.projectCard-list {
     width: 90%;
     margin: auto;
     display: flex;
@@ -29,7 +29,7 @@
     align-items: space-around;
 }
 
-.projectCardLogos {
+.projectCard-logos {
     background-color: white;
     width: 15%;
 }
@@ -41,7 +41,7 @@
     font-size: 1rem;
 }
 
-.projectCardTechnologies {
+.projectCard-technologies {
     margin-block: 10px;
     display: flex;
     flex-flow: row wrap;
@@ -49,28 +49,28 @@
     align-items: space-around;
 }
 
-.projectCardText {
+.projectCard-text {
     text-align: justify;
 }
 
-.projectCardTitle {
+.projectCard-title {
     text-decoration: none;
     color: black;
     font-size: 1.875rem;
 }
 
 @media only screen and (max-width: 499px) {
-    .projectCardButton {
+    .projectCard-button {
         width: 40%;
     }
 }
  
 @media only screen and (min-width: 1440px) { 
-    .projectCardButton {
+    .projectCard-button {
         font-size: 1.25rem;
     }
 
-    .projectCardImage {
+    .projectCard-image {
         width: 80%;
     }
     
@@ -79,7 +79,7 @@
         font-size: 1.375rem;
     }
 
-    .projectCardTitle {
+    .projectCard-title {
         text-decoration: none;
         color: black;
         font-size: 2.25rem;

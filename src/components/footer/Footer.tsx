@@ -4,26 +4,26 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="bottom">
-      <div className="footerItem">
+      <div className="footer-item">
         <a>617-838-4092</a>
       </div>
-      <div className="footerItem">
-        <a className="footerLink" href="mailto:vpverm@bu.edu">
+      <div className="footer-item">
+        <a className="footer-link" href="mailto:vpverm@bu.edu">
           vpverm@bu.edu
         </a>
       </div>
-      <div className="footerItem">
+      <div className="footer-item">
         <a
-          className="footerLink"
+          className="footer-link"
           href="https://www.linkedin.com/in/victor-verma-91713022b/"
           target="_blank"
         >
           LinkedIn
         </a>
       </div>
-      <div className="footerItem">
+      <div className="footer-item">
         <a
-          className="footerLink"
+          className="footer-link"
           href="https://github.com/victorverma3"
           target="_blank"
         >

@@ -7,13 +7,13 @@
    margin: auto;
 }
 
-.nav-link {
+.navLink {
    text-decoration: none;
    color: black;
-   font-size: 1.25rem;
+   font-size: 0.625rem;
 }
 
-.nav-link:hover {
+.navLink:hover {
    text-decoration: underline;
    color: lightskyblue;
 }
@@ -23,7 +23,7 @@
       font-size: 1.625rem;
    }
    
-   .nav-link {
+   .navLink {
       font-size: 1.5rem;
    }
 }

@@ -1,0 +1,23 @@
+#root {
+  max-width: 1440px;
+  margin: auto;
+  text-align: center;
+  background-color: lightskyblue;
+  overflow-x: hidden;
+}
+
+.page-title {
+  font-size: 2.875rem;
+}
+
+@media screen and (max-width: 499px) { }
+
+@media screen and (min-width: 1440px) {
+  .page-subtitle {
+    font-size: 3.125rem;
+  }
+
+  .page-title {
+    font-size: 4.125rem;
+  }
+}

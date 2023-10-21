@@ -1,0 +1,47 @@
+.experience-content {
+    width: 100vw;
+    min-height: 80vh;
+    margin: 85px auto 55px auto;
+}
+
+.skills {
+    padding-top: 15px;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.skills-list {
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+
+.skills-title {
+    font-size: 1.25rem;
+}
+
+.timeline-element-info {
+    text-align: justify;
+}
+
+.vertical-timeline-element-subtitle {
+    text-align: left;
+}
+
+.vertical-timeline-element-title {
+    text-align: left;
+}
+
+@media screen and (max-width: 499) { }
+
+@media screen and (min-width: 1440px) { 
+    .skills {
+        font-size: 1.125rem;
+    }
+}

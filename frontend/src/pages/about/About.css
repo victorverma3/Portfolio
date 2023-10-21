@@ -1,0 +1,36 @@
+.about-bio {
+    width: 75vw;
+    margin: auto;
+    font-size: 1.25rem;
+    text-align: justify;
+    padding-top: 25px;
+}
+
+.about-content {
+    width: 100vw;
+    min-height: 80vh;
+    margin: 85px auto 55px auto;
+}
+
+.about-pic {
+    width: 30vw;
+    border: 1px solid lightgray;
+    margin-block: 10px;
+}
+
+.about-pic-container {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+@media only screen and (max-width: 499px) {
+    .about-pic {
+        width: 75vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) { }

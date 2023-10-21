@@ -1,0 +1,76 @@
+.edu-card {
+    border: 1px solid lightgray;
+}
+
+.education-content {
+    width: 100vw;
+    min-height: 80vh;
+    margin: 85px auto 55px auto;
+}
+
+.school {
+    width: 90vw;
+    margin: auto;
+    padding-block: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.school-info {
+    width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.school-pic {
+    width: 45%;
+    margin: auto;
+    border: 1px solid lightgrey;
+}
+
+.school-pic-container {
+    width: 80vw;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 499px) {
+    .school-info {
+        width: 90vw;
+    }
+    
+    .school-pic {
+        width: 90vw;
+        margin-top: 20px;
+    }
+
+    .school-pic-container {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .school-info {
+        width: 45rem;
+    }
+
+    .school-pic {
+        width: 25rem;
+    }
+
+    .school-pic-container {
+        width: 30rem;
+        margin-block: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

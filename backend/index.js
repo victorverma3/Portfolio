@@ -21,23 +21,6 @@ app.get("/", (request, response) => {
 
 app.use("/experience-collection", experienceRoute);
 
-const cspHeader =
-  "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;";
-
-app.use((request, response, next) => {
-  response.setHeader("Content-Security-Policy", cspHeader);
-  next();
-});
-
-app.use("/images", express.static("../frontend/public/images"));
-
-app.get("/get-image/:imagePath", (request, response) => {
-  const imagePath = request.params.imagePath;
-  const serverBaseUrl = "https://victor-verma-portfolio-backend.vercel.app";
-  const imageUrl = `${serverBaseUrl}/images/${imagePath}`;
-  response.sendFile(imageUrl);
-});
-
 mongoose
   .connect(mongoDBURL)
   .then(() => {

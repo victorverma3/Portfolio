@@ -7,6 +7,12 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import bulogo from "../../../public/images/bulogo.png";
+import ktplogo from "../../../public/images/ktplogo.png";
+import leslieslogo from "../../../public/images/leslieslogo.png";
+import amazonlogo from "../../../public/images/amazonlogo.png";
+import umasshospitallogo from "../../../public/images/umasshospitallogo.png";
+import rsmlogo from "../../../public/images/rsmlogo.png";
 
 type experienceDataType = {
   _id: string;
@@ -40,12 +46,19 @@ const Experience = () => {
       <h1 className="page-title">Experience</h1>
       <VerticalTimeline>
         {experienceData.map((element, index) => {
-          const imageUrl = `https://victor-verma-portfolio-backend.vercel.app/get-image/${element.icon}`;
+          const experienceImageMap: { [key: string]: any } = {
+            bulogo: bulogo,
+            ktplogo: ktplogo,
+            leslieslogo: leslieslogo,
+            amazonlogo: amazonlogo,
+            umasshospitallogo: umasshospitallogo,
+            rsmlogo: rsmlogo,
+          };
           return (
             <VerticalTimelineElement
               key={index}
               iconStyle={{
-                backgroundImage: `url(${imageUrl})`,
+                backgroundImage: `url(${experienceImageMap[element.icon]})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}

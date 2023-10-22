@@ -1,6 +1,6 @@
-import express from "express";
+const express = require('express');
+const cors = require('cors');
 import {PORT, mongoDBURL} from "./config.js";
-import cors from 'cors';
 import experienceRoute from './routes/experienceRoute.js';
 import mongoose, { model } from 'mongoose';
 

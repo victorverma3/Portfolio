@@ -38,6 +38,7 @@ const Experience = () => {
   return (
     <div className="experience-content">
       <h1 className="page-title">Experience</h1>
+      <h3>* Temporarily Unavailable - Working on MERN Stack Deployment * </h3>
       <VerticalTimeline>
         {experienceData.map((element, index) => {
           return (

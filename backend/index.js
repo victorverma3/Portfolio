@@ -8,12 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors(
-    {
-        origin: 'https://victor-verma-portfolio-frontend.vercel.app',
-        credentials: true,
-    }
-));
+app.use(cors());
 
 app.get('/', (request, response) => {
     console.log(request)

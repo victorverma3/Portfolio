@@ -8,7 +8,9 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://victor-verma-portfolio.vercel.app'
+}));
 
 app.get('/', (request, response) => {
     console.log(request)

@@ -10,7 +10,11 @@ app.use(express.json());
 
 app.use(cors(
     {
-        origin: 'https://victor-verma-portfolio-frontend.vercel.app',
+        origin: [
+            "https://victor-verma-portfolio-frontend.vercel.app",
+            "https://victor-verma-portfolio-frontend.vercel.app/_vercel/insights/script.js",
+            "https://victor-verma-portfolio-backend.vercel.app/experience-collection",
+        ],
         methods: 'GET',
     }
 ));

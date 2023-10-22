@@ -85,8 +85,8 @@ const Experience = () => {
           <span className="skills-title">
             <strong>Technical Skills: </strong>
           </span>
-          Python, HTML/CSS, JavaScript, TypeScript, React.js, Node.js, Git,
-          LaTeX, APIs, Pandas, Beautiful Soup, Web Development, Web Scraping,
+          Python, HTML/CSS, JavaScript/TypeScript, React.js, Express.js,
+          Node.js, MongoDB, Git, APIs, Pandas, Beautiful Soup, Web Scraping,
           Object-Oriented Programming, Data Structures, Algorithm
           Analysis/Design.
         </p>

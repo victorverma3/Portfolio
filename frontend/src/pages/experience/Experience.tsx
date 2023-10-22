@@ -25,7 +25,9 @@ const Experience = () => {
   );
   useEffect(() => {
     axios
-      .get("http://localhost:3000/experience-collection")
+      .get(
+        "https://victor-verma-portfolio-backend.vercel.app/experience-collection"
+      )
       .then((response) => {
         setExperienceData(response.data.data);
       })

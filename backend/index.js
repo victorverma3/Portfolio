@@ -2,7 +2,7 @@ import express from "express";
 import {PORT, mongoDBURL} from "./config.js";
 import cors from 'cors';
 import experienceRoute from './routes/experienceRoute.js';
-import mongoose from 'mongoose';
+import mongoose, { model } from 'mongoose';
 
 const app = express();
 
@@ -28,3 +28,5 @@ mongoose
     .catch((error) => {
         console.log(error);
     });
+
+model.exports = app;

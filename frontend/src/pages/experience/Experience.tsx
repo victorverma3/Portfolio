@@ -40,11 +40,12 @@ const Experience = () => {
       <h1 className="page-title">Experience</h1>
       <VerticalTimeline>
         {experienceData.map((element, index) => {
+          const imageUrl = `$https://victor-verma-portfolio-backend.vercel.app/get-image/${element.icon}`;
           return (
             <VerticalTimelineElement
               key={index}
               iconStyle={{
-                backgroundImage: element.icon,
+                backgroundImage: `url(${imageUrl})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}

@@ -8,6 +8,8 @@ const app = express();
 
 app.use(express.json());
 
+app.use("/images", express.static("../../frontend/public/images"));
+
 app.use(
   cors({
     origin: "https://victor-verma-portfolio.vercel.app",
@@ -17,6 +19,13 @@ app.use(
 app.get("/", (request, response) => {
   console.log(request);
   return response.status(234).send(`Backend for Victor's Portfolio`);
+});
+
+app.get("/get-image/:imagePath", (request, response) => {
+  const imagePath = request.params.imagePath;
+  const serverBaseUrl = "https://victor-verma-portfolio-backend.vercel.app";
+  const imageUrl = `${serverBaseUrl}/images/${imagePath}`;
+  response.sendFile(imageUrl);
 });
 
 app.use("/experience-collection", experienceRoute);

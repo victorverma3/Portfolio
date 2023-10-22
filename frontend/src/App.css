@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 499px) { }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .page-subtitle {
     font-size: 3.125rem;
   }

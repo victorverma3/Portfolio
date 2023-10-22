@@ -18,7 +18,7 @@
    color: lightskyblue;
 }
 
-@media only screen and (min-width: 1440px) { 
+@media only screen and (min-width: 1441px) { 
    .nav-brand {
       font-size: 1.625rem;
    }

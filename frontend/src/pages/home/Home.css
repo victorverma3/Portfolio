@@ -33,12 +33,12 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
     .home-lead {
-        font-size: 1.875rem;
+        font-size: 1.625rem;
     }
 
     .home-title {
-        font-size: 9.375rem;
+        font-size: 8rem;
     }
 }

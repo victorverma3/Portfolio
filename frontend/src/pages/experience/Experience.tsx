@@ -44,7 +44,7 @@ const Experience = () => {
             <VerticalTimelineElement
               key={index}
               iconStyle={{
-                backgroundImage: `url(${element.icon})`,
+                backgroundImage: element.icon,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}

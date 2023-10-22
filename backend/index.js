@@ -10,7 +10,10 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://victor-verma-portfolio.vercel.app", "http://localhost"],
+    origin: [
+      "https://victor-verma-portfolio.vercel.app",
+      "http://localhost:5173",
+    ],
   })
 );
 

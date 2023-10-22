@@ -29,4 +29,4 @@ mongoose
         console.log(error);
     });
 
-model.exports = app;
+module.exports = app;

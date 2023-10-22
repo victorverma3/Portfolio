@@ -8,8 +8,6 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/images", express.static("../../frontend/public/images"));
-
 app.use(
   cors({
     origin: "https://victor-verma-portfolio.vercel.app",
@@ -21,14 +19,24 @@ app.get("/", (request, response) => {
   return response.status(234).send(`Backend for Victor's Portfolio`);
 });
 
+app.use("/experience-collection", experienceRoute);
+
+const cspHeader =
+  "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;";
+
+app.use((request, response, next) => {
+  response.setHeader("Content-Security-Policy", cspHeader);
+  next();
+});
+
+app.use("/images", express.static("../frontend/public/images"));
+
 app.get("/get-image/:imagePath", (request, response) => {
   const imagePath = request.params.imagePath;
   const serverBaseUrl = "https://victor-verma-portfolio-backend.vercel.app";
   const imageUrl = `${serverBaseUrl}/images/${imagePath}`;
   response.sendFile(imageUrl);
 });
-
-app.use("/experience-collection", experienceRoute);
 
 mongoose
   .connect(mongoDBURL)

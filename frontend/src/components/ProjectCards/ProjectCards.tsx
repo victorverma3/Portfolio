@@ -41,7 +41,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
           <Card.Img
             className="projectCard-image"
             variant="top"
-            src={`url(${projectImageMap[card.image]})`}
+            src={projectImageMap[card.image]}
             alt="image loading error"
           />
           <Card.Body>
@@ -56,7 +56,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                 return (
                   <img
                     className="projectCard-logos"
-                    src={`url(${projectImageMap[element]})`}
+                    src={projectImageMap[element]}
                     alt="image loading error"
                   ></img>
                 );

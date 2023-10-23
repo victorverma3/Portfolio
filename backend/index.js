@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { PORT, mongoDBURL } from "./config.js";
 import experienceRoute from "./routes/experienceRoute.js";
+import projectRoute from "./routes/projectRoute.js";
 import mongoose from "mongoose";
 
 const app = express();
@@ -23,6 +24,8 @@ app.get("/", (request, response) => {
 });
 
 app.use("/experience-collection", experienceRoute);
+
+app.use("/project-collection", projectRoute);
 
 mongoose
   .connect(mongoDBURL)

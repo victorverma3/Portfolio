@@ -1,6 +1,14 @@
 import React from "react";
 import "./ProjectCards.css";
 import { Button, Card } from "react-bootstrap";
+import candidatebios from "../../../public/images/candidatebios.png";
+import pythonlogo from "../../../public/images/pythonlogo.png";
+import portfolio from "../../../public/images/portfolio.png";
+import reactlogo from "../../../public/images/reactlogo.png";
+import typescriptlogo from "../../../public/images/typescriptlogo.png";
+import htmllogo from "../../../public/images/htmllogo.png";
+import csslogo from "../../../public/images/csslogo.png";
+import sportsnews from "../../../public/images/sportsnews.png";
 
 interface Card {
   title: string;
@@ -8,6 +16,7 @@ interface Card {
   description: string;
   technologies: Array<string>;
   links: Array<Array<string>>;
+  sortOrder: number;
 }
 
 interface ProjectCardsProps {
@@ -15,6 +24,16 @@ interface ProjectCardsProps {
 }
 
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
+  const projectImageMap: { [key: string]: any } = {
+    candidatebios: candidatebios,
+    pythonlogo: pythonlogo,
+    portfolio: portfolio,
+    reactlogo: reactlogo,
+    typescriptlogo: typescriptlogo,
+    htmllogo: htmllogo,
+    csslogo: csslogo,
+    sportsnews: sportsnews,
+  };
   return (
     <div className="projectCard-list">
       {cards.map((card) => (
@@ -37,7 +56,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                 return (
                   <img
                     className="projectCard-logos"
-                    src={element}
+                    src={`url(${projectImageMap[element]})`}
                     alt="image loading error"
                   ></img>
                 );

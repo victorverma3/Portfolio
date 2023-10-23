@@ -1,16 +1,16 @@
 import express from "express";
-import { Experiences } from "../models/experienceModel.js";
+import { Projects } from "../models/projectModel.js";
 
 const router = express.Router();
 
 router.get("/", async (request, response) => {
   try {
-    const experienceElements = await Experiences.find({}).sort({
+    const projectElements = await Projects.find({}).sort({
       sortOrder: 1,
     });
     return response.status(200).json({
-      count: experienceElements.length,
-      data: experienceElements,
+      count: projectElements.length,
+      data: projectElements,
     });
   } catch (error) {
     console.log(error.message);

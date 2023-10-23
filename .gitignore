@@ -2,7 +2,7 @@
 .DS_Store
 
 # Frontend
-./frontend/DS_Store
+frontend/DS_Store
 
 # Backend
 backend/.env

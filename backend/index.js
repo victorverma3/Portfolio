@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { PORT, mongoDBURL } from "./config.js";
+import "./config.js";
 import experienceRoute from "./routes/experienceRoute.js";
 import projectRoute from "./routes/projectRoute.js";
 import mongoose from "mongoose";
@@ -28,11 +28,11 @@ app.use("/experience-collection", experienceRoute);
 app.use("/project-collection", projectRoute);
 
 mongoose
-  .connect(mongoDBURL)
+  .connect(process.env.mongoDBURL)
   .then(() => {
     console.log("App connected to database");
-    app.listen(PORT, () => {
-      console.log(`App is listening to port: ${PORT}`);
+    app.listen(process.env.PORT, () => {
+      console.log(`App is listening to port: ${process.env.PORT}`);
     });
   })
   .catch((error) => {

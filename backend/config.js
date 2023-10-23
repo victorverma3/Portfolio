@@ -1,3 +1,3 @@
-export const PORT = 3000;
+import dotenv from "dotenv";
 
-export const mongoDBURL = "mongodb+srv://vpverm:portfoliodb@cluster0.kb2m6rf.mongodb.net/portfolio-db?retryWrites=true&w=majority";
+dotenv.config();

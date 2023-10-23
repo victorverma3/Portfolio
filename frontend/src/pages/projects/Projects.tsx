@@ -48,9 +48,9 @@ const Projects = () => {
     {
       title: "SportsNews",
       image: sportsnews,
-      technologies: [pythonlogo, htmllogo, csslogo],
       description:
         "I created a script that scrapes the latest headlines for 6 sports and sends them as formatted emails to users on mailing lists every morning at 9:00am est. ",
+      technologies: [pythonlogo, htmllogo, csslogo],
       links: [["GitHub", "https://github.com/victorverma3/SportsNews"]],
     },
   ];

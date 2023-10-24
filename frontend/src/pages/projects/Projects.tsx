@@ -32,6 +32,7 @@ const Projects = () => {
         console.log(error);
       });
   }, []);
+  /*
   // projectTest is used to simulate database in local development
   const projectTest = [
     {
@@ -59,9 +60,9 @@ const Projects = () => {
         "I developed a Python script to facilitate the real-time news retrieval for 6 sports, automating headline formatting, data scraping, and newsletter creation. I used HTML and CSS to design email newsletters that are delivered daily at 9:00am EST.",
       technologies: ["test"],
       links: [["GitHub"]],
-      sortOrder: 2,
+      sortOrder: 3,
     },
-  ];
+  ]; */
   return (
     <div className="project-content">
       <h1 className="page-title">Projects</h1>

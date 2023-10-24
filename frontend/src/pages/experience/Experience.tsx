@@ -88,8 +88,8 @@ const Experience = () => {
           </span>
           Python, HTML/CSS, JavaScript/TypeScript, React.js, Express.js,
           Node.js, MongoDB, Git, APIs, Pandas, Beautiful Soup, Web Scraping,
-          Object-Oriented Programming, Data Structures, Algorithm
-          Analysis/Design.
+          Object-Oriented Programming, Data Structures, Algorithm Analysis and
+          Design.
         </p>
         <p className="skills-list">
           <span className="skills-title">

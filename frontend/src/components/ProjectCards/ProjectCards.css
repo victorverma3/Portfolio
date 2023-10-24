@@ -3,7 +3,7 @@
 }
 
 .projectCard-buttons {
-    width: 90%;
+    width: 100%;
     margin: 10px auto auto auto;
     display: flex;
     flex-direction: row;
@@ -35,7 +35,7 @@
 }
 
 .projectCards {
-    width: 24rem;
+    width: 22rem;
     border: 1px solid lightgray;
     margin-block: 10px;
     font-size: 1rem;

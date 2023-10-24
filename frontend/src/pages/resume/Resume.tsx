@@ -1,8 +1,11 @@
 import React from "react";
-import "./Resume.css";
-import resume from "../../../public/images/resume.png";
 import { Button } from "react-bootstrap";
+
 import PDF from "../../components/VictorVerma.pdf";
+
+import "./Resume.css";
+
+import resume from "../../../public/images/resume.png";
 
 const Resume = () => {
   return (

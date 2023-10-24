@@ -1,15 +1,17 @@
 import React, { useLayoutEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import { useLocation, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Experience from "./pages/experience/Experience";
+
+import About from "./pages/about/About";
 import Education from "./pages/education/Education";
+import Error from "./pages/error/Error";
+import Experience from "./pages/experience/Experience";
+import Home from "./pages/home/Home";
+import Layout from "./Layout";
 import Projects from "./pages/projects/Projects";
 import Resume from "./pages/resume/Resume";
-import About from "./pages/about/About";
-import Error from "./pages/error/Error";
-import Layout from "./Layout";
+
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const { pathname } = useLocation();

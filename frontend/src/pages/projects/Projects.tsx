@@ -1,10 +1,11 @@
-import React from "react";
-import "./Projects.css";
-import ProjectCards from "../../components/ProjectCards/ProjectCards";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
+import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import Reveal from "../../components/Reveal/Reveal";
+
+import "./Projects.css";
 
 type projectDataType = {
   _id: string;

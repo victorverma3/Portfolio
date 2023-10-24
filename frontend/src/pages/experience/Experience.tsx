@@ -1,18 +1,19 @@
-import React from "react";
-import "./Experience.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+
+import "./Experience.css";
 import "react-vertical-timeline-component/style.min.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
+
+import amazonlogo from "../../../public/images/amazonlogo.png";
 import bulogo from "../../../public/images/bulogo.png";
 import ktplogo from "../../../public/images/ktplogo.png";
 import leslieslogo from "../../../public/images/leslieslogo.png";
-import amazonlogo from "../../../public/images/amazonlogo.png";
-import umasshospitallogo from "../../../public/images/umasshospitallogo.png";
 import rsmlogo from "../../../public/images/rsmlogo.png";
+import umasshospitallogo from "../../../public/images/umasshospitallogo.png";
 
 type experienceDataType = {
   _id: string;

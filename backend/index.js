@@ -1,9 +1,11 @@
-import express from "express";
 import cors from "cors";
+import express from "express";
+import mongoose from "mongoose";
+
 import "./config.js";
+
 import experienceRoute from "./routes/experienceRoute.js";
 import projectRoute from "./routes/projectRoute.js";
-import mongoose from "mongoose";
 
 const app = express();
 

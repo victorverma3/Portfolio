@@ -1,6 +1,7 @@
 import React from "react";
-import "./AboutCards.css";
 import { Button, Card } from "react-bootstrap";
+
+import "./AboutCards.css";
 
 interface Card {
   title: string;

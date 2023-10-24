@@ -1,6 +1,8 @@
 import React from "react";
-import "./Education.css";
 import { Card } from "react-bootstrap";
+
+import "./Education.css";
+
 import bueast from "../../../public/images/bueast.png";
 import comlawn from "../../../public/images/comlawn.png";
 

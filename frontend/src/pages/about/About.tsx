@@ -1,12 +1,15 @@
 import React from "react";
-import "./About.css";
+
 import AboutCards from "../../components/AboutCards/AboutCards";
+import Disclaimer from "../../components/Disclaimer/Disclaimer";
+
+import "./About.css";
+
 import cruise from "../../../public/images/cruise.png";
+import cube from "../../../public/images/cube.png";
 import husky from "../../../public/images/husky.png";
 import movies from "../../../public/images/letterboxd.png";
 import weights from "../../../public/images/weights.png";
-import cube from "../../../public/images/cube.png";
-import Disclaimer from "../../components/Disclaimer/Disclaimer";
 
 const About = () => {
   const aboutCards = [

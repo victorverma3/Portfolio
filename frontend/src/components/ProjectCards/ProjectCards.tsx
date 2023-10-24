@@ -1,14 +1,16 @@
 import React from "react";
-import "./ProjectCards.css";
 import { Button, Card } from "react-bootstrap";
+
+import "./ProjectCards.css";
+
 import candidatebios from "../../../public/images/candidatebios.png";
+import csslogo from "../../../public/images/csslogo.png";
+import htmllogo from "../../../public/images/htmllogo.png";
 import pythonlogo from "../../../public/images/pythonlogo.png";
 import portfolio from "../../../public/images/portfolio.png";
 import reactlogo from "../../../public/images/reactlogo.png";
-import typescriptlogo from "../../../public/images/typescriptlogo.png";
-import htmllogo from "../../../public/images/htmllogo.png";
-import csslogo from "../../../public/images/csslogo.png";
 import sportsnews from "../../../public/images/sportsnews.png";
+import typescriptlogo from "../../../public/images/typescriptlogo.png";
 
 interface Card {
   title: string;

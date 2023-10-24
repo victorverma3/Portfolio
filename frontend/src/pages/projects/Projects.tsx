@@ -32,7 +32,8 @@ const Projects = () => {
         console.log(error);
       });
   }, []);
-  const test = [
+  // projectTest is used to simulate database in local development
+  const projectTest = [
     {
       title: "CandidateBios",
       image: "test",

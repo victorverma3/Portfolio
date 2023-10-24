@@ -33,7 +33,7 @@ const Projects = () => {
       });
   }, []);
   /*
-  // projectTest is used to simulate database in local development
+  // projectTest is used to simulate the database in local development
   const projectTest = [
     {
       title: "CandidateBios",

@@ -3,6 +3,7 @@
 
 # Frontend
 frontend/DS_Store
+frontend/.env
 
 # Backend
 backend/.env

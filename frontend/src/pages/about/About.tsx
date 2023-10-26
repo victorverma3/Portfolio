@@ -19,7 +19,7 @@ const About = () => {
       description:
         "I like watching movies in my free time, mostly from any genre. I use the Letterboxd app to log, rate, and rank the movies that I watch. I generally enjoy movies of all genres, languages, and runtimes.",
       link: "Letterboxd",
-      url: "https://letterboxd.com/vic_verma/",
+      url: "https://letterboxd.com/victorverma/",
     },
     {
       title: "Working Out",

@@ -30,57 +30,65 @@ const Experience = () => {
   const [experienceData, setExperienceData] = useState<experienceDataType[]>(
     []
   );
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     axios
       .get(
         "https://victor-verma-portfolio-backend.vercel.app/experience-collection"
       )
       .then((response) => {
         setExperienceData(response.data.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }, []);
   return (
     <div className="experience-content">
       <h1 className="page-title">Experience</h1>
-      <VerticalTimeline>
-        {experienceData.map((element, index) => {
-          const experienceImageMap: { [key: string]: any } = {
-            bulogo: bulogo,
-            ktplogo: ktplogo,
-            leslieslogo: leslieslogo,
-            amazonlogo: amazonlogo,
-            umasshospitallogo: umasshospitallogo,
-            rsmlogo: rsmlogo,
-          };
-          return (
-            <VerticalTimelineElement
-              key={index}
-              iconStyle={{
-                backgroundImage: `url(${experienceImageMap[element.icon]})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            >
-              <h3 className="vertical-timeline-element-title">
-                {element.role}
-              </h3>
-              <h5 className="vertical-timeline-element-subtitle">
-                {element.employer}
-              </h5>
-              <h6 className="vertical-timeline-element-subtitle">
-                {element.dates}
-              </h6>
-              <h6 className="vertical-timeline-element-subtitle">
-                {element.location}
-              </h6>
-              <p className="timeline-element-info">{element.description}</p>
-            </VerticalTimelineElement>
-          );
-        })}
-      </VerticalTimeline>
+      {loading ? (
+        <h1>loading</h1>
+      ) : (
+        <VerticalTimeline>
+          {experienceData.map((element, index) => {
+            const experienceImageMap: { [key: string]: any } = {
+              bulogo: bulogo,
+              ktplogo: ktplogo,
+              leslieslogo: leslieslogo,
+              amazonlogo: amazonlogo,
+              umasshospitallogo: umasshospitallogo,
+              rsmlogo: rsmlogo,
+            };
+            return (
+              <VerticalTimelineElement
+                key={index}
+                iconStyle={{
+                  backgroundImage: `url(${experienceImageMap[element.icon]})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+              >
+                <h3 className="vertical-timeline-element-title">
+                  {element.role}
+                </h3>
+                <h5 className="vertical-timeline-element-subtitle">
+                  {element.employer}
+                </h5>
+                <h6 className="vertical-timeline-element-subtitle">
+                  {element.dates}
+                </h6>
+                <h6 className="vertical-timeline-element-subtitle">
+                  {element.location}
+                </h6>
+                <p className="timeline-element-info">{element.description}</p>
+              </VerticalTimelineElement>
+            );
+          })}
+        </VerticalTimeline>
+      )}
       <div className="skills">
         <p className="skills-list">
           <span className="skills-title">

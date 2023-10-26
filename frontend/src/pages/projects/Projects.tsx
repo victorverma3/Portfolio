@@ -19,17 +19,20 @@ type projectDataType = {
 
 const Projects = () => {
   const [projectData, setProjectData] = useState<projectDataType[]>([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     axios
       .get(
         "https://victor-verma-portfolio-backend.vercel.app/project-collection"
       )
       .then((response) => {
         setProjectData(response.data.data);
-        console.log(response.data.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }, []);
   /*
@@ -66,9 +69,13 @@ const Projects = () => {
   return (
     <div className="project-content">
       <h1 className="page-title">Projects</h1>
-      <Reveal>
-        <ProjectCards cards={projectData} />
-      </Reveal>
+      {loading ? (
+        <h1>loading</h1>
+      ) : (
+        <Reveal>
+          <ProjectCards cards={projectData} />
+        </Reveal>
+      )}
       <Disclaimer />
     </div>
   );

@@ -4,6 +4,7 @@ import axios from "axios";
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import Reveal from "../../components/Reveal/Reveal";
+import Spinner from "../../components/Spinner/Spinner";
 
 import "./Projects.css";
 
@@ -70,7 +71,7 @@ const Projects = () => {
     <div className="project-content">
       <h1 className="page-title">Projects</h1>
       {loading ? (
-        <h1>loading</h1>
+        <Spinner />
       ) : (
         <Reveal>
           <ProjectCards cards={projectData} />

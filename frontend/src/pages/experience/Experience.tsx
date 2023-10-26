@@ -5,6 +5,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
+import Spinner from "../../components/Spinner/Spinner";
+
 import "./Experience.css";
 import "react-vertical-timeline-component/style.min.css";
 
@@ -50,7 +52,7 @@ const Experience = () => {
     <div className="experience-content">
       <h1 className="page-title">Experience</h1>
       {loading ? (
-        <h1>loading</h1>
+        <Spinner />
       ) : (
         <VerticalTimeline>
           {experienceData.map((element, index) => {

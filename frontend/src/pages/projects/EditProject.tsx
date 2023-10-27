@@ -59,7 +59,7 @@ const EditProject = () => {
       )
       .then(() => {
         setLoading(false);
-        enqueueSnackbar("Experience edited successfully", {
+        enqueueSnackbar("Project edited successfully", {
           variant: "success",
         });
         navigate("/projects");

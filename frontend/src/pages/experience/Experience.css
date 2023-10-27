@@ -42,7 +42,13 @@
     text-align: left;
 }
 
-@media screen and (max-width: 499) { }
+@media screen and (max-width: 499px) { }
+
+@media screen and (max-width: 1023px) {
+    .experience-edit-button {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 1441px) { 
     .skills {

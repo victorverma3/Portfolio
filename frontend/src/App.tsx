@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
+import { SnackbarProvider } from "notistack";
 
 import About from "./pages/about/About";
 import EditExperience from "./pages/experience/EditExperience";
@@ -21,18 +22,20 @@ function App() {
   }, [pathname]);
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/experience/edit/:id" element={<EditExperience />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error />} />
-        </Route>
-      </Routes>
+      <SnackbarProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/experience/edit/:id" element={<EditExperience />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<Error />} />
+          </Route>
+        </Routes>
+      </SnackbarProvider>
     </div>
   );
 }

@@ -15,7 +15,7 @@ const EditProject = () => {
   const [description, setDescription] = useState(" ");
   const [technologies, setTechnologies] = useState(" ");
   const [links, setLinks] = useState(" ");
-  const [sortOrder, setSortOrder] = useState(-1);
+  const [sortOrder, setSortOrder] = useState(" ");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -49,7 +49,7 @@ const EditProject = () => {
       description,
       technologies,
       links,
-      sortOrder,
+      sortOrder: parseInt(sortOrder),
     };
     setLoading(true);
     axios
@@ -149,7 +149,7 @@ const EditProject = () => {
               className="edit-project-input"
               type="text"
               value={sortOrder}
-              onChange={(e) => setSortOrder(parseInt(e.target.value))}
+              onChange={(e) => setSortOrder(e.target.value)}
             />
           </div>
         </div>

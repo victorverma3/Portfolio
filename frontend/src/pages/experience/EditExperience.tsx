@@ -16,7 +16,7 @@ const EditExperience = () => {
   const [location, setLocation] = useState(" ");
   const [description, setDescription] = useState(" ");
   const [icon, setIcon] = useState(" ");
-  const [sortOrder, setSortOrder] = useState(-1);
+  const [sortOrder, setSortOrder] = useState(" ");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -52,7 +52,7 @@ const EditExperience = () => {
       location,
       description,
       icon,
-      sortOrder,
+      sortOrder: parseInt(sortOrder),
     };
     setLoading(true);
     axios
@@ -165,7 +165,7 @@ const EditExperience = () => {
               className="edit-experience-input"
               type="text"
               value={sortOrder}
-              onChange={(e) => setSortOrder(parseInt(e.target.value))}
+              onChange={(e) => setSortOrder(e.target.value)}
             />
           </div>
         </div>

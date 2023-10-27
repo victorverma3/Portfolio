@@ -14,7 +14,7 @@ const EditProject = () => {
   const [image, setImage] = useState(" ");
   const [description, setDescription] = useState(" ");
   const [technologies, setTechnologies] = useState(" ");
-  const [links, setLinks] = useState(" ");
+  const [links, setLinks] = useState([{ title: " ", url: " " }]);
   const [sortOrder, setSortOrder] = useState(" ");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -42,6 +42,7 @@ const EditProject = () => {
         console.log(error);
       });
   }, [id, enqueueSnackbar]);
+
   const handleEditProject = () => {
     const data = {
       title,
@@ -135,8 +136,7 @@ const EditProject = () => {
             <input
               className="edit-project-input"
               type="text"
-              value={links}
-              onChange={(e) => setLinks(e.target.value)}
+              value="Edit on MongoDB Atlas only"
             />
           </div>
         </div>

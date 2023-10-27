@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 499px) { }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .experience-edit-button {
         display: none;
     }

@@ -1,5 +1,7 @@
 import React from "react";
+import { AiOutlineEdit } from "react-icons/ai";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import "./ProjectCards.css";
 
@@ -13,6 +15,7 @@ import sportsnews from "../../../public/images/sportsnews.png";
 import typescriptlogo from "../../../public/images/typescriptlogo.png";
 
 interface Card {
+  _id: string;
   title: string;
   image: string;
   description: string;
@@ -65,6 +68,9 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
               })}
             </div>
             <div className="projectCard-buttons">
+              <Link to={`/projects/edit/${card._id}`}>
+                <AiOutlineEdit className="project-edit-button" size={24} />
+              </Link>
               {card.links.map((element) => {
                 return (
                   <Button

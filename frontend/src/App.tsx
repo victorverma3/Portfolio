@@ -4,6 +4,7 @@ import { SnackbarProvider } from "notistack";
 
 import About from "./pages/about/About";
 import EditExperience from "./pages/experience/EditExperience";
+import EditProject from "./pages/projects/EditProject";
 import Education from "./pages/education/Education";
 import Error from "./pages/error/Error";
 import Experience from "./pages/experience/Experience";
@@ -30,6 +31,7 @@ function App() {
             <Route path="/experience/edit/:id" element={<EditExperience />} />
             <Route path="/education" element={<Education />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/edit/:id" element={<EditProject />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Error />} />

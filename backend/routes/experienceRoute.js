@@ -4,6 +4,7 @@ import { Experiences } from "../models/experienceModel.js";
 
 const router = express.Router();
 
+// get all experiences
 router.get("/", async (request, response) => {
   try {
     const experienceElements = await Experiences.find({}).sort({
@@ -19,6 +20,7 @@ router.get("/", async (request, response) => {
   }
 });
 
+// get an experience by id
 router.get("/:id", async (request, response) => {
   try {
     const { id } = request.params;
@@ -30,6 +32,7 @@ router.get("/:id", async (request, response) => {
   }
 });
 
+// update an experience
 router.put("/:id", async (request, response) => {
   try {
     if (

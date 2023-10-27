@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { AiOutlineEdit } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -86,6 +88,9 @@ const Experience = () => {
                   {element.location}
                 </h6>
                 <p className="timeline-element-info">{element.description}</p>
+                <Link to={`/experience/edit/${element._id}`}>
+                  <AiOutlineEdit className="experience-edit-button" size={24} />
+                </Link>
               </VerticalTimelineElement>
             );
           })}

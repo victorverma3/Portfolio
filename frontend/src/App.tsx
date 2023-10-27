@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
 
 import About from "./pages/about/About";
+import EditExperience from "./pages/experience/EditExperience";
 import Education from "./pages/education/Education";
 import Error from "./pages/error/Error";
 import Experience from "./pages/experience/Experience";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/experience/edit/:id" element={<EditExperience />} />
           <Route path="/education" element={<Education />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />

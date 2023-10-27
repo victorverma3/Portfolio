@@ -117,31 +117,6 @@ const EditProject = () => {
         </div>
         <div className="edit-project-individual-field-container">
           <div className="edit-project-field-label">
-            <label>Technologies</label>
-          </div>
-          <div className="edit-project-field">
-            <input
-              className="edit-project-input"
-              type="text"
-              value={technologies}
-              onChange={(e) => setTechnologies(e.target.value)}
-            />
-          </div>
-        </div>
-        <div className="edit-project-individual-field-container">
-          <div className="edit-project-field-label">
-            <label>Links</label>
-          </div>
-          <div className="edit-project-field">
-            <input
-              className="edit-project-input"
-              type="text"
-              value="Edit on MongoDB Atlas only"
-            />
-          </div>
-        </div>
-        <div className="edit-project-individual-field-container">
-          <div className="edit-project-field-label">
             <label>Sort Order</label>
           </div>
           <div className="edit-project-field">

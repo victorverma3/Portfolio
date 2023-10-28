@@ -22,11 +22,6 @@ declare module 'Disclaimer' {
   export default Disclaimer;
 }
 
-declare module 'Footer' {
-  const Footer: React.FunctionComponent;
-  export default Footer;
-}
-
 declare module 'Header' {
   const Header: React.FunctionComponent;
   export default Header;

@@ -7,10 +7,22 @@
    margin: auto;
 }
 
+.nav-logos {
+   width: 7.5rem;
+   margin: auto;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+}
+
+.nav-logo {
+   width: 1.75rem;
+}
+
 .navLink {
    text-decoration: none;
    color: black;
-   font-size: 1rem;
+   font-size: 1.125rem;
 }
 
 .navLink:hover {

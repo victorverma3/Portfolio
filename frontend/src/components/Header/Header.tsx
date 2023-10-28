@@ -6,6 +6,10 @@ import Navbar from "react-bootstrap/Navbar";
 
 import "./Header.css";
 
+import githublogo from "../../../public/images/githublogo.png";
+import maillogo from "../../../public/images/maillogo.png";
+import linkedinlogo from "../../../public/images/linkedinlogo.png";
+
 const Header = () => {
   return (
     <>
@@ -15,6 +19,20 @@ const Header = () => {
             <Navbar.Brand className="nav-brand" href="/">
               Victor Verma
             </Navbar.Brand>
+            <div className="nav-logos">
+              <a
+                href="https://www.linkedin.com/in/victor-verma-91713022b/"
+                target="_blank"
+              >
+                <img className="nav-logo" src={linkedinlogo}></img>
+              </a>
+              <a href="https://github.com/victorverma3" target="_blank">
+                <img className="nav-logo" src={githublogo}></img>
+              </a>
+              <a href="mailto:vpverm@bu.edu" target="_blank">
+                <img className="nav-logo" src={maillogo}></img>
+              </a>
+            </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">

@@ -5,11 +5,11 @@ import Disclaimer from "../../components/Disclaimer/Disclaimer";
 
 import "./About.css";
 
-import cruise from "../../../public/images/cruise.png";
-import cube from "../../../public/images/cube.png";
-import husky from "../../../public/images/husky.png";
-import movies from "../../../public/images/letterboxd.png";
-import weights from "../../../public/images/weights.png";
+import cruise from "../../images/cruise.png";
+import cube from "../../images/cube.png";
+import husky from "../../images/husky.png";
+import movies from "../../images/letterboxd.png";
+import weights from "../../images/weights.png";
 
 const About = () => {
   const aboutCards = [

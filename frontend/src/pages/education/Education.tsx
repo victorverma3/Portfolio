@@ -3,8 +3,8 @@ import { Card } from "react-bootstrap";
 
 import "./Education.css";
 
-import bueast from "../../../public/images/bueast.png";
-import comlawn from "../../../public/images/comlawn.png";
+import bueast from "../../images/bueast.png";
+import comlawn from "../../images/comlawn.png";
 
 const Education = () => {
   return (

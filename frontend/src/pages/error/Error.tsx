@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Error.css";
 
-import tom from "../../../public/images/tom.png";
+import tom from "../../images/tom.png";
 
 const Error = () => {
   return (

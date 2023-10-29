@@ -12,12 +12,12 @@ import Spinner from "../../components/Spinner/Spinner";
 import "./Experience.css";
 import "react-vertical-timeline-component/style.min.css";
 
-import amazonlogo from "../../../public/images/amazonlogo.png";
-import bulogo from "../../../public/images/bulogo.png";
-import ktplogo from "../../../public/images/ktplogo.png";
-import leslieslogo from "../../../public/images/leslieslogo.png";
-import rsmlogo from "../../../public/images/rsmlogo.png";
-import umasshospitallogo from "../../../public/images/umasshospitallogo.png";
+import amazonlogo from "../../images/amazonlogo.png";
+import bulogo from "../../images/bulogo.png";
+import ktplogo from "../../images/ktplogo.png";
+import leslieslogo from "../../images/leslieslogo.png";
+import rsmlogo from "../../images/rsmlogo.png";
+import umasshospitallogo from "../../images/umasshospitallogo.png";
 
 type experienceDataType = {
   _id: string;

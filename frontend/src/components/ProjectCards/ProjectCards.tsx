@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 
 import "./ProjectCards.css";
 
-import candidatebios from "../../../public/images/candidatebios.png";
-import csslogo from "../../../public/images/csslogo.png";
-import htmllogo from "../../../public/images/htmllogo.png";
-import pythonlogo from "../../../public/images/pythonlogo.png";
-import portfolio from "../../../public/images/portfolio.png";
-import reactlogo from "../../../public/images/reactlogo.png";
-import sportsnews from "../../../public/images/sportsnews.png";
-import typescriptlogo from "../../../public/images/typescriptlogo.png";
+import candidatebios from "../../images/candidatebios.png";
+import csslogo from "../../images/csslogo.png";
+import htmllogo from "../../images/htmllogo.png";
+import pythonlogo from "../../images/pythonlogo.png";
+import portfolio from "../../images/portfolio.png";
+import reactlogo from "../../images/reactlogo.png";
+import sportsnews from "../../images/sportsnews.png";
+import typescriptlogo from "../../images/typescriptlogo.png";
 
 interface Card {
   _id: string;

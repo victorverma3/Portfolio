@@ -5,7 +5,7 @@ import PDF from "../../components/VictorVerma.pdf";
 
 import "./Resume.css";
 
-import resume from "../../../public/images/resume.png";
+import resume from "../../images/resume.png";
 
 const Resume = () => {
   return (

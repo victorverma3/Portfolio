@@ -41,3 +41,8 @@
    }
 }
 
+@media (orientation: portrait) {
+   .nav-logos {
+       display: none;
+   }
+}

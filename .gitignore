@@ -2,7 +2,7 @@
 .DS_Store
 
 # Frontend
-frontend/DS_Store
+frontend/src/.DS_Store
 frontend/.env
 frontend/src/components/.DS_Store
 

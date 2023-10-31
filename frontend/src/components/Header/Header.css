@@ -40,3 +40,9 @@
       font-size: 1.5rem;
    }
 }
+
+@media (orientation: portrait) {
+   .nav-logos {
+      display: none;
+   }
+}

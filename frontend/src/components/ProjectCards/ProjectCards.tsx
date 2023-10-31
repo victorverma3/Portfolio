@@ -68,9 +68,6 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
               })}
             </div>
             <div className="projectCard-buttons">
-              <Link to={`/projects/edit/${card._id}`}>
-                <AiOutlineEdit className="project-edit-button" size={24} />
-              </Link>
               {card.links.map((element) => {
                 return (
                   <Button
@@ -84,6 +81,9 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                 );
               })}
             </div>
+            <Link to={`/projects/edit/${card._id}`}>
+              <AiOutlineEdit className="project-edit-button" size={24} />
+            </Link>
           </Card.Body>
         </Card>
       ))}

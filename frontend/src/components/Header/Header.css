@@ -5,6 +5,7 @@
 .nav-container {
    width: 100vw;
    margin: auto;
+   background-color: red;
 }
 
 .nav-logos {

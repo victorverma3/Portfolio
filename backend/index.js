@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://www.victorverma.com/",
+      "https://www.victorverma.com",
       "https://victor-verma-portfolio.vercel.app",
       "http://localhost:5173",
     ],

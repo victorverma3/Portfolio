@@ -15,6 +15,7 @@ app.use(
   cors({
     origin: [
       "https://victor-verma-portfolio.vercel.app",
+      "https://victorverma.com",
       "http://localhost:5173",
     ],
   })

@@ -39,6 +39,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
     csslogo: csslogo,
     sportsnews: sportsnews,
   };
+  const isLocalMachine = window.location.hostname === "localhost";
   return (
     <div className="projectCard-list">
       {cards.map((card) => (
@@ -81,9 +82,11 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                 );
               })}
             </div>
-            <Link to={`/projects/edit/${card._id}`}>
-              <AiOutlineEdit className="project-edit-button" size={24} />
-            </Link>
+            {isLocalMachine && (
+              <Link to={`/projects/edit/${card._id}`}>
+                <AiOutlineEdit className="project-edit-button" size={24} />
+              </Link>
+            )}
           </Card.Body>
         </Card>
       ))}

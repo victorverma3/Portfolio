@@ -7,23 +7,52 @@
 .education-display {
     width: 80vw;
     margin: auto;
-}
-
-.education-display-body {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-around;
     text-align: left;
-    background-color: white;
 }
 
 .education-display-column {
-    width: 25rem;
-    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .education-display-image {
-    width: 15rem;
+    width: 15.5rem;
+    margin: auto;
+}
+
+.education-display-item {
+    width: 25rem;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.education-display-item:hover {
+    box-shadow: 0px 6px 0px 0px rgb(0, 0, 0, 0.3);
+}
+
+.education-display-item h5 {
+    margin: auto;
+    font-size: 2rem;
+    display: block;
+}
+
+.education-display-item ul {
+    display: none;
+}
+
+.education-display-item:hover h5 {
+    display: none;
+}
+
+.education-display-item:hover ul {
+    display: block;
     margin: auto;
 }
 

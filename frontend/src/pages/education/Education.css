@@ -1,3 +1,13 @@
+.arrow-down {
+    width: fit-content;
+    margin: auto;
+}
+
+.arrow-up {
+    width: fit-content;
+    margin: auto;
+}
+
 .education-content {
     width: 100vw;
     min-height: 80vh;
@@ -13,14 +23,24 @@
     text-align: left;
 }
 
+.education-display-body {
+    margin: auto;
+}
+
 .education-display-column {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
+.education-display-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .education-display-image {
-    width: 15.5rem;
+    width: 19rem;
     margin: auto;
 }
 
@@ -35,25 +55,6 @@
 
 .education-display-item:hover {
     box-shadow: 0px 6px 0px 0px rgb(0, 0, 0, 0.3);
-}
-
-.education-display-item h5 {
-    margin: auto;
-    font-size: 2rem;
-    display: block;
-}
-
-.education-display-item ul {
-    display: none;
-}
-
-.education-display-item:hover h5 {
-    display: none;
-}
-
-.education-display-item:hover ul {
-    display: block;
-    margin: auto;
 }
 
 .education-display-subtitle {

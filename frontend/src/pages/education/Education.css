@@ -63,12 +63,18 @@
 }
 
 .pdf-button {
-    width: 10rem;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem;
+    background-color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
 }
 
 .pdf-button:hover {
-    background-color: white;
     color: lightskyblue;
+    border: 2px solid lightskyblue;
 }
 
 .school-pic {

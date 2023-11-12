@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { useState } from "react";
 
 import PDF from "../../components/VictorVerma.pdf";
@@ -144,16 +143,9 @@ const Education = () => {
           </div>
         </div>
       </div>
-      <div className="resume-view">
-        <Button
-          className="pdf-button"
-          variant="dark"
-          href={PDF}
-          target="_blank"
-        >
-          Resume
-        </Button>
-      </div>
+      <a className="pdf-button" href={PDF} target="_blank">
+        View Resume
+      </a>
       <div className="school-pic-container">
         <img className="school-pic" src={comlawn} alt="image not loading"></img>
         <img className="school-pic" src={bueast} alt="image not loading"></img>

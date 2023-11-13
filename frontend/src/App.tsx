@@ -11,7 +11,6 @@ import Experience from "./pages/experience/Experience";
 import Home from "./pages/home/Home";
 import Layout from "./Layout";
 import Projects from "./pages/projects/Projects";
-import Resume from "./pages/resume/Resume";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -32,7 +31,6 @@ function App() {
             <Route path="/education" element={<Education />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/edit/:id" element={<EditProject />} />
-            <Route path="/resume" element={<Resume />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Error />} />
           </Route>

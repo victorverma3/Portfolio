@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.17",
     "@types/react-vertical-timeline-component": "^3.3.3",
     "@vercel/analytics": "^1.1.1",
     "axios": "^1.5.1",
@@ -26,6 +29,7 @@
     "vite-plugin-react": "^4.0.1"
   },
   "devDependencies": {
+    "@mui/icons-material": "^5.14.16",
     "@types/node": "^20.3.1",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",

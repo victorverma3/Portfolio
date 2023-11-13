@@ -57,11 +57,6 @@ const Header = () => {
                   </Link>
                 </Nav.Link>
                 <Nav.Link eventKey="5">
-                  <Link className="navLink" to="/resume">
-                    Resume
-                  </Link>
-                </Nav.Link>
-                <Nav.Link eventKey="6">
                   <Link className="navLink" to="/about">
                     About Me
                   </Link>

@@ -1,5 +1,11 @@
-.edu-card {
-    border: 1px solid lightgray;
+.arrow {
+    width: fit-content;
+    margin: auto;
+}
+
+.arrow:hover {
+    border: 1px solid black;
+    border-radius: 12px;
 }
 
 .education-content {
@@ -8,42 +14,92 @@
     margin: 85px auto 30px auto;
 }
 
-.school {
-    width: 90vw;
+.education-display {
+    width: 80vw;
     margin: auto;
-    padding-block: 10px;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    text-align: left;
 }
 
-.school-info {
-    width: 80%;
-    text-align: left;
+.education-display-body {
+    margin: auto;
+}
+
+.education-display-column {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.school-pic {
-    width: 45%;
-    margin: auto;
-    border: 1px solid lightgrey;
-}
-
-.school-pic-container {
-    width: 80vw;
-    margin-top: 20px;
+.education-display-header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
+.education-display-image {
+    width: 20rem;
+    margin: auto;
+}
+
+.education-display-image-link {
+    text-align: center;
+}
+
+.education-display-item {
+    width: 25rem;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.education-display-item:hover {
+    box-shadow: 0px 6px 0px 0px rgb(78, 165, 217, 0.3);
+}
+
+.education-display-subtitle {
+    width: fit-content;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+}
+
+.pdf-button {
+    width: fit-content;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.pdf-button:hover {
+    color: #4EA5D9;
+    border: 2px solid #4EA5D9;
+}
+
+.school-pic {
+    width: 25rem;
+    margin: 1rem;
+    border: 1px solid lightgrey;
+}
+
+.school-pic-container {
+    width: 80vw;
+    margin-top: 2rem;
+    margin-inline: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
 @media screen and (max-width: 499px) {
-    .school-info {
-        width: 90vw;
-    }
-    
     .school-pic {
         width: 90vw;
         margin-top: 20px;
@@ -58,19 +114,19 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .school-info {
-        width: 45rem;
+    .education-display-item {
+        width: 30rem;
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 2rem;
     }
 
     .school-pic {
-        width: 25rem;
-    }
-
-    .school-pic-container {
         width: 30rem;
-        margin-block: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        margin: 1rem;
+        border: 1px solid lightgrey;
     }
 }

@@ -130,17 +130,9 @@
 @media screen and (min-width: 1440px) {
     .education-display-item {
         width: 30rem;
-        margin: 1rem;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        border-radius: 2rem;
     }
 
     .school-pic {
         width: 30rem;
-        margin: 1rem;
-        border: 1px solid lightgrey;
     }
 }

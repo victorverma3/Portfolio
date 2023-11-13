@@ -129,8 +129,10 @@
 
     .school-pic-container {
         width: 90vw;
+        margin-top: 2rem;
+        margin-inline: auto;
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
         justify-content: space-around;
     }
 }

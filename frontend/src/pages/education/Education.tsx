@@ -39,11 +39,17 @@ const Education = () => {
       <div className="education-display">
         <div className="education-display-column">
           <div className="education-display-item">
-            <img
-              className="education-display-image"
-              src={bulatinlogo}
-              alt="image not loading"
-            ></img>
+            <a
+              className="education-display-image-link"
+              href="https://www.bu.edu/"
+              target="_blank"
+            >
+              <img
+                className="education-display-image"
+                src={bulatinlogo}
+                alt="image not loading"
+              ></img>
+            </a>
           </div>
         </div>
         <div className="education-display-column">
@@ -60,7 +66,7 @@ const Education = () => {
                   </li>
                   <li>College of Arts and Sciences Dean's List.</li>
                 </ul>
-                <div className="arrow-up" onClick={() => handleArrowUpClick(1)}>
+                <div className="arrow" onClick={() => handleArrowUpClick(1)}>
                   <KeyboardArrowUpIcon />
                 </div>
               </div>
@@ -69,10 +75,7 @@ const Education = () => {
                 <h5 className="education-display-subtitle">
                   Boston University
                 </h5>
-                <div
-                  className="arrow-down"
-                  onClick={() => handleArrowDownClick(1)}
-                >
+                <div className="arrow" onClick={() => handleArrowDownClick(1)}>
                   <KeyboardArrowDownIcon />
                 </div>
               </div>
@@ -94,17 +97,14 @@ const Education = () => {
                   </li>
                   <li>Introduction to Machine Learning and AI.</li>
                 </ul>
-                <div className="arrow-up" onClick={() => handleArrowUpClick(2)}>
+                <div className="arrow" onClick={() => handleArrowUpClick(2)}>
                   <KeyboardArrowUpIcon />
                 </div>
               </div>
             ) : (
               <div className="education-display-header">
                 <h5 className="education-display-subtitle">Relevant Courses</h5>
-                <div
-                  className="arrow-down"
-                  onClick={() => handleArrowDownClick(2)}
-                >
+                <div className="arrow" onClick={() => handleArrowDownClick(2)}>
                   <KeyboardArrowDownIcon />
                 </div>
               </div>
@@ -125,17 +125,14 @@ const Education = () => {
                   </li>
                   <li>Boston University Barbell Club.</li>
                 </ul>
-                <div className="arrow-up" onClick={() => handleArrowUpClick(3)}>
+                <div className="arrow" onClick={() => handleArrowUpClick(3)}>
                   <KeyboardArrowUpIcon />
                 </div>
               </div>
             ) : (
               <div className="education-display-header">
                 <h5 className="education-display-subtitle">Extracurriculars</h5>
-                <div
-                  className="arrow-down"
-                  onClick={() => handleArrowDownClick(3)}
-                >
+                <div className="arrow" onClick={() => handleArrowDownClick(3)}>
                   <KeyboardArrowDownIcon />
                 </div>
               </div>

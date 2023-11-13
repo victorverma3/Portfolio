@@ -5,7 +5,6 @@
 .nav-container {
    width: 100vw;
    margin: auto;
-   background-color: red;
 }
 
 .nav-logos {
@@ -28,8 +27,7 @@
 }
 
 .navLink:hover {
-   text-decoration: underline;
-   color: lightskyblue;
+   text-decoration: 2px #4EA5D9 underline;
 }
 
 @media only screen and (min-width: 1441px) { 

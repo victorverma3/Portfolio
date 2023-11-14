@@ -7,7 +7,7 @@
    margin: auto;
 }
 
-.nav-logos {
+.header-nav-logos {
    width: 7.5rem;
    margin: auto;
    display: flex;
@@ -15,7 +15,7 @@
    justify-content: space-around;
 }
 
-.nav-logo {
+.header-nav-logo {
    width: 1.75rem;
 }
 
@@ -28,6 +28,12 @@
 
 .navLink:hover {
    text-decoration: 2px #4EA5D9 underline;
+}
+
+@media screen and (max-width: 991px) {
+   .header-nav-logo {
+       display: none;
+   }
 }
 
 @media only screen and (min-width: 1441px) { 

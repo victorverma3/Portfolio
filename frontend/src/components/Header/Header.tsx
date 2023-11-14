@@ -19,18 +19,18 @@ const Header = () => {
             <Navbar.Brand className="nav-brand" href="/">
               Victor Verma
             </Navbar.Brand>
-            <div className="nav-logos">
+            <div className="header-nav-logos">
               <a
                 href="https://www.linkedin.com/in/victor-verma-91713022b/"
                 target="_blank"
               >
-                <img className="nav-logo" src={linkedinlogo}></img>
+                <img className="header-nav-logo" src={linkedinlogo}></img>
               </a>
               <a href="https://github.com/victorverma3" target="_blank">
-                <img className="nav-logo" src={githublogo}></img>
+                <img className="header-nav-logo" src={githublogo}></img>
               </a>
               <a href="mailto:vpverm@bu.edu" target="_blank">
-                <img className="nav-logo" src={maillogo}></img>
+                <img className="header-nav-logo" src={maillogo}></img>
               </a>
             </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

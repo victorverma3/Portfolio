@@ -1,7 +1,7 @@
 .home-content {
     width: 100vw;
     min-height: 80vh;
-    margin: 110px auto 30px auto;
+    margin: 110px auto -25px auto;
 }
 
 .home-lead {
@@ -12,8 +12,26 @@
     margin: auto;
 }
 
+.home-nav-logos {
+    width: 10rem;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.home-nav-logo {
+    width: 2rem;
+    display: none;
+}
+
 .home-title {
     font-size: 80px;
+}
+
+.push {
+    height: 50px
 }
 
 @media screen and (max-width: 499px) {
@@ -30,6 +48,12 @@
 
     .home-title {
         font-size: 3.125rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .home-nav-logo {
+        display: block;
     }
 }
 

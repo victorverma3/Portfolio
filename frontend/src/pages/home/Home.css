@@ -37,8 +37,7 @@
 @media screen and (max-width: 499px) {
     .home-content {
         max-height: 844px;
-        margin-top: 85px;
-        margin-bottom: 30px;
+        margin: 85px auto 0px auto;
     }
 
     .home-lead {

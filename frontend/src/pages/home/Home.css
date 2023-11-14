@@ -38,7 +38,7 @@
     .home-content {
         max-height: 844px;
         margin-top: 85px;
-        margin-bottom: 25px;
+        margin-bottom: -10px;
     }
 
     .home-lead {

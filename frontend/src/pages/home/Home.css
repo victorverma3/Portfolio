@@ -12,6 +12,11 @@
     margin: auto;
 }
 
+.home-nav-logo {
+    width: 2rem;
+    display: none;
+}
+
 .home-nav-logos {
     width: 10rem;
     height: 50px;
@@ -19,11 +24,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-}
-
-.home-nav-logo {
-    width: 2rem;
-    display: none;
 }
 
 .home-title {
@@ -48,6 +48,10 @@
 
     .home-nav-logo {
         display: block;
+    }
+
+    .home-nav-logos {
+        height: 25px
     }
 
     .home-title {

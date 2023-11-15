@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 499px) {
     .home-content {
-        max-height: 844px;
+        max-height: 800px;
         margin: 85px auto 0px auto;
     }
 
@@ -33,6 +33,10 @@
 
     .home-title {
         font-size: 3.125rem;
+    }
+
+    .push {
+        height: 25px;
     }
 
 }

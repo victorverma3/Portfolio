@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./footer.css";
+import "./Footer.css";
 
 import githublogo from "../../images/githublogo.png";
 import maillogo from "../../images/maillogo.png";

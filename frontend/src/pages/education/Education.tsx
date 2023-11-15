@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+import Footer from "../../components/Footer/Footer";
 import PDF from "../../components/VictorVerma.pdf";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -10,7 +11,6 @@ import "./Education.css";
 import bueast from "../../images/bueast.png";
 import bulatinlogo from "../../images/bulatinlogo.png";
 import comlawn from "../../images/comlawn.png";
-
 const Education = () => {
   const [eduCardOne, setEduCardOne] = useState(false);
   const [eduCardTwo, setEduCardTwo] = useState(false);
@@ -147,6 +147,7 @@ const Education = () => {
         <img className="school-pic" src={comlawn} alt="image not loading"></img>
         <img className="school-pic" src={bueast} alt="image not loading"></img>
       </div>
+      <Footer />
     </div>
   );
 };

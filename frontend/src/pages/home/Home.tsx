@@ -1,10 +1,8 @@
 import React from "react";
 
-import "./Home.css";
+import Footer from "../../components/Footer/Footer";
 
-import githublogo from "../../images/githublogo.png";
-import maillogo from "../../images/maillogo.png";
-import linkedinlogo from "../../images/linkedinlogo.png";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -19,20 +17,7 @@ const Home = () => {
         </p>
         <div className="push"></div>
       </div>
-      <footer className="home-nav-logos">
-        <a
-          href="https://www.linkedin.com/in/victor-verma-91713022b/"
-          target="_blank"
-        >
-          <img className="home-nav-logo" src={linkedinlogo}></img>
-        </a>
-        <a href="https://github.com/victorverma3" target="_blank">
-          <img className="home-nav-logo" src={githublogo}></img>
-        </a>
-        <a href="mailto:vpverm@bu.edu" target="_blank">
-          <img className="home-nav-logo" src={maillogo}></img>
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 };

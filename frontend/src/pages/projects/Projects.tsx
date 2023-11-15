@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
+import Footer from "../../components/Footer/Footer";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import Reveal from "../../components/Reveal/Reveal";
 import Spinner from "../../components/Spinner/Spinner";
@@ -47,6 +48,7 @@ const Projects = () => {
         </Reveal>
       )}
       <Disclaimer />
+      <Footer />
     </div>
   );
 };

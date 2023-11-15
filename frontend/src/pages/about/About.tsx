@@ -2,6 +2,7 @@ import React from "react";
 
 import AboutCards from "../../components/AboutCards/AboutCards";
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
+import Footer from "../../components/Footer/Footer";
 
 import "./About.css";
 
@@ -78,6 +79,7 @@ const About = () => {
       <br></br>
       <AboutCards cards={aboutCards} />
       <Disclaimer />
+      <Footer />
     </div>
   );
 };

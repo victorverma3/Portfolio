@@ -7,6 +7,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
+import Footer from "../../components/Footer/Footer";
 import Spinner from "../../components/Spinner/Spinner";
 
 import "./Experience.css";
@@ -120,6 +121,7 @@ const Experience = () => {
           Problem-Solving, Emotional Intelligence.
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

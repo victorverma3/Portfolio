@@ -33,6 +33,15 @@ const Education = () => {
       setEduCardThree(false);
     }
   };
+  const toggleCard = (num: number) => {
+    if (num === 1) {
+      eduCardOne ? setEduCardOne(false) : setEduCardOne(true);
+    } else if (num === 2) {
+      eduCardTwo ? setEduCardTwo(false) : setEduCardTwo(true);
+    } else if (num === 3) {
+      eduCardThree ? setEduCardThree(false) : setEduCardThree(true);
+    }
+  };
   return (
     <div className="education-content">
       <h1 className="page-title">Education</h1>
@@ -53,7 +62,7 @@ const Education = () => {
           </div>
         </div>
         <div className="education-display-column">
-          <div className="education-display-item">
+          <div className="education-display-item" onClick={() => toggleCard(1)}>
             {eduCardOne ? (
               <div className="education-display-body">
                 <ul>
@@ -66,7 +75,7 @@ const Education = () => {
                   </li>
                   <li>College of Arts and Sciences Dean's List.</li>
                 </ul>
-                <div className="arrow" onClick={() => handleArrowUpClick(1)}>
+                <div className="arrow">
                   <KeyboardArrowUpIcon />
                 </div>
               </div>
@@ -75,13 +84,13 @@ const Education = () => {
                 <h5 className="education-display-subtitle">
                   Boston University
                 </h5>
-                <div className="arrow" onClick={() => handleArrowDownClick(1)}>
+                <div className="arrow">
                   <KeyboardArrowDownIcon />
                 </div>
               </div>
             )}
           </div>
-          <div className="education-display-item">
+          <div className="education-display-item" onClick={() => toggleCard(2)}>
             {eduCardTwo ? (
               <div className="education-display-body">
                 <ul>
@@ -97,20 +106,20 @@ const Education = () => {
                   </li>
                   <li>Introduction to Machine Learning and AI.</li>
                 </ul>
-                <div className="arrow" onClick={() => handleArrowUpClick(2)}>
+                <div className="arrow">
                   <KeyboardArrowUpIcon />
                 </div>
               </div>
             ) : (
               <div className="education-display-header">
                 <h5 className="education-display-subtitle">Relevant Courses</h5>
-                <div className="arrow" onClick={() => handleArrowDownClick(2)}>
+                <div className="arrow">
                   <KeyboardArrowDownIcon />
                 </div>
               </div>
             )}
           </div>
-          <div className="education-display-item">
+          <div className="education-display-item" onClick={() => toggleCard(3)}>
             {eduCardThree ? (
               <div className="education-display-body">
                 <ul>
@@ -125,14 +134,14 @@ const Education = () => {
                   </li>
                   <li>Boston University Barbell Club.</li>
                 </ul>
-                <div className="arrow" onClick={() => handleArrowUpClick(3)}>
+                <div className="arrow">
                   <KeyboardArrowUpIcon />
                 </div>
               </div>
             ) : (
               <div className="education-display-header">
                 <h5 className="education-display-subtitle">Extracurriculars</h5>
-                <div className="arrow" onClick={() => handleArrowDownClick(3)}>
+                <div className="arrow">
                   <KeyboardArrowDownIcon />
                 </div>
               </div>

@@ -11,6 +11,7 @@ import "./Education.css";
 import bueast from "../../images/bueast.png";
 import bulatinlogo from "../../images/bulatinlogo.png";
 import comlawn from "../../images/comlawn.png";
+
 const Education = () => {
   const [eduCardOne, setEduCardOne] = useState(false);
   const [eduCardTwo, setEduCardTwo] = useState(false);

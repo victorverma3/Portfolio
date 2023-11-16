@@ -5,7 +5,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    /* background-color: red; */
 }
 
 .edit-experience-content {
@@ -17,13 +16,11 @@
 .edit-experience-field {
     width: fit-content;
     margin: auto;
-    /* background-color: green; */
 }
 
 .edit-experience-field-container {
     width: fit-content;
     margin: auto;
-    /* background-color: yellow; */
 }
 
 .edit-experience-field-label {
@@ -31,7 +28,6 @@
     margin: auto;
     font-size: 1.5rem;
     text-align: start;
-    /* background-color: blue; */
 }
 
 .edit-experience-individual-field-container {
@@ -39,7 +35,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* background-color: red; */
 }
 
 .edit-experience-input {

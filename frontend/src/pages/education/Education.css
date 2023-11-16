@@ -128,6 +128,8 @@
     }
 }
 
+@media screen and (min-width: 500px) and (max-width: 768px) { }
+
 @media screen and (min-width: 1440px) {
     .education-display-item {
         width: 30rem;

@@ -5,7 +5,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    /* background-color: red; */
 }
 
 .edit-project-content {
@@ -17,13 +16,11 @@
 .edit-project-field {
     width: fit-content;
     margin: auto;
-    /* background-color: green; */
 }
 
 .edit-project-field-container {
     width: fit-content;
     margin: auto;
-    /* background-color: yellow; */
 }
 
 .edit-project-field-label {
@@ -31,7 +28,6 @@
     margin: auto;
     font-size: 1.5rem;
     text-align: start;
-    /* background-color: blue; */
 }
 
 .edit-project-individual-field-container {
@@ -39,7 +35,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* background-color: red; */
 }
 
 .edit-project-input {

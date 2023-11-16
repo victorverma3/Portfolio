@@ -15,24 +15,6 @@ const Education = () => {
   const [eduCardOne, setEduCardOne] = useState(false);
   const [eduCardTwo, setEduCardTwo] = useState(false);
   const [eduCardThree, setEduCardThree] = useState(false);
-  const handleArrowDownClick = (num: number) => {
-    if (num === 1) {
-      setEduCardOne(true);
-    } else if (num === 2) {
-      setEduCardTwo(true);
-    } else if (num === 3) {
-      setEduCardThree(true);
-    }
-  };
-  const handleArrowUpClick = (num: number) => {
-    if (num === 1) {
-      setEduCardOne(false);
-    } else if (num === 2) {
-      setEduCardTwo(false);
-    } else if (num === 3) {
-      setEduCardThree(false);
-    }
-  };
   const toggleCard = (num: number) => {
     if (num === 1) {
       eduCardOne ? setEduCardOne(false) : setEduCardOne(true);

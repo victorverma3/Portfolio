@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 
 import "./config.js";
 
+import aboutRoute from "./routes/aboutRoute.js";
 import experienceRoute from "./routes/experienceRoute.js";
 import projectRoute from "./routes/projectRoute.js";
 
@@ -26,8 +27,8 @@ app.get("/", (request, response) => {
   return response.status(234).send(`Backend for Victor's Portfolio`);
 });
 
+app.use("/about-collection", aboutRoute);
 app.use("/experience-collection", experienceRoute);
-
 app.use("/project-collection", projectRoute);
 
 mongoose

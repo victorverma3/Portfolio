@@ -1,0 +1,48 @@
+.about-project-actions {
+    width: 15rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.about-project-content {
+    width: 100vw;
+    min-height: 80vh;
+    margin: 85px auto 55px auto;
+}
+
+.about-project-field {
+    width: fit-content;
+    margin: auto;
+}
+
+.about-project-field-container {
+    width: fit-content;
+    margin: auto;
+}
+
+.about-project-field-label {
+    width: 10rem;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.about-project-individual-field-container {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-project-input {
+    width: 20rem;
+    margin: auto;
+    height: 2rem;
+}
+
+.about-project-save-button {
+   font-size: 1.5rem;
+}

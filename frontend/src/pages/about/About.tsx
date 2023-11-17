@@ -1,44 +1,43 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 import AboutCards from "../../components/AboutCards/AboutCards";
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
 import Footer from "../../components/Footer/Footer";
+import Spinner from "../../components/Spinner/Spinner";
 
 import "./About.css";
 
 import cruise from "../../images/cruise.png";
-import cube from "../../images/cube.png";
 import husky from "../../images/husky.png";
-import movies from "../../images/letterboxd.png";
-import weights from "../../images/weights.png";
+
+type aboutDataType = {
+  _id: string;
+  title: string;
+  image: string;
+  description: string;
+  link: string;
+  url: string;
+  sortOrder: number;
+};
 
 const About = () => {
-  const aboutCards = [
-    {
-      title: "Watching Movies",
-      image: movies,
-      description:
-        "I like watching movies in my free time, mostly from any genre. I use the Letterboxd app to log, rate, and rank the movies that I watch. I generally enjoy movies of all genres, languages, and runtimes.",
-      link: "Letterboxd",
-      url: "https://letterboxd.com/victorverma/",
-    },
-    {
-      title: "Working Out",
-      image: weights,
-      description:
-        "I enjoy going to the gym in order to maintain a fun, healthy, and active lifestyle. I rotate between Push Pull Legs (PPL) and the Arnold split. I love leg day and my favorite exercise is the barbell front squat.",
-      link: "Latest Workouts",
-      url: "https://docs.google.com/spreadsheets/d/14F7ALQbKsob1XG1ll3aoSl_ZWfQGW3Bu9Tz27Be7nIg/edit?usp=sharing",
-    },
-    {
-      title: "Rubik's Cube",
-      image: cube,
-      description:
-        "I have the 2x2, 3x3, 4x4, Pyraminx, and Megaminx speed cubes. The 3x3 is my favorite, and my personal record is 9.71 seconds using the CFOP method. I hope to achieve a 10 second average in my lifetime.",
-      link: "CFOP Tutorial",
-      url: "https://youtu.be/MS5jByTX_pk",
-    },
-  ];
+  const [aboutData, setAboutData] = useState<aboutDataType[]>([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("https://victor-verma-portfolio-backend.vercel.app/about-collection")
+      .then((response) => {
+        setAboutData(response.data.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+      });
+  }, []);
   return (
     <div className="about-content">
       <h1 className="page-title">About Me</h1>
@@ -77,7 +76,7 @@ const About = () => {
         pick a new major in every pass.
       </p>
       <br></br>
-      <AboutCards cards={aboutCards} />
+      {loading ? <Spinner /> : <AboutCards cards={aboutData} />}
       <Disclaimer />
       <Footer />
     </div>

@@ -2,6 +2,10 @@
     width: 60%;
 }
 
+.aboutCard-buttons {
+    margin-block: 1rem;
+}
+
 .aboutCard-list {
     width: 90%;
     margin: auto;

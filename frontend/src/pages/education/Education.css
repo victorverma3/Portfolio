@@ -57,6 +57,7 @@
     flex-direction: column;
     background-color: white;
     border-radius: 2rem;
+    transition: box-shadow 0.2s ease;
 }
 
 .education-display-item:hover {

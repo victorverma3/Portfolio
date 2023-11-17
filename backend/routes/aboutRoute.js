@@ -49,7 +49,7 @@ router.put("/:id", async (request, response) => {
       });
     }
     const { id } = request.params;
-    const result = await Experiences.findByIdAndUpdate(id, request.body);
+    const result = await About.findByIdAndUpdate(id, request.body);
     if (!result) {
       return response.status(404).json({ message: "About not found" });
     }

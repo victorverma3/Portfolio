@@ -1,8 +1,10 @@
-.error-background {
-    background-color: white;
+.error-content {
+    width: 100vw;
+    min-height: 80vh;
+    margin: 85px auto -50px auto;
 }
 
 .error-image {
-    width: 100vw;
-    margin-bottom: 45px;
+    width: 20rem;
+    margin: 25px auto;
 }

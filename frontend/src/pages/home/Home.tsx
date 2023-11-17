@@ -15,7 +15,6 @@ const Home = () => {
           I want to do in the future, so I spend my time learning what I find
           interesting and creating projects that enhance my life.
         </p>
-        <div className="push"></div>
       </div>
       <Footer />
     </>

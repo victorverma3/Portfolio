@@ -7,16 +7,51 @@ import "./Home.css";
 
 const Home = () => {
   const titlePhrases = [
-    "Hi, I'm Victor.",
+    "H",
+    "Hi",
+    "Hi,",
+    "Hi, I",
+    "Hi, I'",
+    "Hi, I'm",
+    "Hi, I'm V",
+    "Hi, I'm Vi",
+    "Hi, I'm Vic",
+    "Hi, I'm Vict",
+    "Hi, I'm Victo",
+    "Hi, I'm Victor",
+    "Hi, I'm Victor",
+    "Hi, I'm Victor",
+    "Hi, I'm Victor",
+    "Hi, I'm Victor",
+    "Hi, I'm Victor",
+    "S",
+    "So",
+    "Sof",
+    "Soft",
+    "Softw",
+    "Softwa",
+    "Softwar",
+    "Software",
+    "Software E",
+    "Software En",
+    "Software Eng",
+    "Software Engi",
+    "Software Engin",
+    "Software Engine",
+    "Software Enginee",
     "Software Engineer",
-    "Academic Weapon",
+    "Software Engineer",
+    "Software Engineer",
+    "Software Engineer",
+    "Software Engineer",
+    "Software Engineer",
   ];
   const [index, setIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState(titlePhrases[index]);
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % titlePhrases.length);
-    }, 5000);
+    }, 200);
     return () => clearInterval(interval);
   }, []);
 

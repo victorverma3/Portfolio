@@ -25,19 +25,19 @@
 
 @media screen and (max-width: 499px) {
     .home-content {
-        margin: 85px auto -50px auto;
+        margin: 85px auto -125px auto;
     }
 
     .home-lead {
         width: 65vw;
         margin: auto;
-        font-size: 1.375rem;
+        font-size: 1.25rem;
     }
 
     .home-title {
         max-width: 80vw;
         margin: auto;
-        font-size: 3.125rem;
+        font-size: 2.5rem;
     }
 
 }

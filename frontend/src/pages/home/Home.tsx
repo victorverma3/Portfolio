@@ -45,6 +45,19 @@ const Home = () => {
     "Software Engineer",
     "Software Engineer",
     "Software Engineer",
+    "A",
+    "Ac",
+    "Act",
+    "Acti",
+    "Activ",
+    "Active",
+    "Active L",
+    "Active Le",
+    "Active Lea",
+    "Active Lear",
+    "Active Learn",
+    "Active Learne",
+    "Active Learner",
   ];
   const [index, setIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState(titlePhrases[index]);
@@ -56,7 +69,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    setCurrentTitle(titlePhrases[index]);
+    setCurrentTitle(titlePhrases[index] + " ");
   }, [index]);
 
   return (

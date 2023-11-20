@@ -1,8 +1,8 @@
-declare module '*.png'
+declare module "*.png";
 
-declare module '*.pdf'
+declare module "*.pdf";
 
-declare module 'AboutCards' {
+declare module "AboutCards" {
   interface Card {
     title: string;
     image: string;
@@ -17,22 +17,27 @@ declare module 'AboutCards' {
   export default AboutCards;
 }
 
-declare module 'Disclaimer' {
+declare module "Disclaimer" {
   const Disclaimer: React.FunctionComponent;
   export default Disclaimer;
 }
 
-declare module 'Footer' {
+declare module "Footer" {
   const Footer: React.FunctionComponent;
   export default Footer;
 }
 
-declare module 'Header' {
+declare module "Header" {
   const Header: React.FunctionComponent;
   export default Header;
 }
 
-declare module 'ProjectCards' {
+declare module "HomeTitle" {
+  const HomeTitle: React.FunctionComponent;
+  export default HomeTitle;
+}
+
+declare module "ProjectCards" {
   interface Card {
     title: string;
     image: string;
@@ -47,10 +52,10 @@ declare module 'ProjectCards' {
   export default ProjectCards;
 }
 
-declare module 'Reveal' {
+declare module "Reveal" {
   interface Props {
     children: JSX.Element;
   }
   const Reveal: React.FunctionComponent<Props>;
-  export default Reveal
+  export default Reveal;
 }

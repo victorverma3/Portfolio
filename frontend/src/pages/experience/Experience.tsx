@@ -8,7 +8,6 @@ import {
 } from "react-vertical-timeline-component";
 
 import Footer from "../../components/Footer/Footer";
-import Skills from "../../components/Skills/Skills";
 import Spinner from "../../components/Spinner/Spinner";
 
 import "./Experience.css";

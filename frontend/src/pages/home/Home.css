@@ -13,16 +13,6 @@
     margin-inline: auto;
 }
 
-.home-title {
-    font-size: 80px;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.home-title:not(:first-child) {
-    opacity: 0;
-  }
-
 @media screen and (max-width: 499px) {
     .home-content {
         margin: 85px auto -125px auto;
@@ -33,21 +23,10 @@
         margin: auto;
         font-size: 1.25rem;
     }
-
-    .home-title {
-        max-width: 80vw;
-        margin: auto;
-        font-size: 2.5rem;
-    }
-
 }
 
 @media screen and (min-width: 1441px) {
     .home-lead {
         font-size: 1.75rem;
-    }
-
-    .home-title {
-        font-size: 8rem;
     }
 }

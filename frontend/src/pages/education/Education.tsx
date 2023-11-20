@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 
 import Footer from "../../components/Footer/Footer";
-import PDF from "../../components/VictorVerma.pdf";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import Skills from "../../components/Skills/Skills";
 
 import "./Education.css";
 
@@ -132,13 +132,7 @@ const Education = () => {
           </div>
         </div>
       </div>
-      <a className="pdf-button" href={PDF} target="_blank">
-        View Resume
-      </a>
-      <div className="school-pic-container">
-        <img className="school-pic" src={comlawn} alt="image not loading"></img>
-        <img className="school-pic" src={bueast} alt="image not loading"></img>
-      </div>
+      <Skills />
       <Footer />
     </div>
   );

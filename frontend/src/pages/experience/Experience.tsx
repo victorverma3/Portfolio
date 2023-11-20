@@ -8,6 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 
 import Footer from "../../components/Footer/Footer";
+import Skills from "../../components/Skills/Skills";
 import Spinner from "../../components/Spinner/Spinner";
 
 import "./Experience.css";
@@ -103,24 +104,6 @@ const Experience = () => {
           })}
         </VerticalTimeline>
       )}
-      <div className="skills">
-        <p className="skills-list">
-          <span className="skills-title">
-            <strong>Technical Skills: </strong>
-          </span>
-          Python, HTML/CSS, JavaScript/TypeScript, React.js, Express.js,
-          Node.js, MongoDB, Git, APIs, Pandas, Beautiful Soup, Web Scraping,
-          Object-Oriented Programming, Data Structures, Algorithm Analysis and
-          Design.
-        </p>
-        <p className="skills-list">
-          <span className="skills-title">
-            <strong>Soft Skills: </strong>
-          </span>
-          Communication, Teamwork, Organization, Leadership, Critical Thinking,
-          Problem-Solving, Emotional Intelligence.
-        </p>
-      </div>
       <Footer />
     </div>
   );

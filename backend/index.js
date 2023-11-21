@@ -35,7 +35,7 @@ app.use("/project-collection", projectRoute);
 app.use("/skill-collection", skillRoute);
 
 mongoose
-  .connect(process.env.mongoDBURL)
+  .connect(process.env.mongoDBURI)
   .then(() => {
     console.log("App connected to database");
     app.listen(process.env.PORT, () => {

@@ -7,6 +7,7 @@ import "./config.js";
 import aboutRoute from "./routes/aboutRoute.js";
 import experienceRoute from "./routes/experienceRoute.js";
 import projectRoute from "./routes/projectRoute.js";
+import skillRoute from "./routes/skillRoute.js";
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.get("/", (request, response) => {
 app.use("/about-collection", aboutRoute);
 app.use("/experience-collection", experienceRoute);
 app.use("/project-collection", projectRoute);
+app.use("/skill-collection", skillRoute);
 
 mongoose
   .connect(process.env.mongoDBURL)

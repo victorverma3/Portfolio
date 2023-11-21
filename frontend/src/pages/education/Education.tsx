@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+import Disclaimer from "../../components/Disclaimer/Disclaimer";
 import Footer from "../../components/Footer/Footer";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -131,6 +132,7 @@ const Education = () => {
         </div>
       </div>
       <Skills />
+      <Disclaimer />
       <Footer />
     </div>
   );

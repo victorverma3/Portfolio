@@ -50,44 +50,6 @@ const Skills = () => {
         setLoading(false);
       });
   }, []);
-  const skills = [
-    {
-      name: "Python",
-      image: pythonlogo,
-    },
-    {
-      name: "HTML",
-      image: htmllogo,
-    },
-    {
-      name: "CSS",
-      image: csslogo,
-    },
-    {
-      name: "JavaScript",
-      image: javascriptlogo,
-    },
-    {
-      name: "TypeScript",
-      image: typescriptlogo,
-    },
-    {
-      name: "React.js",
-      image: reactlogo,
-    },
-    {
-      name: "Node.js",
-      image: nodelogo,
-    },
-    {
-      name: "MongoDB",
-      image: mongodblogo,
-    },
-    {
-      name: "Git",
-      image: gitlogo,
-    },
-  ];
   return (
     <div className="skills-component">
       <h2 className="page-subtitle">Skills</h2>

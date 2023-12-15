@@ -7,11 +7,16 @@ import "./ProjectCards.css";
 
 import candidatebios from "../../images/candidatebios.png";
 import csslogo from "../../images/csslogo.png";
+import gitlogo from "../../images/gitlogo.png";
 import htmllogo from "../../images/htmllogo.png";
+import javascriptlogo from "../../images/javascriptlogo.png";
+import mongodblogo from "../../images/mongodblogo.png";
+import nutrisistant from "../../images/nutrisistant.png";
 import pythonlogo from "../../images/pythonlogo.png";
 import portfolio from "../../images/portfolio.png";
 import reactlogo from "../../images/reactlogo.png";
 import sportsnews from "../../images/sportsnews.png";
+import statsense from "../../images/statsense.png";
 import typescriptlogo from "../../images/typescriptlogo.png";
 
 interface Card {
@@ -31,13 +36,18 @@ interface ProjectCardsProps {
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
   const projectImageMap: { [key: string]: any } = {
     candidatebios: candidatebios,
-    pythonlogo: pythonlogo,
-    portfolio: portfolio,
-    reactlogo: reactlogo,
-    typescriptlogo: typescriptlogo,
-    htmllogo: htmllogo,
     csslogo: csslogo,
+    gitlogo: gitlogo,
+    htmllogo: htmllogo,
+    javascriptlogo: javascriptlogo,
+    mongodblogo: mongodblogo,
+    nutrisistant: nutrisistant,
+    portfolio: portfolio,
+    pythonlogo: pythonlogo,
+    reactlogo: reactlogo,
     sportsnews: sportsnews,
+    statsense: statsense,
+    typescriptlogo: typescriptlogo,
   };
   const isLocalMachine = window.location.hostname === "localhost";
   return (

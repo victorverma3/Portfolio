@@ -9,6 +9,8 @@ import Spinner from "../../components/Spinner/Spinner";
 
 import "./EditProject.css";
 
+const backend = import.meta.env.VITE_BACKEND_URL;
+
 const EditProject = () => {
   const [title, setTitle] = useState(" ");
   const [image, setImage] = useState(" ");
@@ -24,9 +26,7 @@ const EditProject = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        `https://victor-verma-portfolio-backend.vercel.app/project-collection/${id}`
-      )
+      .get(`${backend}/project-collection/${id}`)
       .then((response) => {
         setTitle(response.data.title);
         setImage(response.data.image);
@@ -54,10 +54,7 @@ const EditProject = () => {
     };
     setLoading(true);
     axios
-      .put(
-        `https://victor-verma-portfolio-backend.vercel.app/project-collection/${id}`,
-        data
-      )
+      .put(`${backend}/project-collection/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Project edited successfully", {

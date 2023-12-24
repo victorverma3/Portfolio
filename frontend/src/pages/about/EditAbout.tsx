@@ -9,6 +9,8 @@ import Spinner from "../../components/Spinner/Spinner";
 
 import "./EditAbout.css";
 
+const backend: string = import.meta.env.VITE_BACKEND_URL;
+
 const EditAbout = () => {
   const [title, setTitle] = useState(" ");
   const [image, setImage] = useState(" ");
@@ -24,9 +26,7 @@ const EditAbout = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        `https://victor-verma-portfolio-backend.vercel.app/about-collection/${id}`
-      )
+      .get(`${backend}/about-collection/${id}`)
       .then((response) => {
         setTitle(response.data.title);
         setImage(response.data.image);
@@ -54,10 +54,7 @@ const EditAbout = () => {
     };
     setLoading(true);
     axios
-      .put(
-        `https://victor-verma-portfolio-backend.vercel.app/about-collection/${id}`,
-        data
-      )
+      .put(`${backend}/about-collection/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("About edited successfully", {

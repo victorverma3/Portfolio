@@ -1,22 +1,25 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // https://vitejs.dev/config/
 export default defineConfig({
   esbuild: {
-    loader: 'tsx',
-}, 
-root: './',
-build: {
-    outDir: './dist',
-},
-optimizeDeps: {
+    loader: "tsx",
+  },
+  root: "./",
+  build: {
+    outDir: "./dist",
+  },
+  optimizeDeps: {
     esbuildOptions: {
-        loader: {
-            '.js': 'jsx',
-            '.ts': 'tsx',
-        },
+      loader: {
+        ".js": "jsx",
+        ".ts": "tsx",
+      },
     },
-},
-plugins: [react()],
-})
+  },
+  plugins: [react()],
+});

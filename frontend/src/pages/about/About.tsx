@@ -12,6 +12,8 @@ import "./About.css";
 import cruise from "../../images/cruise.png";
 import husky from "../../images/husky.png";
 
+const backend: string = import.meta.env.VITE_BACKEND_URL;
+
 type aboutDataType = {
   _id: string;
   title: string;
@@ -28,7 +30,7 @@ const About = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://victor-verma-portfolio-backend.vercel.app/about-collection")
+      .get(`${backend}/about-collection`)
       .then((response) => {
         setAboutData(response.data.data);
         setLoading(false);

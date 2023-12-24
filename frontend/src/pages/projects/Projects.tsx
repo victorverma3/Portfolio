@@ -9,8 +9,6 @@ import Spinner from "../../components/Spinner/Spinner";
 
 import "./Projects.css";
 
-const backend: string = import.meta.env.VITE_BACKEND_URL;
-
 type projectDataType = {
   _id: string;
   title: string;
@@ -27,7 +25,9 @@ const Projects = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${backend}/project-collection`)
+      .get(
+        "https://victor-verma-portfolio-backend.vercel.app/project-collection"
+      )
       .then((response) => {
         setProjectData(response.data.data);
         setLoading(false);

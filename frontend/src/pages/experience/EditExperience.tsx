@@ -9,8 +9,6 @@ import Spinner from "../../components/Spinner/Spinner";
 
 import "./EditExperience.css";
 
-const backend: string = import.meta.env.VITE_BACKEND_URL;
-
 const EditExperience = () => {
   const [role, setRole] = useState(" ");
   const [employer, setEmployer] = useState(" ");
@@ -27,7 +25,9 @@ const EditExperience = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${backend}/experience-collection/${id}`)
+      .get(
+        `https://victor-verma-portfolio-backend.vercel.app/experience-collection/${id}`
+      )
       .then((response) => {
         setRole(response.data.role);
         setEmployer(response.data.employer);
@@ -56,7 +56,10 @@ const EditExperience = () => {
     };
     setLoading(true);
     axios
-      .put(`${backend}/experience-collection/${id}`, data)
+      .put(
+        `https://victor-verma-portfolio-backend.vercel.app/experience-collection/${id}`,
+        data
+      )
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Experience edited successfully", {

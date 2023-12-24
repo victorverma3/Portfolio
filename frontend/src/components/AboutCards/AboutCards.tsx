@@ -32,8 +32,8 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
   const isLocalMachine = window.location.hostname === "localhost";
   return (
     <div className="aboutCard-list">
-      {cards.map((card) => (
-        <Card className="aboutCards">
+      {cards.map((card, index) => (
+        <Card className="aboutCards" key={index}>
           <Card.Img
             className="aboutCard-image"
             variant="top"

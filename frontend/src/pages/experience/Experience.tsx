@@ -20,6 +20,8 @@ import leslieslogo from "../../images/leslieslogo.png";
 import rsmlogo from "../../images/rsmlogo.png";
 import umasshospitallogo from "../../images/umasshospitallogo.png";
 
+const backend = import.meta.env.VITE_BACKEND_URL;
+
 type experienceDataType = {
   _id: string;
   role: string;
@@ -39,9 +41,7 @@ const Experience = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        "https://victor-verma-portfolio-backend.vercel.app/experience-collection"
-      )
+      .get(`${backend}/experience-collection`)
       .then((response) => {
         setExperienceData(response.data.data);
         setLoading(false);

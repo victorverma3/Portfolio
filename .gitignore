@@ -1,9 +1,9 @@
 # Global
 .DS_Store
+.env
 
 # Frontend
 frontend/src/.DS_Store
-frontend/.env
 frontend/src/components/.DS_Store
 
 # Backend

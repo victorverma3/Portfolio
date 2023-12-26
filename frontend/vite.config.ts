@@ -11,20 +11,20 @@ dotenv.config({ path: resolve(__dirname, "../.env") });
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  esbuild: {
-    loader: "tsx",
-  },
-  root: "./",
-  build: {
-    outDir: "./dist",
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      loader: {
-        ".js": "jsx",
-        ".ts": "tsx",
-      },
+    esbuild: {
+        loader: "tsx",
     },
-  },
-  plugins: [react()],
+    root: "./",
+    build: {
+        outDir: "./dist",
+    },
+    optimizeDeps: {
+        esbuildOptions: {
+            loader: {
+                ".js": "jsx",
+                ".ts": "tsx",
+            },
+        },
+    },
+    plugins: [react()],
 });

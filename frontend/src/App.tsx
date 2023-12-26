@@ -17,29 +17,35 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const { pathname } = useLocation();
-  useLayoutEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, [pathname]);
-  return (
-    <div>
-      <SnackbarProvider>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/experience/edit/:id" element={<EditExperience />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/edit/:id" element={<EditProject />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/about/edit/:id" element={<EditAbout />} />
-            <Route path="*" element={<Error />} />
-          </Route>
-        </Routes>
-      </SnackbarProvider>
-    </div>
-  );
+    const { pathname } = useLocation();
+    useLayoutEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }, [pathname]);
+    return (
+        <div>
+            <SnackbarProvider>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="/experience" element={<Experience />} />
+                        <Route
+                            path="/experience/edit/:id"
+                            element={<EditExperience />}
+                        />
+                        <Route path="/education" element={<Education />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route
+                            path="/projects/edit/:id"
+                            element={<EditProject />}
+                        />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/about/edit/:id" element={<EditAbout />} />
+                        <Route path="*" element={<Error />} />
+                    </Route>
+                </Routes>
+            </SnackbarProvider>
+        </div>
+    );
 }
 
 export default App;

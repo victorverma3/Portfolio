@@ -89,20 +89,16 @@ const Education = () => {
                             <div className="education-display-body">
                                 <ul>
                                     <li>
-                                        Applied Abstract Algebra, Differential
-                                        Equations, Linear Algebra, Multivariate
-                                        Calculus, and Probability.
-                                    </li>
-                                    <li>
-                                        Combinatoric Structures, Computer
-                                        Systems, Concepts of Programming
-                                        Languages, Introduction to Analysis of
-                                        Algorithms, Introduction to Computer
-                                        Science I & II, Probability in
+                                        Algorithms, Combinatoric Structures,
+                                        Computer Systems, Concepts of
+                                        Programming Languages, Introduction to
+                                        Machine Learning and AI, Probability in
                                         Computing, and Software Engineering.
                                     </li>
                                     <li>
-                                        Introduction to Machine Learning and AI.
+                                        Applied Abstract Algebra, Differential
+                                        Equations, Linear Algebra, Multivariate
+                                        Calculus, and Probability.
                                     </li>
                                 </ul>
                                 <div className="arrow">

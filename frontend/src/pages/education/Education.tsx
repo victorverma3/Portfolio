@@ -56,7 +56,7 @@ const Education = () => {
                                         B.A. in Mathematics and Computer Science
                                     </li>
                                     <li>Minor in Data Science</li>
-                                    <li>3.83 GPA (3.83 major, 4.0 minor).</li>
+                                    <li>3.85 GPA (3.86 major, 4.0 minor).</li>
                                     <li>
                                         $7500 Student Research Award (Summer
                                         2023 - Fall 2023)

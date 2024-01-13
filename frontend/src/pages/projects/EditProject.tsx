@@ -12,12 +12,12 @@ import "./EditProject.css";
 const backend = import.meta.env.VITE_BACKEND_URL;
 
 const EditProject = () => {
-    const [title, setTitle] = useState(" ");
-    const [image, setImage] = useState(" ");
-    const [description, setDescription] = useState(" ");
-    const [technologies, setTechnologies] = useState(" ");
-    const [links, setLinks] = useState([{ title: " ", url: " " }]);
-    const [sortOrder, setSortOrder] = useState(" ");
+    const [title, setTitle] = useState("");
+    const [image, setImage] = useState("");
+    const [description, setDescription] = useState("");
+    const [technologies, setTechnologies] = useState<string[]>([]);
+    const [links, setLinks] = useState<string[][]>([]);
+    const [sortOrder, setSortOrder] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const { id } = useParams();
@@ -68,6 +68,11 @@ const EditProject = () => {
                 console.log(error);
             });
     };
+    const handleLinkUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const pairArray = JSON.parse(e.target.value as string);
+        console.log(pairArray);
+        setLinks(pairArray);
+    };
     return (
         <div className="edit-project-content">
             <h1 className="page-title">Edit Project</h1>
@@ -109,6 +114,34 @@ const EditProject = () => {
                             type="text"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
+                        />
+                    </div>
+                </div>
+                <div className="edit-project-individual-field-container">
+                    <div className="edit-project-field-label">
+                        <label>Technologies</label>
+                    </div>
+                    <div className="edit-project-field">
+                        <input
+                            className="edit-project-input"
+                            type="text"
+                            value={technologies}
+                            onChange={(e) =>
+                                setTechnologies(e.target.value.split(","))
+                            }
+                        />
+                    </div>
+                </div>
+                <div className="edit-project-individual-field-container">
+                    <div className="edit-project-field-label">
+                        <label>Links</label>
+                    </div>
+                    <div className="edit-project-field">
+                        <input
+                            className="edit-project-input"
+                            type="text"
+                            value={JSON.stringify(links)}
+                            onChange={(e) => handleLinkUpdate(e)}
                         />
                     </div>
                 </div>

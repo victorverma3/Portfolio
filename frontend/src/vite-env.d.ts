@@ -22,6 +22,11 @@ declare module "Disclaimer" {
     export default Disclaimer;
 }
 
+declare module "EduDetails" {
+    const EduDetails: React.FunctionComponent;
+    export default EduDetails;
+}
+
 declare module "Footer" {
     const Footer: React.FunctionComponent;
     export default Footer;

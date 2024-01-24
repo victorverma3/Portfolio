@@ -25,8 +25,8 @@ const Education = () => {
         {
             subtitle: "Relevant Courses",
             bullets: [
-                "Algorithms, Combinatoric Structures, Computer Systems, Concepts of Programming Languages, Introduction to Machine Learning and AI, Probability in Computing, and Software Engineering.",
-                "Applied Abstract Algebra, Differential Equations, Linear Algebra, Multivariate Calculus, and Probability.",
+                "Algorithms, Combinatoric Structures, Computer Systems, Concepts of Programming Languages, Data Science Tools and Applications, Introduction to Machine Learning and AI, Probability in Computing, and Software Engineering.",
+                "Applied Abstract Algebra, Differential Equations, Introduction to Stochastic Processes, Linear Algebra, Multivariate Calculus, and Probability.",
             ],
         },
         {

@@ -6,6 +6,7 @@ import Spinner from "../Spinner/Spinner";
 
 import "./Skills.css";
 
+import bootstraplogo from "../../images/bootstraplogo.png";
 import csslogo from "../../images/csslogo.png";
 import gitlogo from "../../images/gitlogo.png";
 import htmllogo from "../../images/htmllogo.png";
@@ -34,6 +35,7 @@ const Skills = () => {
         nodelogo: nodelogo,
         mongodblogo: mongodblogo,
         gitlogo: gitlogo,
+        bootstraplogo: bootstraplogo,
     };
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);

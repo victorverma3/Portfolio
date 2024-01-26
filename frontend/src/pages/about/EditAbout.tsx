@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSnackbar } from "notistack";
@@ -12,28 +12,35 @@ import "./EditAbout.css";
 const backend = import.meta.env.VITE_BACKEND_URL;
 
 const EditAbout = () => {
-    const [title, setTitle] = useState(" ");
-    const [image, setImage] = useState(" ");
-    const [description, setDescription] = useState(" ");
-    const [link, setLink] = useState(" ");
-    const [url, setURL] = useState(" ");
-    const [sortOrder, setSortOrder] = useState(" ");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const { id } = useParams();
     const { enqueueSnackbar } = useSnackbar();
+    const [formData, setFormData] = useState({
+        title: "",
+        image: "",
+        description: "",
+        link: "",
+        url: "",
+        sortOrder: "",
+    });
 
     useEffect(() => {
         setLoading(true);
         axios
             .get(`${backend}/about-collection/${id}`)
             .then((response) => {
-                setTitle(response.data.title);
-                setImage(response.data.image);
-                setDescription(response.data.description);
-                setLink(response.data.link);
-                setURL(response.data.url);
-                setSortOrder(response.data.sortOrder);
+                const { title, image, description, link, url, sortOrder } =
+                    response.data;
+                setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    title,
+                    image,
+                    description,
+                    link,
+                    url,
+                    sortOrder,
+                }));
                 setLoading(false);
             })
             .catch((error) => {
@@ -43,16 +50,19 @@ const EditAbout = () => {
             });
     }, [id, enqueueSnackbar]);
 
+    const handleFieldChange = (name: string, value: string) => {
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value,
+        }));
+    };
+
     const handleEditAbout = () => {
-        const data = {
-            title,
-            image,
-            description,
-            link,
-            url,
-            sortOrder: parseInt(sortOrder),
-        };
         setLoading(true);
+        const data = {
+            ...formData,
+            sortOrder: parseInt(formData.sortOrder, 10),
+        };
         axios
             .put(`${backend}/about-collection/${id}`, data)
             .then(() => {
@@ -69,92 +79,36 @@ const EditAbout = () => {
             });
     };
     return (
-        <div className="edit-project-content">
+        <div className="edit-about-content">
             <h1 className="page-title">Edit About</h1>
             {loading ? <Spinner /> : " "}
-            <div className="about-project-field-container">
-                <div className="about-project-individual-field-container">
-                    <div className="about-project-field-label">
-                        <label>Title</label>
+            <div className="edit-about-field-container">
+                {Object.entries(formData).map(([name, value]) => (
+                    <div
+                        key={name}
+                        className="edit-about-individual-field-container"
+                    >
+                        <div className="edit-about-field-label">
+                            <label>
+                                {name.charAt(0).toUpperCase() + name.slice(1)}
+                            </label>
+                        </div>
+                        <div className="edit-about-field">
+                            <input
+                                className="edit-about-input"
+                                type="text"
+                                value={value}
+                                onChange={(e) =>
+                                    handleFieldChange(name, e.target.value)
+                                }
+                            />
+                        </div>
                     </div>
-                    <div className="about-project-field">
-                        <input
-                            className="about-project-input"
-                            type="text"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="about-project-individual-field-container">
-                    <div className="about-project-field-label">
-                        <label>Image</label>
-                    </div>
-                    <div className="about-project-field">
-                        <input
-                            className="about-project-input"
-                            type="text"
-                            value={image}
-                            onChange={(e) => setImage(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="about-project-individual-field-container">
-                    <div className="about-project-field-label">
-                        <label>Description</label>
-                    </div>
-                    <div className="about-project-field">
-                        <input
-                            className="about-project-input"
-                            type="text"
-                            value={description}
-                            onChange={(e) => setDescription(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="about-project-individual-field-container">
-                    <div className="about-project-field-label">
-                        <label>Link</label>
-                    </div>
-                    <div className="about-project-field">
-                        <input
-                            className="about-project-input"
-                            type="text"
-                            value={link}
-                            onChange={(e) => setLink(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="about-project-individual-field-container">
-                    <div className="about-project-field-label">
-                        <label>URL</label>
-                    </div>
-                    <div className="about-project-field">
-                        <input
-                            className="about-project-input"
-                            type="text"
-                            value={url}
-                            onChange={(e) => setURL(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="about-project-individual-field-container">
-                    <div className="about-project-field-label">
-                        <label>Sort Order</label>
-                    </div>
-                    <div className="about-project-field">
-                        <input
-                            className="about-project-input"
-                            type="text"
-                            value={sortOrder}
-                            onChange={(e) => setSortOrder(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="about-project-actions">
+                ))}
+                <div className="edit-about-actions">
                     <BackButton size={48} destination="/about" />
                     <button
-                        className="about-project-save-button"
+                        className="edit-about-save-button"
                         onClick={handleEditAbout}
                     >
                         Save

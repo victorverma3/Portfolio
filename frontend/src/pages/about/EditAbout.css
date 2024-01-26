@@ -1,4 +1,4 @@
-.about-project-actions {
+.edit-about-actions {
     width: 15rem;
     margin: auto;
     display: flex;
@@ -7,42 +7,42 @@
     align-content: center;
 }
 
-.about-project-content {
+.edit-about-content {
     width: 100vw;
     min-height: 80vh;
     margin: 85px auto 55px auto;
 }
 
-.about-project-field {
+.edit-about-field {
     width: fit-content;
     margin: auto;
 }
 
-.about-project-field-container {
+.edit-about-field-container {
     width: fit-content;
     margin: auto;
 }
 
-.about-project-field-label {
+.edit-about-field-label {
     width: 10rem;
     margin: auto;
     font-size: 1.5rem;
     text-align: start;
 }
 
-.about-project-individual-field-container {
+.edit-about-individual-field-container {
     margin: 2rem auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.about-project-input {
+.edit-about-input {
     width: 20rem;
     margin: auto;
     height: 2rem;
 }
 
-.about-project-save-button {
+.edit-about-save-button {
    font-size: 1.5rem;
 }

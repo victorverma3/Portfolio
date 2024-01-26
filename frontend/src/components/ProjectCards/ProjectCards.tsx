@@ -10,6 +10,7 @@ import csslogo from "../../images/csslogo.png";
 import gitlogo from "../../images/gitlogo.png";
 import htmllogo from "../../images/htmllogo.png";
 import javascriptlogo from "../../images/javascriptlogo.png";
+import ktpdatabase from "../../images/ktpdatabase.png";
 import mongodblogo from "../../images/mongodblogo.png";
 import nutrisistant from "../../images/nutrisistant.png";
 import pythonlogo from "../../images/pythonlogo.png";
@@ -40,6 +41,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
         gitlogo: gitlogo,
         htmllogo: htmllogo,
         javascriptlogo: javascriptlogo,
+        ktpdatabase: ktpdatabase,
         mongodblogo: mongodblogo,
         nutrisistant: nutrisistant,
         portfolio: portfolio,

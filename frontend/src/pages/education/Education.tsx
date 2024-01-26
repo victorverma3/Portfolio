@@ -33,7 +33,7 @@ const Education = () => {
             subtitle: "Extracurriculars",
             bullets: [
                 "Undergraduate Research Assistant at the Questrom School of Business.",
-                ",Computer Assistant at the Questrom Open Access Lab.",
+                "Computer Assistant at the Questrom Open Access Lab.",
                 "App Committee Head in the Kappa Theta Pi Professional Fraternity.",
                 "Boston University Barbell Club.",
             ],

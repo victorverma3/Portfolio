@@ -50,10 +50,10 @@ const EditAbout = () => {
             });
     }, [id, enqueueSnackbar]);
 
-    const handleFieldChange = (name: string, value: string) => {
+    const handleFieldChange = (field: string, value: string) => {
         setFormData((prevFormData) => ({
             ...prevFormData,
-            [name]: value,
+            [field]: value,
         }));
     };
 

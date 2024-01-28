@@ -20,6 +20,7 @@ app.use(
             "https://victor-verma-portfolio.vercel.app",
             "http://localhost:5173",
             "http://192.168.0.12:5173",
+            "http://192.168.0.21:5173",
         ],
     })
 );

@@ -15,6 +15,7 @@ import mongodblogo from "../../images/mongodblogo.png";
 import nodelogo from "../../images/nodelogo.png";
 import pythonlogo from "../../images/pythonlogo.png";
 import reactlogo from "../../images/reactlogo.png";
+import tensorflowlogo from "../../images/tensorflowlogo.png";
 import typescriptlogo from "../../images/typescriptlogo.png";
 
 type skillsDataType = {
@@ -32,10 +33,11 @@ const Skills = () => {
         javascriptlogo: javascriptlogo,
         typescriptlogo: typescriptlogo,
         reactlogo: reactlogo,
+        bootstraplogo: bootstraplogo,
         nodelogo: nodelogo,
         mongodblogo: mongodblogo,
         gitlogo: gitlogo,
-        bootstraplogo: bootstraplogo,
+        tensorflowlogo: tensorflowlogo,
     };
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);

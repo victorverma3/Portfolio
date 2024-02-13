@@ -2,19 +2,19 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import Spinner from "./Spinner/Spinner";
+import Spinner from "./Spinner";
 
-import bootstraplogo from "../../images/bootstraplogo.png";
-import csslogo from "../../images/csslogo.png";
-import gitlogo from "../../images/gitlogo.png";
-import htmllogo from "../../images/htmllogo.png";
-import javascriptlogo from "../../images/javascriptlogo.png";
-import mongodblogo from "../../images/mongodblogo.png";
-import nodelogo from "../../images/nodelogo.png";
-import pythonlogo from "../../images/pythonlogo.png";
-import reactlogo from "../../images/reactlogo.png";
-import tensorflowlogo from "../../images/tensorflowlogo.png";
-import typescriptlogo from "../../images/typescriptlogo.png";
+import bootstraplogo from "../images/bootstraplogo.png";
+import csslogo from "../images/csslogo.png";
+import gitlogo from "../images/gitlogo.png";
+import htmllogo from "../images/htmllogo.png";
+import javascriptlogo from "../images/javascriptlogo.png";
+import mongodblogo from "../images/mongodblogo.png";
+import nodelogo from "../images/nodelogo.png";
+import pythonlogo from "../images/pythonlogo.png";
+import reactlogo from "../images/reactlogo.png";
+import tensorflowlogo from "../images/tensorflowlogo.png";
+import typescriptlogo from "../images/typescriptlogo.png";
 
 type skillsDataType = {
     _id: string;

@@ -8,7 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 
 import Footer from "../../components/Footer/Footer";
-import Spinner from "../../components/Spinner/Spinner";
+import Spinner from "../../components/Spinner";
 
 import "./Experience.css";
 import "react-vertical-timeline-component/style.min.css";

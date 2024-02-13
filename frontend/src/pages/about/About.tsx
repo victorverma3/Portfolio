@@ -5,7 +5,7 @@ import axios from "axios";
 import AboutCards from "../../components/AboutCards/AboutCards";
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
 import Footer from "../../components/Footer/Footer";
-import Spinner from "../../components/Spinner/Spinner";
+import Spinner from "../../components/Spinner";
 
 import "./About.css";
 

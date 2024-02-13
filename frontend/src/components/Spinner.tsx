@@ -1,10 +1,8 @@
 import React from "react";
 
-import "./Spinner.css";
-
 const Spinner = () => {
     return (
-        <div className="spinner-grow" role="status">
+        <div className="w-20 h-20" role="status">
             <span className="sr-only"></span>
         </div>
     );

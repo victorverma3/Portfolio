@@ -4,8 +4,8 @@ import axios from "axios";
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
 import Footer from "../../components/Footer/Footer";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
-import Reveal from "../../components/Reveal/Reveal";
-import Spinner from "../../components/Spinner/Spinner";
+import Reveal from "../../components/Reveal";
+import Spinner from "../../components/Spinner";
 
 import "./Projects.css";
 

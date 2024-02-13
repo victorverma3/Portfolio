@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import Spinner from "../Spinner/Spinner";
+import Spinner from "./Spinner/Spinner";
 
 import bootstraplogo from "../../images/bootstraplogo.png";
 import csslogo from "../../images/csslogo.png";

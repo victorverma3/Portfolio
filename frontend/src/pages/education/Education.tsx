@@ -3,7 +3,7 @@ import React from "react";
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
 import EduDetails from "../../components/EduDetails/EduDetails";
 import Footer from "../../components/Footer/Footer";
-import Skills from "../../components/Skills/Skills";
+import Skills from "../../components/Skills";
 
 import "./Education.css";
 

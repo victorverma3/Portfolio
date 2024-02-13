@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-import resume from "../VictorVerma.pdf";
+import resume from "./VictorVerma.pdf";
 
-import githublogo from "../../images/githublogo.png";
-import maillogo from "../../images/maillogo.png";
-import linkedinlogo from "../../images/linkedinlogo.png";
+import githublogo from "../images/githublogo.png";
+import maillogo from "../images/maillogo.png";
+import linkedinlogo from "../images/linkedinlogo.png";
 
 const Header = () => {
     const openResume = () => {

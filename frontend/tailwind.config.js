@@ -10,7 +10,11 @@ export default {
             "2xl": "1536px",
             "nav-display": "992px",
         },
-        extend: {},
+    },
+    extend: {
+        border: {
+            1: "1px",
+        },
     },
     plugins: [],
 };

@@ -1,8 +1,8 @@
 import React from "react";
 
-import githublogo from "../../images/githublogo.png";
-import maillogo from "../../images/maillogo.png";
-import linkedinlogo from "../../images/linkedinlogo.png";
+import githublogo from "../images/githublogo.png";
+import maillogo from "../images/maillogo.png";
+import linkedinlogo from "../images/linkedinlogo.png";
 
 const Footer = () => {
     return (

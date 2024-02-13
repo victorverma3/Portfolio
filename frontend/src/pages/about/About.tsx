@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import AboutCards from "../../components/AboutCards/AboutCards";
-import Disclaimer from "../../components/Disclaimer/Disclaimer";
+import Disclaimer from "../../components/Disclaimer";
 import Footer from "../../components/Footer";
 import Spinner from "../../components/Spinner";
 

@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSnackbar } from "notistack";
 
-import BackButton from "../../components/BackButton/BackButton";
+import BackButton from "../../components/BackButton";
 import Spinner from "../../components/Spinner";
 
 import "./EditExperience.css";

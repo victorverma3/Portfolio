@@ -1,6 +1,6 @@
 import React from "react";
 
-import Disclaimer from "../../components/Disclaimer/Disclaimer";
+import Disclaimer from "../../components/Disclaimer";
 import EduDetails from "../../components/EduDetails/EduDetails";
 import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";

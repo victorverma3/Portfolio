@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import Disclaimer from "../../components/Disclaimer/Disclaimer";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import Reveal from "../../components/Reveal";
 import Spinner from "../../components/Spinner";

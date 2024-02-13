@@ -1,7 +1,7 @@
 import React from "react";
 
 import Footer from "../../components/Footer/Footer";
-import HomeTitle from "../../components/HomeTitle/HomeTitle";
+import HomeTitle from "../../components/HomeTitle";
 
 import "./Home.css";
 

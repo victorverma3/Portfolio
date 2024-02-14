@@ -73,7 +73,7 @@ const EditProject = () => {
     };
     return (
         <div className="w-screen min-h-[80vh] mt-20 mb-14">
-            <h1 className="page-title">Edit Project</h1>
+            <h1 className="text-5xl 2xl:text-6xl">Edit Project</h1>
             {loading ? <Spinner /> : " "}
             <div className="w-fit m-auto">
                 <div className="mx-auto my-8 flex flex-row justify-between">

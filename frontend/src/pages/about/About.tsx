@@ -40,7 +40,7 @@ const About = () => {
     }, []);
     return (
         <div className="w-screen min-h-[80vh] mt-20 mb-8">
-            <h1 className="page-title">About Me</h1>
+            <h1 className="text-5xl 2xl:text-6xl">About Me</h1>
             <div className="w-9/12 m-auto flex flex-row flex-wrap justify-around">
                 <img
                     className="w-9/12 max-w-80 mx-auto my-2.5 border-1 border-solid border-gray-200 sm:w-2/5"

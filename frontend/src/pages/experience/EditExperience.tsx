@@ -87,7 +87,7 @@ const EditExperience = () => {
     };
     return (
         <div className="w-screen min-h-[80vh] mt-20 mb-14">
-            <h1 className="page-title">Edit Experience</h1>
+            <h1 className="text-5xl 2xl:text-6xl">Edit Experience</h1>
             {loading ? <Spinner /> : " "}
             <div className="w-fit m-auto">
                 {Object.entries(formData).map(([name, value]) => (

@@ -56,7 +56,7 @@ const Skills = () => {
     }, []);
     return (
         <div className="mt-8">
-            <h2 className="page-subtitle">Skills</h2>
+            <h2 className="text-4xl 2xl:text-5xl">Skills</h2>
             {loading ? (
                 <Spinner />
             ) : (

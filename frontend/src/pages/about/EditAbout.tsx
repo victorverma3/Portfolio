@@ -7,8 +7,6 @@ import { useSnackbar } from "notistack";
 import BackButton from "../../components/BackButton";
 import Spinner from "../../components/Spinner";
 
-import "./EditAbout.css";
-
 const backend = import.meta.env.VITE_BACKEND_URL;
 
 const EditAbout = () => {
@@ -79,23 +77,23 @@ const EditAbout = () => {
             });
     };
     return (
-        <div className="edit-about-content">
+        <div className="w-screen min-h-[80vh] mt-20 mb-14">
             <h1 className="page-title">Edit About</h1>
             {loading ? <Spinner /> : " "}
-            <div className="edit-about-field-container">
+            <div className="w-fit m-auto">
                 {Object.entries(formData).map(([name, value]) => (
                     <div
                         key={name}
-                        className="edit-about-individual-field-container"
+                        className="mx-auto my-8 flex flex-row justify-between"
                     >
-                        <div className="edit-about-field-label">
+                        <div className="w-40 m-auto text-2xl text-start">
                             <label>
                                 {name.charAt(0).toUpperCase() + name.slice(1)}
                             </label>
                         </div>
-                        <div className="edit-about-field">
+                        <div className="w-fit m-auto">
                             <input
-                                className="edit-about-input"
+                                className="w-80 h-8 m-auto border-1 border-gray-200"
                                 type="text"
                                 value={value}
                                 onChange={(e) =>
@@ -105,10 +103,10 @@ const EditAbout = () => {
                         </div>
                     </div>
                 ))}
-                <div className="edit-about-actions">
+                <div className="w-60 m-auto flex flex-row justify-around">
                     <BackButton size={48} destination="/about" />
                     <button
-                        className="edit-about-save-button"
+                        className="w-20 text-2xl bg-white border-1 border-gray-200 hover:border-gray-400"
                         onClick={handleEditAbout}
                     >
                         Save

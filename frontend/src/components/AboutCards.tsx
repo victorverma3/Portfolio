@@ -32,7 +32,7 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
         <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
             {cards.map((card, index) => (
                 <Card
-                    className="w-11/12 text-base my-2.5 border-1 border-solid border-gray-200 sm:w-80 sm:text-lg 2xl:2-96 2xl:text-xl"
+                    className="w-11/12 text-base my-2.5 border-1 border-solid border-gray-200 sm:w-[22rem] sm:text-lg 2xl:2-96 2xl:text-xl"
                     key={index}
                 >
                     <Card.Img

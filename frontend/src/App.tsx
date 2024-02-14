@@ -9,7 +9,7 @@ import EditProject from "./pages/projects/EditProject";
 import Education from "./pages/Education";
 import Error from "./pages/Error";
 import Experience from "./pages/Experience";
-import Home from "./pages/home/Home";
+import Home from "./pages/Home";
 import Layout from "./Layout";
 import Projects from "./pages/Projects";
 

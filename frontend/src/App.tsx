@@ -6,7 +6,7 @@ import About from "./pages/about/About";
 import EditExperience from "./pages/experience/EditExperience";
 import EditAbout from "./pages/about/EditAbout";
 import EditProject from "./pages/projects/EditProject";
-import Education from "./pages/education/Education";
+import Education from "./pages/Education";
 import Error from "./pages/error/Error";
 import Experience from "./pages/experience/Experience";
 import Home from "./pages/home/Home";

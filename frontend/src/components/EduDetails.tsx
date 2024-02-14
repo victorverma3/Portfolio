@@ -21,10 +21,10 @@ const EduDetails = ({ details }: EduDetailsProps) => {
                         <summary className="w-fit mx-4 my-auto text-xl sm:text-2xl">
                             {item.subtitle}
                         </summary>
-                        <div className="m-auto">
+                        <div className="my-2">
                             <ul>
                                 {item.bullets.map((bullet) => (
-                                    <li>{bullet}</li>
+                                    <li> {bullet}</li>
                                 ))}
                             </ul>
                         </div>

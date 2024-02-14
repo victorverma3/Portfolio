@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
 import { SnackbarProvider } from "notistack";
 
-import About from "./pages/about/About";
+import About from "./pages/About";
 import EditExperience from "./pages/experience/EditExperience";
 import EditAbout from "./pages/about/EditAbout";
 import EditProject from "./pages/projects/EditProject";

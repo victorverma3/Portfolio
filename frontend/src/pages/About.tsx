@@ -2,15 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import AboutCards from "../../components/AboutCards";
-import Disclaimer from "../../components/Disclaimer";
-import Footer from "../../components/Footer";
-import Spinner from "../../components/Spinner";
+import AboutCards from "../components/AboutCards";
+import Disclaimer from "../components/Disclaimer";
+import Footer from "../components/Footer";
+import Spinner from "../components/Spinner";
 
-import "./About.css";
-
-import cruise from "../../images/cruise.png";
-import husky from "../../images/husky.png";
+import cruise from "../images/cruise.png";
+import husky from "../images/husky.png";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 
@@ -41,21 +39,21 @@ const About = () => {
             });
     }, []);
     return (
-        <div className="about-content">
+        <div className="w-screen min-h-[80vh] mt-20 mb-8">
             <h1 className="page-title">About Me</h1>
-            <div className="about-pic-container">
+            <div className="w-9/12 m-auto flex flex-row flex-wrap justify-around">
                 <img
-                    className="about-pic"
+                    className="w-9/12 max-w-80 mx-auto my-2.5 border-1 border-solid border-gray-200 sm:w-2/5"
                     src={cruise}
                     alt="image loading error"
                 ></img>
                 <img
-                    className="about-pic"
+                    className="w-9/12 max-w-80 mx-auto my-2.5 border-1 border-solid border-gray-200 sm:w-2/5"
                     src={husky}
                     alt="image loading error"
                 ></img>
             </div>
-            <p className="about-bio">
+            <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 I consider myself to be a perpetual learner. Even though a lot
                 of my time is used up with school, working, the gym, and other
                 hobbies, I always spend a few hours each week working on my own
@@ -68,7 +66,7 @@ const About = () => {
                 infinite loop and pick a new major in every pass.
             </p>
 
-            <p className="about-bio">
+            <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 My parents love to travel, and as a result, I have had the lucky
                 opportunity to go to many places growing up. Some of my favorite
                 locations include Egypt for its history, and Iceland and Alaska
@@ -79,7 +77,7 @@ const About = () => {
                 wilderness.
             </p>
 
-            <p className="about-bio">
+            <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 I was born and raised in central Massachusetts with my parents,
                 my younger sister, and our dog, Rusty. I played football for 10
                 years and started at left-guard at the varsity level for my high

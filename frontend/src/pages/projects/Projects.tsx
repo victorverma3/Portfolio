@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Disclaimer from "../../components/Disclaimer";
 import Footer from "../../components/Footer";
-import ProjectCards from "../../components/ProjectCards/ProjectCards";
+import ProjectCards from "../../components/ProjectCards";
 import Reveal from "../../components/Reveal";
 import Spinner from "../../components/Spinner";
 

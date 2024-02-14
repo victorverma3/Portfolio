@@ -159,7 +159,7 @@ const EditProject = () => {
                 <div className="w-60 m-auto flex flex-row justify-around">
                     <BackButton size={48} destination="/projects" />
                     <button
-                        className="w-20 text-2xl bg-white border-1 border-gray-200"
+                        className="w-20 text-2xl bg-white border-1 border-gray-200 hover:border-gray-400"
                         onClick={handleEditProject}
                     >
                         Save

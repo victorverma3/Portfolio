@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./EduDetails.css";
-
 interface Edu {
     subtitle: string;
     bullets: string[];
@@ -15,15 +13,18 @@ const EduDetails = ({ details }: EduDetailsProps) => {
     return (
         <div>
             {details.map((item) => (
-                <div className="eduDetail-display-item" key={item.subtitle}>
+                <div
+                    className="w-72 m-4 p-4 flex flex-column bg-white rounded-3xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 sm:w-96 2xl:w-[30rem]"
+                    key={item.subtitle}
+                >
                     <details>
-                        <summary className="eduDetail-display-subtitle">
+                        <summary className="w-fit mx-4 my-auto text-xl sm:text-2xl">
                             {item.subtitle}
                         </summary>
-                        <div className="eduDetail-display-body">
+                        <div className="my-2">
                             <ul>
                                 {item.bullets.map((bullet) => (
-                                    <li>{bullet}</li>
+                                    <li> {bullet}</li>
                                 ))}
                             </ul>
                         </div>

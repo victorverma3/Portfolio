@@ -1,8 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import "./HomeTitle.css";
-
 const HomeTitle = () => {
     const titlePhrases = [
         "H",
@@ -75,7 +73,7 @@ const HomeTitle = () => {
     }, [index]);
     return (
         <div>
-            <h1 className="home-title">{currentTitle}</h1>
+            <h1 className="text-4xl m-auto sm:text-7xl">{currentTitle}</h1>
         </div>
     );
 };

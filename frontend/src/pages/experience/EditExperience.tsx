@@ -4,10 +4,8 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSnackbar } from "notistack";
 
-import BackButton from "../../components/BackButton/BackButton";
-import Spinner from "../../components/Spinner/Spinner";
-
-import "./EditExperience.css";
+import BackButton from "../../components/BackButton";
+import Spinner from "../../components/Spinner";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 
@@ -88,23 +86,23 @@ const EditExperience = () => {
             });
     };
     return (
-        <div className="edit-experience-content">
-            <h1 className="page-title">Edit Experience</h1>
+        <div className="w-screen min-h-[80vh] mt-20 mb-14">
+            <h1 className="text-5xl 2xl:text-6xl">Edit Experience</h1>
             {loading ? <Spinner /> : " "}
-            <div className="edit-experience-field-container">
+            <div className="w-fit m-auto">
                 {Object.entries(formData).map(([name, value]) => (
                     <div
                         key={name}
-                        className="edit-experience-individual-field-container"
+                        className="mx-auto my-8 flex flex-row justify-between"
                     >
-                        <div className="edit-experience-field-label">
+                        <div className="w-32 m-auto text-2xl text-start">
                             <label>
                                 {name.charAt(0).toUpperCase() + name.slice(1)}
                             </label>
                         </div>
-                        <div className="edit-experience-field">
+                        <div className="w-fit m-auto">
                             <input
-                                className="edit-experience-input"
+                                className="w-80 h-8 m-auto border-1 border-gray-200"
                                 type="text"
                                 value={value}
                                 onChange={(e) =>
@@ -114,10 +112,10 @@ const EditExperience = () => {
                         </div>
                     </div>
                 ))}
-                <div className="edit-experience-actions">
+                <div className="w-60 m-auto flex flex-row justify-around">
                     <BackButton size={48} destination="/experience" />
                     <button
-                        className="edit-experience-save-button"
+                        className="w-20 text-2xl bg-white border-1 border-gray-200 hover:border-gray-400"
                         onClick={handleEditExperience}
                     >
                         Save

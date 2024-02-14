@@ -4,77 +4,80 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-import resume from "../VictorVerma.pdf";
+import resume from "./VictorVerma.pdf";
 
-import "./Header.css";
-
-import githublogo from "../../images/githublogo.png";
-import maillogo from "../../images/maillogo.png";
-import linkedinlogo from "../../images/linkedinlogo.png";
+import githublogo from "../images/githublogo.png";
+import maillogo from "../images/maillogo.png";
+import linkedinlogo from "../images/linkedinlogo.png";
 
 const Header = () => {
     const openResume = () => {
         window.open(resume, "_blank");
     };
     return (
-        <div className="nav-container">
+        <div className="w-full m-auto">
             <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
                 <Container>
-                    <Navbar.Brand className="nav-brand" href="/">
-                        Victor Verma
+                    <Navbar.Brand href="/">
+                        <span className="text-xl xl:text-2xl">
+                            Victor Verma
+                        </span>
                     </Navbar.Brand>
-                    <div className="header-nav-logos">
+                    <div className="w-32 m-auto flex-row flex-wrap justify-around hidden nav-display:flex portrait:hidden">
                         <a
                             href="https://www.linkedin.com/in/victor-verma-91713022b/"
                             target="_blank"
                         >
-                            <img
-                                className="header-nav-logo"
-                                src={linkedinlogo}
-                            ></img>
+                            <img className="w-7" src={linkedinlogo}></img>
                         </a>
                         <a
                             href="https://github.com/victorverma3"
                             target="_blank"
                         >
-                            <img
-                                className="header-nav-logo"
-                                src={githublogo}
-                            ></img>
+                            <img className="w-7" src={githublogo}></img>
                         </a>
                         <a href="mailto:vpverm@bu.edu" target="_blank">
-                            <img
-                                className="header-nav-logo"
-                                src={maillogo}
-                            ></img>
+                            <img className="w-7" src={maillogo}></img>
                         </a>
                     </div>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <Nav.Link eventKey="1">
-                                <Link className="navLink" to="/">
+                                <Link
+                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
+                                    to="/"
+                                >
                                     Home
                                 </Link>
                             </Nav.Link>
                             <Nav.Link eventKey="2">
-                                <Link className="navLink" to="/experience">
+                                <Link
+                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
+                                    to="/experience"
+                                >
                                     Experience
                                 </Link>
                             </Nav.Link>
                             <Nav.Link eventKey="3">
-                                <Link className="navLink" to="/education">
+                                <Link
+                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
+                                    to="/education"
+                                >
                                     Education
                                 </Link>
                             </Nav.Link>
                             <Nav.Link eventKey="4">
-                                <Link className="navLink" to="/projects">
+                                <Link
+                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
+                                    to="/projects"
+                                >
                                     Projects
                                 </Link>
                             </Nav.Link>
                             <Nav.Link eventKey="5">
                                 <Link
-                                    className="navLink"
+                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
                                     to="#"
                                     onClick={openResume}
                                 >
@@ -82,7 +85,10 @@ const Header = () => {
                                 </Link>
                             </Nav.Link>
                             <Nav.Link eventKey="6">
-                                <Link className="navLink" to="/about">
+                                <Link
+                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
+                                    to="/about"
+                                >
                                     About Me
                                 </Link>
                             </Nav.Link>

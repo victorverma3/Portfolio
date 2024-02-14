@@ -7,10 +7,9 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-import Footer from "../../components/Footer/Footer";
-import Spinner from "../../components/Spinner/Spinner";
+import Footer from "../../components/Footer";
+import Spinner from "../../components/Spinner";
 
-import "./Experience.css";
 import "react-vertical-timeline-component/style.min.css";
 
 import amazonlogo from "../../images/amazonlogo.png";
@@ -53,8 +52,8 @@ const Experience = () => {
     }, []);
     const isLocalMachine = window.location.hostname === "localhost";
     return (
-        <div className="experience-content">
-            <h1 className="page-title">Experience</h1>
+        <div className="w-screen min-h-[80vh] mt-20 mb-8">
+            <h1 className="text-5xl 2xl:text-6xl">Experience</h1>
             {loading ? (
                 <Spinner />
             ) : (
@@ -79,19 +78,15 @@ const Experience = () => {
                                     backgroundSize: "cover",
                                 }}
                             >
-                                <h3 className="vertical-timeline-element-title">
-                                    {element.role}
-                                </h3>
-                                <h5 className="vertical-timeline-element-subtitle">
+                                <h3 className="text-left">{element.role}</h3>
+                                <h5 className="text-left">
                                     {element.employer}
                                 </h5>
-                                <h6 className="vertical-timeline-element-subtitle">
-                                    {element.dates}
-                                </h6>
-                                <h6 className="vertical-timeline-element-subtitle">
+                                <h6 className="text-left">{element.dates}</h6>
+                                <h6 className="text-left">
                                     {element.location}
                                 </h6>
-                                <p className="timeline-element-info">
+                                <p className="text-justify">
                                     {element.description}
                                 </p>
                                 {isLocalMachine && (
@@ -99,7 +94,7 @@ const Experience = () => {
                                         to={`/experience/edit/${element._id}`}
                                     >
                                         <AiOutlineEdit
-                                            className="experience-edit-button"
+                                            className="mx-auto mt-2.5"
                                             size={24}
                                         />
                                     </Link>

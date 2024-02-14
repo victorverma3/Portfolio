@@ -3,11 +3,9 @@ import { AiOutlineEdit } from "react-icons/ai";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import "./AboutCards.css";
-
-import cube from "../../images/cube.png";
-import movies from "../../images/letterboxd.png";
-import weights from "../../images/weights.png";
+import cube from "../images/cube.png";
+import movies from "../images/letterboxd.png";
+import weights from "../images/weights.png";
 
 interface Card {
     _id: string;
@@ -31,11 +29,13 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
     };
     const isLocalMachine = window.location.hostname === "localhost";
     return (
-        <div className="aboutCard-list">
+        <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
             {cards.map((card, index) => (
-                <Card className="aboutCards" key={index}>
+                <Card
+                    className="w-11/12 text-base my-2.5 border-1 border-solid border-gray-200 sm:w-[22rem] sm:text-lg 2xl:2-96 2xl:text-xl"
+                    key={index}
+                >
                     <Card.Img
-                        className="aboutCard-image"
                         variant="top"
                         src={aboutImageMap[card.image]}
                         alt="image loading error"
@@ -43,21 +43,19 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
                     <Card.Body>
                         <Card.Title>
                             <a
-                                className="aboutCard-title"
+                                className="text-3xl text-black no-underline 2xl:text-4xl"
                                 href={card.url}
                                 target="_blank"
                             >
                                 {card.title}
                             </a>
                         </Card.Title>
-                        <div className="aboutCard-text">
-                            <Card.Text className="aboutCard-text">
-                                {card.description}
-                            </Card.Text>
-                        </div>
-                        <div className="aboutCard-buttons">
+                        <Card.Text className="text-justify">
+                            {card.description}
+                        </Card.Text>
+                        <div className="my-4">
                             <Button
-                                className="aboutCard-button"
+                                className="w-3/5"
                                 href={card.url}
                                 target="_blank"
                                 variant="dark"
@@ -67,10 +65,7 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
                         </div>
                         {isLocalMachine && (
                             <Link to={`/about/edit/${card._id}`}>
-                                <AiOutlineEdit
-                                    className="about-edit-button"
-                                    size={24}
-                                />
+                                <AiOutlineEdit className="m-auto" size={24} />
                             </Link>
                         )}
                     </Card.Body>

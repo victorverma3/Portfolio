@@ -7,7 +7,7 @@ import EditExperience from "./pages/experience/EditExperience";
 import EditAbout from "./pages/about/EditAbout";
 import EditProject from "./pages/projects/EditProject";
 import Education from "./pages/Education";
-import Error from "./pages/error/Error";
+import Error from "./pages/Error";
 import Experience from "./pages/Experience";
 import Home from "./pages/home/Home";
 import Layout from "./Layout";

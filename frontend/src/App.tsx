@@ -11,7 +11,7 @@ import Error from "./pages/error/Error";
 import Experience from "./pages/Experience";
 import Home from "./pages/home/Home";
 import Layout from "./Layout";
-import Projects from "./pages/projects/Projects";
+import Projects from "./pages/Projects";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";

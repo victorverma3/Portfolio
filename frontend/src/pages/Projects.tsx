@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import Disclaimer from "../../components/Disclaimer";
-import Footer from "../../components/Footer";
-import ProjectCards from "../../components/ProjectCards";
-import Reveal from "../../components/Reveal";
-import Spinner from "../../components/Spinner";
-
-import "./Projects.css";
+import Disclaimer from "../components/Disclaimer";
+import Footer from "../components/Footer";
+import ProjectCards from "../components/ProjectCards";
+import Reveal from "../components/Reveal";
+import Spinner from "../components/Spinner";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 
@@ -38,7 +36,7 @@ const Projects = () => {
             });
     }, []);
     return (
-        <div className="project-content">
+        <div className="w-screen min-h-[80vh] mt-20 mb-8">
             <h1 className="page-title">Projects</h1>
             {loading ? (
                 <Spinner />

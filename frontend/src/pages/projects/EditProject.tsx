@@ -7,8 +7,6 @@ import { useSnackbar } from "notistack";
 import BackButton from "../../components/BackButton";
 import Spinner from "../../components/Spinner";
 
-import "./EditProject.css";
-
 const backend = import.meta.env.VITE_BACKEND_URL;
 
 const EditProject = () => {
@@ -74,56 +72,56 @@ const EditProject = () => {
         setLinks(pairArray);
     };
     return (
-        <div className="edit-project-content">
+        <div className="w-screen min-h-[80vh] mt-20 mb-14">
             <h1 className="page-title">Edit Project</h1>
             {loading ? <Spinner /> : " "}
-            <div className="edit-project-field-container">
-                <div className="edit-project-individual-field-container">
-                    <div className="edit-project-field-label">
+            <div className="w-fit m-auto">
+                <div className="mx-auto my-8 flex flex-row justify-between">
+                    <div className="w-40 m-auto text-2xl text-start">
                         <label>Title</label>
                     </div>
-                    <div className="edit-project-field">
+                    <div className="w-fit m-auto">
                         <input
-                            className="edit-project-input"
+                            className="w-80 h-8 m-auto border-1 border-gray-200"
                             type="text"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                         />
                     </div>
                 </div>
-                <div className="edit-project-individual-field-container">
-                    <div className="edit-project-field-label">
+                <div className="mx-auto my-8 flex flex-row justify-between">
+                    <div className="w-40 m-auto text-2xl text-start">
                         <label>Image</label>
                     </div>
-                    <div className="edit-project-field">
+                    <div className="w-fit m-auto">
                         <input
-                            className="edit-project-input"
+                            className="w-80 h-8 m-auto border-1 border-gray-200"
                             type="text"
                             value={image}
                             onChange={(e) => setImage(e.target.value)}
                         />
                     </div>
                 </div>
-                <div className="edit-project-individual-field-container">
-                    <div className="edit-project-field-label">
+                <div className="mx-auto my-8 flex flex-row justify-between">
+                    <div className="w-40 m-auto text-2xl text-start">
                         <label>Description</label>
                     </div>
-                    <div className="edit-project-field">
+                    <div className="w-fit m-auto">
                         <input
-                            className="edit-project-input"
+                            className="w-80 h-8 m-auto border-1 border-gray-200"
                             type="text"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         />
                     </div>
                 </div>
-                <div className="edit-project-individual-field-container">
-                    <div className="edit-project-field-label">
+                <div className="mx-auto my-8 flex flex-row justify-between">
+                    <div className="w-40 m-auto text-2xl text-start">
                         <label>Technologies</label>
                     </div>
-                    <div className="edit-project-field">
+                    <div className="w-fit m-auto">
                         <input
-                            className="edit-project-input"
+                            className="w-80 h-8 m-auto border-1 border-gray-200"
                             type="text"
                             value={technologies}
                             onChange={(e) =>
@@ -132,36 +130,36 @@ const EditProject = () => {
                         />
                     </div>
                 </div>
-                <div className="edit-project-individual-field-container">
-                    <div className="edit-project-field-label">
+                <div className="mx-auto my-8 flex flex-row justify-between">
+                    <div className="w-40 m-auto text-2xl text-start">
                         <label>Links</label>
                     </div>
-                    <div className="edit-project-field">
+                    <div className="w-fit m-auto">
                         <input
-                            className="edit-project-input"
+                            className="w-80 h-8 m-auto border-1 border-gray-200"
                             type="text"
                             value={JSON.stringify(links)}
                             onChange={(e) => handleLinkUpdate(e)}
                         />
                     </div>
                 </div>
-                <div className="edit-project-individual-field-container">
-                    <div className="edit-project-field-label">
+                <div className="mx-auto my-8 flex flex-row justify-between">
+                    <div className="w-40 m-auto text-2xl text-start">
                         <label>Sort Order</label>
                     </div>
-                    <div className="edit-project-field">
+                    <div className="w-fit m-auto">
                         <input
-                            className="edit-project-input"
+                            className="w-80 h-8 m-auto border-1 border-gray-200"
                             type="text"
                             value={sortOrder}
                             onChange={(e) => setSortOrder(e.target.value)}
                         />
                     </div>
                 </div>
-                <div className="edit-project-actions">
+                <div className="w-60 m-auto flex flex-row justify-around">
                     <BackButton size={48} destination="/projects" />
                     <button
-                        className="edit-project-save-button"
+                        className="w-20 text-2xl bg-white border-1 border-gray-200"
                         onClick={handleEditProject}
                     >
                         Save

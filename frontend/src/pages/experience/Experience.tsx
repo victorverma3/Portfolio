@@ -7,17 +7,17 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-import Footer from "../components/Footer";
-import Spinner from "../components/Spinner";
+import Footer from "../../components/Footer";
+import Spinner from "../../components/Spinner";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import amazonlogo from "../images/amazonlogo.png";
-import bulogo from "../images/bulogo.png";
-import ktplogo from "../images/ktplogo.png";
-import leslieslogo from "../images/leslieslogo.png";
-import rsmlogo from "../images/rsmlogo.png";
-import umasshospitallogo from "../images/umasshospitallogo.png";
+import amazonlogo from "../../images/amazonlogo.png";
+import bulogo from "../../images/bulogo.png";
+import ktplogo from "../../images/ktplogo.png";
+import leslieslogo from "../../images/leslieslogo.png";
+import rsmlogo from "../../images/rsmlogo.png";
+import umasshospitallogo from "../../images/umasshospitallogo.png";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 

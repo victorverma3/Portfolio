@@ -1,11 +1,11 @@
 import React from "react";
 
-import Disclaimer from "../components/Disclaimer";
-import EduDetails from "../components/EduDetails";
-import Footer from "../components/Footer";
-import Skills from "../components/Skills";
+import Disclaimer from "../../components/Disclaimer";
+import EduDetails from "../../components/EduDetails";
+import Footer from "../../components/Footer";
+import Skills from "../../components/Skills";
 
-import bulatinlogo from "../images/bulatinlogo.png";
+import bulatinlogo from "../../images/bulatinlogo.png";
 
 const Education = () => {
     const eduInfo = [

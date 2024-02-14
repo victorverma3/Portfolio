@@ -2,13 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import AboutCards from "../components/AboutCards";
-import Disclaimer from "../components/Disclaimer";
-import Footer from "../components/Footer";
-import Spinner from "../components/Spinner";
+import AboutCards from "../../components/AboutCards";
+import Disclaimer from "../../components/Disclaimer";
+import Footer from "../../components/Footer";
+import Spinner from "../../components/Spinner";
 
-import cruise from "../images/cruise.png";
-import husky from "../images/husky.png";
+import cruise from "../../images/cruise.png";
+import husky from "../../images/husky.png";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 

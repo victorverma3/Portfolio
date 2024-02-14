@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import Disclaimer from "../components/Disclaimer";
-import Footer from "../components/Footer";
-import ProjectCards from "../components/ProjectCards";
-import Reveal from "../components/Reveal";
-import Spinner from "../components/Spinner";
+import Disclaimer from "../../components/Disclaimer";
+import Footer from "../../components/Footer";
+import ProjectCards from "../../components/ProjectCards";
+import Reveal from "../../components/Reveal";
+import Spinner from "../../components/Spinner";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 

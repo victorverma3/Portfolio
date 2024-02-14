@@ -1,8 +1,8 @@
 import React from "react";
 
-import Footer from "../components/Footer";
+import Footer from "../../components/Footer";
 
-import tom from "../images/tom.png";
+import tom from "../../images/tom.png";
 
 const Error = () => {
     return (

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { CSSProperties } from "react";
+import { PuffLoader } from "react-spinners";
 
 const Spinner = () => {
-    return (
-        <div className="w-20 h-20" role="status">
-            <span className="sr-only"></span>
-        </div>
-    );
+    const override: CSSProperties = {
+        display: "block",
+        margin: "auto",
+    };
+    return <PuffLoader cssOverride={override} color="#60a5fa" />;
 };
 
 export default Spinner;

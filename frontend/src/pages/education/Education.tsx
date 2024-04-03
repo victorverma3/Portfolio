@@ -16,7 +16,7 @@ const Education = () => {
                 "B.A. in Mathematics and Computer Science.",
                 "Minor in Data Science.",
                 "3.85 GPA (3.86 major, 4.0 minor).",
-                "$7500 Student Research Award (Summer 2023 - Fall 2023).",
+                "Student Research Award (Summer 2023 - Spring 2024).",
                 "College of Arts and Sciences Dean's List.",
             ],
         },

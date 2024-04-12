@@ -59,7 +59,7 @@ const EditProject = () => {
 
     const handleFieldChange = (field: string, value: string) => {
         const parsedValue =
-            field === "technologies" || "linkTitles" || "linkURLs"
+            field === ("technologies" || "linkTitles" || "linkURLs")
                 ? value.split(",")
                 : value;
         setFormData((prevFormData) => ({

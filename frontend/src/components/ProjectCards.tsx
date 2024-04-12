@@ -10,12 +10,16 @@ import htmllogo from "../images/htmllogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
 import ktpdatabase from "../images/ktpdatabase.png";
 import mongodblogo from "../images/mongodblogo.png";
+import numpylogo from "../images/numpylogo.png";
 import nutrisistant from "../images/nutrisistant.png";
+import pandaslogo from "../images/pandaslogo.png";
 import pythonlogo from "../images/pythonlogo.png";
 import portfolio from "../images/portfolio.png";
 import reactlogo from "../images/reactlogo.png";
+import scikitlearnlogo from "../images/scikitlearnlogo.png";
 import sportsnews from "../images/sportsnews.png";
 import statsense from "../images/statsense.png";
+import tensorflowlogo from "../images/tensorflowlogo.png";
 import typescriptlogo from "../images/typescriptlogo.png";
 
 interface Card {
@@ -42,12 +46,16 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
         javascriptlogo: javascriptlogo,
         ktpdatabase: ktpdatabase,
         mongodblogo: mongodblogo,
+        numpylogo: numpylogo,
         nutrisistant: nutrisistant,
+        pandaslogo: pandaslogo,
         portfolio: portfolio,
         pythonlogo: pythonlogo,
         reactlogo: reactlogo,
+        scikitlearnlogo: scikitlearnlogo,
         sportsnews: sportsnews,
         statsense: statsense,
+        tensorflowlogo: tensorflowlogo,
         typescriptlogo: typescriptlogo,
     };
     const isLocalMachine = window.location.hostname === "localhost";

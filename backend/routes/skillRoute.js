@@ -59,6 +59,7 @@ router.put("/:id", async (request, response) => {
     }
 });
 
+// delete a skill
 router.delete("/:id", async (request, response) => {
     try {
         await Skills.findByIdAndDelete(request.params.id);

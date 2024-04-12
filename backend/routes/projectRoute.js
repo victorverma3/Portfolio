@@ -40,12 +40,13 @@ router.put("/:id", async (request, response) => {
             !request.body.image ||
             !request.body.description ||
             !request.body.technologies ||
-            !request.body.links ||
+            !request.body.linkTitles ||
+            !request.body.linkURLs ||
             !request.body.sortOrder
         ) {
             return response.status(400).send({
                 message:
-                    "Send all required fields: Title, Image, Description, Technologies, Links, and Sort Order",
+                    "Send all required fields: Title, Image, Description, Technologies, Link Titles, Link URLs, and Sort Order",
             });
         }
         const { id } = request.params;

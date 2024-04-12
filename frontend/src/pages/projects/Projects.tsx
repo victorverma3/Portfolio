@@ -15,7 +15,8 @@ type projectDataType = {
     image: string;
     description: string;
     technologies: [string];
-    links: [[string]];
+    linkTitles: [string];
+    linkURLs: [string];
     sortOrder: number;
 };
 

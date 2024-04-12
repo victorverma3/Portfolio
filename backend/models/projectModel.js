@@ -17,8 +17,12 @@ const projectSchema = mongoose.Schema({
         type: [String],
         required: true,
     },
-    links: {
-        type: [[String]],
+    linkTitles: {
+        type: [String],
+        required: true,
+    },
+    linkURLs: {
+        type: [String],
         required: true,
     },
     sortOrder: {

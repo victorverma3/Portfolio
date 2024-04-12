@@ -24,7 +24,8 @@ interface Card {
     image: string;
     description: string;
     technologies: Array<string>;
-    links: Array<Array<string>>;
+    linkTitles: Array<string>;
+    linkURLs: Array<string>;
     sortOrder: number;
 }
 
@@ -81,15 +82,16 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                             })}
                         </div>
                         <div className="w-full mt-2.5 flex flex-row justify-around">
-                            {card.links.map((element) => {
+                            {card.linkTitles.map((title, index) => {
                                 return (
                                     <Button
+                                        key={index}
                                         className="w-4/12 sm:w-2/5"
-                                        href={element[1]}
+                                        href={card.linkURLs[index]}
                                         target="_blank"
                                         variant="dark"
                                     >
-                                        {element[0]}
+                                        {title}
                                     </Button>
                                 );
                             })}

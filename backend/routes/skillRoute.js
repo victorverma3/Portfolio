@@ -32,7 +32,7 @@ router.get("/:id", async (request, response) => {
     }
 });
 
-// update a project
+// update a skill
 router.put("/:id", async (request, response) => {
     try {
         if (
@@ -53,6 +53,18 @@ router.put("/:id", async (request, response) => {
         return response
             .status(200)
             .send({ message: "Skill updated successfully" });
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
+router.delete("/:id", async (request, response) => {
+    try {
+        await Skills.findByIdAndDelete(request.params.id);
+        return response
+            .status(200)
+            .send({ message: "Skill deleted successfully" });
     } catch (error) {
         console.log(error.message);
         response.status(500).send({ message: error.message });

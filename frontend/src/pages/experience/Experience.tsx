@@ -7,6 +7,7 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
+import DeleteModal from "../../components/DeleteModal";
 import Footer from "../../components/Footer";
 import Spinner from "../../components/Spinner";
 
@@ -90,14 +91,21 @@ const Experience = () => {
                                     {element.description}
                                 </p>
                                 {isLocalMachine && (
-                                    <Link
-                                        to={`/experience/edit/${element._id}`}
-                                    >
-                                        <AiOutlineEdit
-                                            className="mx-auto mt-2.5"
-                                            size={24}
+                                    <div className="px-4 flex flex-row flex-wrap justify-around">
+                                        <Link
+                                            to={`/experience/edit/${element._id}`}
+                                        >
+                                            <AiOutlineEdit
+                                                className="mx-auto mt-2.5"
+                                                size={24}
+                                            />
+                                        </Link>
+                                        <DeleteModal
+                                            id={element._id}
+                                            name={element.role}
+                                            deleteItem={"Experience"}
                                         />
-                                    </Link>
+                                    </div>
                                 )}
                             </VerticalTimelineElement>
                         );

@@ -63,4 +63,17 @@ router.put("/:id", async (request, response) => {
     }
 });
 
+// delete a project
+router.delete("/:id", async (request, response) => {
+    try {
+        await Projects.findByIdAndDelete(request.params.id);
+        return response
+            .status(200)
+            .send({ message: "Project deleted successfully" });
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
 export default router;

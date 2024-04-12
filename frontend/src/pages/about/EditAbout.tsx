@@ -93,7 +93,7 @@ const EditAbout = () => {
                         </div>
                         <div className="w-fit m-auto">
                             <input
-                                className="w-80 h-8 m-auto border-1 border-gray-200"
+                                className="w-80 h-8 m-auto px-2 border-1 border-gray-200"
                                 type="text"
                                 value={value}
                                 onChange={(e) =>

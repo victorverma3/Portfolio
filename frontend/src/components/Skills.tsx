@@ -4,6 +4,7 @@ import { AiOutlineEdit } from "react-icons/ai";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import DeleteModal from "./DeleteModal";
 import Spinner from "./Spinner";
 
 import bootstraplogo from "../images/bootstraplogo.png";
@@ -48,6 +49,7 @@ const Skills = () => {
     const isLocalMachine = window.location.hostname === "localhost";
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);
+
     useEffect(() => {
         setLoading(true);
         axios
@@ -63,31 +65,41 @@ const Skills = () => {
                 setLoading(false);
             });
     }, []);
+
     return (
         <div className="mt-8">
             <h2 className="text-4xl 2xl:text-5xl">Skills</h2>
             {loading ? (
                 <Spinner />
             ) : (
-                <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap justify-center content-center">
-                    {skillsData.map((skill, index) => (
-                        <div className="w-32 sm:w-40 m-4" key={index}>
-                            <h3 className="text-2xl">{skill.name}</h3>
-                            <img
-                                className="w-16 sm:w-20 m-auto"
-                                src={skillsImageMap[skill.image]}
-                            ></img>
-                            {isLocalMachine && (
-                                <Link to={`/skills/edit/${skill._id}`}>
-                                    <AiOutlineEdit
-                                        className="mx-auto mt-2"
-                                        size={24}
-                                    />
-                                </Link>
-                            )}
-                        </div>
-                    ))}
-                </div>
+                <>
+                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap justify-center content-center">
+                        {skillsData.map((skill, index) => (
+                            <div className="w-32 sm:w-40 m-4" key={index}>
+                                <h3 className="text-2xl">{skill.name}</h3>
+                                <img
+                                    className="w-16 sm:w-20 m-auto"
+                                    src={skillsImageMap[skill.image]}
+                                ></img>
+                                {isLocalMachine && (
+                                    <div className="px-4 flex flex-row flex-wrap justify-around">
+                                        <Link to={`/skills/edit/${skill._id}`}>
+                                            <AiOutlineEdit
+                                                className="mx-auto mt-2"
+                                                size={24}
+                                            />
+                                        </Link>
+                                        <DeleteModal
+                                            id={skill._id}
+                                            name={skill.name}
+                                            deleteItem={"Skill"}
+                                        />
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </>
             )}
         </div>
     );

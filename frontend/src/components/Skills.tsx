@@ -33,7 +33,7 @@ const Skills = () => {
         pythonlogo: pythonlogo,
         tensorflowlogo: tensorflowlogo,
         pandaslogo: pandaslogo,
-        scikitlearn: scikitlearnlogo,
+        scikitlearnlogo: scikitlearnlogo,
         numpylogo: numpylogo,
         htmllogo: htmllogo,
         csslogo: csslogo,

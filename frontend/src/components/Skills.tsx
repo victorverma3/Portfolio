@@ -11,8 +11,11 @@ import htmllogo from "../images/htmllogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
 import mongodblogo from "../images/mongodblogo.png";
 import nodelogo from "../images/nodelogo.png";
+import numpylogo from "../images/numpylogo.png";
+import pandaslogo from "../images/pandaslogo.png";
 import pythonlogo from "../images/pythonlogo.png";
 import reactlogo from "../images/reactlogo.png";
+import scikitlearnlogo from "../images/scikitlearnlogo.png";
 import tensorflowlogo from "../images/tensorflowlogo.png";
 import typescriptlogo from "../images/typescriptlogo.png";
 
@@ -26,6 +29,10 @@ type skillsDataType = {
 const Skills = () => {
     const skillsImageMap: { [key: string]: any } = {
         pythonlogo: pythonlogo,
+        tensorflowlogo: tensorflowlogo,
+        pandaslogo: pandaslogo,
+        scikitlearn: scikitlearnlogo,
+        numpylogo: numpylogo,
         htmllogo: htmllogo,
         csslogo: csslogo,
         javascriptlogo: javascriptlogo,
@@ -35,7 +42,6 @@ const Skills = () => {
         nodelogo: nodelogo,
         mongodblogo: mongodblogo,
         gitlogo: gitlogo,
-        tensorflowlogo: tensorflowlogo,
     };
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);

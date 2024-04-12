@@ -21,7 +21,7 @@ const EditProject = () => {
         technologies: [],
         linkTitles: [],
         linkURLs: [],
-        sortOrder: -1,
+        sortOrder: "",
     });
 
     useEffect(() => {
@@ -72,6 +72,7 @@ const EditProject = () => {
         setLoading(true);
         const data = {
             ...formData,
+            sortOrder: parseInt(formData.sortOrder, 10),
         };
         axios
             .put(`${backend}/project-collection/${id}`, data)

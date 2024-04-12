@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import EditExperience from "./pages/experience/EditExperience";
 import EditAbout from "./pages/about/EditAbout";
 import EditProject from "./pages/projects/EditProject";
+import EditSkill from "./pages/education/EditSkill";
 import Education from "./pages/education/Education";
 import Error from "./pages/error/Error";
 import Experience from "./pages/experience/Experience";
@@ -33,6 +34,10 @@ function App() {
                             element={<EditExperience />}
                         />
                         <Route path="/education" element={<Education />} />
+                        <Route
+                            path="/skills/edit/:id"
+                            element={<EditSkill />}
+                        />
                         <Route path="/projects" element={<Projects />} />
                         <Route
                             path="/projects/edit/:id"

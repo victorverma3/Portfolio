@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { AiOutlineEdit } from "react-icons/ai";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Spinner from "./Spinner";
 
@@ -43,6 +45,7 @@ const Skills = () => {
         mongodblogo: mongodblogo,
         gitlogo: gitlogo,
     };
+    const isLocalMachine = window.location.hostname === "localhost";
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -74,6 +77,14 @@ const Skills = () => {
                                 className="w-16 sm:w-20 m-auto"
                                 src={skillsImageMap[skill.image]}
                             ></img>
+                            {isLocalMachine && (
+                                <Link to={`/skills/edit/${skill._id}`}>
+                                    <AiOutlineEdit
+                                        className="mx-auto mt-2"
+                                        size={24}
+                                    />
+                                </Link>
+                            )}
                         </div>
                     ))}
                 </div>

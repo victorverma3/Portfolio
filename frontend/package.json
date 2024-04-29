@@ -14,7 +14,7 @@
         "@emotion/styled": "^11.11.0",
         "@mui/material": "^5.14.17",
         "@types/react-vertical-timeline-component": "^3.3.3",
-        "@vercel/analytics": "^1.1.1",
+        "@vercel/analytics": "^1.2.2",
         "axios": "^1.5.1",
         "bootstrap": "^5.2.3",
         "framer-motion": "^10.12.18",

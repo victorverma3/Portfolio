@@ -7,9 +7,6 @@ import Disclaimer from "../../components/Disclaimer";
 import Footer from "../../components/Footer";
 import Spinner from "../../components/Spinner";
 
-import cruise from "../../images/cruise.png";
-import husky from "../../images/husky.png";
-
 const backend = import.meta.env.VITE_BACKEND_URL;
 
 type aboutDataType = {
@@ -41,18 +38,6 @@ const About = () => {
     return (
         <div className="w-screen min-h-[80vh] mt-20 mb-8">
             <h1 className="text-5xl 2xl:text-6xl">About Me</h1>
-            <div className="w-9/12 m-auto flex flex-row flex-wrap justify-around">
-                <img
-                    className="w-9/12 max-w-80 mx-auto my-2.5 border-1 border-solid border-gray-200 sm:w-2/5"
-                    src={cruise}
-                    alt="image loading error"
-                ></img>
-                <img
-                    className="w-9/12 max-w-80 mx-auto my-2.5 border-1 border-solid border-gray-200 sm:w-2/5"
-                    src={husky}
-                    alt="image loading error"
-                ></img>
-            </div>
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 I consider myself to be a perpetual learner. Even though a lot
                 of my time is used up with school, working, the gym, and other

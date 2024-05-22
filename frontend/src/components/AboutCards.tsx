@@ -1,7 +1,7 @@
 import React from "react";
-import { AiOutlineEdit } from "react-icons/ai";
 import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
+import EditAboutModal from "./EditAbout";
 
 import cube from "../images/cube.png";
 import movies from "../images/letterboxd.png";
@@ -63,11 +63,7 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
                                 {card.link}
                             </Button>
                         </div>
-                        {isLocalMachine && (
-                            <Link to={`/about/edit/${card._id}`}>
-                                <AiOutlineEdit className="m-auto" size={24} />
-                            </Link>
-                        )}
+                        {isLocalMachine && <EditAboutModal id={card._id} />}
                     </Card.Body>
                 </Card>
             ))}

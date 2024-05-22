@@ -1,9 +1,8 @@
 import React from "react";
-import { AiOutlineEdit } from "react-icons/ai";
 import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 import DeleteModal from "./DeleteModal";
+import EditProjectModal from "./EditProjectModal";
 
 import candidatebios from "../images/candidatebios.png";
 import csslogo from "../images/csslogo.png";
@@ -108,12 +107,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                         </div>
                         {isLocalMachine && (
                             <div className="px-4 flex flex-row flex-wrap justify-around">
-                                <Link to={`/projects/edit/${card._id}`}>
-                                    <AiOutlineEdit
-                                        className="mx-auto mt-2"
-                                        size={24}
-                                    />
-                                </Link>
+                                <EditProjectModal id={card._id} />
                                 <DeleteModal
                                     id={card._id}
                                     name={card.title}

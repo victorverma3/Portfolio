@@ -3,10 +3,7 @@ import { useLocation, Routes, Route } from "react-router-dom";
 import { SnackbarProvider } from "notistack";
 
 import About from "./pages/about/About";
-import EditExperience from "./pages/experience/EditExperience";
 import EditAbout from "./pages/about/EditAbout";
-import EditProject from "./pages/projects/EditProject";
-import EditSkill from "./pages/education/EditSkill";
 import Education from "./pages/education/Education";
 import Error from "./pages/error/Error";
 import Experience from "./pages/experience/Experience";
@@ -29,20 +26,8 @@ function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />} />
                         <Route path="/experience" element={<Experience />} />
-                        <Route
-                            path="/experience/edit/:id"
-                            element={<EditExperience />}
-                        />
                         <Route path="/education" element={<Education />} />
-                        <Route
-                            path="/skills/edit/:id"
-                            element={<EditSkill />}
-                        />
                         <Route path="/projects" element={<Projects />} />
-                        <Route
-                            path="/projects/edit/:id"
-                            element={<EditProject />}
-                        />
                         <Route path="/about" element={<About />} />
                         <Route path="/about/edit/:id" element={<EditAbout />} />
                         <Route path="*" element={<Error />} />

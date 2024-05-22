@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineEdit } from "react-icons/ai";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import {
     VerticalTimeline,
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
 import DeleteModal from "../../components/DeleteModal";
+import EditExperienceModal from "../../components/EditExperienceModal";
 import Footer from "../../components/Footer";
 import Spinner from "../../components/Spinner";
 
@@ -92,14 +91,7 @@ const Experience = () => {
                                 </p>
                                 {isLocalMachine && (
                                     <div className="px-4 flex flex-row flex-wrap justify-around">
-                                        <Link
-                                            to={`/experience/edit/${element._id}`}
-                                        >
-                                            <AiOutlineEdit
-                                                className="mx-auto mt-2.5"
-                                                size={24}
-                                            />
-                                        </Link>
+                                        <EditExperienceModal id={element._id} />
                                         <DeleteModal
                                             id={element._id}
                                             name={element.role}

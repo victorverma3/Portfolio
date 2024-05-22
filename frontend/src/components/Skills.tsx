@@ -1,10 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { AiOutlineEdit } from "react-icons/ai";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 import DeleteModal from "./DeleteModal";
+import EditSkillModal from "./EditSkillModal";
 import Spinner from "./Spinner";
 
 import bootstraplogo from "../images/bootstraplogo.png";
@@ -83,12 +82,7 @@ const Skills = () => {
                                 ></img>
                                 {isLocalMachine && (
                                     <div className="px-4 flex flex-row flex-wrap justify-around">
-                                        <Link to={`/skills/edit/${skill._id}`}>
-                                            <AiOutlineEdit
-                                                className="mx-auto mt-2"
-                                                size={24}
-                                            />
-                                        </Link>
+                                        <EditSkillModal id={skill._id} />
                                         <DeleteModal
                                             id={skill._id}
                                             name={skill.name}

@@ -32,6 +32,55 @@ router.get("/:id", async (request, response) => {
     }
 });
 
+// add an experience
+router.post("/", async (request, response) => {
+    try {
+        const {
+            role,
+            employer,
+            dates,
+            location,
+            description,
+            icon,
+            sortOrder,
+        } = request.body;
+
+        if (
+            !role ||
+            !employer ||
+            !dates ||
+            !location ||
+            !description ||
+            !icon ||
+            !sortOrder
+        ) {
+            return response.status(400).send({
+                message:
+                    "Send all required fields: Role, Employer, Dates, Location, Description, Icon, and Sort Order",
+            });
+        }
+
+        const newExperience = new Experiences({
+            role,
+            employer,
+            dates,
+            location,
+            description,
+            icon,
+            sortOrder,
+        });
+
+        await newExperience.save();
+
+        return response
+            .status(200)
+            .send({ message: "Experience added successfully" });
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
 // update an experience
 router.put("/:id", async (request, response) => {
     try {

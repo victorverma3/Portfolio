@@ -5,6 +5,7 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
+import AddExperienceModal from "../../components/AddExperienceModal";
 import DeleteModal from "../../components/DeleteModal";
 import EditExperienceModal from "../../components/EditExperienceModal";
 import Footer from "../../components/Footer";
@@ -17,6 +18,7 @@ import bulogo from "../../images/bulogo.png";
 import ktplogo from "../../images/ktplogo.png";
 import leslieslogo from "../../images/leslieslogo.png";
 import rsmlogo from "../../images/rsmlogo.png";
+import savvaslogo from "../../images/savvaslogo.png";
 import umasshospitallogo from "../../images/umasshospitallogo.png";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
@@ -60,6 +62,7 @@ const Experience = () => {
                 <VerticalTimeline>
                     {experienceData.map((element, index) => {
                         const experienceImageMap: { [key: string]: any } = {
+                            savvaslogo: savvaslogo,
                             bulogo: bulogo,
                             ktplogo: ktplogo,
                             leslieslogo: leslieslogo,
@@ -104,6 +107,7 @@ const Experience = () => {
                     })}
                 </VerticalTimeline>
             )}
+            <AddExperienceModal />
             <Footer />
         </div>
     );

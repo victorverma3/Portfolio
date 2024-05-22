@@ -62,13 +62,13 @@ const Experience = () => {
                 <VerticalTimeline>
                     {experienceData.map((element, index) => {
                         const experienceImageMap: { [key: string]: any } = {
-                            savvaslogo: savvaslogo,
+                            amazonlogo: amazonlogo,
                             bulogo: bulogo,
                             ktplogo: ktplogo,
                             leslieslogo: leslieslogo,
-                            amazonlogo: amazonlogo,
-                            umasshospitallogo: umasshospitallogo,
                             rsmlogo: rsmlogo,
+                            savvaslogo: savvaslogo,
+                            umasshospitallogo: umasshospitallogo,
                         };
                         return (
                             <VerticalTimelineElement
@@ -107,7 +107,7 @@ const Experience = () => {
                     })}
                 </VerticalTimeline>
             )}
-            <AddExperienceModal />
+            {isLocalMachine && <AddExperienceModal />}
             <Footer />
         </div>
     );

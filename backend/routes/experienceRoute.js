@@ -59,7 +59,6 @@ router.post("/", async (request, response) => {
                     "Send all required fields: Role, Employer, Dates, Location, Description, Icon, and Sort Order",
             });
         }
-
         const newExperience = new Experiences({
             role,
             employer,
@@ -69,9 +68,7 @@ router.post("/", async (request, response) => {
             icon,
             sortOrder,
         });
-
         await newExperience.save();
-
         return response
             .status(200)
             .send({ message: "Experience added successfully" });

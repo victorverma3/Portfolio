@@ -32,6 +32,32 @@ router.get("/:id", async (request, response) => {
     }
 });
 
+// add a skill
+router.post("/", async (request, response) => {
+    try {
+        const { name, image, sortOrder } = request.body;
+
+        if (!name || !image || !sortOrder) {
+            return response.status(400).send({
+                message:
+                    "Send all required fields: Name, Image, and Sort Order",
+            });
+        }
+        const newSkill = new Skills({
+            name,
+            image,
+            sortOrder,
+        });
+        await newSkill.save();
+        return response
+            .status(200)
+            .send({ message: "Skill added successfully" });
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
 // update a skill
 router.put("/:id", async (request, response) => {
     try {

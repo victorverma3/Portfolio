@@ -2,12 +2,14 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import AddSkillModal from "./AddSkillModal";
 import DeleteModal from "./DeleteModal";
 import EditSkillModal from "./EditSkillModal";
 import Spinner from "./Spinner";
 
 import bootstraplogo from "../images/bootstraplogo.png";
 import csslogo from "../images/csslogo.png";
+import flasklogo from "../images/flasklogo.png";
 import gitlogo from "../images/gitlogo.png";
 import htmllogo from "../images/htmllogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
@@ -18,6 +20,7 @@ import pandaslogo from "../images/pandaslogo.png";
 import pythonlogo from "../images/pythonlogo.png";
 import reactlogo from "../images/reactlogo.png";
 import scikitlearnlogo from "../images/scikitlearnlogo.png";
+import supabaselogo from "../images/supabaselogo.png";
 import tensorflowlogo from "../images/tensorflowlogo.png";
 import typescriptlogo from "../images/typescriptlogo.png";
 
@@ -30,20 +33,22 @@ type skillsDataType = {
 
 const Skills = () => {
     const skillsImageMap: { [key: string]: any } = {
-        pythonlogo: pythonlogo,
-        tensorflowlogo: tensorflowlogo,
-        pandaslogo: pandaslogo,
-        scikitlearnlogo: scikitlearnlogo,
-        numpylogo: numpylogo,
-        htmllogo: htmllogo,
-        csslogo: csslogo,
-        javascriptlogo: javascriptlogo,
-        typescriptlogo: typescriptlogo,
-        reactlogo: reactlogo,
         bootstraplogo: bootstraplogo,
-        nodelogo: nodelogo,
-        mongodblogo: mongodblogo,
+        csslogo: csslogo,
+        flasklogo: flasklogo,
         gitlogo: gitlogo,
+        htmllogo: htmllogo,
+        javascriptlogo: javascriptlogo,
+        mongodblogo: mongodblogo,
+        nodelogo: nodelogo,
+        numpylogo: numpylogo,
+        pandaslogo: pandaslogo,
+        pythonlogo: pythonlogo,
+        reactlogo: reactlogo,
+        scikitlearnlogo: scikitlearnlogo,
+        supabaselogo: supabaselogo,
+        tensorflowlogo: tensorflowlogo,
+        typescriptlogo: typescriptlogo,
     };
     const isLocalMachine = window.location.hostname === "localhost";
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
@@ -93,6 +98,7 @@ const Skills = () => {
                             </div>
                         ))}
                     </div>
+                    {isLocalMachine && <AddSkillModal />}
                 </>
             )}
         </div>

@@ -6,6 +6,7 @@ import EditProjectModal from "./EditProjectModal";
 
 import candidatebios from "../images/candidatebios.png";
 import csslogo from "../images/csslogo.png";
+import flasklogo from "../images/flasklogo.png";
 import gitlogo from "../images/gitlogo.png";
 import htmllogo from "../images/htmllogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
@@ -17,9 +18,11 @@ import pandaslogo from "../images/pandaslogo.png";
 import pythonlogo from "../images/pythonlogo.png";
 import portfolio from "../images/portfolio.png";
 import reactlogo from "../images/reactlogo.png";
+import recommendations from "../images/recommendations.png";
 import scikitlearnlogo from "../images/scikitlearnlogo.png";
 import sportsnews from "../images/sportsnews.png";
 import statsense from "../images/statsense.png";
+import supabaselogo from "../images/supabaselogo.png";
 import tensorflowlogo from "../images/tensorflowlogo.png";
 import typescriptlogo from "../images/typescriptlogo.png";
 
@@ -42,6 +45,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
     const projectImageMap: { [key: string]: any } = {
         candidatebios: candidatebios,
         csslogo: csslogo,
+        flasklogo: flasklogo,
         gitlogo: gitlogo,
         htmllogo: htmllogo,
         javascriptlogo: javascriptlogo,
@@ -53,9 +57,11 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
         portfolio: portfolio,
         pythonlogo: pythonlogo,
         reactlogo: reactlogo,
+        recommendations: recommendations,
         scikitlearnlogo: scikitlearnlogo,
         sportsnews: sportsnews,
         statsense: statsense,
+        supabaselogo: supabaselogo,
         tensorflowlogo: tensorflowlogo,
         typescriptlogo: typescriptlogo,
     };

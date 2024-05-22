@@ -32,6 +32,52 @@ router.get("/:id", async (request, response) => {
     }
 });
 
+// add a project
+router.post("/", async (request, response) => {
+    try {
+        const {
+            title,
+            image,
+            description,
+            technologies,
+            linkTitles,
+            linkURLs,
+            sortOrder,
+        } = request.body;
+
+        if (
+            !request.body.title ||
+            !request.body.image ||
+            !request.body.description ||
+            !request.body.technologies ||
+            !request.body.linkTitles ||
+            !request.body.linkURLs ||
+            !request.body.sortOrder
+        ) {
+            return response.status(400).send({
+                message:
+                    "Send all required fields: Title, Image, Description, Technologies, Link Titles, Link URLs, and Sort Order",
+            });
+        }
+        const newProject = new Projects({
+            title,
+            image,
+            description,
+            technologies,
+            linkTitles,
+            linkURLs,
+            sortOrder,
+        });
+        await newProject.save();
+        return response
+            .status(200)
+            .send({ message: "Project added successfully" });
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
 // update a project
 router.put("/:id", async (request, response) => {
     try {

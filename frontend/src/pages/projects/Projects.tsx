@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import AddProjectModal from "../../components/AddProjectModal";
 import Disclaimer from "../../components/Disclaimer";
 import Footer from "../../components/Footer";
 import ProjectCards from "../../components/ProjectCards";
@@ -46,6 +47,7 @@ const Projects = () => {
                     <ProjectCards cards={projectData} />
                 </Reveal>
             )}
+            <AddProjectModal />
             <Disclaimer />
             <Footer />
         </div>

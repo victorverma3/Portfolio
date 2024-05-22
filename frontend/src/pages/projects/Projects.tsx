@@ -37,6 +37,7 @@ const Projects = () => {
                 setLoading(false);
             });
     }, []);
+    const isLocalMachine = window.location.hostname === "localhost";
     return (
         <div className="w-screen min-h-[80vh] mt-20 mb-8">
             <h1 className="text-5xl 2xl:text-6xl">Projects</h1>
@@ -47,7 +48,7 @@ const Projects = () => {
                     <ProjectCards cards={projectData} />
                 </Reveal>
             )}
-            <AddProjectModal />
+            {isLocalMachine && <AddProjectModal />}
             <Disclaimer />
             <Footer />
         </div>

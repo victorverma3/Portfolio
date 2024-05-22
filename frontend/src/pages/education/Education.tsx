@@ -15,16 +15,16 @@ const Education = () => {
                 "Expected Graduation - May 2025.",
                 "B.A. in Mathematics and Computer Science.",
                 "Minor in Data Science.",
-                "3.85 GPA (3.86 major, 4.0 minor).",
-                "Student Research Award (Summer 2023 - Spring 2024).",
-                "College of Arts and Sciences Dean's List.",
+                "3.87 GPA (3.88 major, 4.0 minor).",
+                "UROP Student Research Award (Summer 2023 - Spring 2024).",
+                "6x College of Arts and Sciences Dean's List.",
             ],
         },
         {
             subtitle: "Relevant Courses",
             bullets: [
-                "Algorithms, Combinatoric Structures, Computer Systems, Concepts of Programming Languages, Data Science Tools and Applications, Introduction to Machine Learning and AI, Probability in Computing, and Software Engineering.",
-                "Applied Abstract Algebra, Differential Equations, Introduction to Stochastic Processes, Linear Algebra, Multivariate Calculus, and Probability.",
+                "Algorithms, Combinatoric Structures, Computer Systems, Data Science Tools and Applications, Functional Programming, Machine Learning and AI, Probability in Computing, and Software Engineering.",
+                "Applied Abstract Algebra, Differential Equations, Linear Algebra, Multivariate Calculus, Probability, Stochastic Processes.",
             ],
         },
         {

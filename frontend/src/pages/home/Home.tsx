@@ -6,7 +6,7 @@ import HomeTitle from "../../components/HomeTitle";
 const Home = () => {
     return (
         <>
-            <div className="w-screen min-h-[80vh] mt-12 sm:mt-[110px] sm:mb-[-50px]">
+            <div className="w-screen sm:min-h-[65vh] mt-20 sm:mt-28">
                 <HomeTitle />
                 <p className="w-[65vw] m-auto pt-6 text-xl text-justify sm:w-[60vw] sm:text-2xl sm:mb-12 2xl:text-3xl">
                     I'm a rising senior at Boston University graduating in 2025,

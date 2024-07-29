@@ -7,7 +7,7 @@ import DeleteModal from "./DeleteModal";
 import EditSkillModal from "./EditSkillModal";
 import Spinner from "./Spinner";
 
-import bootstraplogo from "../images/bootstraplogo.png";
+import awslogo from "../images/awslogo.png";
 import csslogo from "../images/csslogo.png";
 import flasklogo from "../images/flasklogo.png";
 import gitlogo from "../images/gitlogo.png";
@@ -33,7 +33,7 @@ type skillsDataType = {
 
 const Skills = () => {
     const skillsImageMap: { [key: string]: any } = {
-        bootstraplogo: bootstraplogo,
+        awslogo: awslogo,
         csslogo: csslogo,
         flasklogo: flasklogo,
         gitlogo: gitlogo,

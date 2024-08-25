@@ -9,6 +9,7 @@ import Spinner from "./Spinner";
 
 import awslogo from "../images/awslogo.png";
 import csslogo from "../images/csslogo.png";
+import dockerlogo from "../images/dockerlogo.png";
 import flasklogo from "../images/flasklogo.png";
 import gitlogo from "../images/gitlogo.png";
 import htmllogo from "../images/htmllogo.png";
@@ -35,6 +36,7 @@ const Skills = () => {
     const skillsImageMap: { [key: string]: any } = {
         awslogo: awslogo,
         csslogo: csslogo,
+        dockerlogo,
         flasklogo: flasklogo,
         gitlogo: gitlogo,
         htmllogo: htmllogo,

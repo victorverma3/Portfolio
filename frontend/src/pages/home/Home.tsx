@@ -14,9 +14,7 @@ const Home = () => {
                     data science. I am constantly striving to learn new skills
                     and continue to develop myself academically and
                     professionally. I particularly enjoy spending time working
-                    on personal projects and research, and I am currently a
-                    software development engineer intern at Savvas Learning
-                    Company.
+                    on personal projects that solve problems in my own life.
                 </p>
             </div>
             <Footer />

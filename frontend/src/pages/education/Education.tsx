@@ -23,8 +23,8 @@ const Education = () => {
         {
             subtitle: "Relevant Courses",
             bullets: [
-                "Algorithms, Combinatoric Structures, Computer Systems, Database Systems, Distributed Systems, Functional Programming, Machine Learning and AI, Probability in Computing, and Software Engineering.",
-                "Applied Abstract Algebra, Differential Equations, Linear Algebra, Multivariate Calculus, Probability, Stochastic Algorithms, and Stochastic Processes.",
+                " Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Software Engineering, Computer Systems, Probability in Computing.",
+                "Probability, Stochastic Algorithms, Stochastic Processes, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
             ],
         },
         {
@@ -33,7 +33,7 @@ const Education = () => {
                 "Undergraduate Research Assistant in the Questrom School of Business.",
                 "Computer Assistant in the Questrom Open Access Lab.",
                 "Former App Committee Head in Kappa Theta Pi's Lambda Chapter.",
-                "Boston University Barbell Club.",
+                "Boston University Men's Rugby.",
             ],
         },
     ];

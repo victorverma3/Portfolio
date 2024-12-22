@@ -29,7 +29,7 @@ type experienceDataType = {
     employer: string;
     dates: string;
     location: string;
-    description: string;
+    description: string[];
     icon: string;
     sortOrder: number;
 };
@@ -89,9 +89,14 @@ const Experience = () => {
                                 <h6 className="text-left">
                                     {element.location}
                                 </h6>
-                                <p className="text-justify">
-                                    {element.description}
-                                </p>
+                                <ul className="text-left">
+                                    {element.description.map(
+                                        (bullet, index) => (
+                                            <li key={index}>{bullet}</li>
+                                        )
+                                    )}
+                                </ul>
+
                                 {isLocalMachine && (
                                     <div className="px-4 flex flex-row flex-wrap justify-around">
                                         <EditExperienceModal id={element._id} />

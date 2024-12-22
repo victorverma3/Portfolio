@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useForm, FieldErrors } from "react-hook-form";
+import { useForm, useFieldArray, FieldErrors } from "react-hook-form";
 import { useSnackbar } from "notistack";
 
 import { Button } from "@mui/material";
@@ -13,7 +13,7 @@ type FormValues = {
     employer: string;
     dates: string;
     location: string;
-    description: string;
+    description: { bullet: string }[];
     icon: string;
     sortOrder: string;
 };
@@ -25,6 +25,7 @@ const AddExperienceModal = () => {
     const [open, setOpen] = useState(false);
     const {
         register,
+        control,
         handleSubmit,
         formState: { errors },
     } = useForm<FormValues>({
@@ -33,16 +34,22 @@ const AddExperienceModal = () => {
             employer: "",
             dates: "",
             location: "",
-            description: "",
+            description: [{ bullet: "" }],
             icon: "",
             sortOrder: "",
         },
+    });
+
+    const { fields, append, remove } = useFieldArray({
+        name: "description",
+        control,
     });
 
     const onSubmit = (formData: FormValues) => {
         console.log(formData);
         const data = {
             ...formData,
+            description: formData.description.map((item) => item.bullet),
             sortOrder: parseInt(formData.sortOrder, 10),
         };
         axios
@@ -77,7 +84,6 @@ const AddExperienceModal = () => {
         "employer",
         "dates",
         "location",
-        "description",
         "icon",
     ] as const;
 
@@ -137,6 +143,46 @@ const AddExperienceModal = () => {
                                     </div>
                                 </div>
                             ))}
+                            <div className="form-control">
+                                <label
+                                    className="text-center text-xl"
+                                    htmlFor="description"
+                                >
+                                    Description
+                                </label>
+                                {fields.map((field, index) => (
+                                    <div
+                                        key={field.id}
+                                        className="flex items-center"
+                                    >
+                                        <input
+                                            className="w-96 mt-2 px-2 text-center border-2 border-solid border-black"
+                                            type="text"
+                                            {...register(
+                                                `description.${index}.bullet` as const,
+                                                {
+                                                    required:
+                                                        "Description is required",
+                                                }
+                                            )}
+                                        />
+                                        <button
+                                            type="button"
+                                            className="ml-2 px-2 border-2 border-solid border-red-500 hover:bg-red-500 text-red-500 hover:text-white"
+                                            onClick={() => remove(index)}
+                                        >
+                                            Remove
+                                        </button>
+                                    </div>
+                                ))}
+                                <button
+                                    type="button"
+                                    className="w-fit mt-2 px-2 border-2 border-solid border-green-500 hover:bg-green-500 text-green-500 hover:text-white"
+                                    onClick={() => append({ bullet: "" })}
+                                >
+                                    Add Bullet
+                                </button>
+                            </div>
                             <div className="form-control">
                                 <div className="flex flex-col">
                                     <label

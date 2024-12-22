@@ -181,7 +181,7 @@ const AddProjectModal = () => {
                                                 className="form-control"
                                                 key={field.id}
                                             >
-                                                <div className="flex flex-row justify-between">
+                                                <div className="flex flex-row justify-around">
                                                     <input
                                                         type="text"
                                                         className="h-fit my-auto px-2 text-center border-2 border-solid border-black"
@@ -192,7 +192,7 @@ const AddProjectModal = () => {
                                                     {index > 0 && (
                                                         <button
                                                             type="button"
-                                                            className="w-fit block my-2 px-2 text-xl border-2 hover:border-red-500"
+                                                            className="w-fit block my-2 px-2 text-red-500 hover:text-white border-2 border-solid border-red-500 hover:border-red-500 hover:bg-red-500"
                                                             onClick={() =>
                                                                 removeTechnology(
                                                                     index
@@ -208,7 +208,7 @@ const AddProjectModal = () => {
                                     })}
                                     <button
                                         type="button"
-                                        className="w-fit block mx-auto my-2 px-2 text-xl border-2 hover:border-green-500"
+                                        className="w-fit block mx-auto my-2 px-2 text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500"
                                         onClick={() =>
                                             appendTechnology({ tech: "" })
                                         }
@@ -231,7 +231,7 @@ const AddProjectModal = () => {
                                                 className="form-control"
                                                 key={field.id}
                                             >
-                                                <div className="flex flex-row justify-between">
+                                                <div className="flex flex-row justify-around">
                                                     <input
                                                         type="text"
                                                         className="h-fit my-auto px-2 text-center border-2 border-solid border-black"
@@ -242,7 +242,7 @@ const AddProjectModal = () => {
                                                     {index > 0 && (
                                                         <button
                                                             type="button"
-                                                            className="w-fit block my-2 px-2 text-xl border-2 hover:border-red-500"
+                                                            className="w-fit block my-2 px-2 text-red-500 hover:text-white border-2 border-solid border-red-500 hover:border-red-500 hover:bg-red-500"
                                                             onClick={() =>
                                                                 removeLinkTitle(
                                                                     index
@@ -258,7 +258,7 @@ const AddProjectModal = () => {
                                     })}
                                     <button
                                         type="button"
-                                        className="w-fit block mx-auto my-2 px-2 text-xl border-2 hover:border-green-500"
+                                        className="w-fit block mx-auto my-2 px-2 text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500"
                                         onClick={() =>
                                             appendLinkTitle({ linkTitle: "" })
                                         }
@@ -281,7 +281,7 @@ const AddProjectModal = () => {
                                                 className="form-control"
                                                 key={field.id}
                                             >
-                                                <div className="flex flex-row justify-between">
+                                                <div className="flex flex-row justify-around">
                                                     <input
                                                         type="text"
                                                         className="h-fit my-auto px-2 text-center border-2 border-solid border-black"
@@ -292,7 +292,7 @@ const AddProjectModal = () => {
                                                     {index > 0 && (
                                                         <button
                                                             type="button"
-                                                            className="w-fit block my-2 px-2 text-xl border-2 hover:border-red-500"
+                                                            className="w-fit block my-2 px-2 text-red-500 hover:text-white border-2 border-solid border-red-500 hover:border-red-500 hover:bg-red-500"
                                                             onClick={() =>
                                                                 removeLinkURL(
                                                                     index
@@ -308,12 +308,12 @@ const AddProjectModal = () => {
                                     })}
                                     <button
                                         type="button"
-                                        className="w-fit block mx-auto my-2 px-2 text-xl border-2 hover:border-green-500"
+                                        className="w-fit block mx-auto my-2 px-2 text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500"
                                         onClick={() =>
                                             appendLinkURL({ linkURL: "" })
                                         }
                                     >
-                                        Add link title
+                                        Add link url
                                     </button>
                                 </div>
                             </div>
@@ -362,7 +362,7 @@ const AddProjectModal = () => {
                                     </p>
                                 </div>
                             </div>
-                            <button className="w-fit flex mx-auto my-2 px-2 text-xl border-2 hover:border-green-500">
+                            <button className="w-fit flex mx-auto my-2 px-2 text-xl text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500">
                                 Save
                             </button>
                         </form>

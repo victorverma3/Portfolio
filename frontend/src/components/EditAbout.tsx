@@ -204,7 +204,7 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
                                     </p>
                                 </div>
                             </div>
-                            <button className="w-fit flex mx-auto my-2 px-2 text-xl border-2 hover:border-green-500">
+                            <button className="w-fit flex mx-auto my-2 px-2 text-xl text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500">
                                 Save
                             </button>
                         </form>

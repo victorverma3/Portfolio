@@ -153,10 +153,10 @@ const AddExperienceModal = () => {
                                 {fields.map((field, index) => (
                                     <div
                                         key={field.id}
-                                        className="flex items-center"
+                                        className="flex flex-row justify-between"
                                     >
                                         <input
-                                            className="w-96 mt-2 px-2 text-center border-2 border-solid border-black"
+                                            className="w-4/6 h-fit my-auto px-2 text-center border-2 border-solid border-black"
                                             type="text"
                                             {...register(
                                                 `description.${index}.bullet` as const,
@@ -168,7 +168,7 @@ const AddExperienceModal = () => {
                                         />
                                         <button
                                             type="button"
-                                            className="ml-2 px-2 border-2 border-solid border-red-500 hover:bg-red-500 text-red-500 hover:text-white"
+                                            className="w-fit block my-2 px-2 text-red-500 hover:text-white border-2 border-solid border-red-500 hover:border-red-500 hover:bg-red-500"
                                             onClick={() => remove(index)}
                                         >
                                             Remove
@@ -177,7 +177,7 @@ const AddExperienceModal = () => {
                                 ))}
                                 <button
                                     type="button"
-                                    className="w-fit mt-2 px-2 border-2 border-solid border-green-500 hover:bg-green-500 text-green-500 hover:text-white"
+                                    className="w-fit block mx-auto my-2 px-2 text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500"
                                     onClick={() => append({ bullet: "" })}
                                 >
                                     Add Bullet
@@ -228,7 +228,7 @@ const AddExperienceModal = () => {
                                     </p>
                                 </div>
                             </div>
-                            <button className="w-fit flex mx-auto my-2 px-2 text-xl border-2 hover:border-green-500">
+                            <button className="w-fit flex mx-auto my-2 px-2 text-xl text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500">
                                 Save
                             </button>
                         </form>

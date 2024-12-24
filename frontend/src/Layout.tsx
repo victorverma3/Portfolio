@@ -6,9 +6,11 @@ import Header from "./components/Header";
 
 function Layout() {
     return (
-        <div>
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <Outlet />
+            <div className="grow bg-gradient-to-b from-sky-100 to-gray-100">
+                <Outlet />
+            </div>
             <Analytics />
         </div>
     );

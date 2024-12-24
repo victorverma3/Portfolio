@@ -9,12 +9,13 @@ const Home = () => {
             <div className="w-screen sm:min-h-[65vh] mt-20 sm:mt-28">
                 <HomeTitle />
                 <p className="w-[65vw] m-auto pt-6 text-xl text-justify sm:w-[60vw] sm:text-2xl sm:mb-12 2xl:text-3xl">
-                    I'm a rising senior at Boston University graduating in 2025,
-                    majoring in mathematics and computer science and minoring
-                    data science. I am constantly striving to learn new skills
-                    and continue to develop myself academically and
+                    I'm a senior at Boston University graduating in spring 2025
+                    with a B.A. in Mathematics and Computer science and a minor
+                    in Data Science. I am constantly striving to learn new
+                    skills and continue to develop myself academically and
                     professionally. I particularly enjoy spending time working
-                    on personal projects that solve problems in my own life.
+                    on personal projects that solve interesting problems in my
+                    life.
                 </p>
             </div>
             <Footer />

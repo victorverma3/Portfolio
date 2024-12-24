@@ -15,22 +15,22 @@ const Education = () => {
                 "Expected Graduation - May 2025.",
                 "B.A. in Mathematics and Computer Science.",
                 "Minor in Data Science.",
-                "3.87 GPA (3.88 major, 4.0 minor).",
-                "UROP Student Research Award (Summer 2023 - Spring 2024).",
-                "6x College of Arts and Sciences Dean's List.",
+                "3.89 GPA.",
+                "UROP Student Research Award.",
+                "College of Arts and Sciences Dean's List.",
             ],
         },
         {
             subtitle: "Relevant Courses",
             bullets: [
-                " Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Software Engineering, Computer Systems, Probability in Computing.",
+                "Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Software Engineering, Computer Systems, Probability in Computing.",
                 "Probability, Stochastic Algorithms, Stochastic Processes, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
             ],
         },
         {
             subtitle: "Extracurriculars",
             bullets: [
-                "Undergraduate Research Assistant in the Questrom School of Business.",
+                "Research Assistant in the Questrom School of Business.",
                 "Computer Assistant in the Questrom Open Access Lab.",
                 "Former App Committee Head in Kappa Theta Pi's Lambda Chapter.",
                 "Boston University Men's Rugby.",

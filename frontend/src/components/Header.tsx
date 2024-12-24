@@ -7,13 +7,26 @@ import Navbar from "react-bootstrap/Navbar";
 import resume from "./VictorVerma.pdf";
 
 import githublogo from "../images/githublogo.png";
-import maillogo from "../images/maillogo.png";
 import linkedinlogo from "../images/linkedinlogo.png";
+import maillogo from "../images/maillogo.png";
 
 const Header = () => {
     const openResume = () => {
         window.open(resume, "_blank");
     };
+    const logoItems = [
+        { url: "https://www.linkedin.com/in/victorverma/", logo: linkedinlogo },
+        { url: "https://github.com/victorverma3", logo: githublogo },
+        { url: "mailto:vpverm@bu.edu", logo: maillogo },
+    ];
+    const navItems = [
+        { url: "/", text: "Home" },
+        { url: "/experience", text: "Experience" },
+        { url: "/education", text: "Education" },
+        { url: "/projects", text: "Projects" },
+        { url: "#", click: openResume, text: "Resume" },
+        { url: "/about", text: "About Me" },
+    ];
     return (
         <div className="w-full m-auto">
             <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
@@ -24,74 +37,31 @@ const Header = () => {
                         </span>
                     </Navbar.Brand>
                     <div className="w-32 m-auto flex-row flex-wrap justify-around hidden nav-display:flex portrait:hidden">
-                        <a
-                            href="https://www.linkedin.com/in/victor-verma-91713022b/"
-                            target="_blank"
-                        >
-                            <img className="w-7" src={linkedinlogo}></img>
-                        </a>
-                        <a
-                            href="https://github.com/victorverma3"
-                            target="_blank"
-                        >
-                            <img className="w-7" src={githublogo}></img>
-                        </a>
-                        <a href="mailto:vpverm@bu.edu" target="_blank">
-                            <img className="w-7" src={maillogo}></img>
-                        </a>
+                        {logoItems.map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.url}
+                                target="_blank"
+                                className="rounded-md hover:scale-105 hover:shadow-md"
+                            >
+                                <img className="w-7" src={item.logo} />
+                            </a>
+                        ))}
                     </div>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link eventKey="1">
-                                <Link
-                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
-                                    to="/"
-                                >
-                                    Home
-                                </Link>
-                            </Nav.Link>
-                            <Nav.Link eventKey="2">
-                                <Link
-                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
-                                    to="/experience"
-                                >
-                                    Experience
-                                </Link>
-                            </Nav.Link>
-                            <Nav.Link eventKey="3">
-                                <Link
-                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
-                                    to="/education"
-                                >
-                                    Education
-                                </Link>
-                            </Nav.Link>
-                            <Nav.Link eventKey="4">
-                                <Link
-                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
-                                    to="/projects"
-                                >
-                                    Projects
-                                </Link>
-                            </Nav.Link>
-                            <Nav.Link eventKey="5">
-                                <Link
-                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
-                                    to="#"
-                                    onClick={openResume}
-                                >
-                                    Resume
-                                </Link>
-                            </Nav.Link>
-                            <Nav.Link eventKey="6">
-                                <Link
-                                    className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
-                                    to="/about"
-                                >
-                                    About Me
-                                </Link>
-                            </Nav.Link>
+                            {navItems.map((item, index) => (
+                                <Nav.Link eventKey={index}>
+                                    <Link
+                                        className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
+                                        to={item.url}
+                                        onClick={item?.click}
+                                    >
+                                        {item.text}
+                                    </Link>
+                                </Nav.Link>
+                            ))}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -20,6 +20,7 @@ import portfolio from "../images/portfolio.png";
 import reactlogo from "../images/reactlogo.png";
 import recommendations from "../images/recommendations.png";
 import scikitlearnlogo from "../images/scikitlearnlogo.png";
+import sgd from "../images/sgd.png";
 import sportsnews from "../images/sportsnews.png";
 import statsense from "../images/statsense.png";
 import supabaselogo from "../images/supabaselogo.png";
@@ -59,6 +60,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
         reactlogo: reactlogo,
         recommendations: recommendations,
         scikitlearnlogo: scikitlearnlogo,
+        sgd: sgd,
         sportsnews: sportsnews,
         statsense: statsense,
         supabaselogo: supabaselogo,

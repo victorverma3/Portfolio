@@ -6,10 +6,13 @@ import EditProjectModal from "./EditProjectModal";
 
 import candidatebios from "../images/candidatebios.png";
 import csslogo from "../images/csslogo.png";
+import firebaselogo from "../images/firebaselogo.png";
 import flasklogo from "../images/flasklogo.png";
 import gitlogo from "../images/gitlogo.png";
 import htmllogo from "../images/htmllogo.png";
+import huggingfacelogo from "../images/huggingfacelogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
+import ktpaul from "../images/ktpaul.png";
 import ktpdatabase from "../images/ktpdatabase.png";
 import mongodblogo from "../images/mongodblogo.png";
 import numpylogo from "../images/numpylogo.png";
@@ -44,28 +47,31 @@ interface ProjectCardsProps {
 
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
     const projectImageMap: { [key: string]: any } = {
-        candidatebios: candidatebios,
-        csslogo: csslogo,
-        flasklogo: flasklogo,
-        gitlogo: gitlogo,
-        htmllogo: htmllogo,
-        javascriptlogo: javascriptlogo,
-        ktpdatabase: ktpdatabase,
-        mongodblogo: mongodblogo,
-        numpylogo: numpylogo,
-        nutrisistant: nutrisistant,
-        pandaslogo: pandaslogo,
-        portfolio: portfolio,
-        pythonlogo: pythonlogo,
-        reactlogo: reactlogo,
-        recommendations: recommendations,
-        scikitlearnlogo: scikitlearnlogo,
-        sgd: sgd,
-        sportsnews: sportsnews,
-        statsense: statsense,
-        supabaselogo: supabaselogo,
-        tensorflowlogo: tensorflowlogo,
-        typescriptlogo: typescriptlogo,
+        candidatebios,
+        csslogo,
+        firebaselogo,
+        flasklogo,
+        gitlogo,
+        htmllogo,
+        huggingfacelogo,
+        javascriptlogo,
+        ktpaul,
+        ktpdatabase,
+        mongodblogo,
+        numpylogo,
+        nutrisistant,
+        pandaslogo,
+        portfolio,
+        pythonlogo,
+        reactlogo,
+        recommendations,
+        scikitlearnlogo,
+        sgd,
+        sportsnews,
+        statsense,
+        supabaselogo,
+        tensorflowlogo,
+        typescriptlogo,
     };
     const isLocalMachine = window.location.hostname === "localhost";
     return (

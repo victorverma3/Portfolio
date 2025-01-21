@@ -11,8 +11,10 @@ import awslogo from "../images/awslogo.png";
 import dockerlogo from "../images/dockerlogo.png";
 import firebaselogo from "../images/firebaselogo.png";
 import flasklogo from "../images/flasklogo.png";
+import gcplogo from "../images/gcplogo.png";
 import gitlogo from "../images/gitlogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
+import llamaindexlogo from "../images/llamaindexlogo.png";
 import mongodblogo from "../images/mongodblogo.png";
 import nodelogo from "../images/nodelogo.png";
 import numpylogo from "../images/numpylogo.png";
@@ -37,8 +39,10 @@ const Skills = () => {
         dockerlogo,
         firebaselogo,
         flasklogo,
+        gcplogo,
         gitlogo,
         javascriptlogo,
+        llamaindexlogo,
         mongodblogo,
         nodelogo,
         numpylogo,
@@ -84,7 +88,7 @@ const Skills = () => {
                                 <img
                                     className="w-16 sm:w-20 m-auto"
                                     src={skillsImageMap[skill.image]}
-                                ></img>
+                                />
                                 {isLocalMachine && (
                                     <div className="px-4 flex flex-row flex-wrap justify-around">
                                         <EditSkillModal id={skill._id} />

@@ -35,17 +35,18 @@ router.get("/:id", async (request, response) => {
 // add a skill
 router.post("/", async (request, response) => {
     try {
-        const { name, image, sortOrder } = request.body;
+        const { name, image, group, sortOrder } = request.body;
 
-        if (!name || !image || !sortOrder) {
+        if (!name || !image || !group || !sortOrder) {
             return response.status(400).send({
                 message:
-                    "Send all required fields: Name, Image, and Sort Order",
+                    "Send all required fields: Name, Image, Group, and Sort Order",
             });
         }
         const newSkill = new Skills({
             name,
             image,
+            group,
             sortOrder,
         });
         await newSkill.save();
@@ -64,11 +65,12 @@ router.put("/:id", async (request, response) => {
         if (
             !request.body.name ||
             !request.body.image ||
+            !request.body.group ||
             !request.body.sortOrder
         ) {
             return response.status(400).send({
                 message:
-                    "Send all required fields: Name, Image, and Sort Order",
+                    "Send all required fields: Name, Image, Group, and Sort Order",
             });
         }
         const { id } = request.params;

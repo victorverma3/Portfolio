@@ -11,6 +11,7 @@ import Modal from "@mui/material/Modal";
 type FormValues = {
     name: string;
     image: string;
+    group: string;
     sortOrder: string;
 };
 
@@ -27,6 +28,7 @@ const AddSkillModal = () => {
         defaultValues: {
             name: "",
             image: "",
+            group: "",
             sortOrder: "",
         },
     });
@@ -64,7 +66,7 @@ const AddSkillModal = () => {
         setOpen(false);
     };
 
-    const mapFields = ["name", "image"] as const;
+    const mapFields = ["name", "image", "group"] as const;
 
     return (
         <div>

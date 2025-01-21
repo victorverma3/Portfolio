@@ -12,6 +12,7 @@ import Spinner from "./Spinner";
 type FormValues = {
     name: string;
     image: string;
+    group: string;
     sortOrder: string;
 };
 
@@ -34,6 +35,7 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
         defaultValues: {
             name: "",
             image: "",
+            group: "",
             sortOrder: "",
         },
     });
@@ -73,6 +75,7 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
                 reset({
                     name: response.data.name,
                     image: response.data.image,
+                    group: response.data.group,
                     sortOrder: String(response.data.sortOrder),
                 });
                 setLoading(false);
@@ -91,7 +94,7 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
         setOpen(false);
     };
 
-    const mapFields = ["name", "image"] as const;
+    const mapFields = ["name", "image", "group"] as const;
 
     return (
         <div>

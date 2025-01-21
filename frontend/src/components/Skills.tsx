@@ -30,6 +30,7 @@ type skillsDataType = {
     _id: string;
     name: string;
     image: string;
+    group: string;
     sortOrder: number;
 };
 
@@ -76,34 +77,65 @@ const Skills = () => {
 
     return (
         <div className="mt-8">
-            <h2 className="text-4xl 2xl:text-5xl">Skills</h2>
             {loading ? (
                 <Spinner />
             ) : (
-                <>
+                <div>
+                    <h2 className="text-4xl 2xl:text-5xl">
+                        Languages and Frameworks
+                    </h2>
                     <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap justify-center content-center">
-                        {skillsData.map((skill, index) => (
-                            <div className="w-32 sm:w-40 m-4" key={index}>
-                                <h3 className="text-2xl">{skill.name}</h3>
-                                <img
-                                    className="w-16 sm:w-20 m-auto"
-                                    src={skillsImageMap[skill.image]}
-                                />
-                                {isLocalMachine && (
-                                    <div className="px-4 flex flex-row flex-wrap justify-around">
-                                        <EditSkillModal id={skill._id} />
-                                        <DeleteModal
-                                            id={skill._id}
-                                            name={skill.name}
-                                            deleteItem={"Skill"}
-                                        />
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                        {skillsData
+                            .filter((skill) => skill.group === "lf")
+                            .map((skill, index) => (
+                                <div className="w-32 sm:w-40 m-4" key={index}>
+                                    <h3 className="text-2xl">{skill.name}</h3>
+                                    <img
+                                        className="w-16 sm:w-20 m-auto"
+                                        src={skillsImageMap[skill.image]}
+                                    />
+                                    {isLocalMachine && (
+                                        <div className="px-4 flex flex-row flex-wrap justify-around">
+                                            <EditSkillModal id={skill._id} />
+                                            <DeleteModal
+                                                id={skill._id}
+                                                name={skill.name}
+                                                deleteItem={"Skill"}
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                    </div>
+
+                    <h2 className="text-4xl 2xl:text-5xl">
+                        Tools and Libraries
+                    </h2>
+                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap justify-center content-center">
+                        {skillsData
+                            .filter((skill) => skill.group === "tl")
+                            .map((skill, index) => (
+                                <div className="w-32 sm:w-40 m-4" key={index}>
+                                    <h3 className="text-2xl">{skill.name}</h3>
+                                    <img
+                                        className="w-16 sm:w-20 m-auto"
+                                        src={skillsImageMap[skill.image]}
+                                    />
+                                    {isLocalMachine && (
+                                        <div className="px-4 flex flex-row flex-wrap justify-around">
+                                            <EditSkillModal id={skill._id} />
+                                            <DeleteModal
+                                                id={skill._id}
+                                                name={skill.name}
+                                                deleteItem={"Skill"}
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
                     </div>
                     {isLocalMachine && <AddSkillModal />}
-                </>
+                </div>
             )}
         </div>
     );

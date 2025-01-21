@@ -9,6 +9,10 @@ const skillSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    group: {
+        type: String,
+        required: true,
+    },
     sortOrder: {
         type: Number,
         required: true,

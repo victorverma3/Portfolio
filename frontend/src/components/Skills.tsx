@@ -13,6 +13,7 @@ import firebaselogo from "../images/firebaselogo.png";
 import flasklogo from "../images/flasklogo.png";
 import gcplogo from "../images/gcplogo.png";
 import gitlogo from "../images/gitlogo.png";
+import javalogo from "../images/javalogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
 import llamaindexlogo from "../images/llamaindexlogo.png";
 import mongodblogo from "../images/mongodblogo.png";
@@ -42,6 +43,7 @@ const Skills = () => {
         flasklogo,
         gcplogo,
         gitlogo,
+        javalogo,
         javascriptlogo,
         llamaindexlogo,
         mongodblogo,
@@ -80,18 +82,18 @@ const Skills = () => {
             {loading ? (
                 <Spinner />
             ) : (
-                <div>
-                    <h2 className="text-4xl 2xl:text-5xl">
+                <div className="flex flex-col space-y-6">
+                    <h2 className="text-3xl 2xl:text-4xl">
                         Languages and Frameworks
                     </h2>
-                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap justify-center content-center">
+                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap gap-2 justify-center content-center">
                         {skillsData
                             .filter((skill) => skill.group === "lf")
                             .map((skill, index) => (
-                                <div className="w-32 sm:w-40 m-4" key={index}>
-                                    <h3 className="text-2xl">{skill.name}</h3>
+                                <div className="w-32 sm:w-40" key={index}>
+                                    <h3 className="text-xl">{skill.name}</h3>
                                     <img
-                                        className="w-16 sm:w-20 m-auto"
+                                        className="w-12 sm:w-16 m-auto"
                                         src={skillsImageMap[skill.image]}
                                     />
                                     {isLocalMachine && (
@@ -108,17 +110,17 @@ const Skills = () => {
                             ))}
                     </div>
 
-                    <h2 className="text-4xl 2xl:text-5xl">
+                    <h2 className="text-3xl 2xl:text-4xl">
                         Tools and Libraries
                     </h2>
-                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap justify-center content-center">
+                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap gap-2 justify-center content-center">
                         {skillsData
                             .filter((skill) => skill.group === "tl")
                             .map((skill, index) => (
-                                <div className="w-32 sm:w-40 m-4" key={index}>
-                                    <h3 className="text-2xl">{skill.name}</h3>
+                                <div className="w-32 sm:w-40" key={index}>
+                                    <h3 className="text-xl">{skill.name}</h3>
                                     <img
-                                        className="w-16 sm:w-20 m-auto"
+                                        className="w-12 sm:w-16 m-auto"
                                         src={skillsImageMap[skill.image]}
                                     />
                                     {isLocalMachine && (

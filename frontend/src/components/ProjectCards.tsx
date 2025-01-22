@@ -100,7 +100,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                                         className="w-1/6 bg-white"
                                         src={projectImageMap[element]}
                                         alt="image loading error"
-                                    ></img>
+                                    />
                                 );
                             })}
                         </div>

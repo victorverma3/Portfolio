@@ -13,6 +13,7 @@ import firebaselogo from "../images/firebaselogo.png";
 import flasklogo from "../images/flasklogo.png";
 import gcplogo from "../images/gcplogo.png";
 import gitlogo from "../images/gitlogo.png";
+import huggingfacelogo from "../images/huggingfacelogo.png";
 import javalogo from "../images/javalogo.png";
 import javascriptlogo from "../images/javascriptlogo.png";
 import llamaindexlogo from "../images/llamaindexlogo.png";
@@ -43,6 +44,7 @@ const Skills = () => {
         flasklogo,
         gcplogo,
         gitlogo,
+        huggingfacelogo,
         javalogo,
         javascriptlogo,
         llamaindexlogo,

@@ -54,7 +54,7 @@ const Header = () => {
                             {navItems.map((item, index) => (
                                 <Nav.Link eventKey={index}>
                                     <Link
-                                        className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-2 hover:decoration-blue-400 delay-150 duration-150 ease-linear"
+                                        className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-blue-400 duration-200 ease-in-out"
                                         to={item.url}
                                         onClick={item?.click}
                                     >

@@ -41,12 +41,12 @@ const Skills = () => {
             {loading ? (
                 <Spinner />
             ) : (
-                <div className="flex flex-col space-y-6">
+                <div className="flex flex-col space-y-8">
                     <SkillSection
                         skillsData={skillsData.filter(
-                            (skill) => skill.group === "languages"
+                            (skill) => skill.group === "languages-dbs"
                         )}
-                        sectionHeader="Languages"
+                        sectionHeader="Languages and Databases"
                     />
 
                     <SkillSection

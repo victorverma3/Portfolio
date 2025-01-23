@@ -5,7 +5,6 @@ import AddProjectModal from "../../components/AddProjectModal";
 import Disclaimer from "../../components/Disclaimer";
 import Footer from "../../components/Footer";
 import ProjectCards from "../../components/ProjectCards";
-import Reveal from "../../components/Reveal";
 import Spinner from "../../components/Spinner";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
@@ -41,13 +40,7 @@ const Projects = () => {
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="text-5xl 2xl:text-6xl">Projects</h1>
-            {loading ? (
-                <Spinner />
-            ) : (
-                <Reveal>
-                    <ProjectCards cards={projectData} />
-                </Reveal>
-            )}
+            {loading ? <Spinner /> : <ProjectCards cards={projectData} />}
             {isLocalMachine && <AddProjectModal />}
             <Disclaimer />
             <Footer />

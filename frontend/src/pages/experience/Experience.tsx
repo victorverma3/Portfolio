@@ -22,6 +22,7 @@ import savvaslogo from "../../../public/images/savvaslogo.png";
 import umasshospitallogo from "../../../public/images/umasshospitallogo.png";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
+const isLocalMachine = window.location.hostname === "localhost";
 
 type experienceDataType = {
     _id: string;
@@ -52,7 +53,7 @@ const Experience = () => {
                 setLoading(false);
             });
     }, []);
-    const isLocalMachine = window.location.hostname === "localhost";
+
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="text-5xl 2xl:text-6xl">Experience</h1>

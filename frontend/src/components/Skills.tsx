@@ -3,31 +3,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import AddSkillModal from "./AddSkillModal";
-import DeleteModal from "./DeleteModal";
-import EditSkillModal from "./EditSkillModal";
 import SkillSection from "./SkillSection";
 import Spinner from "./Spinner";
 
-// import awslogo from "../images/awslogo.png";
-// import dockerlogo from "../images/dockerlogo.png";
-// import firebaselogo from "../images/firebaselogo.png";
-// import flasklogo from "../images/flasklogo.png";
-// import gcplogo from "../images/gcplogo.png";
-// import gitlogo from "../images/gitlogo.png";
-// import huggingfacelogo from "../images/huggingfacelogo.png";
-// import javalogo from "../images/javalogo.png";
-// import javascriptlogo from "../images/javascriptlogo.png";
-// import llamaindexlogo from "../images/llamaindexlogo.png";
-// import mongodblogo from "../images/mongodblogo.png";
-// import nodelogo from "../images/nodelogo.png";
-// import numpylogo from "../images/numpylogo.png";
-// import pandaslogo from "../images/pandaslogo.png";
-// import pythonlogo from "../images/pythonlogo.png";
-// import reactlogo from "../images/reactlogo.png";
-// import scikitlearnlogo from "../images/scikitlearnlogo.png";
-// import supabaselogo from "../images/supabaselogo.png";
-// import tensorflowlogo from "../images/tensorflowlogo.png";
-// import typescriptlogo from "../images/typescriptlogo.png";
+const isLocalMachine = window.location.hostname === "localhost";
 
 type skillsDataType = {
     _id: string;
@@ -38,29 +17,6 @@ type skillsDataType = {
 };
 
 const Skills = () => {
-    // const skillsImageMap: { [key: string]: any } = {
-    //     awslogo,
-    //     dockerlogo,
-    //     firebaselogo,
-    //     flasklogo,
-    //     gcplogo,
-    //     gitlogo,
-    //     huggingfacelogo,
-    //     javalogo,
-    //     javascriptlogo,
-    //     llamaindexlogo,
-    //     mongodblogo,
-    //     nodelogo,
-    //     numpylogo,
-    //     pandaslogo,
-    //     pythonlogo,
-    //     reactlogo,
-    //     scikitlearnlogo,
-    //     supabaselogo,
-    //     tensorflowlogo,
-    //     typescriptlogo,
-    // };
-    const isLocalMachine = window.location.hostname === "localhost";
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);
 

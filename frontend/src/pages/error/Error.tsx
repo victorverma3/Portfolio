@@ -2,7 +2,7 @@ import React from "react";
 
 import Footer from "../../components/Footer";
 
-import tom from "../../images/tom.png";
+import tom from "../../../public/images/tom.png";
 
 const Error = () => {
     return (

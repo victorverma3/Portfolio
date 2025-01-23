@@ -3,10 +3,6 @@ import { Button, Card } from "react-bootstrap";
 
 import EditAboutModal from "./EditAbout";
 
-import cube from "../images/cube.png";
-import movies from "../images/letterboxd.png";
-import weights from "../images/weights.png";
-
 interface Card {
     _id: string;
     title: string;
@@ -22,11 +18,6 @@ interface AboutCardsProps {
 }
 
 const AboutCards = ({ cards }: AboutCardsProps) => {
-    const aboutImageMap: { [key: string]: any } = {
-        movies: movies,
-        weights: weights,
-        cube: cube,
-    };
     const isLocalMachine = window.location.hostname === "localhost";
     return (
         <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
@@ -37,7 +28,7 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
                 >
                     <Card.Img
                         variant="top"
-                        src={aboutImageMap[card.image]}
+                        src={`images/${card.image}.png`}
                         alt="image loading error"
                     />
                     <Card.Body>

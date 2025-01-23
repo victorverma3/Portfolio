@@ -5,28 +5,29 @@ import axios from "axios";
 import AddSkillModal from "./AddSkillModal";
 import DeleteModal from "./DeleteModal";
 import EditSkillModal from "./EditSkillModal";
+import SkillSection from "./SkillSection";
 import Spinner from "./Spinner";
 
-import awslogo from "../images/awslogo.png";
-import dockerlogo from "../images/dockerlogo.png";
-import firebaselogo from "../images/firebaselogo.png";
-import flasklogo from "../images/flasklogo.png";
-import gcplogo from "../images/gcplogo.png";
-import gitlogo from "../images/gitlogo.png";
-import huggingfacelogo from "../images/huggingfacelogo.png";
-import javalogo from "../images/javalogo.png";
-import javascriptlogo from "../images/javascriptlogo.png";
-import llamaindexlogo from "../images/llamaindexlogo.png";
-import mongodblogo from "../images/mongodblogo.png";
-import nodelogo from "../images/nodelogo.png";
-import numpylogo from "../images/numpylogo.png";
-import pandaslogo from "../images/pandaslogo.png";
-import pythonlogo from "../images/pythonlogo.png";
-import reactlogo from "../images/reactlogo.png";
-import scikitlearnlogo from "../images/scikitlearnlogo.png";
-import supabaselogo from "../images/supabaselogo.png";
-import tensorflowlogo from "../images/tensorflowlogo.png";
-import typescriptlogo from "../images/typescriptlogo.png";
+// import awslogo from "../images/awslogo.png";
+// import dockerlogo from "../images/dockerlogo.png";
+// import firebaselogo from "../images/firebaselogo.png";
+// import flasklogo from "../images/flasklogo.png";
+// import gcplogo from "../images/gcplogo.png";
+// import gitlogo from "../images/gitlogo.png";
+// import huggingfacelogo from "../images/huggingfacelogo.png";
+// import javalogo from "../images/javalogo.png";
+// import javascriptlogo from "../images/javascriptlogo.png";
+// import llamaindexlogo from "../images/llamaindexlogo.png";
+// import mongodblogo from "../images/mongodblogo.png";
+// import nodelogo from "../images/nodelogo.png";
+// import numpylogo from "../images/numpylogo.png";
+// import pandaslogo from "../images/pandaslogo.png";
+// import pythonlogo from "../images/pythonlogo.png";
+// import reactlogo from "../images/reactlogo.png";
+// import scikitlearnlogo from "../images/scikitlearnlogo.png";
+// import supabaselogo from "../images/supabaselogo.png";
+// import tensorflowlogo from "../images/tensorflowlogo.png";
+// import typescriptlogo from "../images/typescriptlogo.png";
 
 type skillsDataType = {
     _id: string;
@@ -37,28 +38,28 @@ type skillsDataType = {
 };
 
 const Skills = () => {
-    const skillsImageMap: { [key: string]: any } = {
-        awslogo,
-        dockerlogo,
-        firebaselogo,
-        flasklogo,
-        gcplogo,
-        gitlogo,
-        huggingfacelogo,
-        javalogo,
-        javascriptlogo,
-        llamaindexlogo,
-        mongodblogo,
-        nodelogo,
-        numpylogo,
-        pandaslogo,
-        pythonlogo,
-        reactlogo,
-        scikitlearnlogo,
-        supabaselogo,
-        tensorflowlogo,
-        typescriptlogo,
-    };
+    // const skillsImageMap: { [key: string]: any } = {
+    //     awslogo,
+    //     dockerlogo,
+    //     firebaselogo,
+    //     flasklogo,
+    //     gcplogo,
+    //     gitlogo,
+    //     huggingfacelogo,
+    //     javalogo,
+    //     javascriptlogo,
+    //     llamaindexlogo,
+    //     mongodblogo,
+    //     nodelogo,
+    //     numpylogo,
+    //     pandaslogo,
+    //     pythonlogo,
+    //     reactlogo,
+    //     scikitlearnlogo,
+    //     supabaselogo,
+    //     tensorflowlogo,
+    //     typescriptlogo,
+    // };
     const isLocalMachine = window.location.hostname === "localhost";
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);
@@ -85,59 +86,34 @@ const Skills = () => {
                 <Spinner />
             ) : (
                 <div className="flex flex-col space-y-6">
-                    <h2 className="text-3xl 2xl:text-4xl">
-                        Languages and Frameworks
-                    </h2>
-                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap gap-2 justify-center content-center">
-                        {skillsData
-                            .filter((skill) => skill.group === "lf")
-                            .map((skill, index) => (
-                                <div className="w-32 sm:w-40" key={index}>
-                                    <h3 className="text-xl">{skill.name}</h3>
-                                    <img
-                                        className="w-12 sm:w-16 m-auto"
-                                        src={skillsImageMap[skill.image]}
-                                    />
-                                    {isLocalMachine && (
-                                        <div className="px-4 flex flex-row flex-wrap justify-around">
-                                            <EditSkillModal id={skill._id} />
-                                            <DeleteModal
-                                                id={skill._id}
-                                                name={skill.name}
-                                                deleteItem={"Skill"}
-                                            />
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                    </div>
+                    <SkillSection
+                        skillsData={skillsData.filter(
+                            (skill) => skill.group === "languages"
+                        )}
+                        sectionHeader="Languages"
+                    />
 
-                    <h2 className="text-3xl 2xl:text-4xl">
-                        Tools and Libraries
-                    </h2>
-                    <div className="w-11/12 sm:w-4/5 m-auto flex flex-row flex-wrap gap-2 justify-center content-center">
-                        {skillsData
-                            .filter((skill) => skill.group === "tl")
-                            .map((skill, index) => (
-                                <div className="w-32 sm:w-40" key={index}>
-                                    <h3 className="text-xl">{skill.name}</h3>
-                                    <img
-                                        className="w-12 sm:w-16 m-auto"
-                                        src={skillsImageMap[skill.image]}
-                                    />
-                                    {isLocalMachine && (
-                                        <div className="px-4 flex flex-row flex-wrap justify-around">
-                                            <EditSkillModal id={skill._id} />
-                                            <DeleteModal
-                                                id={skill._id}
-                                                name={skill.name}
-                                                deleteItem={"Skill"}
-                                            />
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                    </div>
+                    <SkillSection
+                        skillsData={skillsData.filter(
+                            (skill) => skill.group === "ds-ml"
+                        )}
+                        sectionHeader="Data Science and Machine Learning"
+                    />
+
+                    <SkillSection
+                        skillsData={skillsData.filter(
+                            (skill) => skill.group === "cloud-devops"
+                        )}
+                        sectionHeader="Cloud Technologies and DevOps"
+                    />
+
+                    <SkillSection
+                        skillsData={skillsData.filter(
+                            (skill) => skill.group === "web"
+                        )}
+                        sectionHeader="Web Development"
+                    />
+
                     {isLocalMachine && <AddSkillModal />}
                 </div>
             )}

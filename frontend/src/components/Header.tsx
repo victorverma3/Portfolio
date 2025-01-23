@@ -6,9 +6,9 @@ import Navbar from "react-bootstrap/Navbar";
 
 import resume from "./VictorVerma.pdf";
 
-import githublogo from "../images/githublogo.png";
-import linkedinlogo from "../images/linkedinlogo.png";
-import maillogo from "../images/maillogo.png";
+import githublogo from "../../public/images/githublogo.png";
+import linkedinlogo from "../../public/images/linkedinlogo.png";
+import maillogo from "../../public/images/maillogo.png";
 
 const Header = () => {
     const openResume = () => {
@@ -52,7 +52,7 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             {navItems.map((item, index) => (
-                                <Nav.Link eventKey={index}>
+                                <Nav.Link eventKey={index} key={index}>
                                     <Link
                                         className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-blue-400 duration-200 ease-in-out"
                                         to={item.url}

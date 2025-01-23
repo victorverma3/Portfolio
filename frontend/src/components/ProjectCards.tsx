@@ -4,31 +4,7 @@ import { Button, Card } from "react-bootstrap";
 import DeleteModal from "./DeleteModal";
 import EditProjectModal from "./EditProjectModal";
 
-import candidatebios from "../images/candidatebios.png";
-import csslogo from "../images/csslogo.png";
-import firebaselogo from "../images/firebaselogo.png";
-import flasklogo from "../images/flasklogo.png";
-import gitlogo from "../images/gitlogo.png";
-import htmllogo from "../images/htmllogo.png";
-import huggingfacelogo from "../images/huggingfacelogo.png";
-import javascriptlogo from "../images/javascriptlogo.png";
-import ktpaul from "../images/ktpaul.png";
-import ktpdatabase from "../images/ktpdatabase.png";
-import mongodblogo from "../images/mongodblogo.png";
-import numpylogo from "../images/numpylogo.png";
-import nutrisistant from "../images/nutrisistant.png";
-import pandaslogo from "../images/pandaslogo.png";
-import pythonlogo from "../images/pythonlogo.png";
-import portfolio from "../images/portfolio.png";
-import reactlogo from "../images/reactlogo.png";
-import recommendations from "../images/recommendations.png";
-import scikitlearnlogo from "../images/scikitlearnlogo.png";
-import sgd from "../images/sgd.png";
-import sportsnews from "../images/sportsnews.png";
-import statsense from "../images/statsense.png";
-import supabaselogo from "../images/supabaselogo.png";
-import tensorflowlogo from "../images/tensorflowlogo.png";
-import typescriptlogo from "../images/typescriptlogo.png";
+const isLocalMachine = window.location.hostname === "localhost";
 
 interface Card {
     _id: string;
@@ -46,34 +22,6 @@ interface ProjectCardsProps {
 }
 
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
-    const projectImageMap: { [key: string]: any } = {
-        candidatebios,
-        csslogo,
-        firebaselogo,
-        flasklogo,
-        gitlogo,
-        htmllogo,
-        huggingfacelogo,
-        javascriptlogo,
-        ktpaul,
-        ktpdatabase,
-        mongodblogo,
-        numpylogo,
-        nutrisistant,
-        pandaslogo,
-        portfolio,
-        pythonlogo,
-        reactlogo,
-        recommendations,
-        scikitlearnlogo,
-        sgd,
-        sportsnews,
-        statsense,
-        supabaselogo,
-        tensorflowlogo,
-        typescriptlogo,
-    };
-    const isLocalMachine = window.location.hostname === "localhost";
     return (
         <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
             {cards.map((card) => (
@@ -81,7 +29,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                     <Card.Img
                         className="m-auto"
                         variant="top"
-                        src={projectImageMap[card.image]}
+                        src={`images/${card.image}.png`}
                         alt="image loading error"
                     />
                     <Card.Body>
@@ -98,7 +46,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                                 return (
                                     <img
                                         className="w-1/6 bg-white"
-                                        src={projectImageMap[element]}
+                                        src={`images/${element}.png`}
                                         alt="image loading error"
                                     />
                                 );

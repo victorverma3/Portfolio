@@ -5,7 +5,7 @@ import EduDetails from "../../components/EduDetails";
 import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";
 
-import bulatinlogo from "../../images/bulatinlogo.png";
+import bulatinlogo from "../../../public/images/bulatinlogo.png";
 
 const Education = () => {
     const eduInfo = [

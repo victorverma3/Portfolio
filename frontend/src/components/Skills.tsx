@@ -41,7 +41,7 @@ const Skills = () => {
             {loading ? (
                 <Spinner />
             ) : (
-                <div className="flex flex-col space-y-8">
+                <div className="flex flex-col space-y-6">
                     <SkillSection
                         skillsData={skillsData.filter(
                             (skill) => skill.group === "languages-dbs"

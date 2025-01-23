@@ -34,9 +34,7 @@ const Header = () => {
             <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
                 <Container>
                     <Navbar.Brand href="/">
-                        <span className="text-xl xl:text-2xl">
-                            Victor Verma
-                        </span>
+                        <span className="text-xl">Victor Verma</span>
                     </Navbar.Brand>
                     <div className="w-32 m-auto flex-row flex-wrap justify-around hidden nav-display:flex portrait:hidden">
                         {logoItems.map((item, index) => (
@@ -56,7 +54,7 @@ const Header = () => {
                             {navItems.map((item, index) => (
                                 <Nav.Link eventKey={index} key={index}>
                                     <Link
-                                        className="text-xl xl:text-2xl text-black no-underline hover:underline hover:decoration-blue-400 duration-200 ease-in-out"
+                                        className="text-xl text-black no-underline hover:underline hover:decoration-blue-400 duration-200 ease-in-out"
                                         to={item.url}
                                         onClick={item?.click}
                                     >

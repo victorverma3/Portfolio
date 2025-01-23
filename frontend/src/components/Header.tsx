@@ -6,18 +6,20 @@ import Navbar from "react-bootstrap/Navbar";
 
 import resume from "./VictorVerma.pdf";
 
-import githublogo from "../../public/images/githublogo.png";
-import linkedinlogo from "../../public/images/linkedinlogo.png";
-import maillogo from "../../public/images/maillogo.png";
-
 const Header = () => {
     const openResume = () => {
         window.open(resume, "_blank");
     };
     const logoItems = [
-        { url: "https://www.linkedin.com/in/victorverma/", logo: linkedinlogo },
-        { url: "https://github.com/victorverma3", logo: githublogo },
-        { url: "mailto:vpverm@bu.edu", logo: maillogo },
+        {
+            url: "https://www.linkedin.com/in/victorverma/",
+            logo: "images/linkedinlogo.png",
+        },
+        {
+            url: "https://github.com/victorverma3",
+            logo: "images/githublogo.png",
+        },
+        { url: "mailto:vpverm@bu.edu", logo: "images/maillogo.png" },
     ];
     const navItems = [
         { url: "/", text: "Home" },

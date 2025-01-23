@@ -28,7 +28,7 @@ const SkillSection = ({ skillsData, sectionHeader }: SkillSectionProps) => {
                         <h3 className="text-lg">{skill.name}</h3>
                         <img
                             className="w-12 sm:w-16 m-auto"
-                            src={`images/${skill.image}.png`}
+                            src={`images/${skill.image}.png?url`}
                         />
                         {isLocalMachine && (
                             <div className="px-4 flex flex-row flex-wrap justify-between">

@@ -5,38 +5,37 @@ import EduDetails from "../../components/EduDetails";
 import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";
 
-import bulatinlogo from "../../../public/images/bulatinlogo.png";
+const eduInfo = [
+    {
+        subtitle: "Boston University",
+        bullets: [
+            "Expected Graduation - May 2025.",
+            "B.A. in Mathematics and Computer Science.",
+            "Minor in Data Science.",
+            "3.89 GPA.",
+            "UROP Student Research Award.",
+            "College of Arts and Sciences Dean's List.",
+        ],
+    },
+    {
+        subtitle: "Relevant Courses",
+        bullets: [
+            "Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Software Engineering, Computer Systems, Probability in Computing.",
+            "Probability, Stochastic Algorithms, Stochastic Processes, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
+        ],
+    },
+    {
+        subtitle: "Extracurriculars",
+        bullets: [
+            "Research Assistant in the Questrom School of Business.",
+            "Computer Assistant in the Questrom Open Access Lab.",
+            "Former App Committee Head in Kappa Theta Pi's Lambda Chapter.",
+            "Boston University Men's Rugby.",
+        ],
+    },
+];
 
 const Education = () => {
-    const eduInfo = [
-        {
-            subtitle: "Boston University",
-            bullets: [
-                "Expected Graduation - May 2025.",
-                "B.A. in Mathematics and Computer Science.",
-                "Minor in Data Science.",
-                "3.89 GPA.",
-                "UROP Student Research Award.",
-                "College of Arts and Sciences Dean's List.",
-            ],
-        },
-        {
-            subtitle: "Relevant Courses",
-            bullets: [
-                "Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Software Engineering, Computer Systems, Probability in Computing.",
-                "Probability, Stochastic Algorithms, Stochastic Processes, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
-            ],
-        },
-        {
-            subtitle: "Extracurriculars",
-            bullets: [
-                "Research Assistant in the Questrom School of Business.",
-                "Computer Assistant in the Questrom Open Access Lab.",
-                "Former App Committee Head in Kappa Theta Pi's Lambda Chapter.",
-                "Boston University Men's Rugby.",
-            ],
-        },
-    ];
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="text-5xl 2xl:text-6xl">Education</h1>
@@ -45,9 +44,9 @@ const Education = () => {
                     <a href="https://www.bu.edu/" target="_blank">
                         <img
                             className="w-48 m-auto p-3 sm:w-80"
-                            src={bulatinlogo}
+                            src="images/bulatinlogo.png"
                             alt="image not loading"
-                        ></img>
+                        />
                     </a>
                 </div>
                 <div className="m-auto flex flex-column justify-around">

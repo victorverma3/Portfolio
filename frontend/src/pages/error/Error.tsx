@@ -2,8 +2,6 @@ import React from "react";
 
 import Footer from "../../components/Footer";
 
-import tom from "../../../public/images/tom.png";
-
 const Error = () => {
     return (
         <>
@@ -13,7 +11,7 @@ const Error = () => {
                 </h1>
                 <img
                     className="w-80 mx-auto my-6"
-                    src={tom}
+                    src="images/tom.png"
                     alt="error loading image"
                 ></img>
             </div>

@@ -53,14 +53,14 @@ const Skills = () => {
                         skillsData={skillsData.filter(
                             (skill) => skill.group === "ds-ml"
                         )}
-                        sectionHeader="Data Science and Machine Learning"
+                        sectionHeader="Data Science and ML"
                     />
 
                     <SkillSection
                         skillsData={skillsData.filter(
                             (skill) => skill.group === "cloud-devops"
                         )}
-                        sectionHeader="Cloud Technologies and DevOps"
+                        sectionHeader="Cloud and DevOps"
                     />
 
                     <SkillSection

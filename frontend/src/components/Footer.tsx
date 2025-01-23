@@ -1,14 +1,16 @@
 import React from "react";
 
-import githublogo from "../../public/images/githublogo.png";
-import linkedinlogo from "../../public/images/linkedinlogo.png";
-import maillogo from "../../public/images/maillogo.png";
-
 const Footer = () => {
     const logoItems = [
-        { url: "https://www.linkedin.com/in/victorverma/", logo: linkedinlogo },
-        { url: "https://github.com/victorverma3", logo: githublogo },
-        { url: "mailto:vpverm@bu.edu", logo: maillogo },
+        {
+            url: "https://www.linkedin.com/in/victorverma/",
+            logo: "images/linkedinlogo.png",
+        },
+        {
+            url: "https://github.com/victorverma3",
+            logo: "images/githublogo.png",
+        },
+        { url: "mailto:vpverm@bu.edu", logo: "images/maillogo.png" },
     ];
     return (
         <footer className="w-40 h-5 mx-auto mt-8 sm:mt-12 mb-12 flex flex-wrap justify-around">

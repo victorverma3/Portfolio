@@ -13,14 +13,6 @@ import Spinner from "../../components/Spinner";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import amazonlogo from "../../../public/images/amazonlogo.png";
-import bulogo from "../../../public/images/bulogo.png";
-import ktplogo from "../../../public/images/ktplogo.png";
-import leslieslogo from "../../../public/images/leslieslogo.png";
-import rsmlogo from "../../../public/images/rsmlogo.png";
-import savvaslogo from "../../../public/images/savvaslogo.png";
-import umasshospitallogo from "../../../public/images/umasshospitallogo.png";
-
 const backend = import.meta.env.VITE_BACKEND_URL;
 const isLocalMachine = window.location.hostname === "localhost";
 
@@ -62,22 +54,11 @@ const Experience = () => {
             ) : (
                 <VerticalTimeline>
                     {experienceData.map((element, index) => {
-                        const experienceImageMap: { [key: string]: any } = {
-                            amazonlogo: amazonlogo,
-                            bulogo: bulogo,
-                            ktplogo: ktplogo,
-                            leslieslogo: leslieslogo,
-                            rsmlogo: rsmlogo,
-                            savvaslogo: savvaslogo,
-                            umasshospitallogo: umasshospitallogo,
-                        };
                         return (
                             <VerticalTimelineElement
                                 key={index}
                                 iconStyle={{
-                                    backgroundImage: `url(${
-                                        experienceImageMap[element.icon]
-                                    })`,
+                                    backgroundImage: `images/${element.icon}.png?url`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
                                 }}

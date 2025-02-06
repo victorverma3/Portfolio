@@ -42,13 +42,13 @@ const About = () => {
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 I am a rising senior at Boston University, graduating in May
                 2025 with a B.A. in Mathematics and Computer Science and a Minor
-                in Data Science. I am looking for full-time roles as a
-                full-stack software engineer, machine-learning engineer, or data
-                scientist, and ideally I want to be able to do something at the
-                intersection of all three. I love learning, and I spend a few
-                hours each week working on personal projects and developing my
-                skills. I am open to getting at a graduate degree in computer
-                science at some point in the future.
+                in Data Science. I am looking for full-time roles data
+                scientist, machine-learning engine, full-stack software
+                engineer, or research assistant. Ideally I want my future job to
+                be a combination of elements from each. I love learning, and I
+                spend a few hours each week working on personal projects and
+                developing my skills. I am open to getting at a graduate degree
+                in computer science at some point in the future.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">

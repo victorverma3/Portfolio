@@ -42,8 +42,8 @@ const About = () => {
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 I am a rising senior at Boston University, graduating in May
                 2025 with a B.A. in Mathematics and Computer Science and a Minor
-                in Data Science. I am looking for full-time roles data
-                scientist, machine-learning engine, full-stack software
+                in Data Science. I am looking for full-time roles as a data
+                scientist, machine-learning engineer, full-stack software
                 engineer, or research assistant. Ideally I want my future job to
                 be a combination of elements from each. I love learning, and I
                 spend a few hours each week working on personal projects and
@@ -54,9 +54,9 @@ const About = () => {
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 My three biggest hobbies are watching movies, working out, and
                 solving the Rubik's Cube. I also love to hang out with my
-                friends, watch sports (football, soccer, and basketball), and
-                eat food of all cuisines. I enjoy traveling with my family, with
-                some of my favorite places being Egypt and Jordan for their
+                friends, watch sports (football, soccer, basketball, and rugby),
+                and eat food of all cuisines. I enjoy traveling with my family,
+                with some of my favorite places being Egypt and Jordan for their
                 history, and Iceland and Alaska for their scenery. At this
                 moment, I really want to see the wildlife in sub-Saharan Africa
                 and the Amazon Rainforest in South America.

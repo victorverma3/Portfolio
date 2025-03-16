@@ -45,10 +45,10 @@ const About = () => {
                 in Data Science. I am looking for full-time roles as a data
                 scientist, machine-learning engineer, full-stack software
                 engineer, or research assistant. Ideally I want my future job to
-                be a combination of elements from each. I love learning, and I
+                have a combination of elements from each. I love learning, and I
                 spend a few hours each week working on personal projects and
-                developing my skills. I am open to getting at a graduate degree
-                in computer science at some point in the future.
+                developing my skills. I plan to get a master's degree in
+                computer science in the future.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
@@ -56,10 +56,8 @@ const About = () => {
                 solving the Rubik's Cube. I also love to hang out with my
                 friends, watch sports (football, soccer, basketball, and rugby),
                 and eat food of all cuisines. I enjoy traveling with my family,
-                with some of my favorite places being Egypt and Jordan for their
-                history, and Iceland and Alaska for their scenery. At this
-                moment, I really want to see the wildlife in sub-Saharan Africa
-                and the Amazon Rainforest in South America.
+                with some of my favorite places being Egypt and Jordan for the
+                history, and Iceland and Alaska for the nature.
             </p>
 
             <br />

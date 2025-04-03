@@ -1,5 +1,6 @@
 # Portfolio
 
-I built my own portfolio website using TypeScript, Bootstrap, and Tailwind CSS in the MERN stack.
+I built my portfolio website using React, TypeScript, Tailwind CSS, Node.js, and
+MongoDB.
 
 https://victorverma.com

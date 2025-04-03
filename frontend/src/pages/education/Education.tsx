@@ -20,7 +20,7 @@ const eduInfo = [
     {
         subtitle: "Relevant Courses",
         bullets: [
-            "Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Software Engineering, Computer Systems, Probability in Computing.",
+            "Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Cloud Computing, Software Engineering, Computer Systems, Probability in Computing.",
             "Probability, Stochastic Algorithms, Stochastic Processes, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
         ],
     },

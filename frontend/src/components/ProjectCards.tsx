@@ -25,7 +25,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
     return (
         <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
             {cards.map((card) => (
-                <Card className="w-[22rem] my-2.5 border-1 border-solid border-gray-200 text-base 2xl:w-96 2xl:text-xl">
+                <Card className="w-[22rem] my-2.5 text-base 2xl:w-96 2xl:text-xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400">
                     <Card.Img
                         className="m-auto"
                         variant="top"

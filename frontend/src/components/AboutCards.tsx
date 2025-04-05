@@ -20,10 +20,10 @@ interface AboutCardsProps {
 const AboutCards = ({ cards }: AboutCardsProps) => {
     const isLocalMachine = window.location.hostname === "localhost";
     return (
-        <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
+        <div className="w-5/6 m-auto flex flex-row flex-wrap justify-around">
             {cards.map((card, index) => (
                 <Card
-                    className="w-11/12 text-base my-2.5 border-1 border-solid border-gray-200 sm:w-[22rem] sm:text-lg 2xl:2-96 2xl:text-xl"
+                    className="w-11/12 xs:w-[20rem] 2xl:w-96 my-2.5 text-base sm:text-lg 2xl:text-xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
                     key={index}
                 >
                     <Card.Img

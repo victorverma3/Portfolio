@@ -39,24 +39,22 @@ const About = () => {
             <h1 className="text-5xl 2xl:text-6xl">About Me</h1>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
-                I am a rising senior at Boston University, graduating in May
-                2025 with a B.A. in Mathematics and Computer Science and a Minor
-                in Data Science. I am looking for full-time roles as a data
-                scientist, machine-learning engineer, full-stack software
-                engineer, or research assistant. Ideally I want my future job to
-                have a combination of elements from each. I love learning, and I
-                spend a few hours each week working on personal projects and
-                developing my skills. I plan to get a master's degree in
-                computer science in the future.
+                I'm a senior at Boston University graduating in May 2025 with a
+                B.A. in Mathematics and Computer Science and a minor in Data
+                Science, and I plan to get an MSCS in the near future. I'm
+                looking for full-time roles as a data scientist,
+                machine-learning engineer, full-stack software engineer, or
+                research assistant. I love learning and spend a lot of time
+                working on personal projects and developing new skills.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
-                My three biggest hobbies are watching movies, working out, and
+                In my free time, I love to watch movies, go to the gym, and
                 solving the Rubik's Cube. I also love to hang out with my
                 friends, watch sports (football, soccer, basketball, and rugby),
-                and eat food of all cuisines. I enjoy traveling with my family,
-                with some of my favorite places being Egypt and Jordan for the
-                history, and Iceland and Alaska for the nature.
+                and eat food of all cuisines. I enjoy traveling, with some of my
+                favorite places being Egypt and Jordan for the history, and
+                Iceland and Alaska for the nature.
             </p>
 
             <br />

@@ -1,6 +1,5 @@
 import React from "react";
 
-import Disclaimer from "../../components/Disclaimer";
 import EduDetails from "../../components/EduDetails";
 import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";
@@ -52,7 +51,6 @@ const Education = () => {
                 <EduDetails details={eduInfo} />
             </div>
             <Skills />
-            <Disclaimer />
             <Footer />
         </div>
     );

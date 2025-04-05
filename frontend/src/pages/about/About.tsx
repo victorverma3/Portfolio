@@ -63,7 +63,7 @@ const About = () => {
             <br />
 
             {loading ? <Spinner /> : <AboutCards cards={aboutData} />}
-            <Disclaimer />
+
             <Footer />
         </div>
     );

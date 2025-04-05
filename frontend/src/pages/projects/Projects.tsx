@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import AddProjectModal from "../../components/AddProjectModal";
-import Disclaimer from "../../components/Disclaimer";
 import Footer from "../../components/Footer";
 import ProjectCards from "../../components/ProjectCards";
 import Spinner from "../../components/Spinner";
@@ -42,7 +41,6 @@ const Projects = () => {
             <h1 className="text-5xl 2xl:text-6xl">Projects</h1>
             {loading ? <Spinner /> : <ProjectCards cards={projectData} />}
             {isLocalMachine && <AddProjectModal />}
-            <Disclaimer />
             <Footer />
         </div>
     );

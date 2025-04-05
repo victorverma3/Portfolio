@@ -49,9 +49,7 @@ const Education = () => {
                         />
                     </a>
                 </div>
-                <div className="m-auto flex flex-column justify-around">
-                    <EduDetails details={eduInfo} />
-                </div>
+                <EduDetails details={eduInfo} />
             </div>
             <Skills />
             <Disclaimer />

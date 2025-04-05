@@ -11,10 +11,10 @@ interface EduDetailsProps {
 
 const EduDetails = ({ details }: EduDetailsProps) => {
     return (
-        <div>
+        <div className="w-fit my-4 mx-auto space-y-4">
             {details.map((item, index) => (
                 <div
-                    className="w-72 m-4 p-4 flex flex-column bg-white rounded-3xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 sm:w-96 2xl:w-[30rem]"
+                    className="w-72 sm:w-96 2xl:w-[30rem] p-4 flex flex-column rounded-3xl bg-white transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
                     key={index}
                 >
                     <details>

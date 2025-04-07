@@ -20,7 +20,7 @@ interface SkillSectionProps {
 
 const SkillSection = ({ skillsData, sectionHeader }: SkillSectionProps) => {
     return (
-        <div className="w-11/12 sm:w-4/5 max-w-[768px] mx-auto">
+        <div className="w-[80vw] mx-auto px-3">
             <h2 className="text-3xl 2xl:text-4xl">{sectionHeader}</h2>
             <div className="m-auto flex flex-row flex-wrap gap-2 justify-center content-center">
                 {skillsData.map((skill, index) => (

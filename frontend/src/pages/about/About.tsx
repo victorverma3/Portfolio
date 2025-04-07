@@ -50,9 +50,9 @@ const About = () => {
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 In my free time, I love to watch movies, go to the gym, and
-                solving the Rubik's Cube. I also love to hang out with my
-                friends, watch sports (football, soccer, basketball, and rugby),
-                and eat food of all cuisines. I enjoy traveling, with some of my
+                solve the Rubik's Cube. I also like to hang out with my friends,
+                watch sports (football, soccer, basketball, and rugby), and eat
+                food of all cuisines. I enjoy traveling, with some of my
                 favorite places being Egypt and Jordan for the history, and
                 Iceland and Alaska for the nature.
             </p>

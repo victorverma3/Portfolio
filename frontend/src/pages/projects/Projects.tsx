@@ -39,8 +39,8 @@ const Projects = () => {
             });
     }, []);
 
-    const dragItem = useRef<number>(0);
-    const draggedOverItem = useRef<number>(0);
+    const dragProject = useRef<number>(0);
+    const draggedOverProject = useRef<number>(0);
     const updateProjects = async (projects: projectDataType[]) => {
         try {
             await Promise.all(
@@ -64,10 +64,10 @@ const Projects = () => {
     };
     const handleSort = () => {
         const projectsClone = [...projectData];
-        const temp = projectsClone[dragItem.current];
-        projectsClone[dragItem.current] =
-            projectsClone[draggedOverItem.current];
-        projectsClone[draggedOverItem.current] = temp;
+        const temp = projectsClone[dragProject.current];
+        projectsClone[dragProject.current] =
+            projectsClone[draggedOverProject.current];
+        projectsClone[draggedOverProject.current] = temp;
 
         const updatedProjects = projectsClone.map((project, index) => ({
             ...project,
@@ -91,9 +91,11 @@ const Projects = () => {
                                 key={index}
                                 className="w-56 border-2 border-gray-300 rounded-md transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 cursor-grab"
                                 draggable
-                                onDragStart={() => (dragItem.current = index)}
+                                onDragStart={() =>
+                                    (dragProject.current = index)
+                                }
                                 onDragEnter={() =>
-                                    (draggedOverItem.current = index)
+                                    (draggedOverProject.current = index)
                                 }
                                 onDragEnd={handleSort}
                                 onDragOver={(e) => e.preventDefault()}

@@ -13,7 +13,6 @@ type FormValues = {
     name: string;
     image: string;
     group: string;
-    sortOrder: string;
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;

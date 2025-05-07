@@ -19,7 +19,6 @@ type FormValues = {
     linkTitlesObj: { linkTitle: string }[];
     linkURLs: string[];
     linkURLsObj: { linkURL: string }[];
-    sortOrder: string;
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
@@ -49,7 +48,6 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
             linkTitlesObj: [{ linkTitle: "" }],
             linkURLs: [""],
             linkURLsObj: [{ linkURL: "" }],
-            sortOrder: "",
         },
     });
 
@@ -130,7 +128,6 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
                     linkURLsObj: response.data.linkURLs.map((item: string) => ({
                         linkURL: item,
                     })),
-                    sortOrder: String(response.data.sortOrder),
                 });
                 setLoading(false);
             })

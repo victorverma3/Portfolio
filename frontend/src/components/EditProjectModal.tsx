@@ -19,6 +19,7 @@ type FormValues = {
     linkTitlesObj: { linkTitle: string }[];
     linkURLs: string[];
     linkURLsObj: { linkURL: string }[];
+    sortOrder: number;
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
@@ -48,6 +49,7 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
             linkTitlesObj: [{ linkTitle: "" }],
             linkURLs: [""],
             linkURLsObj: [{ linkURL: "" }],
+            sortOrder: -1,
         },
     });
 
@@ -58,6 +60,7 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
             technologies: formData.technologiesObj.map((item) => item.tech),
             linkTitles: formData.linkTitlesObj.map((item) => item.linkTitle),
             linkURLs: formData.linkURLsObj.map((item) => item.linkURL),
+            sortOrder: formData.sortOrder,
         };
         axios
             .put(`${backend}/project-collection/${id}`, data)
@@ -128,6 +131,7 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
                     linkURLsObj: response.data.linkURLs.map((item: string) => ({
                         linkURL: item,
                     })),
+                    sortOrder: response.data.sortOrder,
                 });
                 setLoading(false);
             })

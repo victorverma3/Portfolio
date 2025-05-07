@@ -13,6 +13,7 @@ type FormValues = {
     name: string;
     image: string;
     group: string;
+    sortOrder: number;
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
@@ -35,6 +36,7 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
             name: "",
             image: "",
             group: "",
+            sortOrder: -1,
         },
     });
 
@@ -42,6 +44,7 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
         console.log(formData);
         const data = {
             ...formData,
+            sortOrder: formData.sortOrder,
         };
         axios
             .put(`${backend}/skill-collection/${id}`, data)
@@ -73,6 +76,7 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
                     name: response.data.name,
                     image: response.data.image,
                     group: response.data.group,
+                    sortOrder: response.data.sortOrder,
                 });
                 setLoading(false);
             })

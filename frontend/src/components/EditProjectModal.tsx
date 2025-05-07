@@ -60,7 +60,6 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
             technologies: formData.technologiesObj.map((item) => item.tech),
             linkTitles: formData.linkTitlesObj.map((item) => item.linkTitle),
             linkURLs: formData.linkURLsObj.map((item) => item.linkURL),
-            sortOrder: parseInt(formData.sortOrder, 10),
         };
         axios
             .put(`${backend}/project-collection/${id}`, data)
@@ -356,51 +355,6 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
                                     >
                                         Add link url
                                     </button>
-                                </div>
-                            </div>
-                            <div className="form-control">
-                                <div className="flex flex-col">
-                                    <label
-                                        className="text-center text-xl"
-                                        htmlFor="sortOrder"
-                                    >
-                                        SortOrder
-                                    </label>
-                                    <input
-                                        className="w-96 mt-2 px-2 text-center border-2 border-solid border-black"
-                                        type="text"
-                                        id="sortOrder"
-                                        {...register("sortOrder", {
-                                            required: {
-                                                value: true,
-                                                message:
-                                                    "SortOrder is required",
-                                            },
-                                            validate: {
-                                                notEmpty: (fieldValue) => {
-                                                    return (
-                                                        fieldValue !== "" ||
-                                                        "SortOrder cannot be empty"
-                                                    );
-                                                },
-                                                isInt: (fieldValue) => {
-                                                    const num = parseInt(
-                                                        fieldValue,
-                                                        10
-                                                    );
-                                                    return (
-                                                        (!isNaN(num) &&
-                                                            num.toString() ===
-                                                                fieldValue) ||
-                                                        "SortOrder must be an integer"
-                                                    );
-                                                },
-                                            },
-                                        })}
-                                    />
-                                    <p className="mx-auto mt-2 text-red-500">
-                                        {errors.sortOrder?.message}
-                                    </p>
                                 </div>
                             </div>
                             <button className="w-fit flex mx-auto my-2 px-2 text-xl text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500">

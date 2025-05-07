@@ -15,6 +15,9 @@ export default {
             border: {
                 1: "1px",
             },
+            width: {
+                128: "512px",
+            },
         },
     },
 

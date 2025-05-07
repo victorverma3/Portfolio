@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import { useSnackbar } from "notistack";
 
 import AddProjectModal from "../../components/AddProjectModal";
 import Footer from "../../components/Footer";
@@ -22,6 +23,8 @@ type projectDataType = {
 const Projects = () => {
     const [projectData, setProjectData] = useState<projectDataType[]>([]);
     const [loading, setLoading] = useState(false);
+    const { enqueueSnackbar } = useSnackbar();
+
     useEffect(() => {
         setLoading(true);
         axios
@@ -35,12 +38,74 @@ const Projects = () => {
                 setLoading(false);
             });
     }, []);
+
+    const dragItem = useRef<number>(0);
+    const draggedOverItem = useRef<number>(0);
+    const updateProjects = async (projects: projectDataType[]) => {
+        try {
+            await Promise.all(
+                projects.map((project) =>
+                    axios.put(
+                        `${backend}/project-collection/${project._id}`,
+                        project
+                    )
+                )
+            );
+            enqueueSnackbar("Sort order updated successfully", {
+                variant: "success",
+            });
+            window.location.reload();
+        } catch (error) {
+            enqueueSnackbar("Error updating sort order", {
+                variant: "error",
+            });
+            console.error(error);
+        }
+    };
+    const handleSort = () => {
+        const itemsClone = [...projectData];
+        const temp = itemsClone[dragItem.current];
+        itemsClone[dragItem.current] = itemsClone[draggedOverItem.current];
+        itemsClone[draggedOverItem.current] = temp;
+
+        const updatedItems = itemsClone.map((item, index) => ({
+            ...item,
+            sortOrder: index + 1,
+        }));
+        updateProjects(updatedItems);
+    };
     const isLocalMachine = window.location.hostname === "localhost";
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="text-5xl 2xl:text-6xl">Projects</h1>
             {loading ? <Spinner /> : <ProjectCards cards={projectData} />}
             {isLocalMachine && <AddProjectModal />}
+
+            {isLocalMachine && (
+                <div className="w-128 max-w-[80vw] mt-8 mx-auto flex flex-col">
+                    <h3>Edit Sort Order</h3>
+                    <div className="mx-auto flex flex-wrap justify-around gap-3">
+                        {projectData.map((project, index) => (
+                            <div
+                                key={index}
+                                className="w-56 border-2 border-gray-300 rounded-md transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 cursor-grab"
+                                draggable
+                                onDragStart={() => (dragItem.current = index)}
+                                onDragEnter={() =>
+                                    (draggedOverItem.current = index)
+                                }
+                                onDragEnd={handleSort}
+                                onDragOver={(e) => e.preventDefault()}
+                            >
+                                <p className="h-fit m-auto p-2">
+                                    {project.title} {`(${project.sortOrder})`}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
             <Footer />
         </div>
     );

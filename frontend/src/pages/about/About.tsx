@@ -42,10 +42,10 @@ const About = () => {
                 I'm a senior at Boston University graduating in May 2025 with a
                 B.A. in Mathematics and Computer Science and a minor in Data
                 Science, and I plan to get an MSCS in the near future. I'm
-                looking for full-time roles as a data scientist,
-                machine-learning engineer, full-stack software engineer, or
-                research assistant. I love learning and spend a lot of time
-                working on personal projects and developing new skills.
+                looking for full-time roles as a machine-learning engineer, data
+                scientist, full-stack software engineer, or research assistant.
+                I love learning and spend a lot of time working on personal
+                projects and developing new skills.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
@@ -53,8 +53,8 @@ const About = () => {
                 solve the Rubik's Cube. I also like to hang out with my friends,
                 watch sports (football, soccer, basketball, and rugby), and eat
                 food of all cuisines. I enjoy traveling, with some of my
-                favorite places being Egypt and Jordan for the history, and
-                Iceland and Alaska for the nature.
+                favorite places being Egypt and Jordan for their history, and
+                Iceland and Alaska for their nature.
             </p>
 
             <br />

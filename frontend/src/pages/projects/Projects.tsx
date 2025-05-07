@@ -63,16 +63,17 @@ const Projects = () => {
         }
     };
     const handleSort = () => {
-        const itemsClone = [...projectData];
-        const temp = itemsClone[dragItem.current];
-        itemsClone[dragItem.current] = itemsClone[draggedOverItem.current];
-        itemsClone[draggedOverItem.current] = temp;
+        const projectsClone = [...projectData];
+        const temp = projectsClone[dragItem.current];
+        projectsClone[dragItem.current] =
+            projectsClone[draggedOverItem.current];
+        projectsClone[draggedOverItem.current] = temp;
 
-        const updatedItems = itemsClone.map((item, index) => ({
-            ...item,
+        const updatedProjects = projectsClone.map((project, index) => ({
+            ...project,
             sortOrder: index + 1,
         }));
-        updateProjects(updatedItems);
+        updateProjects(updatedProjects);
     };
     const isLocalMachine = window.location.hostname === "localhost";
     return (

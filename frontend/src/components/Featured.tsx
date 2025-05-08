@@ -86,7 +86,7 @@ const Featured = () => {
     return loading ? (
         <Spinner />
     ) : (
-        <div className="w-88 sm:w-[60vw] mx-auto mt-4 rounded-lg shadow shadow-blue-400 bg-gray-100">
+        <div className="w-[65vw] sm:w-[60vw] mx-auto mt-4 rounded-lg shadow shadow-blue-400 bg-gray-100">
             <h2 className="pt-3">Featured</h2>
             <Carousel
                 swipeable={isSmall ? true : false}
@@ -106,7 +106,7 @@ const Featured = () => {
                 {projectData.map((project, index) => (
                     <Card
                         key={index}
-                        className="w-[18rem] sm:w-[20rem] xl:w-[22rem] mx-auto text-base 2xl:w-96 2xl:text-xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
+                        className="w-[14rem] xs:w-[18rem] sm:w-[20rem] xl:w-[22rem] mx-auto text-base 2xl:w-96 2xl:text-xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
                     >
                         <a
                             href={

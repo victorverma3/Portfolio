@@ -87,7 +87,7 @@ const Featured = () => {
         <Spinner />
     ) : (
         <div className="w-[65vw] sm:w-[60vw] mx-auto mt-4 rounded-lg shadow shadow-blue-400 bg-gray-100">
-            <h2 className="pt-3">Featured</h2>
+            <h2 className="pt-3">Featured Work</h2>
             <Carousel
                 swipeable={isSmall ? true : false}
                 draggable={false}

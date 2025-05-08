@@ -35,12 +35,12 @@ const featuredLinks: { [key: string]: string } = {
 
 const responsive = {
     desktop: {
-        breakpoint: { max: 3000, min: 1024 },
+        breakpoint: { max: 3000, min: 1280 },
         items: 2,
         slidesToSlide: 2,
     },
     tablet: {
-        breakpoint: { max: 1024, min: 540 },
+        breakpoint: { max: 1280, min: 540 },
         items: 1,
     },
     mobile: {
@@ -72,11 +72,10 @@ const Featured = () => {
             });
     }, []);
 
-    const [isSmall, setIsSmall] = useState(window.innerWidth < 768);
-
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1280);
     useEffect(() => {
         const handleResize = () => {
-            setIsSmall(window.innerWidth < 768);
+            setIsDesktop(window.innerWidth > 1280);
         };
 
         window.addEventListener("resize", handleResize);
@@ -89,7 +88,7 @@ const Featured = () => {
         <div className="w-[65vw] sm:w-[60vw] mx-auto mt-4 rounded-lg shadow shadow-blue-400 bg-gray-100">
             <h2 className="pt-3">Featured Work</h2>
             <Carousel
-                swipeable={isSmall ? true : false}
+                swipeable={isDesktop ? false : true}
                 draggable={false}
                 showDots={true}
                 arrows={false}

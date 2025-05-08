@@ -39,13 +39,12 @@ const About = () => {
             <h1 className="text-5xl 2xl:text-6xl">About Me</h1>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
-                I'm a senior at Boston University graduating in May 2025 with a
-                B.A. in Mathematics and Computer Science and a minor in Data
-                Science, and I plan to get an MSCS in the near future. I'm
-                looking for full-time roles as a machine-learning engineer, data
-                scientist, full-stack software engineer, or research assistant.
-                I love learning and spend a lot of time working on personal
-                projects and developing new skills.
+                I graduated from Boston University in May 2025 with a B.A. in
+                Mathematics and Computer Science and a minor in Data Science.
+                I'm currently working as an associate software engineer at
+                Savvas Learning Company, but I may pursue a graduate degree in
+                computer science. I love learning and spend a lot of time
+                working on personal projects and developing new skills.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">

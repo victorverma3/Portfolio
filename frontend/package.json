@@ -24,6 +24,7 @@
         "react-dom": "^18.2.0",
         "react-hook-form": "^7.51.3",
         "react-icons": "^4.11.0",
+        "react-multi-carousel": "^2.8.6",
         "react-router-dom": "^6.11.2",
         "react-spinners": "^0.13.8",
         "react-vertical-timeline-component": "^3.6.0",

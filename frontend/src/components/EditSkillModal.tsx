@@ -17,6 +17,7 @@ type FormValues = {
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 interface EditSkillModalProps {
     id: string;
@@ -47,7 +48,11 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
             sortOrder: formData.sortOrder,
         };
         axios
-            .put(`${backend}/skill-collection/${id}`, data)
+            .put(`${backend}/skill-collection/${id}`, data, {
+                headers: {
+                    "x-api-key": apiKey,
+                },
+            })
             .then(() => {
                 setOpen(false);
                 enqueueSnackbar("Skill edited successfully", {

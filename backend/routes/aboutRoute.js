@@ -1,6 +1,7 @@
 import express from "express";
 
 import { About } from "../models/aboutModel.js";
+import { validateApiKey } from "../index.js";
 
 const router = express.Router();
 
@@ -33,7 +34,7 @@ router.get("/:id", async (request, response) => {
 });
 
 // update an about
-router.put("/:id", async (request, response) => {
+router.put("/:id", validateApiKey, async (request, response) => {
     try {
         if (
             !request.body.title ||

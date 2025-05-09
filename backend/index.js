@@ -9,6 +9,8 @@ import experienceRoute from "./routes/experienceRoute.js";
 import projectRoute from "./routes/projectRoute.js";
 import skillRoute from "./routes/skillRoute.js";
 
+const API_KEY = process.env.API_KEY;
+
 const app = express();
 
 app.use(express.json());
@@ -24,6 +26,18 @@ app.use(
         ],
     })
 );
+
+export function validateApiKey(req, res, next) {
+    if (!API_KEY) {
+        return res.status(403).json({ message: "Forbidden: Unauthorized" });
+    }
+
+    const apiKey = req.headers["x-api-key"];
+    if (apiKey === API_KEY) {
+        return next();
+    }
+    return res.status(403).json({ message: "Forbidden: Unauthorized" });
+}
 
 app.get("/", (request, response) => {
     console.log(request);

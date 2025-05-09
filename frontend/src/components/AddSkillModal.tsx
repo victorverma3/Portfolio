@@ -16,6 +16,7 @@ type FormValues = {
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 const AddSkillModal = () => {
     const { enqueueSnackbar } = useSnackbar();
@@ -40,7 +41,11 @@ const AddSkillModal = () => {
             sortOrder: parseInt(formData.sortOrder, 10),
         };
         axios
-            .post(`${backend}/skill-collection/`, data)
+            .post(`${backend}/skill-collection/`, data, {
+                headers: {
+                    "x-api-key": apiKey,
+                },
+            })
             .then(() => {
                 setOpen(false);
                 enqueueSnackbar("Skill added successfully", {

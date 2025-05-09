@@ -1,6 +1,7 @@
 import express from "express";
 
 import { Projects } from "../models/projectModel.js";
+import { validateApiKey } from "../index.js";
 
 const router = express.Router();
 
@@ -33,7 +34,7 @@ router.get("/:id", async (request, response) => {
 });
 
 // add a project
-router.post("/", async (request, response) => {
+router.post("/", validateApiKey, async (request, response) => {
     try {
         const {
             title,
@@ -79,7 +80,7 @@ router.post("/", async (request, response) => {
 });
 
 // update a project
-router.put("/:id", async (request, response) => {
+router.put("/:id", validateApiKey, async (request, response) => {
     try {
         if (
             !request.body.title ||
@@ -110,7 +111,7 @@ router.put("/:id", async (request, response) => {
 });
 
 // delete a project
-router.delete("/:id", async (request, response) => {
+router.delete("/:id", validateApiKey, async (request, response) => {
     try {
         await Projects.findByIdAndDelete(request.params.id);
         return response

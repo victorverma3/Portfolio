@@ -20,6 +20,7 @@ type FormValues = {
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 interface EditExperienceModalProps {
     id: string;
@@ -60,7 +61,11 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
             sortOrder: parseInt(formData.sortOrder, 10),
         };
         axios
-            .put(`${backend}/experience-collection/${id}`, data)
+            .put(`${backend}/experience-collection/${id}`, data, {
+                headers: {
+                    "x-api-key": apiKey,
+                },
+            })
             .then(() => {
                 setOpen(false);
                 enqueueSnackbar("Experience edited successfully", {

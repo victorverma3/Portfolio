@@ -26,7 +26,7 @@ const Header = () => {
         { url: "/experience", text: "Experience" },
         { url: "/education", text: "Education" },
         { url: "/projects", text: "Projects" },
-        { url: "#", click: openResume, text: "Resume" },
+        { url: "#", click: openResume, text: "CV" },
         { url: "/about", text: "About Me" },
     ];
     return (

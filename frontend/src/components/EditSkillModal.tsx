@@ -76,7 +76,6 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
         axios
             .get(`${backend}/skill-collection/${id}`)
             .then((response) => {
-                console.log(response.data);
                 reset({
                     name: response.data.name,
                     image: response.data.image,

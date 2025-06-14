@@ -119,7 +119,6 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
         axios
             .get(`${backend}/project-collection/${id}`)
             .then((response) => {
-                console.log(response.data);
                 reset({
                     title: response.data.title,
                     image: response.data.image,

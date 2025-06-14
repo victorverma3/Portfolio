@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 
-import EditAboutModal from "./EditAbout";
+import EditAboutModal from "./EditAboutModal";
 
 interface Card {
     _id: string;

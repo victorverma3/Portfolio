@@ -3,72 +3,63 @@ import { useEffect, useState } from "react";
 import { AiOutlineEdit } from "react-icons/ai";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useForm, useFieldArray, FieldErrors } from "react-hook-form";
+import { useForm, FieldErrors } from "react-hook-form";
 import { useSnackbar } from "notistack";
 
 import Modal from "@mui/material/Modal";
 import Spinner from "./Spinner";
 
 type FormValues = {
-    role: string;
-    employer: string;
-    dates: string;
-    location: string;
-    description: { bullet: string }[];
-    icon: string;
+    title: string;
+    image: string;
+    description: string;
+    link: string;
+    url: string;
     sortOrder: string;
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 const apiKey = import.meta.env.VITE_API_KEY;
 
-interface EditExperienceModalProps {
+interface EditAboutModalProps {
     id: string;
 }
 
-const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
+const EditAboutModal = ({ id }: EditAboutModalProps) => {
     const [loading, setLoading] = useState(false);
     const { enqueueSnackbar } = useSnackbar();
     const [open, setOpen] = useState(false);
     const {
         register,
-        control,
         handleSubmit,
         formState: { errors },
         reset,
     } = useForm<FormValues>({
         defaultValues: {
-            role: "",
-            employer: "",
-            dates: "",
-            location: "",
-            description: [{ bullet: "" }],
-            icon: "",
+            title: "",
+            image: "",
+            description: "",
+            link: "",
+            url: "",
             sortOrder: "",
         },
-    });
-
-    const { fields, append, remove } = useFieldArray({
-        name: "description",
-        control,
     });
 
     const onSubmit = (formData: FormValues) => {
         console.log(formData);
         const data = {
             ...formData,
-            description: formData.description.map((item) => item.bullet),
             sortOrder: parseInt(formData.sortOrder, 10),
         };
         axios
-            .put(`${backend}/experience-collection/${id}`, data, {
+            .put(`${backend}/about-collection/${id}`, data, {
                 headers: {
                     "x-api-key": apiKey,
                 },
             })
             .then(() => {
                 setOpen(false);
-                enqueueSnackbar("Experience edited successfully", {
+                enqueueSnackbar("About edited successfully", {
                     variant: "success",
                 });
                 window.location.reload();
@@ -87,17 +78,14 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`${backend}/experience-collection/${id}`)
+            .get(`${backend}/about-collection/${id}`)
             .then((response) => {
                 reset({
-                    role: response.data.role,
-                    employer: response.data.employer,
-                    dates: response.data.dates,
-                    location: response.data.location,
-                    description: response.data.description.map(
-                        (item: string) => ({ bullet: item })
-                    ),
-                    icon: response.data.icon,
+                    title: response.data.title,
+                    image: response.data.image,
+                    description: response.data.description,
+                    link: response.data.link,
+                    url: response.data.url,
                     sortOrder: String(response.data.sortOrder),
                 });
                 setLoading(false);
@@ -116,13 +104,7 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
         setOpen(false);
     };
 
-    const mapFields = [
-        "role",
-        "employer",
-        "dates",
-        "location",
-        "icon",
-    ] as const;
+    const mapFields = ["title", "image", "description", "link", "url"] as const;
 
     return (
         <div>
@@ -137,7 +119,7 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
             >
                 <div className="w-fit m-auto fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center shadow border-2 border-solid border-black bg-white">
                     <h1 className="w-fit mx-auto mt-2 text-3xl 2xl:text-4x">
-                        Edit Experience
+                        Edit About
                     </h1>
                     {loading ? <Spinner /> : " "}
                     <div className="w-fit max-h-96 overflow-y-auto m-auto">
@@ -181,46 +163,6 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
                                     </div>
                                 </div>
                             ))}
-                            <div className="form-control">
-                                <label
-                                    className="text-center text-xl"
-                                    htmlFor="description"
-                                >
-                                    Description
-                                </label>
-                                {fields.map((field, index) => (
-                                    <div
-                                        key={field.id}
-                                        className="flex flex-row justify-between"
-                                    >
-                                        <input
-                                            className="w-4/6 h-fit my-auto px-2 text-center border-2 border-solid border-black"
-                                            type="text"
-                                            {...register(
-                                                `description.${index}.bullet` as const,
-                                                {
-                                                    required:
-                                                        "Description is required",
-                                                }
-                                            )}
-                                        />
-                                        <button
-                                            type="button"
-                                            className="w-fit block my-2 px-2 text-red-500 hover:text-white border-2 border-solid border-red-500 hover:border-red-500 hover:bg-red-500"
-                                            onClick={() => remove(index)}
-                                        >
-                                            Remove
-                                        </button>
-                                    </div>
-                                ))}
-                                <button
-                                    type="button"
-                                    className="w-fit block mx-auto my-2 px-2 text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500"
-                                    onClick={() => append({ bullet: "" })}
-                                >
-                                    Add Bullet
-                                </button>
-                            </div>
                             <div className="form-control">
                                 <div className="flex flex-col">
                                     <label
@@ -277,4 +219,4 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
     );
 };
 
-export default EditExperienceModal;
+export default EditAboutModal;

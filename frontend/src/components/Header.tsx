@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-import resume from "./VictorVerma.pdf";
+import { supabase } from "../utils/Supabase";
 
 const Header = () => {
+    const [resumeURL, setResumeURL] = useState("");
+    useEffect(() => {
+        const { data: publicData } = supabase.storage
+            .from("files")
+            .getPublicUrl("VictorVermaResume.pdf");
+        setResumeURL(publicData.publicUrl);
+    }, []);
     const openResume = () => {
-        window.open(resume, "_blank");
+        window.open(resumeURL);
     };
+
     const logoItems = [
         {
             url: "https://www.linkedin.com/in/victorverma/",
@@ -26,7 +34,7 @@ const Header = () => {
         { url: "/experience", text: "Experience" },
         { url: "/education", text: "Education" },
         { url: "/projects", text: "Projects" },
-        { url: "#", click: openResume, text: "CV" },
+        { url: resumeURL, click: openResume, text: "Resume" },
         { url: "/about", text: "About Me" },
     ];
     return (

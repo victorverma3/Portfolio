@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import EduDetails from "../../components/EduDetails";
 import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";
+import UploadPDF from "../../components/UploadPDF";
+
+import { supabase } from "../../utils/Supabase";
 
 const eduInfo = [
     {
@@ -35,6 +38,14 @@ const eduInfo = [
 ];
 
 const Education = () => {
+    const [CVURL, setCVURL] = useState("");
+    useEffect(() => {
+        const { data: publicData } = supabase.storage
+            .from("files")
+            .getPublicUrl("VictorVermaCV.pdf");
+        setCVURL(publicData.publicUrl);
+        console.log(publicData.publicUrl);
+    }, []);
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="text-5xl 2xl:text-6xl">Education</h1>
@@ -50,7 +61,15 @@ const Education = () => {
                 </div>
                 <EduDetails details={eduInfo} />
             </div>
+            <a
+                className="w-fit mx-auto p-2 text-black text-2xl 2xl:text-3xl rounded-xl no-underline transition-shadow duration-200 ease-in-out bg-white hover:shadow hover:shadow-blue-400"
+                href={CVURL}
+                target="_blank"
+            >
+                Curriculum Vitae
+            </a>
             <Skills />
+            <UploadPDF />
             <Footer />
         </div>
     );

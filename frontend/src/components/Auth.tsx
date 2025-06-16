@@ -70,11 +70,17 @@ const Auth = () => {
     return (
         <div>
             {isAuthorized ? (
-                <button className="m-2 p-2 text-black" onClick={handleLogout}>
+                <button
+                    className="m-2 p-2 text-black hover:opacity-75"
+                    onClick={handleLogout}
+                >
                     <LockOpenOutlined />{" "}
                 </button>
             ) : (
-                <button className="m-2 p-2 text-black" onClick={handleOpen}>
+                <button
+                    className="m-2 p-2 text-black hover:opacity-75"
+                    onClick={handleOpen}
+                >
                     <LockOutlined />
                 </button>
             )}

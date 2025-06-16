@@ -45,7 +45,9 @@ const Header = () => {
                 <Container>
                     <Auth />
                     <Navbar.Brand href="/">
-                        <span className="text-xl">Victor Verma</span>
+                        <span className="text-xl hover:opacity-75">
+                            Victor Verma
+                        </span>
                     </Navbar.Brand>
                     <div className="w-32 m-auto flex-row flex-wrap justify-around hidden nav-display:flex portrait:hidden">
                         {logoItems.map((item, index) => (
@@ -53,7 +55,7 @@ const Header = () => {
                                 key={index}
                                 href={item.url}
                                 target="_blank"
-                                className="rounded-md hover:scale-105 hover:shadow-md"
+                                className="rounded-md hover:scale-105 hover:opacity-75"
                             >
                                 <img className="w-7" src={item.logo} />
                             </a>
@@ -65,7 +67,7 @@ const Header = () => {
                             {navItems.map((item, index) => (
                                 <Nav.Link eventKey={index} key={index}>
                                     <Link
-                                        className="text-xl text-black no-underline hover:underline hover:decoration-blue-400 duration-200 ease-in-out"
+                                        className="text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
                                         to={item.url}
                                         onClick={item?.click}
                                     >

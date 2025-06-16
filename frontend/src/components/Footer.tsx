@@ -19,7 +19,7 @@ const Footer = () => {
                     key={index}
                     href={item.url}
                     target="_blank"
-                    className="rounded-md hover:scale-105 hover:shadow-md"
+                    className="rounded-md hover:scale-105 hover:opacity-75"
                 >
                     <img
                         className="w-8 block nav-display:hidden"

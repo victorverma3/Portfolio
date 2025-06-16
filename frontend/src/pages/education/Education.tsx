@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";
 import UploadPDF from "../../components/UploadPDF";
 
+import { useAuth } from "../../contexts/AuthContext";
+
 import { supabase } from "../../utils/Supabase";
 
 const eduInfo = [
@@ -44,8 +46,9 @@ const Education = () => {
             .from("files")
             .getPublicUrl("VictorVermaCV.pdf");
         setCVURL(publicData.publicUrl);
-        console.log(publicData.publicUrl);
     }, []);
+
+    const { isAuthorized } = useAuth();
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="text-5xl 2xl:text-6xl">Education</h1>
@@ -69,7 +72,7 @@ const Education = () => {
                 Curriculum Vitae
             </a>
             <Skills />
-            <UploadPDF />
+            {isAuthorized && <UploadPDF />}
             <Footer />
         </div>
     );

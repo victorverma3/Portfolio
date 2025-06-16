@@ -7,6 +7,8 @@ import Footer from "../../components/Footer";
 import ProjectCards from "../../components/ProjectCards";
 import Spinner from "../../components/Spinner";
 
+import { useAuth } from "../../contexts/AuthContext";
+
 const backend = import.meta.env.VITE_BACKEND_URL;
 
 type projectDataType = {
@@ -47,7 +49,14 @@ const Projects = () => {
                 projects.map((project) =>
                     axios.put(
                         `${backend}/project-collection/${project._id}`,
-                        project
+                        project,
+                        {
+                            headers: {
+                                Authorization: `Bearer ${sessionStorage.getItem(
+                                    "authToken"
+                                )}`,
+                            },
+                        }
                     )
                 )
             );
@@ -75,14 +84,16 @@ const Projects = () => {
         }));
         updateProjects(updatedProjects);
     };
-    const isLocalMachine = window.location.hostname === "localhost";
+
+    const { isAuthorized } = useAuth();
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="text-5xl 2xl:text-6xl">Projects</h1>
             {loading ? <Spinner /> : <ProjectCards cards={projectData} />}
-            {isLocalMachine && <AddProjectModal />}
 
-            {isLocalMachine && (
+            {isAuthorized && <AddProjectModal />}
+
+            {isAuthorized && (
                 <div className="w-128 max-w-[80vw] mt-8 mx-auto flex flex-col">
                     <h3>Edit Sort Order</h3>
                     <div className="mx-auto flex flex-wrap justify-around gap-3">

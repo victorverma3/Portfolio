@@ -4,7 +4,7 @@ import { Button, Card } from "react-bootstrap";
 import DeleteModal from "./DeleteModal";
 import EditProjectModal from "./EditProjectModal";
 
-const isLocalMachine = window.location.hostname === "localhost";
+import { useAuth } from "../contexts/AuthContext";
 
 interface Card {
     _id: string;
@@ -22,6 +22,7 @@ interface ProjectCardsProps {
 }
 
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
+    const { isAuthorized } = useAuth();
     return (
         <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
             {cards.map((card, index) => (
@@ -71,7 +72,7 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                                 );
                             })}
                         </div>
-                        {isLocalMachine && (
+                        {isAuthorized && (
                             <div className="px-4 flex flex-row flex-wrap justify-around">
                                 <EditProjectModal id={card._id} />
                                 <DeleteModal

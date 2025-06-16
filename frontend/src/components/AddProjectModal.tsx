@@ -22,7 +22,6 @@ type FormValues = {
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
 
 const AddProjectModal = () => {
     const { enqueueSnackbar } = useSnackbar();
@@ -59,7 +58,9 @@ const AddProjectModal = () => {
         axios
             .post(`${backend}/project-collection/`, data, {
                 headers: {
-                    "x-api-key": apiKey,
+                    Authorization: `Bearer ${sessionStorage.getItem(
+                        "authToken"
+                    )}`,
                 },
             })
             .then(() => {

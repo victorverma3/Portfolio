@@ -1,7 +1,8 @@
 import express from "express";
 
 import { About } from "../models/aboutModel.js";
-import { validateApiKey } from "../index.js";
+
+import { verifyToken } from "../auth.js";
 
 const router = express.Router();
 
@@ -34,7 +35,7 @@ router.get("/:id", async (request, response) => {
 });
 
 // update an about
-router.put("/:id", validateApiKey, async (request, response) => {
+router.put("/:id", verifyToken, async (request, response) => {
     try {
         if (
             !request.body.title ||

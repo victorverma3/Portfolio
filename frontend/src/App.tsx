@@ -10,6 +10,8 @@ import Home from "./pages/home/Home";
 import Layout from "./Layout";
 import Projects from "./pages/projects/Projects";
 
+import { AuthProvider } from "./contexts/AuthContext";
+
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -20,18 +22,23 @@ function App() {
     }, [pathname]);
     return (
         <div>
-            <SnackbarProvider>
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<Home />} />
-                        <Route path="/experience" element={<Experience />} />
-                        <Route path="/education" element={<Education />} />
-                        <Route path="/projects" element={<Projects />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="*" element={<Error />} />
-                    </Route>
-                </Routes>
-            </SnackbarProvider>
+            <AuthProvider>
+                <SnackbarProvider>
+                    <Routes>
+                        <Route path="/" element={<Layout />}>
+                            <Route index element={<Home />} />
+                            <Route
+                                path="/experience"
+                                element={<Experience />}
+                            />
+                            <Route path="/education" element={<Education />} />
+                            <Route path="/projects" element={<Projects />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="*" element={<Error />} />
+                        </Route>
+                    </Routes>
+                </SnackbarProvider>
+            </AuthProvider>
         </div>
     );
 }

@@ -8,8 +8,7 @@ import aboutRoute from "./routes/aboutRoute.js";
 import experienceRoute from "./routes/experienceRoute.js";
 import projectRoute from "./routes/projectRoute.js";
 import skillRoute from "./routes/skillRoute.js";
-
-const API_KEY = process.env.API_KEY;
+import authRoute from "./routes/authRoute.js";
 
 const app = express();
 
@@ -27,18 +26,6 @@ app.use(
     })
 );
 
-export function validateApiKey(req, res, next) {
-    if (!API_KEY) {
-        return res.status(403).json({ message: "Forbidden: Unauthorized" });
-    }
-
-    const apiKey = req.headers["x-api-key"];
-    if (apiKey === API_KEY) {
-        return next();
-    }
-    return res.status(403).json({ message: "Forbidden: Unauthorized" });
-}
-
 app.get("/", (request, response) => {
     console.log(request);
     return response.status(234).send(`Backend for Victor's Portfolio`);
@@ -48,6 +35,7 @@ app.use("/about-collection", aboutRoute);
 app.use("/experience-collection", experienceRoute);
 app.use("/project-collection", projectRoute);
 app.use("/skill-collection", skillRoute);
+app.use("/auth-collection", authRoute);
 
 mongoose
     .connect(process.env.mongoDBURI)

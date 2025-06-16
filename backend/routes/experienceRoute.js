@@ -1,7 +1,8 @@
 import express from "express";
 
 import { Experiences } from "../models/experienceModel.js";
-import { validateApiKey } from "../index.js";
+
+import { verifyToken } from "../auth.js";
 
 const router = express.Router();
 
@@ -34,7 +35,7 @@ router.get("/:id", async (request, response) => {
 });
 
 // add an experience
-router.post("/", validateApiKey, async (request, response) => {
+router.post("/", verifyToken, async (request, response) => {
     try {
         const {
             role,
@@ -80,7 +81,7 @@ router.post("/", validateApiKey, async (request, response) => {
 });
 
 // update an experience
-router.put("/:id", validateApiKey, async (request, response) => {
+router.put("/:id", verifyToken, async (request, response) => {
     try {
         if (
             !request.body.role ||
@@ -113,7 +114,7 @@ router.put("/:id", validateApiKey, async (request, response) => {
 });
 
 // delete an experience
-router.delete("/:id", validateApiKey, async (request, response) => {
+router.delete("/:id", verifyToken, async (request, response) => {
     try {
         await Experiences.findByIdAndDelete(request.params.id);
         return response

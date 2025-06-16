@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
+import Auth from "./Auth";
+
 import { supabase } from "../utils/Supabase";
 
 const Header = () => {
@@ -41,6 +43,7 @@ const Header = () => {
         <div className="w-full m-auto">
             <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
                 <Container>
+                    <Auth />
                     <Navbar.Brand href="/">
                         <span className="text-xl">Victor Verma</span>
                     </Navbar.Brand>

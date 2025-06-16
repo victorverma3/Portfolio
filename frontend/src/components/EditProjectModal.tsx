@@ -23,7 +23,6 @@ type FormValues = {
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
 
 interface EditProjectModalProps {
     id: string;
@@ -66,7 +65,9 @@ const EditProjectModal = ({ id }: EditProjectModalProps) => {
         axios
             .put(`${backend}/project-collection/${id}`, data, {
                 headers: {
-                    "x-api-key": apiKey,
+                    Authorization: `Bearer ${sessionStorage.getItem(
+                        "authToken"
+                    )}`,
                 },
             })
             .then(() => {

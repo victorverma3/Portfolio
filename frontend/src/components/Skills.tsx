@@ -6,7 +6,7 @@ import AddSkillModal from "./AddSkillModal";
 import SkillSection from "./SkillSection";
 import Spinner from "./Spinner";
 
-const isLocalMachine = window.location.hostname === "localhost";
+import { useAuth } from "../contexts/AuthContext";
 
 type skillsDataType = {
     _id: string;
@@ -35,6 +35,8 @@ const Skills = () => {
                 setLoading(false);
             });
     }, []);
+
+    const { isAuthorized } = useAuth();
 
     return (
         <div className="mt-8">
@@ -70,7 +72,7 @@ const Skills = () => {
                         sectionHeader="Web Development"
                     />
 
-                    {isLocalMachine && <AddSkillModal />}
+                    {isAuthorized && <AddSkillModal />}
                 </div>
             )}
         </div>

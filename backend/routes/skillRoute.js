@@ -1,7 +1,8 @@
 import express from "express";
 
 import { Skills } from "../models/skillModel.js";
-import { validateApiKey } from "../index.js";
+
+import { verifyToken } from "../auth.js";
 
 const router = express.Router();
 
@@ -34,7 +35,7 @@ router.get("/:id", async (request, response) => {
 });
 
 // add a skill
-router.post("/", validateApiKey, async (request, response) => {
+router.post("/", verifyToken, async (request, response) => {
     try {
         const { name, image, group, sortOrder } = request.body;
 
@@ -61,7 +62,7 @@ router.post("/", validateApiKey, async (request, response) => {
 });
 
 // update a skill
-router.put("/:id", validateApiKey, async (request, response) => {
+router.put("/:id", verifyToken, async (request, response) => {
     try {
         if (
             !request.body.name ||
@@ -89,7 +90,7 @@ router.put("/:id", validateApiKey, async (request, response) => {
 });
 
 // delete a skill
-router.delete("/:id", validateApiKey, async (request, response) => {
+router.delete("/:id", verifyToken, async (request, response) => {
     try {
         await Skills.findByIdAndDelete(request.params.id);
         return response

@@ -3,6 +3,8 @@ import { Button, Card } from "react-bootstrap";
 
 import EditAboutModal from "./EditAboutModal";
 
+import { useAuth } from "../contexts/AuthContext";
+
 interface Card {
     _id: string;
     title: string;
@@ -18,7 +20,7 @@ interface AboutCardsProps {
 }
 
 const AboutCards = ({ cards }: AboutCardsProps) => {
-    const isLocalMachine = window.location.hostname === "localhost";
+    const { isAuthorized } = useAuth();
     return (
         <div className="w-5/6 m-auto flex flex-row flex-wrap justify-around">
             {cards.map((card, index) => (
@@ -54,7 +56,7 @@ const AboutCards = ({ cards }: AboutCardsProps) => {
                                 {card.link}
                             </Button>
                         </div>
-                        {isLocalMachine && <EditAboutModal id={card._id} />}
+                        {isAuthorized && <EditAboutModal id={card._id} />}
                     </Card.Body>
                 </Card>
             ))}

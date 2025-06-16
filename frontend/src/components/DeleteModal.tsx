@@ -9,7 +9,6 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
 
 interface DeleteModalProps {
     id: string;
@@ -36,7 +35,9 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ id, name, deleteItem }) => {
                     `${backend}/${deleteItem.toLowerCase()}-collection/${id}`,
                     {
                         headers: {
-                            "x-api-key": apiKey,
+                            Authorization: `Bearer ${sessionStorage.getItem(
+                                "authToken"
+                            )}`,
                         },
                     }
                 )

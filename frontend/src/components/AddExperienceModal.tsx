@@ -19,7 +19,6 @@ type FormValues = {
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
 
 const AddExperienceModal = () => {
     const { enqueueSnackbar } = useSnackbar();
@@ -56,7 +55,9 @@ const AddExperienceModal = () => {
         axios
             .post(`${backend}/experience-collection/`, data, {
                 headers: {
-                    "x-api-key": apiKey,
+                    Authorization: `Bearer ${sessionStorage.getItem(
+                        "authToken"
+                    )}`,
                 },
             })
             .then(() => {

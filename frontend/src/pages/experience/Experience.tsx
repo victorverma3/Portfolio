@@ -11,10 +11,11 @@ import EditExperienceModal from "../../components/EditExperienceModal";
 import Footer from "../../components/Footer";
 import Spinner from "../../components/Spinner";
 
+import { useAuth } from "../../contexts/AuthContext";
+
 import "react-vertical-timeline-component/style.min.css";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
-const isLocalMachine = window.location.hostname === "localhost";
 
 type experienceDataType = {
     _id: string;
@@ -45,6 +46,8 @@ const Experience = () => {
                 setLoading(false);
             });
     }, []);
+
+    const { isAuthorized } = useAuth();
 
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
@@ -79,7 +82,7 @@ const Experience = () => {
                                     )}
                                 </ul>
 
-                                {isLocalMachine && (
+                                {isAuthorized && (
                                     <div className="px-4 flex flex-row flex-wrap justify-around">
                                         <EditExperienceModal id={element._id} />
                                         <DeleteModal
@@ -94,7 +97,7 @@ const Experience = () => {
                     })}
                 </VerticalTimeline>
             )}
-            {isLocalMachine && <AddExperienceModal />}
+            {isAuthorized && <AddExperienceModal />}
             <Footer />
         </div>
     );

@@ -48,7 +48,7 @@ const UploadPDF = () => {
             enqueueSnackbar(`Failed to upload PDF: ${uploadError.message}`);
             return;
         } else {
-            enqueueSnackbar(`Uploaded ${file.name} to Supabase`, {
+            enqueueSnackbar(`Uploaded ${file.name}`, {
                 variant: "success",
             });
             setFile(null);

@@ -1,7 +1,8 @@
 import express from "express";
 
 import { Projects } from "../models/projectModel.js";
-import { validateApiKey } from "../index.js";
+
+import { verifyToken } from "../auth.js";
 
 const router = express.Router();
 
@@ -34,7 +35,7 @@ router.get("/:id", async (request, response) => {
 });
 
 // add a project
-router.post("/", validateApiKey, async (request, response) => {
+router.post("/", verifyToken, async (request, response) => {
     try {
         const {
             title,
@@ -80,7 +81,7 @@ router.post("/", validateApiKey, async (request, response) => {
 });
 
 // update a project
-router.put("/:id", validateApiKey, async (request, response) => {
+router.put("/:id", verifyToken, async (request, response) => {
     try {
         if (
             !request.body.title ||
@@ -111,7 +112,7 @@ router.put("/:id", validateApiKey, async (request, response) => {
 });
 
 // delete a project
-router.delete("/:id", validateApiKey, async (request, response) => {
+router.delete("/:id", verifyToken, async (request, response) => {
     try {
         await Projects.findByIdAndDelete(request.params.id);
         return response

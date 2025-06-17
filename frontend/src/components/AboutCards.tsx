@@ -22,7 +22,7 @@ interface AboutCardsProps {
 const AboutCards = ({ cards }: AboutCardsProps) => {
     const { isAuthorized } = useAuth();
     return (
-        <div className="w-5/6 m-auto flex flex-row flex-wrap justify-around">
+        <div className="w-5/6 m-auto flex flex-row flex-wrap space-x-4 justify-around">
             {cards.map((card, index) => (
                 <Card
                     className="w-11/12 xs:w-[20rem] 2xl:w-96 my-2.5 text-base sm:text-lg 2xl:text-xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"

@@ -24,11 +24,11 @@ interface ProjectCardsProps {
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
     const { isAuthorized } = useAuth();
     return (
-        <div className="w-11/12 m-auto flex flex-row flex-wrap justify-around">
+        <div className="w-11/12 m-auto flex flex-row flex-wrap space-x-4 justify-around">
             {cards.map((card, index) => (
                 <Card
                     key={index}
-                    className="w-[22rem] my-2.5 text-base 2xl:w-96 2xl:text-xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
+                    className="w-[22rem] my-2.5 transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
                 >
                     <Card.Img
                         className="m-auto"
@@ -38,11 +38,11 @@ const ProjectCards = ({ cards }: ProjectCardsProps) => {
                     />
                     <Card.Body>
                         <Card.Title>
-                            <h1 className="text-3xl text-black no-underline 2xl:text-4xl">
+                            <h1 className="text-3xl text-black no-underline">
                                 {card.title}
                             </h1>
                         </Card.Title>
-                        <Card.Text className="text-justify">
+                        <Card.Text className="text-justify text-md">
                             {card.description}
                         </Card.Text>
                         <div className="my-2.5 flex flex-row flex-wrap justify-around">

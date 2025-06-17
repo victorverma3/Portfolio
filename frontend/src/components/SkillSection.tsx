@@ -87,7 +87,7 @@ const SkillSection = ({ skillsData, sectionHeader }: SkillSectionProps) => {
                             isAuthorized ? (e) => e.preventDefault() : undefined
                         }
                     >
-                        <h3 className="text-lg">{skill.name}</h3>
+                        <h3 className="text-lg 2xl:text-xl">{skill.name}</h3>
                         <img
                             className="w-12 sm:w-16 m-auto"
                             src={`images/${skill.image}.png?url`}

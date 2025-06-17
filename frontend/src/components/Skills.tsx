@@ -39,7 +39,7 @@ const Skills = () => {
     const { isAuthorized } = useAuth();
 
     return (
-        <div className="mt-8">
+        <div className="mt-3">
             {loading ? (
                 <Spinner />
             ) : (

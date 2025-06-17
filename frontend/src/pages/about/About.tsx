@@ -36,7 +36,7 @@ const About = () => {
     }, []);
     return (
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
-            <h1 className="text-5xl 2xl:text-6xl">About Me</h1>
+            <h1 className="mt-2 text-5xl 2xl:text-6xl">About Me</h1>
 
             <p className="w-9/12 m-auto pt-6 text-xl text-justify">
                 I graduated from Boston University in May 2025 with a B.A. in

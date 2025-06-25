@@ -30,7 +30,17 @@ const SkillSection = ({ skillsData }: SkillSectionProps) => {
         try {
             await Promise.all(
                 skills.map((skill) =>
-                    axios.put(`${backend}/skill-collection/${skill._id}`, skill)
+                    axios.put(
+                        `${backend}/skill-collection/${skill._id}`,
+                        skill,
+                        {
+                            headers: {
+                                Authorization: `Bearer ${sessionStorage.getItem(
+                                    "authToken"
+                                )}`,
+                            },
+                        }
+                    )
                 )
             );
             enqueueSnackbar("Sort order updated successfully", {

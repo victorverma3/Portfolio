@@ -105,7 +105,7 @@ const Featured = () => {
                 {projectData.map((project, index) => (
                     <Card
                         key={index}
-                        className="w-[14rem] xs:w-[18rem] sm:w-[20rem] xl:w-[22rem] mx-auto text-base 2xl:w-96 2xl:text-xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
+                        className="w-[14rem] xs:w-[18rem] sm:w-[20rem] xl:w-[22rem] mx-auto transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
                     >
                         <a
                             href={
@@ -126,7 +126,7 @@ const Featured = () => {
                             />
                             <Card.Body>
                                 <Card.Title>
-                                    <h1 className="text-lg sm:text-xl xl:text-2xl text-black no-underline 2xl:text-4xl">
+                                    <h1 className="text-lg sm:text-xl xl:text-2xl 2xl:text-3xl text-black no-underline">
                                         {project.title}
                                     </h1>
                                 </Card.Title>

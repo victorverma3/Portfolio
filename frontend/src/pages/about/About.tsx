@@ -38,7 +38,7 @@ const About = () => {
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="mt-2 text-5xl 2xl:text-6xl">About Me</h1>
 
-            <p className="w-9/12 m-auto pt-6 text-xl text-justify">
+            <p className="w-9/12 m-auto pt-6 text-xl 2xl:text-2xl text-justify">
                 I graduated from Boston University in May 2025 with a B.A. in
                 Mathematics and Computer Science and a minor in Data Science.
                 I'm currently working as an associate software engineer at
@@ -47,7 +47,7 @@ const About = () => {
                 working on personal projects and developing new skills.
             </p>
 
-            <p className="w-9/12 m-auto pt-6 text-xl text-justify">
+            <p className="w-9/12 m-auto pt-6 text-xl 2xl:text-2xl text-justify">
                 In my free time, I love to watch movies, go to the gym, and
                 solve the Rubik's Cube. I also like to hang out with my friends,
                 watch sports (football, soccer, basketball, and rugby), and eat

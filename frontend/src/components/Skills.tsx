@@ -45,7 +45,7 @@ const Skills = () => {
     const { isAuthorized } = useAuth();
 
     return (
-        <div className="w-[80vw] mx-auto mt-3">
+        <div className="w-[75vw] mx-auto mt-4">
             {loading ? (
                 <Spinner />
             ) : (

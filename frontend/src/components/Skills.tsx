@@ -18,9 +18,13 @@ type skillsDataType = {
 
 const Skills = () => {
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
-    const [loading, setLoading] = useState(false);
+    const [skillSection, setSkillSection] = useState<string>("langs-tools");
 
-    const [skillSection, setSkillSection] = useState<string>("languages-dbs");
+    const handleUpdate = (skillSection: string) => {
+        setSkillSection(skillSection);
+    };
+
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         setLoading(true);
@@ -49,43 +53,33 @@ const Skills = () => {
                     <div className="flex justify-around border-bottom">
                         <button
                             className={`w-fit p-2 text-base md:text-2xl ${
-                                skillSection === "languages-dbs" &&
+                                skillSection === "langs-tools" &&
                                 "duration-200 ease-in-out bg-blue-100"
                             }`}
-                            onClick={() => setSkillSection("languages-dbs")}
-                            type="button"
+                            onClick={() => handleUpdate("langs-tools")}
+                            type="submit"
                         >
-                            Languages and Databases
+                            Languages and Tools
                         </button>
                         <button
                             className={`w-fit p-2 text-base md:text-2xl ${
                                 skillSection === "ds-ml" &&
                                 "duration-200 ease-in-out bg-blue-100"
                             }`}
-                            onClick={() => setSkillSection("ds-ml")}
-                            type="button"
+                            onClick={() => handleUpdate("ds-ml")}
+                            type="submit"
                         >
                             Data Science and ML
                         </button>
                         <button
                             className={`w-fit p-2 text-base md:text-2xl ${
-                                skillSection === "cloud-devops" &&
+                                skillSection === "cloud-web" &&
                                 "duration-200 ease-in-out bg-blue-100"
                             }`}
-                            onClick={() => setSkillSection("cloud-devops")}
-                            type="button"
+                            onClick={() => handleUpdate("cloud-web")}
+                            type="submit"
                         >
-                            Cloud and Devops
-                        </button>
-                        <button
-                            className={`w-fit p-2 text-base md:text-2xl ${
-                                skillSection === "web" &&
-                                "duration-200 ease-in-out bg-blue-100"
-                            }`}
-                            onClick={() => setSkillSection("web")}
-                            type="button"
-                        >
-                            Web Development
+                            Cloud and Web
                         </button>
                     </div>
 

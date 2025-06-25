@@ -90,7 +90,7 @@ const EditSkillModal = ({ id }: EditSkillModalProps) => {
                 enqueueSnackbar("Error", { variant: "error" });
                 console.log(error);
             });
-    }, []);
+    }, [id, reset]);
 
     const handleOpen = () => {
         setOpen(true);

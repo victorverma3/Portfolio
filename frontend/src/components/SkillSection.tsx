@@ -71,11 +71,13 @@ const SkillSection = ({ skillsData }: SkillSectionProps) => {
         }
     };
     return (
-        <div className="m-auto p-3 flex flex-row flex-wrap gap-3 justify-center content-center">
+        <div className="m-auto p-3 flex flex-row flex-wrap gap-3 justify-center content-center ">
             {skillsData.map((skill, index) => (
                 <div
                     key={index}
-                    className={`w-24 sm:w-32 ${isAuthorized && "cursor-grab"}`}
+                    className={`w-24 sm:w-32 ${
+                        isAuthorized && "cursor-grab"
+                    } hover:shadow hover:shadow-blue-400`}
                     draggable={isAuthorized}
                     onDragStart={
                         isAuthorized

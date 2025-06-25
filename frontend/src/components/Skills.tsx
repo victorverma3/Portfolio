@@ -49,13 +49,12 @@ const Skills = () => {
             {loading ? (
                 <Spinner />
             ) : (
-                <div className="mx-auto p-3 flex flex-col space-y-6 rounded-3xl bg-white">
+                <div className="mx-auto p-3 flex flex-col space-y-6 rounded-3xl shadow shadow-blue-400 bg-white">
                     <div className="flex justify-around border-bottom">
                         <button
                             className={`w-fit p-2 text-base md:text-2xl ${
-                                skillSection === "langs-tools" &&
-                                "duration-200 ease-in-out bg-blue-100"
-                            }`}
+                                skillSection === "langs-tools" && "bg-blue-100"
+                            } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
                             onClick={() => handleUpdate("langs-tools")}
                             type="submit"
                         >
@@ -63,9 +62,8 @@ const Skills = () => {
                         </button>
                         <button
                             className={`w-fit p-2 text-base md:text-2xl ${
-                                skillSection === "ds-ml" &&
-                                "duration-200 ease-in-out bg-blue-100"
-                            }`}
+                                skillSection === "ds-ml" && "bg-blue-100"
+                            } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
                             onClick={() => handleUpdate("ds-ml")}
                             type="submit"
                         >
@@ -73,9 +71,8 @@ const Skills = () => {
                         </button>
                         <button
                             className={`w-fit p-2 text-base md:text-2xl ${
-                                skillSection === "cloud-web" &&
-                                "duration-200 ease-in-out bg-blue-100"
-                            }`}
+                                skillSection === "cloud-web" && "bg-blue-100"
+                            } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
                             onClick={() => handleUpdate("cloud-web")}
                             type="submit"
                         >

@@ -19,10 +19,9 @@ type skillsDataType = {
 
 interface SkillSectionProps {
     skillsData: skillsDataType[];
-    sectionHeader: string;
 }
 
-const SkillSection = ({ skillsData, sectionHeader }: SkillSectionProps) => {
+const SkillSection = ({ skillsData }: SkillSectionProps) => {
     const { isAuthorized } = useAuth();
     const { enqueueSnackbar } = useSnackbar();
     const dragSkill = useRef<number>(0);
@@ -62,49 +61,46 @@ const SkillSection = ({ skillsData, sectionHeader }: SkillSectionProps) => {
         }
     };
     return (
-        <div className="w-[80vw] mx-auto px-3">
-            <h2 className="text-3xl 2xl:text-4xl">{sectionHeader}</h2>
-            <div className="m-auto flex flex-row flex-wrap gap-2 justify-center content-center">
-                {skillsData.map((skill, index) => (
-                    <div
-                        key={index}
-                        className={`w-24 sm:w-32 ${
-                            isAuthorized && "cursor-grab"
-                        }`}
-                        draggable={isAuthorized}
-                        onDragStart={
-                            isAuthorized
-                                ? () => (dragSkill.current = index)
-                                : undefined
-                        }
-                        onDragEnter={
-                            isAuthorized
-                                ? () => (draggedOverSkill.current = index)
-                                : undefined
-                        }
-                        onDragEnd={isAuthorized ? handleSort : undefined}
-                        onDragOver={
-                            isAuthorized ? (e) => e.preventDefault() : undefined
-                        }
-                    >
-                        <h3 className="text-lg 2xl:text-xl">{skill.name}</h3>
-                        <img
-                            className="w-12 sm:w-16 m-auto"
-                            src={`images/${skill.image}.png?url`}
-                        />
-                        {isAuthorized && (
-                            <div className="px-4 flex flex-row flex-wrap justify-between">
-                                <EditSkillModal id={skill._id} />
-                                <DeleteModal
-                                    id={skill._id}
-                                    name={skill.name}
-                                    deleteItem={"Skill"}
-                                />
-                            </div>
-                        )}
-                    </div>
-                ))}
-            </div>
+        <div className="m-auto p-3 flex flex-row flex-wrap gap-3 justify-center content-center">
+            {skillsData.map((skill, index) => (
+                <div
+                    key={index}
+                    className={`w-24 sm:w-32 ${isAuthorized && "cursor-grab"}`}
+                    draggable={isAuthorized}
+                    onDragStart={
+                        isAuthorized
+                            ? () => (dragSkill.current = index)
+                            : undefined
+                    }
+                    onDragEnter={
+                        isAuthorized
+                            ? () => (draggedOverSkill.current = index)
+                            : undefined
+                    }
+                    onDragEnd={isAuthorized ? handleSort : undefined}
+                    onDragOver={
+                        isAuthorized ? (e) => e.preventDefault() : undefined
+                    }
+                >
+                    <h3 className="text-base sm:text-lg 2xl:text-xl">
+                        {skill.name}
+                    </h3>
+                    <img
+                        className="w-12 sm:w-16 m-auto"
+                        src={`images/${skill.image}.png?url`}
+                    />
+                    {isAuthorized && (
+                        <div className="px-4 flex flex-row flex-wrap justify-between">
+                            <EditSkillModal id={skill._id} />
+                            <DeleteModal
+                                id={skill._id}
+                                name={skill.name}
+                                deleteItem={"Skill"}
+                            />
+                        </div>
+                    )}
+                </div>
+            ))}
         </div>
     );
 };

@@ -20,6 +20,8 @@ const Skills = () => {
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
     const [loading, setLoading] = useState(false);
 
+    const [skillSection, setSkillSection] = useState<string>("languages-dbs");
+
     useEffect(() => {
         setLoading(true);
         axios
@@ -39,42 +41,62 @@ const Skills = () => {
     const { isAuthorized } = useAuth();
 
     return (
-        <div className="mt-3">
+        <div className="w-[80vw] mx-auto mt-3">
             {loading ? (
                 <Spinner />
             ) : (
-                <div className="flex flex-col space-y-6">
-                    <SkillSection
-                        skillsData={skillsData.filter(
-                            (skill) => skill.group === "languages-dbs"
-                        )}
-                        sectionHeader="Languages and Databases"
-                    />
+                <div className="mx-auto p-3 flex flex-col space-y-6 rounded-3xl bg-white">
+                    <div className="flex justify-around border-bottom">
+                        <button
+                            className={`w-fit p-2 text-base md:text-2xl ${
+                                skillSection === "languages-dbs" &&
+                                "duration-200 ease-in-out bg-blue-100"
+                            }`}
+                            onClick={() => setSkillSection("languages-dbs")}
+                            type="button"
+                        >
+                            Languages and Databases
+                        </button>
+                        <button
+                            className={`w-fit p-2 text-base md:text-2xl ${
+                                skillSection === "ds-ml" &&
+                                "duration-200 ease-in-out bg-blue-100"
+                            }`}
+                            onClick={() => setSkillSection("ds-ml")}
+                            type="button"
+                        >
+                            Data Science and ML
+                        </button>
+                        <button
+                            className={`w-fit p-2 text-base md:text-2xl ${
+                                skillSection === "cloud-devops" &&
+                                "duration-200 ease-in-out bg-blue-100"
+                            }`}
+                            onClick={() => setSkillSection("cloud-devops")}
+                            type="button"
+                        >
+                            Cloud and Devops
+                        </button>
+                        <button
+                            className={`w-fit p-2 text-base md:text-2xl ${
+                                skillSection === "web" &&
+                                "duration-200 ease-in-out bg-blue-100"
+                            }`}
+                            onClick={() => setSkillSection("web")}
+                            type="button"
+                        >
+                            Web Development
+                        </button>
+                    </div>
 
                     <SkillSection
                         skillsData={skillsData.filter(
-                            (skill) => skill.group === "ds-ml"
+                            (skill) => skill.group === skillSection
                         )}
-                        sectionHeader="Data Science and ML"
                     />
-
-                    <SkillSection
-                        skillsData={skillsData.filter(
-                            (skill) => skill.group === "cloud-devops"
-                        )}
-                        sectionHeader="Cloud and DevOps"
-                    />
-
-                    <SkillSection
-                        skillsData={skillsData.filter(
-                            (skill) => skill.group === "web"
-                        )}
-                        sectionHeader="Web Development"
-                    />
-
-                    {isAuthorized && <AddSkillModal />}
                 </div>
             )}
+            {isAuthorized && <AddSkillModal />}
         </div>
     );
 };

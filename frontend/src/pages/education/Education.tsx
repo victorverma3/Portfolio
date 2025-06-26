@@ -15,7 +15,7 @@ const eduInfo = [
         bullets: [
             "B.A. in Mathematics and Computer Science.",
             "Minor in Data Science.",
-            "Magna Cum Laude, 3.89 GPA.",
+            "Magna cum laude, 3.89 GPA.",
             "2x UROP Student Research Award, UROP Faculty Matching Grant.",
             "6x College of Arts and Sciences Dean's List.",
         ],

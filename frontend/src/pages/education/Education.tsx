@@ -13,12 +13,11 @@ const eduInfo = [
     {
         subtitle: "Boston University",
         bullets: [
-            "Expected Graduation - May 2025.",
             "B.A. in Mathematics and Computer Science.",
             "Minor in Data Science.",
-            "3.89 GPA.",
-            "UROP Student Research Award.",
-            "College of Arts and Sciences Dean's List.",
+            "Magna Cum Laude, 3.89 GPA.",
+            "2x UROP Student Research Award, UROP Faculty Matching Grant.",
+            "6x College of Arts and Sciences Dean's List.",
         ],
     },
     {

@@ -14,7 +14,7 @@ const EduDetails = ({ details }: EduDetailsProps) => {
         <div className="w-fit my-4 mx-auto space-y-4">
             {details.map((item, index) => (
                 <div
-                    className="w-72 sm:w-96 2xl:w-[30rem] p-4 flex flex-column rounded-3xl bg-white transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
+                    className="w-72 sm:w-96 2xl:w-[30rem] p-4 flex flex-column rounded-3xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 bg-white "
                     key={index}
                 >
                     <details>

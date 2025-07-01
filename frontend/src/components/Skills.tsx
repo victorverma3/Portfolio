@@ -8,6 +8,8 @@ import Spinner from "./Spinner";
 
 import { useAuth } from "../contexts/AuthContext";
 
+const backend = import.meta.env.VITE_BACKEND_URL;
+
 type skillsDataType = {
     _id: string;
     name: string;
@@ -29,9 +31,7 @@ const Skills = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(
-                "https://victor-verma-portfolio-backend.vercel.app/skill-collection"
-            )
+            .get(`${backend}/skill-collection`)
             .then((response) => {
                 setSkillsData(response.data.data);
                 setLoading(false);

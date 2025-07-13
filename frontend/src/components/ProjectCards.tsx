@@ -24,7 +24,7 @@ interface ProjectCardsProps {
 const ProjectCards = ({ cards }: ProjectCardsProps) => {
     const { isAuthorized } = useAuth();
     return (
-        <div className="w-11/12 m-auto flex flex-row flex-wrap space-x-4 justify-around">
+        <div className="w-11/12 m-auto flex flex-row flex-wrap space-4 justify-around">
             {cards.map((card, index) => (
                 <Card
                     key={index}

@@ -36,7 +36,7 @@ const Header = () => {
         { url: "/experience", text: "Experience" },
         { url: "/education", text: "Education" },
         { url: "/projects", text: "Projects" },
-        { url: resumeURL, click: openResume, text: "Resume" },
+        { url: resumeURL, click: openResume, text: "Resume", id: "resume" },
         { url: "/about", text: "About Me" },
     ];
     return (
@@ -65,7 +65,11 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             {navItems.map((item, index) => (
-                                <Nav.Link eventKey={index} key={index}>
+                                <Nav.Link
+                                    eventKey={index}
+                                    key={index}
+                                    id={item?.id}
+                                >
                                     <Link
                                         className="text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
                                         to={item.url}

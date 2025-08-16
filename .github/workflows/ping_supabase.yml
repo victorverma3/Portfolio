@@ -3,28 +3,15 @@ name: ping supabase
 on:
     workflow_dispatch:
     schedule:
-        - cron: 0 4 1,6,11,16,21,26 * *
+        - cron: 0 4 * * *
 
 jobs:
-    build:
+    ping:
         runs-on: ubuntu-latest
 
         steps:
-            - name: checkout repo content
-              uses: actions/checkout@v4
-
-            - name: setup python
-              uses: actions/setup-python@v5
-              with:
-                  python-version: "3.10.7"
-
-            - name: install python packages
+            - name: ping supabase
               run: |
-                  python3 -m pip install --upgrade pip
-                  pip install -r backend/scripts/requirements.txt
-
-            - name: execute ping_supabase.py
-              env:
-                  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-                  SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-              run: python3 backend/scripts/ping_supabase.py
+                  code=$(curl -s -o /dev/null -w "%{http_code}" \
+                  https://xbzrwufafydjklsocypj.supabase.co/storage/v1/object/public/files/VictorVermaResume.pdf)
+                  echo "Supabase returned status: $code"

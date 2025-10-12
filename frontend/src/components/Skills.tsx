@@ -50,9 +50,9 @@ const Skills = () => {
                 <Spinner />
             ) : (
                 <div className="mx-auto p-3 flex flex-col space-y-6 rounded-3xl shadow shadow-blue-400 bg-white">
-                    <div className="flex justify-around border-bottom">
+                    <div className="flex justify-evenly border-bottom">
                         <button
-                            className={`w-fit p-2 text-base md:text-2xl ${
+                            className={`w-64 p-2 text-base md:text-2xl ${
                                 skillSection === "langs-tools" && "bg-blue-100"
                             } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
                             onClick={() => handleUpdate("langs-tools")}
@@ -61,7 +61,7 @@ const Skills = () => {
                             Languages and Tools
                         </button>
                         <button
-                            className={`w-fit p-2 text-base md:text-2xl ${
+                            className={`w-64 p-2 text-base md:text-2xl ${
                                 skillSection === "ds-ml" && "bg-blue-100"
                             } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
                             onClick={() => handleUpdate("ds-ml")}
@@ -70,7 +70,7 @@ const Skills = () => {
                             Data Science and ML
                         </button>
                         <button
-                            className={`w-fit p-2 text-base md:text-2xl ${
+                            className={`w-64 p-2 text-base md:text-2xl ${
                                 skillSection === "cloud-web" && "bg-blue-100"
                             } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
                             onClick={() => handleUpdate("cloud-web")}

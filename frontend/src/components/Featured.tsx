@@ -6,6 +6,8 @@ import "react-multi-carousel/lib/styles.css";
 
 import Spinner from "./Spinner";
 
+import useIsScreenLg from "../hooks/useIsScreenLg";
+
 const backend = import.meta.env.VITE_BACKEND_URL;
 
 type projectDataType = {
@@ -34,22 +36,15 @@ const featuredLinks: { [key: string]: string } = {
 };
 
 const responsive = {
-    desktop: {
-        breakpoint: { max: 3000, min: 1280 },
-        items: 2,
-        slidesToSlide: 2,
-    },
-    tablet: {
-        breakpoint: { max: 1280, min: 540 },
+    large: {
+        breakpoint: { max: 3000, min: 0 },
         items: 1,
-    },
-    mobile: {
-        breakpoint: { max: 540, min: 0 },
-        items: 1,
+        slidesToSlide: 1,
     },
 };
 
 const Featured = () => {
+    const isScreenLg = useIsScreenLg();
     const [projectData, setProjectData] = useState<projectDataType[]>([]);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -72,26 +67,16 @@ const Featured = () => {
             });
     }, []);
 
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1280);
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > 1280);
-        };
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     return loading ? (
         <Spinner />
     ) : (
-        <div className="w-[65vw] sm:w-[60vw] mx-auto mt-4 rounded-lg shadow shadow-blue-400 bg-gray-100">
+        <div className="w-3/5 max-w-3xl mx-auto mt-4 rounded-lg shadow shadow-blue-400 bg-gray-100">
             <h2 className="pt-3">Featured Work</h2>
             <Carousel
-                swipeable={isDesktop ? false : true}
+                swipeable={!isScreenLg}
                 draggable={false}
                 showDots={true}
-                arrows={false}
+                arrows={true}
                 responsive={responsive}
                 ssr={true}
                 infinite={true}
@@ -100,12 +85,11 @@ const Featured = () => {
                 rewindWithAnimation={true}
                 customTransition="transform 1500ms ease-in-out"
                 containerClass="carousel-container pb-4"
-                dotListClass=""
             >
                 {projectData.map((project, index) => (
                     <Card
                         key={index}
-                        className="w-[14rem] xs:w-[18rem] sm:w-[20rem] xl:w-[22rem] mx-auto transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
+                        className="w-4/5 sm:w-3/5 sm:min-w-128 mx-auto transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400"
                     >
                         <a
                             href={
@@ -126,7 +110,7 @@ const Featured = () => {
                             />
                             <Card.Body>
                                 <Card.Title>
-                                    <h1 className="text-lg sm:text-xl xl:text-2xl 2xl:text-3xl text-black no-underline">
+                                    <h1 className="w-full text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-black no-underline">
                                         {project.title}
                                     </h1>
                                 </Card.Title>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 
-import EditAboutModal from "./EditAboutModal";
+import EditAboutModal from "../editing/EditAboutModal";
 
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 interface Card {
     _id: string;

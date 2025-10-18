@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import EduDetails from "../../components/EduDetails";
-import Footer from "../../components/Footer";
-import Skills from "../../components/Skills";
-import UploadPDF from "../../components/UploadPDF";
+import EduDetails from "../components/EduDetails";
+import Footer from "../components/layout/Footer";
+import Skills from "../components/Skills";
+import UploadPDF from "../components/UploadPDF";
 
-import { useAuth } from "../../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
-import { supabase } from "../../utils/Supabase";
+import { supabase } from "../utils/Supabase";
 
 const eduInfo = [
     {

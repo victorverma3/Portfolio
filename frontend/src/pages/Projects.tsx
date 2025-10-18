@@ -2,12 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 
-import AddProjectModal from "../../components/AddProjectModal";
-import Footer from "../../components/Footer";
-import ProjectCards from "../../components/ProjectCards";
-import Spinner from "../../components/Spinner";
+import AddProjectModal from "../components/editing/AddProjectModal";
+import Footer from "../components/layout/Footer";
+import ProjectCards from "../components/cards/ProjectCards";
+import Spinner from "../components/Spinner";
 
-import { useAuth } from "../../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 

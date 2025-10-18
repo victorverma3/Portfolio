@@ -1,8 +1,8 @@
 import React from "react";
 
-import Featured from "../../components/Featured";
-import Footer from "../../components/Footer";
-import HomeTitle from "../../components/HomeTitle";
+import Featured from "../components/Featured";
+import Footer from "../components/layout/Footer";
+import HomeTitle from "../components/HomeTitle";
 
 const Home = () => {
     return (

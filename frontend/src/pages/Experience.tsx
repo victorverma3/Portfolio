@@ -5,13 +5,13 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-import AddExperienceModal from "../../components/AddExperienceModal";
-import DeleteModal from "../../components/DeleteModal";
-import EditExperienceModal from "../../components/EditExperienceModal";
-import Footer from "../../components/Footer";
-import Spinner from "../../components/Spinner";
+import AddExperienceModal from "../components/editing/AddExperienceModal";
+import DeleteModal from "../components/editing/DeleteModal";
+import EditExperienceModal from "../components/editing/EditExperienceModal";
+import Footer from "../components/layout/Footer";
+import Spinner from "../components/Spinner";
 
-import { useAuth } from "../../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
 import "react-vertical-timeline-component/style.min.css";
 

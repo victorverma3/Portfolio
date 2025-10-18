@@ -1,10 +1,10 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 
-import DeleteModal from "./DeleteModal";
-import EditProjectModal from "./EditProjectModal";
+import DeleteModal from "../editing/DeleteModal";
+import EditProjectModal from "../editing/EditProjectModal";
 
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 interface Card {
     _id: string;

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import AddSkillModal from "./AddSkillModal";
+import AddSkillModal from "./editing/AddSkillModal";
 import SkillSection from "./SkillSection";
 import Spinner from "./Spinner";
 

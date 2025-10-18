@@ -2,13 +2,13 @@ import React, { useLayoutEffect } from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
 import { SnackbarProvider } from "notistack";
 
-import About from "./pages/about/About";
-import Education from "./pages/education/Education";
-import Error from "./pages/error/Error";
-import Experience from "./pages/experience/Experience";
-import Home from "./pages/home/Home";
+import About from "./pages/About";
+import Education from "./pages/Education";
+import Error from "./pages/Error";
+import Experience from "./pages/Experience";
+import Home from "./pages/Home";
 import Layout from "./Layout";
-import Projects from "./pages/projects/Projects";
+import Projects from "./pages/Projects";
 
 import { AuthProvider } from "./contexts/AuthContext";
 

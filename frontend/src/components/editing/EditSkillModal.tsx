@@ -7,24 +7,22 @@ import { useForm, FieldErrors } from "react-hook-form";
 import { useSnackbar } from "notistack";
 
 import Modal from "@mui/material/Modal";
-import Spinner from "./Spinner";
+import Spinner from "../Spinner";
 
 type FormValues = {
-    title: string;
+    name: string;
     image: string;
-    description: string;
-    link: string;
-    url: string;
-    sortOrder: string;
+    group: string;
+    sortOrder: number;
 };
 
 const backend = import.meta.env.VITE_BACKEND_URL;
 
-interface EditAboutModalProps {
+interface EditSkillModalProps {
     id: string;
 }
 
-const EditAboutModal = ({ id }: EditAboutModalProps) => {
+const EditSkillModal = ({ id }: EditSkillModalProps) => {
     const [loading, setLoading] = useState(false);
     const { enqueueSnackbar } = useSnackbar();
     const [open, setOpen] = useState(false);
@@ -35,12 +33,10 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
         reset,
     } = useForm<FormValues>({
         defaultValues: {
-            title: "",
+            name: "",
             image: "",
-            description: "",
-            link: "",
-            url: "",
-            sortOrder: "",
+            group: "",
+            sortOrder: -1,
         },
     });
 
@@ -48,10 +44,10 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
         console.log(formData);
         const data = {
             ...formData,
-            sortOrder: parseInt(formData.sortOrder, 10),
+            sortOrder: formData.sortOrder,
         };
         axios
-            .put(`${backend}/about-collection/${id}`, data, {
+            .put(`${backend}/skill-collection/${id}`, data, {
                 headers: {
                     Authorization: `Bearer ${sessionStorage.getItem(
                         "authToken"
@@ -60,7 +56,7 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
             })
             .then(() => {
                 setOpen(false);
-                enqueueSnackbar("About edited successfully", {
+                enqueueSnackbar("Skill edited successfully", {
                     variant: "success",
                 });
                 window.location.reload();
@@ -79,15 +75,13 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`${backend}/about-collection/${id}`)
+            .get(`${backend}/skill-collection/${id}`)
             .then((response) => {
                 reset({
-                    title: response.data.title,
+                    name: response.data.name,
                     image: response.data.image,
-                    description: response.data.description,
-                    link: response.data.link,
-                    url: response.data.url,
-                    sortOrder: String(response.data.sortOrder),
+                    group: response.data.group,
+                    sortOrder: response.data.sortOrder,
                 });
                 setLoading(false);
             })
@@ -96,7 +90,7 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
                 enqueueSnackbar("Error", { variant: "error" });
                 console.log(error);
             });
-    }, [id]);
+    }, [id, reset]);
 
     const handleOpen = () => {
         setOpen(true);
@@ -105,7 +99,7 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
         setOpen(false);
     };
 
-    const mapFields = ["title", "image", "description", "link", "url"] as const;
+    const mapFields = ["name", "image", "group"] as const;
 
     return (
         <div>
@@ -120,7 +114,7 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
             >
                 <div className="w-fit m-auto fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center shadow border-2 border-solid border-black bg-white">
                     <h1 className="w-fit mx-auto mt-2 text-3xl 2xl:text-4x">
-                        Edit About
+                        Edit Skill
                     </h1>
                     {loading ? <Spinner /> : " "}
                     <div className="w-fit max-h-96 overflow-y-auto m-auto">
@@ -164,51 +158,6 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
                                     </div>
                                 </div>
                             ))}
-                            <div className="form-control">
-                                <div className="flex flex-col">
-                                    <label
-                                        className="text-center text-xl"
-                                        htmlFor="sortOrder"
-                                    >
-                                        SortOrder
-                                    </label>
-                                    <input
-                                        className="w-96 mt-2 px-2 text-center border-2 border-solid border-black"
-                                        type="text"
-                                        id="sortOrder"
-                                        {...register("sortOrder", {
-                                            required: {
-                                                value: true,
-                                                message:
-                                                    "SortOrder is required",
-                                            },
-                                            validate: {
-                                                notEmpty: (fieldValue) => {
-                                                    return (
-                                                        fieldValue !== "" ||
-                                                        "SortOrder cannot be empty"
-                                                    );
-                                                },
-                                                isInt: (fieldValue) => {
-                                                    const num = parseInt(
-                                                        fieldValue,
-                                                        10
-                                                    );
-                                                    return (
-                                                        (!isNaN(num) &&
-                                                            num.toString() ===
-                                                                fieldValue) ||
-                                                        "SortOrder must be an integer"
-                                                    );
-                                                },
-                                            },
-                                        })}
-                                    />
-                                    <p className="mx-auto mt-2 text-red-500">
-                                        {errors.sortOrder?.message}
-                                    </p>
-                                </div>
-                            </div>
                             <button className="w-fit flex mx-auto my-2 px-2 text-xl text-green-500 hover:text-white border-2 border-solid border-green-500 hover:bg-green-500">
                                 Save
                             </button>
@@ -220,4 +169,4 @@ const EditAboutModal = ({ id }: EditAboutModalProps) => {
     );
 };
 
-export default EditAboutModal;
+export default EditSkillModal;

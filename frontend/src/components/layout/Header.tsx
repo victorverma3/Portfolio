@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-import Auth from "./Auth";
+import Auth from "../Auth";
 
-import { supabase } from "../utils/Supabase";
+import { supabase } from "../../utils/Supabase";
 
 const Header = () => {
     const [resumeURL, setResumeURL] = useState("");

@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 
-import DeleteModal from "./DeleteModal";
-import EditSkillModal from "./EditSkillModal";
+import DeleteModal from "./editing/DeleteModal";
+import EditSkillModal from "./editing/EditSkillModal";
 
 import { useAuth } from "../contexts/AuthContext";
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
-import Header from "./components/Header";
+import Header from "./components/layout/Header";
 
 function Layout() {
     return (

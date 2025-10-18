@@ -7,7 +7,7 @@ import { useForm, FieldErrors, useFieldArray } from "react-hook-form";
 import { useSnackbar } from "notistack";
 
 import Modal from "@mui/material/Modal";
-import Spinner from "./Spinner";
+import Spinner from "../Spinner";
 
 type FormValues = {
     title: string;

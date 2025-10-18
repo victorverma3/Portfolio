@@ -1,0 +1,10 @@
+# LLM documentation for www.victorverma.com
+
+This is the portfolio website for Victor Verma, an associate software engineer in the AI Enabled Learning domain at Savvas Learning Company. He recently graduated from Boston University with a B.A. in Mathematics and Computer Science and a minor in Data Science. He is interested in AI, machine learning, full-stack development, and optimization.
+
+## URLs
+- [Home](https://www.victorverma.com/): The landing page for Victor Verma's portfolio website.
+- [Experience](https://www.victorverma.com/experience): Learn more about Victor Verma's work experience from high school to present.
+- [Education](https://www.victorverma.com/education): Learn more about Victor Verma's college education.
+- [Projects](https://www.victorverma.com/projects): Learn more about Victor Verma's personal projects.
+- [About](https://www.victorverma.com/about): Learn more about Victor Verma's personal interests.

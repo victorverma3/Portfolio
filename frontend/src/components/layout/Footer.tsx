@@ -1,6 +1,6 @@
 import React from "react";
 
-import useIsScreenMd from "../../hooks/useIsScreenMd";
+import useIsScreenLg from "../../hooks/useIsScreenLg";
 
 const logoItems = [
     {
@@ -15,10 +15,10 @@ const logoItems = [
 ];
 
 const Footer = () => {
-    const isScreenMd = useIsScreenMd();
+    const isScreenLg = useIsScreenLg();
     return (
         <footer className="h-fit min-h-8">
-            {!isScreenMd && (
+            {!isScreenLg && (
                 <div className="w-fit mx-auto mt-8 pt-4 pb-12 flex gap-3">
                     {logoItems.map((item, index) => (
                         <a

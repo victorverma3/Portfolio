@@ -1,14 +1,49 @@
 import React, { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Auth from "../Auth";
 
 import { supabase } from "../../utils/Supabase";
 
+import useIsScreenLg from "../../hooks/useIsScreenLg";
+import useIsScreenMd from "../../hooks/useIsScreenMd";
+import useIsScrolled from "../../hooks/useIsScrolled";
+
 const Header = () => {
+    const isScrolled = useIsScrolled();
+    const isScreenLg = useIsScreenLg();
+    const isScreenMd = useIsScreenMd();
+    const [navDrawerOpen, setNavDrawerOpen] = useState(false);
+
+    useEffect(() => {
+        if (isScreenMd) {
+            setNavDrawerOpen(false);
+        }
+    }, [isScreenMd]);
+
+    useEffect(() => {
+        const body = document.body;
+
+        if (navDrawerOpen) {
+            const scrollBarCompensation =
+                window.innerWidth - document.documentElement.clientWidth;
+            body.style.overflow = "hidden";
+            if (scrollBarCompensation > 0) {
+                body.style.paddingRight = `${scrollBarCompensation}px`;
+            }
+        } else {
+            body.style.overflow = "";
+            body.style.paddingRight = "";
+        }
+
+        return () => {
+            body.style.overflow = "";
+            body.style.paddingRight = "";
+        };
+    }, [navDrawerOpen]);
+
     const [resumeURL, setResumeURL] = useState("");
     useEffect(() => {
         const { data: publicData } = supabase.storage
@@ -40,49 +75,133 @@ const Header = () => {
         { url: "/about", text: "About Me" },
     ];
     return (
-        <div className="w-full m-auto">
-            <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
-                <Container>
-                    <Auth />
-                    <Navbar.Brand href="/">
-                        <span className="text-xl hover:opacity-75">
-                            Victor Verma
-                        </span>
-                    </Navbar.Brand>
-                    <div className="w-32 m-auto flex-row flex-wrap justify-around hidden nav-display:flex portrait:hidden">
-                        {logoItems.map((item, index) => (
+        <div
+            className={`sticky top-0 z-[1500] h-16 ${
+                isScrolled && "shadow-md"
+            } bg-white`}
+        >
+            {/* Navbar */}
+            {isScreenMd && (
+                <div className="h-full max-w-[1080px] m-auto flex justify-between">
+                    <div className="h-full ml-2 flex items-center gap-3">
+                        <div className="h-full flex items-center">
+                            <Auth />
                             <a
-                                key={index}
-                                href={item.url}
-                                target="_blank"
-                                className="rounded-md hover:scale-105 hover:opacity-75"
+                                className="p-2 text-lg lg:text-xl hover:opacity-75 text-black no-underline"
+                                href="/"
                             >
-                                <img className="w-7" src={item.logo} />
+                                Victor Verma
                             </a>
-                        ))}
+                        </div>
+                        {isScreenLg && (
+                            <div className="h-full flex items-center gap-3">
+                                {logoItems.map((item, index) => (
+                                    <a
+                                        key={index}
+                                        href={item.url}
+                                        target="_blank"
+                                        className="rounded-md hover:scale-105 hover:opacity-75"
+                                    >
+                                        <img className="w-7" src={item.logo} />
+                                    </a>
+                                ))}
+                            </div>
+                        )}
                     </div>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto">
-                            {navItems.map((item, index) => (
-                                <Nav.Link
-                                    eventKey={index}
+                    <div className="h-full mr-4 flex items-center gap-2">
+                        {navItems.map((item, index) =>
+                            item?.id === "resume" ? (
+                                <Link
                                     key={index}
-                                    id={item?.id}
+                                    className="p-2 text-lg lg:text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
+                                    to={item.url}
+                                    target="_blank"
                                 >
+                                    {item.text}
+                                </Link>
+                            ) : (
+                                <Link
+                                    key={index}
+                                    className="p-2 text-lg lg:text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
+                                    to={item.url}
+                                >
+                                    {item.text}
+                                </Link>
+                            )
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {!isScreenMd && (
+                <div className="h-full m-auto flex items-center justify-between">
+                    <div className="h-full ml-2 flex items-center">
+                        <Auth />
+                        <a
+                            className="p-2 text-lg lg:text-xl hover:opacity-75 text-black no-underline"
+                            href="/"
+                        >
+                            Victor Verma
+                        </a>
+                    </div>
+
+                    {navDrawerOpen ? (
+                        <AiOutlineClose
+                            className="mr-4 hover:cursor-pointer hover:text-palette-darkbrown"
+                            size={32}
+                            onClick={() => setNavDrawerOpen(false)}
+                        />
+                    ) : (
+                        <AiOutlineMenu
+                            className="mr-4 hover:cursor-pointer hover:text-palette-darkbrown"
+                            size={32}
+                            onClick={() => setNavDrawerOpen(true)}
+                        />
+                    )}
+                </div>
+            )}
+
+            {/* Navbar Dropdown */}
+            <AnimatePresence>
+                {!isScreenMd && navDrawerOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "100vh", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden bg-white border-2 border-t border-gray-200"
+                    >
+                        <div className="flex flex-col items-start px-6 py-4 space-y-3">
+                            {navItems.map((item, index) =>
+                                item?.id === "resume" ? (
                                     <Link
-                                        className="text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
+                                        key={index}
+                                        className="p-2 text-lg lg:text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
                                         to={item.url}
-                                        onClick={item?.click}
+                                        target="_blank"
+                                        onClick={() => {
+                                            setNavDrawerOpen(false);
+                                        }}
                                     >
                                         {item.text}
                                     </Link>
-                                </Nav.Link>
-                            ))}
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                                ) : (
+                                    <Link
+                                        key={index}
+                                        className="p-2 text-lg lg:text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
+                                        to={item.url}
+                                        onClick={() => {
+                                            setNavDrawerOpen(false);
+                                        }}
+                                    >
+                                        {item.text}
+                                    </Link>
+                                )
+                            )}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };

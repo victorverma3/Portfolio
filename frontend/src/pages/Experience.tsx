@@ -8,7 +8,6 @@ import {
 import AddExperienceModal from "../components/editing/AddExperienceModal";
 import DeleteModal from "../components/editing/DeleteModal";
 import EditExperienceModal from "../components/editing/EditExperienceModal";
-import Footer from "../components/layout/Footer";
 import Spinner from "../components/Spinner";
 
 import { useAuth } from "../contexts/AuthContext";
@@ -98,7 +97,6 @@ const Experience = () => {
                 </VerticalTimeline>
             )}
             {isAuthorized && <AddExperienceModal />}
-            <Footer />
         </div>
     );
 };

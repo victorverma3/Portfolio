@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import EduDetails from "../components/EduDetails";
-import Footer from "../components/layout/Footer";
 import Skills from "../components/Skills";
 import UploadPDF from "../components/UploadPDF";
 
@@ -74,7 +73,6 @@ const Education = () => {
             </div>
             <Skills />
             {isAuthorized && <UploadPDF />}
-            <Footer />
         </div>
     );
 };

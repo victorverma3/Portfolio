@@ -1,30 +1,23 @@
 import React, { useRef, useState } from "react";
+import axios from "axios";
 import { useSnackbar } from "notistack";
-
 import { Button } from "@mui/material";
 
-import { supabase } from "../utils/Supabase";
+const backend = import.meta.env.VITE_BACKEND_URL;
 
 const UploadPDF = () => {
     const { enqueueSnackbar } = useSnackbar();
-
     const [file, setFile] = useState<File | null>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const handleInputClick = async () => {
-        inputRef.current?.click();
-    };
+    const handleInputClick = () => inputRef.current?.click();
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const selectedFile = e.target.files?.[0];
-
         if (selectedFile && selectedFile.type !== "application/pdf") {
-            enqueueSnackbar("Only PDF files are allowed", {
-                variant: "error",
-            });
+            enqueueSnackbar("Only PDF files are allowed", { variant: "error" });
             return;
         }
-
         setFile(selectedFile ?? null);
     };
 
@@ -35,24 +28,33 @@ const UploadPDF = () => {
         }
 
         if (!(file.name.includes("Resume") || file.name.includes("CV"))) {
-            enqueueSnackbar('"Resume" or "CV" must be included in the title"', {
+            enqueueSnackbar('"Resume" or "CV" must be included in the title', {
                 variant: "error",
             });
             return;
         }
-        const { error: uploadError } = await supabase.storage
-            .from("files")
-            .upload(file.name, file, { upsert: true });
 
-        if (uploadError) {
-            enqueueSnackbar(`Failed to upload PDF: ${uploadError.message}`);
-            return;
-        } else {
-            enqueueSnackbar(`Uploaded ${file.name}`, {
-                variant: "success",
+        const data = new FormData();
+        data.append("file", file);
+
+        await axios
+            .post(`${backend}/file/upload-resume-cv`, data, {
+                headers: {
+                    Authorization: `Bearer ${sessionStorage.getItem(
+                        "authToken"
+                    )}`,
+                },
+            })
+            .then(() => {
+                enqueueSnackbar(`Uploaded ${file.name}`, {
+                    variant: "success",
+                });
+                setFile(null);
+            })
+            .catch((error) => {
+                enqueueSnackbar("Upload failed", { variant: "error" });
+                console.log(error);
             });
-            setFile(null);
-        }
     };
 
     return (
@@ -68,6 +70,7 @@ const UploadPDF = () => {
             <Button className="mx-auto mt-4" onClick={handleInputClick}>
                 Upload Document
             </Button>
+
             {file && (
                 <Button className="mx-auto mt-4" onClick={handleUpload}>
                     Complete Upload

@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Auth from "../Auth";
 
-import { supabase } from "../../utils/Supabase";
-
 import useIsScreenLg from "../../hooks/useIsScreenLg";
 import useIsScreenMd from "../../hooks/useIsScreenMd";
 import useIsScrolled from "../../hooks/useIsScrolled";
+
+const backend = import.meta.env.VITE_BACKEND_URL;
 
 const Header = () => {
     const isScrolled = useIsScrolled();
@@ -46,10 +47,14 @@ const Header = () => {
 
     const [resumeURL, setResumeURL] = useState("");
     useEffect(() => {
-        const { data: publicData } = supabase.storage
-            .from("files")
-            .getPublicUrl("VictorVermaResume.pdf");
-        setResumeURL(publicData.publicUrl);
+        axios
+            .get(`${backend}/file/get-resume-url`)
+            .then((response) => {
+                setResumeURL(response.data.url);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }, []);
     const openResume = () => {
         window.open(resumeURL);

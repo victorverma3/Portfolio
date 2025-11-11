@@ -9,6 +9,7 @@ import experienceRoute from "./routes/experienceRoute.js";
 import projectRoute from "./routes/projectRoute.js";
 import skillRoute from "./routes/skillRoute.js";
 import authRoute from "./routes/authRoute.js";
+import fileRoute from "./routes/fileRoute.js";
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use("/experience-collection", experienceRoute);
 app.use("/project-collection", projectRoute);
 app.use("/skill-collection", skillRoute);
 app.use("/auth-collection", authRoute);
+app.use("/file", fileRoute);
 
 mongoose
     .connect(process.env.mongoDBURI)

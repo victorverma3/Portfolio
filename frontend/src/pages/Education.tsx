@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import EduDetails from "../components/EduDetails";
 import Skills from "../components/Skills";
@@ -6,7 +7,7 @@ import UploadPDF from "../components/UploadPDF";
 
 import { useAuth } from "../contexts/AuthContext";
 
-import { supabase } from "../utils/Supabase";
+const backend = import.meta.env.VITE_BACKEND_URL;
 
 const eduInfo = [
     {
@@ -40,10 +41,14 @@ const eduInfo = [
 const Education = () => {
     const [CVURL, setCVURL] = useState("");
     useEffect(() => {
-        const { data: publicData } = supabase.storage
-            .from("files")
-            .getPublicUrl("VictorVermaCV.pdf");
-        setCVURL(publicData.publicUrl);
+        axios
+            .get(`${backend}/file/get-cv-url`)
+            .then((response) => {
+                setCVURL(response.data.url);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }, []);
 
     const { isAuthorized } = useAuth();

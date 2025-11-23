@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
 import EduDetails from "../components/EduDetails";
 import Skills from "../components/Skills";
 import UploadPDF from "../components/UploadPDF";
 
 import { useAuth } from "../contexts/AuthContext";
-
-const backend = import.meta.env.VITE_BACKEND_URL;
 
 const eduInfo = [
     {

@@ -45,20 +45,17 @@ const Header = () => {
         };
     }, [navDrawerOpen]);
 
-    const [resumeURL, setResumeURL] = useState("");
+    const [CVURL, setCVURL] = useState("");
     useEffect(() => {
         axios
-            .get(`${backend}/file/get-resume-url`)
+            .get(`${backend}/file/get-cv-url`)
             .then((response) => {
-                setResumeURL(response.data.url);
+                setCVURL(response.data.url);
             })
             .catch((error) => {
                 console.log(error);
             });
     }, []);
-    const openResume = () => {
-        window.open(resumeURL);
-    };
 
     const logoItems = [
         {
@@ -76,7 +73,7 @@ const Header = () => {
         { url: "/experience", text: "Experience" },
         { url: "/education", text: "Education" },
         { url: "/projects", text: "Projects" },
-        { url: resumeURL, click: openResume, text: "Resume", id: "resume" },
+        { url: CVURL, text: "CV", id: "cv" },
         { url: "/about", text: "About Me" },
     ];
     return (
@@ -115,7 +112,7 @@ const Header = () => {
                     </div>
                     <div className="h-full mr-4 flex items-center gap-2">
                         {navItems.map((item, index) =>
-                            item?.id === "resume" ? (
+                            item?.id === "cv" ? (
                                 <Link
                                     key={index}
                                     className="p-2 text-lg lg:text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"

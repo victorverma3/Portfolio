@@ -20,8 +20,8 @@ const eduInfo = [
     {
         subtitle: "Relevant Courses",
         bullets: [
-            "Machine Learning and AI, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Cloud Computing with Azure, Software Engineering, Computer Systems, Probability in Computing.",
-            "Probability, Stochastic Algorithms, Stochastic Processes, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
+            "Machine Learning and AI, Data Science Tools and Applications, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Engineering for Big Data, Software Engineering, Computer Systems, Probability in Computing.",
+            "Stochastic Algorithms, Stochastic Processes, Probability, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
         ],
     },
     {

@@ -41,25 +41,23 @@ const About = () => {
                 I'm currently working as an associate software developer in the
                 AI-Enabled Learning domain at Savvas Learning Company, having
                 recently graduated from Boston University with a B.A. in
-                Mathematics and Computer Science and a minor in Data Science. I
-                love learning and solving problems, and my primary interests are
-                machine learning, optimization, and full-stack web development.
+                Mathematics and Computer Science and a minor in Data Science. My
+                primary interests are natural language processing, recommender
+                systems, machine learning, and optimization. I love learning and
+                solving problems.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl 2xl:text-2xl text-justify">
-                I pursue many hobbies in my free time, ranging from casual to
-                physical to intellectual. As an avid Letterboxd user and AMC
-                A-List member, I typically watch over 100 movies each year. I
-                live an active lifestyle; I used to play football in high school
-                and rugby in college, both of which I like to watch in addition
-                to soccer, UFC, and basketball. Nowadays, I spend many of my
-                evenings at the Gym. Additionally, I love traveling, and some of
-                my favorite places I've visited are Egypt and Jordan for their
-                history, and Iceland and Alaska for their nature. My bucket list
-                currently includes gorilla trekking in Rwanda and hiking Machu
-                Picchu in Peru. Lastly, I've starting reading more since
-                graduating college, and my favorite genres are mystery, history,
-                international geopolitics, and sci-fi.
+                In my free time, I pursue many hobbies. I typically watch 100+
+                movies each year, and am an active Letterboxd user and AMC
+                A-List member. I've always lived an active lifestyle lifting
+                weights at the gym, playing rugby in college, and football in
+                high school. My favorite sports to watch are football, mma,
+                soccer, and basketball. Additionally, I love traveling; my
+                favorite places include Egypt, Jordan, Iceland, Alaska, Italy,
+                and Japan because of their combination of food, history, and
+                nature. My bucket list currently includes gorilla trekking in
+                Rwanda and hiking Machu Picchu in Peru.
             </p>
 
             <br />

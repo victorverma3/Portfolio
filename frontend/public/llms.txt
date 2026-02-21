@@ -7,4 +7,4 @@ This is the portfolio website for Victor Verma, an associate software engineer i
 - [Experience](https://www.victorverma.com/experience): Learn more about Victor Verma's work experience from high school to present.
 - [Education](https://www.victorverma.com/education): Learn more about Victor Verma's college education.
 - [Projects](https://www.victorverma.com/projects): Learn more about Victor Verma's personal projects.
-- [About](https://www.victorverma.com/about): Learn more about Victor Verma's personal interests.
+- [About Me](https://www.victorverma.com/about): Learn more about Victor Verma's personal interests.

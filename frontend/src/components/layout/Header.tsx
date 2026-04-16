@@ -45,12 +45,12 @@ const Header = () => {
         };
     }, [navDrawerOpen]);
 
-    const [CVURL, setCVURL] = useState("");
+    const [ResumeURL, setResumeURL] = useState("");
     useEffect(() => {
         axios
-            .get(`${backend}/file/get-cv-url`)
+            .get(`${backend}/file/get-resume-url`)
             .then((response) => {
-                setCVURL(response.data.url);
+                setResumeURL(response.data.url);
             })
             .catch((error) => {
                 console.log(error);
@@ -73,7 +73,7 @@ const Header = () => {
         { url: "/experience", text: "Experience" },
         { url: "/education", text: "Education" },
         { url: "/projects", text: "Projects" },
-        { url: CVURL, text: "CV", id: "cv" },
+        { url: ResumeURL, text: "Resume", id: "resume" },
         { url: "/about", text: "About Me" },
     ];
     return (
@@ -112,7 +112,7 @@ const Header = () => {
                     </div>
                     <div className="h-full mr-4 flex items-center gap-2">
                         {navItems.map((item, index) =>
-                            item?.id === "cv" ? (
+                            item?.id === "resume" ? (
                                 <Link
                                     key={index}
                                     className="p-2 text-lg lg:text-xl text-black no-underline hover:underline hover:decoration-blue-400 hover:opacity-75 duration-200 ease-in-out"
@@ -129,7 +129,7 @@ const Header = () => {
                                 >
                                     {item.text}
                                 </Link>
-                            )
+                            ),
                         )}
                     </div>
                 </div>
@@ -198,7 +198,7 @@ const Header = () => {
                                     >
                                         {item.text}
                                     </Link>
-                                )
+                                ),
                             )}
                         </div>
                     </motion.div>

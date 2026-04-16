@@ -1,0 +1,32 @@
+version: 2
+updates:
+    - package-ecosystem: "npm"
+      directory: "/frontend"
+      schedule:
+          interval: "weekly"
+
+      groups:
+          dependencies:
+              patterns: ["*"]
+              update-types:
+                  - "patch"
+                  - "minor"
+
+      labels:
+          - "dependencies"
+          - "javascript"
+    - package-ecosystem: "npm"
+      directory: "/backend"
+      schedule:
+          interval: "weekly"
+
+      groups:
+          dependencies:
+              patterns: ["*"]
+              update-types:
+                  - "patch"
+                  - "minor"
+
+      labels:
+          - "dependencies"
+          - "javascript"

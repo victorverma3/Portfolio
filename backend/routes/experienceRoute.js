@@ -40,6 +40,7 @@ router.post("/", verifyToken, async (request, response) => {
         const {
             role,
             employer,
+            employerLink,
             dates,
             location,
             description,
@@ -50,6 +51,7 @@ router.post("/", verifyToken, async (request, response) => {
         if (
             !role ||
             !employer ||
+            !employerLink ||
             !dates ||
             !location ||
             !description ||
@@ -58,12 +60,13 @@ router.post("/", verifyToken, async (request, response) => {
         ) {
             return response.status(400).send({
                 message:
-                    "Send all required fields: Role, Employer, Dates, Location, Description, Icon, and Sort Order",
+                    "Send all required fields: Role, Employer, Employer Link, Dates, Location, Description, Icon, and Sort Order",
             });
         }
         const newExperience = new Experiences({
             role,
             employer,
+            employerLink,
             dates,
             location,
             description,
@@ -86,6 +89,7 @@ router.put("/:id", verifyToken, async (request, response) => {
         if (
             !request.body.role ||
             !request.body.employer ||
+            !request.body.employerLink ||
             !request.body.dates ||
             !request.body.location ||
             !request.body.description ||
@@ -94,7 +98,7 @@ router.put("/:id", verifyToken, async (request, response) => {
         ) {
             return response.status(400).send({
                 message:
-                    "Send all required fields: Role, Employer, Dates, Location, Description, Icon, and Sort Order",
+                    "Send all required fields: Role, Employer, Employer Link, Dates, Location, Description, Icon, and Sort Order",
             });
         }
         const { id } = request.params;

@@ -11,6 +11,7 @@ import Modal from "@mui/material/Modal";
 type FormValues = {
     role: string;
     employer: string;
+    employerLink: string;
     dates: string;
     location: string;
     description: { bullet: string }[];
@@ -32,6 +33,7 @@ const AddExperienceModal = () => {
         defaultValues: {
             role: "",
             employer: "",
+            employerLink: "",
             dates: "",
             location: "",
             description: [{ bullet: "" }],
@@ -56,7 +58,7 @@ const AddExperienceModal = () => {
             .post(`${backend}/experience-collection/`, data, {
                 headers: {
                     Authorization: `Bearer ${sessionStorage.getItem(
-                        "authToken"
+                        "authToken",
                     )}`,
                 },
             })
@@ -88,6 +90,7 @@ const AddExperienceModal = () => {
     const mapFields = [
         "role",
         "employer",
+        "employerLink",
         "dates",
         "location",
         "icon",
@@ -169,7 +172,7 @@ const AddExperienceModal = () => {
                                                 {
                                                     required:
                                                         "Description is required",
-                                                }
+                                                },
                                             )}
                                         />
                                         <button
@@ -217,7 +220,7 @@ const AddExperienceModal = () => {
                                                 isInt: (fieldValue) => {
                                                     const num = parseInt(
                                                         fieldValue,
-                                                        10
+                                                        10,
                                                     );
                                                     return (
                                                         (!isNaN(num) &&

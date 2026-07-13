@@ -12,6 +12,7 @@ import Spinner from "../Spinner";
 type FormValues = {
     role: string;
     employer: string;
+    employerLink: string;
     dates: string;
     location: string;
     description: { bullet: string }[];
@@ -39,6 +40,7 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
         defaultValues: {
             role: "",
             employer: "",
+            employerLink: "",
             dates: "",
             location: "",
             description: [{ bullet: "" }],
@@ -63,7 +65,7 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
             .put(`${backend}/experience-collection/${id}`, data, {
                 headers: {
                     Authorization: `Bearer ${sessionStorage.getItem(
-                        "authToken"
+                        "authToken",
                     )}`,
                 },
             })
@@ -93,10 +95,11 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
                 reset({
                     role: response.data.role,
                     employer: response.data.employer,
+                    employerLink: response.data.employerLink,
                     dates: response.data.dates,
                     location: response.data.location,
                     description: response.data.description.map(
-                        (item: string) => ({ bullet: item })
+                        (item: string) => ({ bullet: item }),
                     ),
                     icon: response.data.icon,
                     sortOrder: String(response.data.sortOrder),
@@ -120,6 +123,7 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
     const mapFields = [
         "role",
         "employer",
+        "employerLink",
         "dates",
         "location",
         "icon",
@@ -202,7 +206,7 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
                                                 {
                                                     required:
                                                         "Description is required",
-                                                }
+                                                },
                                             )}
                                         />
                                         <button
@@ -250,7 +254,7 @@ const EditExperienceModal = ({ id }: EditExperienceModalProps) => {
                                                 isInt: (fieldValue) => {
                                                     const num = parseInt(
                                                         fieldValue,
-                                                        10
+                                                        10,
                                                     );
                                                     return (
                                                         (!isNaN(num) &&

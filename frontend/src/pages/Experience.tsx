@@ -20,6 +20,7 @@ type experienceDataType = {
     _id: string;
     role: string;
     employer: string;
+    employerLink: string;
     dates: string;
     location: string;
     description: string[];
@@ -29,7 +30,7 @@ type experienceDataType = {
 
 const Experience = () => {
     const [experienceData, setExperienceData] = useState<experienceDataType[]>(
-        []
+        [],
     );
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -63,6 +64,14 @@ const Experience = () => {
                                     backgroundImage: `url(images/${element.icon}.png)`,
                                     backgroundPosition: "center",
                                     backgroundSize: "cover",
+                                    cursor: "pointer",
+                                }}
+                                iconOnClick={() => {
+                                    window.open(
+                                        element.employerLink,
+                                        "_blank",
+                                        "noopener,noreferrer",
+                                    );
                                 }}
                             >
                                 <h3 className="text-left">{element.role}</h3>
@@ -77,7 +86,7 @@ const Experience = () => {
                                     {element.description.map(
                                         (bullet, index) => (
                                             <li key={index}>{bullet}</li>
-                                        )
+                                        ),
                                     )}
                                 </ul>
 

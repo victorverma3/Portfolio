@@ -9,6 +9,10 @@ const experienceSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    employerLink: {
+        type: String,
+        required: true,
+    },
     dates: {
         type: String,
         required: true,
@@ -34,5 +38,5 @@ const experienceSchema = mongoose.Schema({
 export const Experiences = mongoose.model(
     "Experience Element",
     experienceSchema,
-    "experience-collection"
+    "experience-collection",
 );

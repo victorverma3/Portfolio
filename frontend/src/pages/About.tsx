@@ -38,26 +38,30 @@ const About = () => {
             <h1 className="mt-2 text-5xl 2xl:text-6xl">About Me</h1>
 
             <p className="w-9/12 m-auto pt-6 text-xl 2xl:text-2xl text-justify">
-                I'm currently working as an associate software developer in the
-                AI-Enabled Learning domain at Savvas Learning Company, having
-                recently graduated from Boston University with a B.A. in
-                Mathematics and Computer Science and a minor in Data Science. My
-                primary interests are natural language processing, recommender
-                systems, machine learning, and optimization. I love learning and
-                solving problems.
+                I'm currently pursuing my Master of Science in Computer Science
+                (MSCS) at Georgia Tech, with a specialization in Machine
+                Learning. Previously, I worked as a SWE at Savvas Learning
+                Company, where my work involved applied natural language
+                processing. I completed my Bachelor of Arts in Mathematics and
+                Computer Science, with a minor in Data Science from Boston
+                University. My primary research interests interests are applied
+                natural language processing, recommender systems, machine
+                learning, and optimization. I love learning and solving
+                problems.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl 2xl:text-2xl text-justify">
-                In my free time, I pursue many hobbies. I typically watch 100+
-                movies each year, and am an active Letterboxd user and AMC
-                A-List member. I've always lived an active lifestyle lifting
-                weights at the gym, playing rugby in college, and football in
-                high school. My favorite sports to watch are football, mma,
-                soccer, and basketball. Additionally, I love traveling; my
-                favorite places include Egypt, Jordan, Iceland, Alaska, Italy,
-                and Japan because of their combination of food, history, and
-                nature. My bucket list currently includes gorilla trekking in
-                Rwanda and hiking Machu Picchu in Peru.
+                I have many hobbies that I enjoy in my free time. I'm an active
+                Letterboxd Patron and AMC A-Lister, typically watching 120+
+                movies each year. I also try to live an active lifestyle, which
+                includes weightlifting, running, playing rugby in college, and
+                football in high school. My favorite sports to watch are
+                football, soccer, mma, and basketball. Finally, I love
+                traveling, especially to places that have a great combination of
+                food, history, and nature. My most memorable trips include
+                Egypt, Jordan, Iceland, Alaska, Italy, and Japan. Someday soon,
+                I hope to go gorilla trekking in Rwanda and hike Machu Picchu in
+                Peru.
             </p>
 
             <br />

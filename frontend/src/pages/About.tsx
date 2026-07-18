@@ -42,12 +42,11 @@ const About = () => {
                 (MSCS) at Georgia Tech, with a specialization in Machine
                 Learning. Previously, I worked as a SWE at Savvas Learning
                 Company, where my work involved applied natural language
-                processing. I completed my Bachelor of Arts in Mathematics and
-                Computer Science, with a minor in Data Science from Boston
-                University. My primary research interests interests are applied
-                natural language processing, recommender systems, machine
-                learning, and optimization. I love learning and solving
-                problems.
+                processing (NLP). I completed my Bachelor of Arts in Mathematics
+                and Computer Science, with a minor in Data Science from Boston
+                University. My research interests include applied NLP,
+                recommender systems, optimization, and computational social
+                science. I love learning and solving problems.
             </p>
 
             <p className="w-9/12 m-auto pt-6 text-xl 2xl:text-2xl text-justify">

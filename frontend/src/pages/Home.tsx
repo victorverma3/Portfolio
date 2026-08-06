@@ -11,7 +11,7 @@ const Home = () => {
                 I'm an MSCS student at Georgia Tech with a passion for solving
                 interdisciplinary problems at the cutting edge of technology. My
                 research interests include applied NLP, recommender systems,
-                optimization, and computational social science
+                optimization, and computational social science.
             </p>
             <Featured />
         </div>

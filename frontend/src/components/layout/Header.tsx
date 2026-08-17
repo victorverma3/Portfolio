@@ -66,7 +66,7 @@ const Header = () => {
             url: "https://github.com/victorverma3",
             logo: "images/githublogo.png",
         },
-        { url: "mailto:vpverm@bu.edu", logo: "images/maillogo.png" },
+        { url: "mailto:vpverm@gatech.edu", logo: "images/maillogo.png" },
     ];
     const navItems = [
         { url: "/", text: "Home" },

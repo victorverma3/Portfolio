@@ -6,7 +6,27 @@ import UploadPDF from "../components/UploadPDF";
 
 import { useAuth } from "../contexts/AuthContext";
 
-const eduInfo = [
+const gtInfo = [
+    {
+        subtitle: "Georgia Tech",
+        bullets: [
+            "M.S. in Computer Science.",
+            "Specialization in Machine Learning.",
+        ],
+    },
+    {
+        subtitle: "Relevant Courses",
+        bullets: [
+            "Machine Learning, Natural Language, Computer Vision, Graduate Algorithms.",
+        ],
+    },
+    {
+        subtitle: "Extracurriculars",
+        bullets: ["Loading..."],
+    },
+];
+
+const buInfo = [
     {
         subtitle: "Boston University",
         bullets: [
@@ -41,16 +61,30 @@ const Education = () => {
         <div className="w-screen min-h-[80vh] pt-20 pb-8">
             <h1 className="mt-2 text-5xl 2xl:text-6xl">Education</h1>
             <div className="w-[80vw] m-auto mb-6 p-3 text-left flex flex-row flex-wrap justify-around">
-                <div className="w-80 m-auto bg-white rounded-3xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 sm:w-96 2xl:w-[30rem]">
-                    <a href="https://www.bu.edu/" target="_blank">
-                        <img
-                            className="w-48 m-auto p-3 sm:w-80"
-                            src="images/bulatinlogo.png"
-                            alt="image not loading"
-                        />
-                    </a>
+                <div className="w-[80vw] m-auto mb-6 p-3 text-left flex flex-row flex-wrap justify-around">
+                    <div className="w-80 m-auto bg-white rounded-3xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 sm:w-96 2xl:w-[30rem]">
+                        <a href="https://www.gatech.edu/" target="_blank">
+                            <img
+                                className="w-48 m-auto p-3 sm:w-80"
+                                src="images/gtlogoseal.png"
+                                alt="image not loading"
+                            />
+                        </a>
+                    </div>
+                    <EduDetails details={gtInfo} />
                 </div>
-                <EduDetails details={eduInfo} />
+                <div className="w-[80vw] m-auto mb-6 p-3 text-left flex flex-row flex-wrap justify-around">
+                    <EduDetails details={buInfo} />
+                    <div className="w-80 m-auto bg-white rounded-3xl transition-shadow duration-200 ease-in-out hover:shadow hover:shadow-blue-400 sm:w-96 2xl:w-[30rem]">
+                        <a href="https://www.bu.edu/" target="_blank">
+                            <img
+                                className="w-48 m-auto p-3 sm:w-80"
+                                src="images/bulogoseal.png"
+                                alt="image not loading"
+                            />
+                        </a>
+                    </div>
+                </div>
             </div>
             <Skills />
             {isAuthorized && <UploadPDF />}

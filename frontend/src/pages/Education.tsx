@@ -22,7 +22,7 @@ const gtInfo = [
     },
     {
         subtitle: "Extracurriculars",
-        bullets: ["Loading..."],
+        bullets: ["Georgia Tech Men's Rugby"],
     },
 ];
 
@@ -33,14 +33,14 @@ const buInfo = [
             "B.A. in Mathematics and Computer Science.",
             "Minor in Data Science.",
             "Magna Cum Laude, 3.89 GPA.",
-            "2x UROP Student Research Award, UROP Faculty Matching Grant.",
-            "6x College of Arts & Sciences Dean's List.",
+            "UROP Student Research Award (2x), UROP Faculty Matching Grant.",
+            "College of Arts & Sciences Dean's List (6x).",
         ],
     },
     {
         subtitle: "Relevant Courses",
         bullets: [
-            "Machine Learning and AI, Data Science Tools and Applications, Natural Language Processing, Algorithms, Database Systems, Distributed Systems, Engineering for Big Data, Software Engineering, Computer Systems, Probability in Computing.",
+            "Machine Learning and AI, Data Science Tools and Applications, Natural Language Processing, Probability in Computing, Algorithms, Database Systems, Distributed Systems, Engineering for Big Data, Software Engineering, Computer Systems.",
             "Stochastic Algorithms, Stochastic Processes, Probability, Linear Algebra, Multivariate Calculus, Differential Equations, Applied Abstract Algebra.",
         ],
     },

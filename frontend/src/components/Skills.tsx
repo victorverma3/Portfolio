@@ -20,7 +20,7 @@ type skillsDataType = {
 
 const Skills = () => {
     const [skillsData, setSkillsData] = useState<skillsDataType[]>([]);
-    const [skillSection, setSkillSection] = useState<string>("langs-tools");
+    const [skillSection, setSkillSection] = useState<string>("ds-ml");
 
     const handleUpdate = (skillSection: string) => {
         setSkillSection(skillSection);
@@ -53,21 +53,21 @@ const Skills = () => {
                     <div className="flex justify-evenly border-bottom">
                         <button
                             className={`w-64 p-2 text-base md:text-2xl ${
-                                skillSection === "langs-tools" && "bg-blue-100"
-                            } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
-                            onClick={() => handleUpdate("langs-tools")}
-                            type="submit"
-                        >
-                            Languages and Tools
-                        </button>
-                        <button
-                            className={`w-64 p-2 text-base md:text-2xl ${
                                 skillSection === "ds-ml" && "bg-blue-100"
                             } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
                             onClick={() => handleUpdate("ds-ml")}
                             type="submit"
                         >
                             Data Science and ML
+                        </button>
+                        <button
+                            className={`w-64 p-2 text-base md:text-2xl ${
+                                skillSection === "langs-tools" && "bg-blue-100"
+                            } hover:shadow hover:shadow-blue-400 duration-200 ease-in-out`}
+                            onClick={() => handleUpdate("langs-tools")}
+                            type="submit"
+                        >
+                            Languages and Tools
                         </button>
                         <button
                             className={`w-64 p-2 text-base md:text-2xl ${
@@ -82,7 +82,7 @@ const Skills = () => {
 
                     <SkillSection
                         skillsData={skillsData.filter(
-                            (skill) => skill.group === skillSection
+                            (skill) => skill.group === skillSection,
                         )}
                     />
                 </div>

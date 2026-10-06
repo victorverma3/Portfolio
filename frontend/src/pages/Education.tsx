@@ -10,7 +10,7 @@ const gtInfo = [
     {
         subtitle: "Georgia Tech",
         bullets: [
-            "M.S. in Computer Science.",
+            "Master of Science in Computer Science.",
             "Specialization in Machine Learning.",
         ],
     },
@@ -30,7 +30,7 @@ const buInfo = [
     {
         subtitle: "Boston University",
         bullets: [
-            "B.A. in Mathematics and Computer Science.",
+            "Bachelor of Arts in Mathematics & Computer Science.",
             "Minor in Data Science.",
             "Magna Cum Laude, 3.89 GPA.",
             "UROP Student Research Award (2x), UROP Faculty Matching Grant.",
